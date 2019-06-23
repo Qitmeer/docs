@@ -1,5 +1,5 @@
 # docs
-The Qitmeer documentation &amp; guides and tutorials. 
+The Qitmeer documentation &amp; guides and tutorials.
 
 # How To Run
 
@@ -37,3 +37,16 @@ hugo sersve
 
 open http://localhost:1313
 ```
+
+# How To Add Document
+
+#### creat a document item
+
+```bash
+hugo new content/example/_index.en.md
+vim content/example/_index.en.md
+```
+
+> Note that all document files are placed under the content folder
+
+Detailed tutorials are available [hugo_example](https://zhangyi999.github.io/hugo_example/)
