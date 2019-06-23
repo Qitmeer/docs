@@ -1,0 +1,9 @@
+<div style="text-align: center"> 
+        {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
+        {{ $File := .File }}
+        {{ $Site := .Site }}
+        {{with $File.Path }}
+        <h5>- <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank" style="color:#777">Edit this page on GitHub</a> -</h5>    
+        {{ end }}
+      {{ end }}
+</div>
