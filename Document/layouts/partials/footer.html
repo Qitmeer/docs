@@ -1,0 +1,120 @@
+{{ if .Params.chapter }}
+</div> <!-- end chapter-->
+{{ end }}
+</div> 
+{{ partial "custom-comments.html" . }}
+</div>
+
+<div id="navigation">
+<!-- Next prev page -->
+{{ $currentNode := . }}
+
+{{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}
+
+{{ define "menu-nextprev" }}
+{{$currentNode := .currentnode }}
+{{ if ne .menu.Params.hidden true}}
+    {{if hasPrefix $currentNode.URL .menu.URL }}
+        {{ $currentNode.Scratch.Set "NextPageOK" "OK" }}
+        {{ $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") }}
+    {{else}}
+        {{if eq ($currentNode.Scratch.Get "NextPageOK") "OK"}}
+            {{ $currentNode.Scratch.Set "NextPageOK" nil }}
+            {{ $currentNode.Scratch.Set "nextPage" .menu }}
+        {{end}}
+    {{end}}
+    {{ $currentNode.Scratch.Set "prevPageTmp" .menu }}
+
+        {{ $currentNode.Scratch.Set "pages" .menu.Pages }}
+        {{ if .menu.IsHome}}
+            {{ $currentNode.Scratch.Set "pages" .menu.Sections }}
+        {{ else if .menu.Sections}}
+            {{ $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) }}
+        {{end}}
+        {{ $pages := ($currentNode.Scratch.Get "pages") }}
+
+        {{ range $pages.ByWeight  }}
+            {{ template "menu-nextprev" dict "menu" . "currentnode" $currentNode }}
+        {{end}}
+{{ end }}
+{{ end }}
+
+
+{{$showPrevNext := (and (not .Params.disableNextPrev) (not .Site.Params.disableNextPrev))}}
+{{if $showPrevNext}}
+{{with ($.Scratch.Get "prevPage")}}
+<a class="nav nav-prev" href="{{.URL}}" title="{{.Title}}"> <i class="fa fa-chevron-left"></i></a>
+{{end}}
+{{with ($.Scratch.Get "nextPage")}}
+<a class="nav nav-next" href="{{.URL}}" title="{{.Title}}" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+{{end}}
+{{end}}
+</div>
+
+</section>
+
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+<div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>
+<script src="{{"js/clipboard.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/perfect-scrollbar.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/perfect-scrollbar.jquery.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/jquery.sticky.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/featherlight.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/html5shiv-printshiv.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<!-- 
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+<script src="{{"js/highlight.pack.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+
+
+<script src="{{"js/modernizr.custom-3.6.0.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/hugo-learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<link href="{{"mermaid/mermaid.css" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet" />
+<script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<!-- <script src="{{"js/MathJax.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script> -->
+<script>
+mermaid.initialize({ startOnLoad: true });
+
+</script>
+<script >
+    setTimeout( function () {
+      var isMathjaxConfig = false; // 防止重复调用Config，造成性能损耗
+      function initMathjaxConfig() {
+        if (!window.MathJax) {
+          return;
+        }
+        window.MathJax.Hub.Config({
+          showProcessingMessages: false, //关闭js加载过程信息
+          messageStyle: "none", //不显示信息
+          jax: ["input/TeX", "output/HTML-CSS"],
+          tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
+            displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
+            skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
+          },
+          "HTML-CSS": {
+            availableFonts: ["STIX", "TeX"], //可选字体
+            showMathMenu: false //关闭右击菜单显示
+          }
+        });
+        isMathjaxConfig = true; // 
+      };
+      if (isMathjaxConfig === false) { // 如果：没有配置MathJax
+        initMathjaxConfig();
+      }
+      // 如果，不传入第三个参数，则渲染整个document
+      // 因为使用的Vuejs，所以指明#app，以提高速度
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('body-inner')]);
+    },0)
+    
+  </script>
+  
+  
+{{ partial "custom-footer.html" . }}
+</body>
+</html>

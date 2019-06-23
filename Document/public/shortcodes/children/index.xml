@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Children on Hugo Learn Documentation</title>
+    <link>/shortcodes/children/</link>
+    <description>Recent content in Children on Hugo Learn Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/shortcodes/children/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Children (Pages filles)</title>
+      <link>/shortcodes/children/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/shortcodes/children/_index.fr/</guid>
+      <description>Utilisez le shortcode children pour lister les pages filles de la page et tous ses déscendants (pages filles de pages filles). Par défaut, le shortcode affiche des liens vers les pages filles.
+Utilisation    Paramètre Défaut Description     page current Spécifie le nom de la page (nom de la section) à afficher   style &amp;ldquo;li&amp;rdquo; Choisi le style à utiliser pour afficher les descendants.</description>
+    </item>
+    
+    <item>
+      <title>page test</title>
+      <link>/shortcodes/children/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/shortcodes/children/test/</guid>
+      <description>This is a test demo child page</description>
+    </item>
+    
+    <item>
+      <title>page test</title>
+      <link>/shortcodes/children/test.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/shortcodes/children/test.fr/</guid>
+      <description>Ceci est une page de demo</description>
+    </item>
+    
+  </channel>
+</rss>
