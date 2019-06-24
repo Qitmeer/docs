@@ -2,15 +2,15 @@
 title: NxTools
 weight: 2
 pre: "<b>2. </b>"
-chapter: true
+# chapter: true
 ---
 
-# nx user guide
+## nx user guide
 nx is a command-line tool that is a superset of bx commands and provides a variety of commands for key management and transaction construction.
 
 ## Prerequisites
 
-- Update Go to version at least 1.12 (required >= **1.12**)
+Update Go to version at least 1.12 (required >= **1.12**)
 
 Check your golang version
 
@@ -92,7 +92,7 @@ addr & tx & sign
 
 #### base58-encode
 
-encode a base16 string to a base58 string
+- encode a base16 string to a base58 string
 
 ##### Example
 
@@ -109,7 +109,7 @@ encode a base16 string to a base58 string
 
 #### base58-decode
 
-decode a base58 string to a base16 string
+- decode a base58 string to a base16 string
 
 ##### Example
 
@@ -126,7 +126,7 @@ decode a base58 string to a base16 string
 
 #### base58check-encode
 
-base16 string into HLC or BTC address.
+- base16 string into HLC or BTC address.
 
 ```bash
 ~ nx base58check-encode
