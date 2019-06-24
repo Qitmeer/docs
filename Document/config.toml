@@ -2,15 +2,15 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Hugo Learn Documentation"
-theme = "hugo-theme-learn"
+title = "qitmeer Documentation"
+theme = "qitmeer-doc"
 themesdir = "./themes/"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
   editURL = "https://github.com/HalalChain/docs/tree/master/Document/content/"
-  description = "Documentation for Hugo Learn Theme"
+  description = "Documentation for Hugo qitmeer-doc"
   author = "Mathieu Cornic"
   showVisitedLinks = false
   disableBreadcrumb = false
@@ -21,16 +21,6 @@ defaultContentLanguageInSubdir= true
 home = [ "HTML", "RSS", "JSON"]
 
 
-[Languages]
-# [Languages.en]
-# title = "Documentation for Hugo Learn Theme"
-# weight = 2
-# languageName = "English"
-
-
-# [Languages.fr]
-# title = "Documentation du thème Hugo Learn"
-# weight = 2
-# languageName = "Français"
+# [Languages]
 
 

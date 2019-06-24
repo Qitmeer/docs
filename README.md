@@ -32,9 +32,8 @@ Hugo Static Site Generator v0.55.6/extended darwin/amd64 BuildDate: unknown
 
 ```bash
 git clone https://github.com/HalalChain/docs.git
-cd docs/Document/themes/
-git clone https://github.com/matcornic/hugo-theme-learn.git
-cd ..
+cd docs/Document/
+https://github.com/matcornic/hugo-theme-learn.git
 hugo sersve
 
 open http://localhost:1313
