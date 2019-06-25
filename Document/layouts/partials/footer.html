@@ -81,7 +81,9 @@
 mermaid.initialize({ startOnLoad: true });
 
 </script>
-
+{{if .Params.mathjax }}
+{{ partial "mathjax.html" . }}
+{{end}}
   
   
 {{ partial "custom-footer.html" . }}
