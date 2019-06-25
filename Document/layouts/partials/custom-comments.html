@@ -3,7 +3,26 @@
         {{ $File := .File }}
         {{ $Site := .Site }}
         {{with $File.Path }}
-        <h5>- <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank" style="color:#777">Edit this page on GitHub</a> -</h5>    
+        <h5 style="font-family: -webkit-body;" > <a class="github-link qitmeer-eidt" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank" style="color:#777"><i class="fab fa-fw fa-github"></i> Edit This Page On GitHub</a> </h5>    
         {{ end }}
       {{ end }}
 </div>
+
+<style>
+  .qitmeer-eidt {
+    background-color: #abb2bf;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 16px;
+    transition: all .3s;
+    -moz-transition: all .3s;	/* Firefox 4 */
+    -webkit-transition: all .3s;	/* Safari 和 Chrome */
+    -o-transition: all .3s;	/* Opera */
+  }
+
+  .qitmeer-eidt:hover {
+    background-color: #74b559;
+    box-shadow: 0px 0px 8px #abd699;
+  }
+
+</style>

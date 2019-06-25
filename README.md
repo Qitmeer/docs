@@ -33,7 +33,7 @@ Hugo Static Site Generator v0.55.6/extended darwin/amd64 BuildDate: unknown
 ```bash
 git clone https://github.com/HalalChain/docs.git
 cd docs/Document/
-https://github.com/matcornic/hugo-theme-learn.git
+
 hugo sersve
 
 open http://localhost:1313
@@ -50,4 +50,31 @@ vim content/example/_index.en.md
 
 > Note that all document files are placed under the content folder
 
-Detailed tutorials are available [hugo_example](https://zhangyi999.github.io/hugo_example/)
+#### Configuration page
+
+```bash
+hugo new content/nxtools/_index.en.md
+cd content/nxtools/_index.en.md
+```
+
+Edit page parameters `content/nxtools/_index.en.md`
+
+```bash
+---
+title: NxTools
+
+# Represents the sorting position of the sidebar
+weight: 1
+
+# According to the serial number
+pre: "<b>1. </b>"
+
+# When true, the page paragraph is displayed in the center
+chapter: true
+
+# This option needs to be set if the page has formula content
+mathjax: true
+---
+
+### content
+```

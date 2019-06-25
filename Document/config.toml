@@ -9,7 +9,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
-  editURL = "https://github.com/HalalChain/docs/tree/master/Document/content/"
+  editURL = "https://github.com/HalalChain/docs/edit/master/Document/content/"
   description = "Documentation for Hugo qitmeer-doc"
   author = "Mathieu Cornic"
   showVisitedLinks = false

@@ -1,0 +1,11 @@
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      messageStyle: "none", 
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX","output/HTML-CSS"],
+      tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+    });
+  </script>
+
+<script src={{"js/sample/MathJax.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}></script>
+<script src={{"js/sample/config/TeX-AMS_HTML-full.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}></script>
