@@ -54,7 +54,7 @@ vim content/example/_index.en.md
 
 ```bash
 hugo new content/nxtools/_index.en.md
-cd content/nxtools/_index.en.md
+vim content/nxtools/_index.en.md
 ```
 
 Edit page parameters `content/nxtools/_index.en.md`
