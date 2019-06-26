@@ -6,7 +6,7 @@ weight: 1
 ---
 
 ## nx user guide
-nx is a command-line tool that is a superset of bx commands and provides a variety of commands for key management and transaction construction.
+nx是一个命令行工具，它是bx命令的超集，为密钥管理和事务构造提供了各种命令。
 
 ## Prerequisites
 
