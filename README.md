@@ -34,7 +34,7 @@ Hugo Static Site Generator v0.55.6/extended darwin/amd64 BuildDate: unknown
 git clone https://github.com/HalalChain/docs.git
 cd docs/Document/
 
-hugo sersve
+hugo serve
 
 open http://localhost:1313
 ```
@@ -78,3 +78,5 @@ mathjax: true
 
 ### content
 ```
+
+Detailed tutorials are available [hugo_example](https://zhangyi999.github.io/hugo_example/)
