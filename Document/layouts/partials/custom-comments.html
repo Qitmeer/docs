@@ -2,8 +2,19 @@
         {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
         {{ $File := .File }}
         {{ $Site := .Site }}
+        {{ $Title := .Title }}
+        
         {{with $File.Path }}
-        <h5 style="font-family: -webkit-body;" > <a class="github-link qitmeer-eidt" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank" style="color:#777"><i class="fab fa-fw fa-github"></i> Edit This Page On GitHub</a> </h5>    
+        <!-- <h5 style="font-family: -webkit-body;" > <a class="github-link qitmeer-eidt" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank" style="color:#777"><i class="fab fa-fw fa-github"></i> Edit This Page On GitHub</a> </h5> -->
+          <div class="library-github" markdown="0">
+            <i class="fab fa-fw fa-github"></i>
+            <strong>Contribute on GitHub</strong>
+            <p>
+              <a target="blank" href="{{ $Site.Params.issueURL }}?title={{ $Title }}&body=Link%3A%C2%A0{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="{{ $Site.Params.viewURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}">View File</a > |
+              <a target="blank" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}">Edit File</a >
+            </p >
+          </div>    
         {{ end }}
       {{ end }}
 </div>
