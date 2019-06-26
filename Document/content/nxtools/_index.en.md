@@ -1,7 +1,7 @@
 ---
 title: NxTools
 weight: 1
-pre: "<b>1. </b>"
+#pre: "<b>1. </b>"
 # chapter: true
 ---
 
