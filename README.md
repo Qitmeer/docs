@@ -78,5 +78,3 @@ mathjax: true
 
 ### content
 ```
-
-Detailed tutorials are available [hugo_example](https://zhangyi999.github.io/hugo_example/)
