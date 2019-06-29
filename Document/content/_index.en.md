@@ -6,13 +6,13 @@ title: "Qitmeer docs"
 
 ------------
 
-The Qitmeer/HLC documentation &amp; guides and tutorials. 
+The Qitmeer/HLC documentation &amp; guides and tutorials.
 
 #### Document List
- - [Introduction](/en/intro/)
- - [Getting Started](/en/getstart/)
- - [Tutorials](en/tutorials/)
+ - [Introduction](./intro/)
+ - [Getting Started](./getstart/)
+ - [Tutorials](./tutorials/)
  - Commands Reference
-   - [Nx Tools](/en/nxtools/)
- - [Frequently Asked Questions](/en/faqs/)
- - [Glossary](en/glossary)
+   - [Nx Tools](./nxtools/)
+ - [Frequently Asked Questions](./faqs/)
+ - [Glossary](./glossary)
