@@ -1,8 +1,8 @@
 baseURL = "/"
 languageCode = "en-US"
-defaultContentLanguage = "cn"
+defaultContentLanguage = "en"
 
-title = "qitmeer Documentation"
+title = "Qitmeer Documentation"
 theme = "qitmeer-doc"
 themesdir = "./themes/"
 metaDataFormat = "yaml"
@@ -26,17 +26,17 @@ home = [ "HTML", "RSS", "JSON"]
 # [Languages]
 [Languages]
 [Languages.cn]
-title = "HLC Documentation"
+title = "Qitmeer 文档"
 weight = 1
-languageName = "简体"
+languageName = "中文（简体）"
 
 [Languages.en]
-title = "HLC Documentation"
+title = "Qitmeer Documentation"
 weight = 1
-languageName = "En"
+languageName = "English"
 
 [Languages.ar]
-title = "HLC ملفات"
+title = "Qitmeer ملفات"
 weight = 1
 languageName = "العربية"
 
