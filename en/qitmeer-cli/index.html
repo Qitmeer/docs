@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/docs/images/favicon.png" type="image/png">
 
-    <title>Tags :: Qitmeer Documentation</title>
+    <title>Qitmeer-cli :: Qitmeer Documentation</title>
 
     
     <link href="/docs/css/nucleus.css?1561869864" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/docs/en/tags/">
+  <body class="" data-url="/docs/en/qitmeer-cli/">
     <nav id="sidebar" class="">
 
 
@@ -173,8 +173,8 @@
   
     
     <li data-nav-id="/docs/en/qitmeer-cli/" title="Qitmeer-cli" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/docs/en/qitmeer-cli/">
@@ -276,41 +276,13 @@
               
               
                   
-                    
-                    
-                      <option id="ar" value="https://halalchain.github.io/docs/ar/tags/">العربية</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-          
-              
               
                   
               
                   
                     
                     
-                      <option id="cn" value="https://halalchain.github.io/docs/cn/tags/">中文（简体）</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="https://halalchain.github.io/docs/en/tags/" selected>English</option>
+                      <option id="en" value="https://halalchain.github.io/docs/en/qitmeer-cli/" selected>English</option>
                     
                   
               
@@ -364,6 +336,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/qitmeer-cli/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -380,7 +363,13 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            <a href='/docs/en/'>Qitmeer docs</a> > Qitmeer-cli
+          
+         
           
         
                  
@@ -389,7 +378,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#qitmeer-cli-user-guide">Qitmeer-cli user guide</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#how-to-build">How to build</a></li>
+<li><a href="#qitmeer-commands">Qitmeer Commands</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -405,18 +404,82 @@
           
             <h1>
               
-              Tags
+              Qitmeer-cli
             </h1>
           
 
         
 
 
-
-
-<ul>
 	
-</ul>
+
+<h2 id="qitmeer-cli-user-guide">Qitmeer-cli user guide</h2>
+
+<p><strong><em>qitmeer-cli</em></strong> is a command-line tool that allows you to send RPC commands to the <strong><em>qitmeer</em></strong> network from the command line.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Update Go to version at least 1.12 (required &gt;= <strong>1.12</strong>)</p>
+
+<p>Check your golang version</p>
+
+<pre><code class="language-shell">$ go version
+go version go1.12 darwin/amd64
+</code></pre>
+
+<h2 id="how-to-build">How to build</h2>
+
+<pre><code class="language-shell">$ mkdir -p /tmp/work
+$ cd /tmp/work
+$ git clone https://github.com/HalalChain/qitmeer-cli.git
+$ go build
+
+</code></pre>
+
+<h2 id="qitmeer-commands">Qitmeer Commands</h2>
+
+<pre><code class="language-shell">$ ./qitmeer-cli help
+qitmeer cli is a RPC tool for the qitmeer network
+
+Usage:
+  qitmeer-cli [command]
+
+Available Commands:
+  createrawtransaction createRawTransaction
+  decoderawtransaction decodeRawTransaction
+  generate             generate {n}, cpu mine n blocks
+  getUtxo              getUtxo tx_hash vout include_mempool,
+  getblock             get block by number or hash
+  getblockcount        get block count
+  getblockhash         get block hash by number
+  getblocktemplate     getblocktemplate
+  getmempool           get mempool
+  getrawtransaction    getrawtransaction
+  help                 Help about any command
+  sendrawtransaction   sendRawTransaction
+  txSign               txSign private_key raw_tx
+
+Flags:
+      --c string           RPC server certificate file path
+      --conf string        RPC username (default &quot;config.toml&quot;)
+  -h, --help               help for qitmeer-cli
+      --notls              Do not verify tls certificates (not recommended!) (default true)
+  -P, --password string    RPC password
+      --proxy string       Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
+      --proxypass string   Password for proxy server
+      --proxyuser string   Username for proxy server
+  -s, --server string      RPC server to connect to (default &quot;127.0.0.1:18131&quot;)
+      --simnet             Connect to the simulation test network
+      --skipverify         Do not verify tls certificates (not recommended!) (default true)
+      --testnet            Connect to testnet
+  -u, --user string        RPC username
+
+Use &quot;qitmeer-cli [command] --help&quot; for more information about a command.
+
+</code></pre>
+
+
+
 
 
 <footer class=" footline" >
@@ -538,6 +601,26 @@
 
     
         
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+            
+            
+        
     
     
 
@@ -581,22 +664,6 @@
 
 
         
-            
-
-
-    
-        
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
 
 
 
@@ -606,13 +673,32 @@
 
 
 
+<a class="nav nav-prev" href="/docs/en/nxtools/" title="NxTools"> <i class="fa fa-chevron-left"></i></a>
 
-<a class="nav nav-next" href="/docs/en/intro/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+
+<a class="nav nav-next" href="/docs/en/faqs/" title="Frequently Asked Questions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
 <div style="text-align: center"> 
         
+        
+        
+        
+        
+        
+        
+          <div class="library-github" markdown="0">
+            <i class="fab fa-fw fa-github"></i>
+            <strong>Contribute on GitHub</strong>
+            <p>
+              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=Qitmeer-cli&body=Link%3A%C2%A0qitmeer-cli%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/qitmeer-cli/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/qitmeer-cli/_index.en.md">Edit File</a >
+            </p >
+          </div>    
+        
+      
 </div>
 <div class="cca4" >
   <p>&copy; Copyright HalalChain 2019.
