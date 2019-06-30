@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-weight: 5
+weight: 15
 #pre: "<b>1. </b>"
 # chapter: true
 ---

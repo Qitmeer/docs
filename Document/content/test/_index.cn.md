@@ -1,6 +1,6 @@
 ---
 title: 测试字体显示和 语法高亮
-weight: 18
+weight: 99 
 #pre: "<b>4. </b>"
 chapter: true
 mathjax: true
