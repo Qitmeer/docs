@@ -71,7 +71,7 @@ Note: github don't support `==hightlight==` markdown. we need to use a html 5 `<
 4. Apply a drop shadow to your image
 5. Select and copy just the image and paste it into your email or desired location.
 
-![My helpful screenshot](/images/showcase/tat.png)
+![My helpful screenshot](/images/showcase/screenshot.png)
 
 [ Stackexchange Question : Screenshot of selected area with shadow](http://apple.stackexchange.com/a/199248)
 
@@ -88,11 +88,11 @@ The script from [here](https://github.com/StefanScherer/dotfiles/blob/master/bin
 
 You might need to `brew install imagemagick` before using it.
 
-![Before add shadow](/images/showcase/tat.png)
+![Before add shadow](/images/showcase/add-shadow-before.png)
 *fig.1 - Before adding the shadow*
 
 
-![After add shadow](/images/showcase/tat.png)
+![After add shadow](/images/showcase/add-shadow-after.png)
 *fig.2 - 阴影效果添加之后*
 
 ### Create favicon.ico
