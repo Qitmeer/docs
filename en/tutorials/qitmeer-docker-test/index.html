@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/docs/images/favicon.png" type="image/png">
 
-    <title>Glossary :: Qitmeer Documentation</title>
+    <title>Qitmeer Testing Guide :: Qitmeer Documentation</title>
 
     
     <link href="/docs/css/nucleus.css?1561892236" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/docs/en/glossary/">
+  <body class="" data-url="/docs/en/tutorials/qitmeer-docker-test/">
     <nav id="sidebar" class="">
 
 
@@ -129,7 +129,7 @@
   
     
     <li data-nav-id="/docs/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -156,8 +156,8 @@
   
     
     <li data-nav-id="/docs/en/tutorials/qitmeer-docker-test/" title="Qitmeer Testing Guide" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/docs/en/tutorials/qitmeer-docker-test/">
@@ -253,8 +253,8 @@
   
     
     <li data-nav-id="/docs/en/glossary/" title="Glossary" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/docs/en/glossary/">
@@ -318,7 +318,7 @@
                   
                     
                     
-                      <option id="en" value="https://halalchain.github.io/docs/en/glossary/" selected>English</option>
+                      <option id="en" value="https://halalchain.github.io/docs/en/tutorials/qitmeer-docker-test/" selected>English</option>
                     
                   
               
@@ -376,7 +376,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/glossary/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/tutorials/qitmeer-docker-test/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -403,7 +403,13 @@
             
           
           
-            <a href='/docs/en/'>Qitmeer docs</a> > Glossary
+            
+            
+          
+          
+            <a href='/docs/en/'>Qitmeer docs</a> > <a href='/docs/en/tutorials/'>Tutorials</a> > Qitmeer Testing Guide
+          
+         
           
          
           
@@ -414,7 +420,35 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#testing-qitmeer-using-docker-image">Testing Qitmeer Using Docker Image</a>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a>
+<ul>
+<li><a href="#install-docker">Install Docker</a></li>
+<li><a href="#install-qitmeer-cli">Install Qitmeer-cli</a></li>
+<li><a href="#install-nx-tool">Install Nx tool</a></li>
+</ul></li>
+<li><a href="#step-by-step-guide">Step-by-Step Guide</a>
+<ul>
+<li><a href="#pull-the-qitmeer-docker-image">Pull the Qitmeer Docker image</a></li>
+<li><a href="#generate-minning-address">Generate Minning address</a></li>
+<li><a href="#start-up-node">Start up Node</a></li>
+<li><a href="#generate-block">Generate Block</a></li>
+<li><a href="#inspect-generated-block">Inspect generated Block</a></li>
+<li><a href="#build-transaction">Build Transaction</a></li>
+<li><a href="#sign-transaction">Sign Transaction</a></li>
+<li><a href="#send-transcation">Send Transcation</a></li>
+<li><a href="#minning">Minning</a></li>
+<li><a href="#verify-transcation">Verify Transcation</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -430,7 +464,7 @@
           
             <h1>
               
-              Glossary
+              Qitmeer Testing Guide
             </h1>
           
 
@@ -438,6 +472,41 @@
 
 
 	
+
+<h2 id="testing-qitmeer-using-docker-image">Testing Qitmeer Using Docker Image</h2>
+
+<p>Here is the step by step guide to show to how setup the testing Qitmeer network by using the Qitmeer docker image.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<h4 id="install-docker">Install Docker</h4>
+
+<h4 id="install-qitmeer-cli">Install Qitmeer-cli</h4>
+
+<h4 id="install-nx-tool">Install Nx tool</h4>
+
+<h3 id="step-by-step-guide">Step-by-Step Guide</h3>
+
+<h4 id="pull-the-qitmeer-docker-image">Pull the Qitmeer Docker image</h4>
+
+<h4 id="generate-minning-address">Generate Minning address</h4>
+
+<h4 id="start-up-node">Start up Node</h4>
+
+<h4 id="generate-block">Generate Block</h4>
+
+<h4 id="inspect-generated-block">Inspect generated Block</h4>
+
+<h4 id="build-transaction">Build Transaction</h4>
+
+<h4 id="sign-transaction">Sign Transaction</h4>
+
+<h4 id="send-transcation">Send Transcation</h4>
+
+<h4 id="minning">Minning</h4>
+
+<h4 id="verify-transcation">Verify Transcation</h4>
+
 
 
 
@@ -529,6 +598,7 @@
 
     
         
+        
     
     
 
@@ -544,6 +614,7 @@
 
     
         
+        
     
     
 
@@ -563,21 +634,8 @@
 
     
         
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
             
-
-
-    
+            
         
     
     
@@ -611,6 +669,21 @@
 
     
         
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
         
     
     
@@ -628,9 +701,6 @@
 
     
         
-            
-            
-        
     
     
 
@@ -651,10 +721,10 @@
 
 
 
-<a class="nav nav-prev" href="/docs/en/faqs/" title="Frequently Asked Questions"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="/docs/en/tutorials/" title="Tutorials"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="/docs/en/test/" title="Test fonts and syntax highlight" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="/docs/en/nxtools/" title="NxTools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -670,9 +740,9 @@
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=Glossary&body=Link%3A%C2%A0glossary%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/glossary/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/glossary/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=Qitmeer%20Testing%20Guide&body=Link%3A%C2%A0tutorials%2fqitmeer-docker-test%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/tutorials/qitmeer-docker-test/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/tutorials/qitmeer-docker-test/_index.en.md">Edit File</a >
             </p >
           </div>    
         

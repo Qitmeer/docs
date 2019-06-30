@@ -18,7 +18,7 @@
 	"title": "Tutorials",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Qitmeer Tutorials List  Qitmeer Tesing Guide: Step-by-Step Guide by Using Docker Image  "
 },
 {
 	"uri": "https://halalchain.github.io/docs/en/nxtools/",
@@ -47,6 +47,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://halalchain.github.io/docs/en/tutorials/qitmeer-docker-test/",
+	"title": "Qitmeer Testing Guide",
+	"tags": [],
+	"description": "",
+	"content": " Testing Qitmeer Using Docker Image Here is the step by step guide to show to how setup the testing Qitmeer network by using the Qitmeer docker image.\nPrerequisites Install Docker Install Qitmeer-cli Install Nx tool Step-by-Step Guide Pull the Qitmeer Docker image Generate Minning address Start up Node Generate Block Inspect generated Block Build Transaction Sign Transaction Send Transcation Minning Verify Transcation "
 },
 {
 	"uri": "https://halalchain.github.io/docs/en/test/",
