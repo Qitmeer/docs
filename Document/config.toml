@@ -1,4 +1,4 @@
-baseURL = "./docs/"
+baseURL = "https://halalchain.github.io/docs"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
