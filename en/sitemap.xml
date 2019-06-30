@@ -3,119 +3,119 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>./docs/en/getstart/</loc>
+    <loc>https://halalchain.github.io/docs/en/getstart/</loc>
   </url>
   
   <url>
-    <loc>./docs/en/intro/</loc>
+    <loc>https://halalchain.github.io/docs/en/intro/</loc>
   </url>
   
   <url>
-    <loc>./docs/en/tutorials/</loc>
+    <loc>https://halalchain.github.io/docs/en/tutorials/</loc>
   </url>
   
   <url>
-    <loc>./docs/en/nxtools/</loc>
+    <loc>https://halalchain.github.io/docs/en/nxtools/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="./docs/cn/nxtools/"
+                href="https://halalchain.github.io/docs/cn/nxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="./docs/ar/nxtools/"
+                href="https://halalchain.github.io/docs/ar/nxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./docs/en/nxtools/"
+                href="https://halalchain.github.io/docs/en/nxtools/"
                 />
   </url>
   
   <url>
-    <loc>./docs/en/faqs/</loc>
+    <loc>https://halalchain.github.io/docs/en/faqs/</loc>
   </url>
   
   <url>
-    <loc>./docs/en/glossary/</loc>
+    <loc>https://halalchain.github.io/docs/en/glossary/</loc>
   </url>
   
   <url>
-    <loc>./docs/en/test/</loc>
+    <loc>https://halalchain.github.io/docs/en/test/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="./docs/ar/test/"
+                href="https://halalchain.github.io/docs/ar/test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="./docs/cn/test/"
+                href="https://halalchain.github.io/docs/cn/test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./docs/en/test/"
+                href="https://halalchain.github.io/docs/en/test/"
                 />
   </url>
   
   <url>
-    <loc>./docs/en/categories/</loc>
+    <loc>https://halalchain.github.io/docs/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="./docs/ar/categories/"
+                href="https://halalchain.github.io/docs/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="./docs/cn/categories/"
+                href="https://halalchain.github.io/docs/cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./docs/en/categories/"
+                href="https://halalchain.github.io/docs/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>./docs/en/</loc>
+    <loc>https://halalchain.github.io/docs/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="./docs/ar/"
+                href="https://halalchain.github.io/docs/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="./docs/cn/"
+                href="https://halalchain.github.io/docs/cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./docs/en/"
+                href="https://halalchain.github.io/docs/en/"
                 />
   </url>
   
   <url>
-    <loc>./docs/en/tags/</loc>
+    <loc>https://halalchain.github.io/docs/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="./docs/ar/tags/"
+                href="https://halalchain.github.io/docs/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="./docs/cn/tags/"
+                href="https://halalchain.github.io/docs/cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./docs/en/tags/"
+                href="https://halalchain.github.io/docs/en/tags/"
                 />
   </url>
   

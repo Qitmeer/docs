@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test fonts and syntax highlight on Qitmeer Documentation</title>
-    <link>./docs/en/test/</link>
+    <link>https://halalchain.github.io/docs/en/test/</link>
     <description>Recent content in Test fonts and syntax highlight on Qitmeer Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="./docs/en/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://halalchain.github.io/docs/en/test/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

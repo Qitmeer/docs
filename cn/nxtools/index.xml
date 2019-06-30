@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nx 工具集 on Qitmeer 文档</title>
-    <link>./docs/cn/nxtools/</link>
+    <link>https://halalchain.github.io/docs/cn/nxtools/</link>
     <description>Recent content in Nx 工具集 on Qitmeer 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="./docs/cn/nxtools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://halalchain.github.io/docs/cn/nxtools/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
