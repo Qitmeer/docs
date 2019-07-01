@@ -36,7 +36,7 @@ cd docs/Document/
 
 hugo serve
 
-open http://localhost:1313
+open http://localhost:1313/docs/
 ```
 
 # How To Add Document
