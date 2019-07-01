@@ -1,9 +1,11 @@
 ---
 title: Test fonts and syntax highlight
-weight: 18
+weight: 99 
 # pre: "<b>4. </b>"
 chapter: true
-mathjax: true
+mathjax: false
+katex: true
+markup: "mmark"
 ---
 
 > To be, or not to be, Ay there's the point, To Die, to sleep, is that all? Aye all: No, to sleep, to dream, aye marry there it goes, For in that dream of death, when we awake, And borne before an everlasting Judge, From whence no passenger ever returned, The undiscovered country, at whose sight The happy smile, and the accursed damn'd.  But for this, the joyful hope of this, Who'd bear the scorns and flattery of the world, Scorned by the right rich, the rich cursed of the poor?  The widow being oppressed, the orphan wrong'd, The taste of hunger, or a tyrants reign, And thousand more calamities besides, To grunt and sweat under this weary life, When that he may his full Quietus make, With a bare bodkin, who would this endure, But for a hope of something after death?  Which puzzles the brain, and doth confound the sense, Which makes us rather bear those evils we have, Than fly to others that we know not of.  Aye that, O this conscience makes cowards of us all, Lady in thy orizons, be all my sins remembered.
@@ -71,7 +73,7 @@ Note: github don't support `==hightlight==` markdown. we need to use a html 5 `<
 4. Apply a drop shadow to your image
 5. Select and copy just the image and paste it into your email or desired location.
 
-![My helpful screenshot](/images/showcase/tat.png)
+![My helpful screenshot](/images/showcase/screenshot.png)
 
 [ Stackexchange Question : Screenshot of selected area with shadow](http://apple.stackexchange.com/a/199248)
 
@@ -88,11 +90,11 @@ The script from [here](https://github.com/StefanScherer/dotfiles/blob/master/bin
 
 You might need to `brew install imagemagick` before using it.
 
-![Before add shadow](/images/showcase/tat.png)
+![Before add shadow](/images/showcase/add-shadow-before.png)
 *fig.1 - Before adding the shadow*
 
 
-![After add shadow](/images/showcase/tat.png)
+![After add shadow](/images/showcase/add-shadow-after.png)
 *fig.2 - 阴影效果添加之后*
 
 ### Create favicon.ico

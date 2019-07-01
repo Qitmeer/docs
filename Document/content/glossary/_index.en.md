@@ -1,6 +1,6 @@
 ---
 title: Glossary
-weight: 6
+weight: 20 
 #pre: "<b>1. </b>"
 # chapter: true
 ---
