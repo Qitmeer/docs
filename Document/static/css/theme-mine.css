@@ -113,6 +113,14 @@ a:hover {
     width: 100% ;
     padding: 10px
 }
+
+
+@media only all and (max-width: 47.938em) {
+    h1  {
+        font-size: 34px ;
+    }
+}
+
 /* 
 @media only all and (max-width: 59.938em) {
     .cca4  {
