@@ -111,8 +111,12 @@ mermaid.initialize({ startOnLoad: true });
 {{if .Params.mathjax }}
 {{ partial "mathjax.html" . }}
 {{end}}
-  
-  
+
+{{if .Params.katex }}
+{{ partial "katex.html" . }}
+{{ end }}
+
 {{ partial "custom-footer.html" . }}
 </body>
+
 </html>

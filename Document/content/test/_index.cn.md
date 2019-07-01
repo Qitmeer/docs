@@ -3,7 +3,9 @@ title: 测试字体显示和 语法高亮
 weight: 99 
 #pre: "<b>4. </b>"
 chapter: true
-mathjax: true
+mathjax: false
+katex: true
+markup: mmark
 ---
 
 > To be, or not to be, Ay there's the point, To Die, to sleep, is that all? Aye all: No, to sleep, to dream, aye marry there it goes, For in that dream of death, when we awake, And borne before an everlasting Judge, From whence no passenger ever returned, The undiscovered country, at whose sight The happy smile, and the accursed damn'd.  But for this, the joyful hope of this, Who'd bear the scorns and flattery of the world, Scorned by the right rich, the rich cursed of the poor?  The widow being oppressed, the orphan wrong'd, The taste of hunger, or a tyrants reign, And thousand more calamities besides, To grunt and sweat under this weary life, When that he may his full Quietus make, With a bare bodkin, who would this endure, But for a hope of something after death?  Which puzzles the brain, and doth confound the sense, Which makes us rather bear those evils we have, Than fly to others that we know not of.  Aye that, O this conscience makes cowards of us all, Lady in thy orizons, be all my sins remembered.
