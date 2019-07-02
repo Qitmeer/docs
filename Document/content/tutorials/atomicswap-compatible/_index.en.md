@@ -5,4 +5,14 @@ weight: 2
 # chapter: true
 ---
 
-## Testing Qitmeer Using Docker Image
+#### Qitmeer-compatible cross-chain atomic swapping
+
+Through this document, HLC and BTC atomic exchanges can be achieved using qitmeer-cli and qx.
+
+#### Theory
+
+#### Command line
+
+#### Example
+
+#### Discovering raw transactions
