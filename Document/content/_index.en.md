@@ -13,7 +13,7 @@ The Qitmeer/HLC documentation &amp; guides and tutorials.
  - [Getting Started](./getstart/)
  - [Tutorials](./tutorials/)
  - Commands Reference
-   - [Nx Tools](./nxtools/)
+   - [Qx Tools](./qxtools/)
    - [Qitmeer-cli](./qitmeer-cli/)
  - [Frequently Asked Questions](./faqs/)
  - [Glossary](./glossary)

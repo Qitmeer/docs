@@ -1,12 +1,15 @@
 ---
-title: Nx 工具集
+title: Qx Tools
 weight: 4
-# pre: "<b>1. </b>"
+#pre: "<b>1. </b>"
 # chapter: true
 ---
 
-## nx user guide
-nx是一个命令行工具，它是bx命令的超集，为密钥管理和事务构造提供了各种命令。
+## Qx user guide
+
+[Qx](https://github.com/HalalChain/qx) is a command-line tool that provides a variety of commands for key management and transaction construction, such as random "seed" generation, public/private key encoding etc. qx cab be built and distributed as a single file binary, which works like the swiss army knife of qitmeer.
+
+Please see more details at [https://github.com/HalalChain/qx](https://github.com/HalalChain/qx)
 
 ## Prerequisites
 
@@ -24,19 +27,19 @@ go version go1.12 darwin/amd64
 ```bash
 ~ mkdir -p /tmp/work
 ~ cd /tmp/work
-~ git clone https://github.com/HalalChain/qitmeer.git
-~ cd qitmeer/tools
+~ git clone https://github.com/HalalChain/qx.git
+~ cd qx
 ~ go build
-~ ./nx --version
-Nx Version : "0.0.1"
+~ ./qx --version
+Qx Version : "0.0.1"
 ```
 
-## nx Commands
+## qx Commands
 
-```bash
-~ nx
+```shell
+~ qx
 
-Usage: nx [--version] [--help] <command> [<args>]
+Usage: qx [--version] [--help] <command> [<args>]
 
 encode and decode :
     base58-encode         encode a base16 string to a base58 string
@@ -88,7 +91,7 @@ addr & tx & sign
 
 ## Encoding Commands
 
-解码和编码 hlc 地址；
+Encode/Decocde Qitmeer address & private/pubkey
 
 #### base58-encode
 
@@ -97,7 +100,7 @@ addr & tx & sign
 ##### Example
 
 ```bash
-~ nx base58-decode RmCYoUMqKZopUkai2YhUFHR9UeqjeyjTAgW
+~ qx base58-decode RmCYoUMqKZopUkai2YhUFHR9UeqjeyjTAgW
 ```
 
 ```bash
@@ -114,7 +117,7 @@ addr & tx & sign
 ##### Example
 
 ```bash
-~ nx base58-decode 1234567890abcdef
+~ qx base58-decode 1234567890abcdef
 ```
 
 ```bash
@@ -126,11 +129,11 @@ addr & tx & sign
 
 #### base58check-encode
 
-- base16 string into HLC or BTC address.
+- base16 string into Qitmeer or BTC address.
 
 ```bash
-~ nx base58check-encode
-Usage: nx base58check-encode [-v <ver>] [hexstring]
+~ qx base58check-encode
+Usage: qx base58check-encode [-v <ver>] [hexstring]
   -a string
     base58check hasher
   -c int
@@ -142,8 +145,8 @@ Usage: nx base58check-encode [-v <ver>] [hexstring]
 ##### Example
 
 ```bash
-# create hlc privnet address by base16
-~ nx base58check-encode c1c3092d17c917c2799c041aeaeac18822772149
+# create qitmeer privnet address by base16
+~ qx base58check-encode c1c3092d17c917c2799c041aeaeac18822772149
 
 # base58 string
 RmPwHCuC2m6gvz9TnVLapHySk1ZU72FTSru
@@ -151,7 +154,7 @@ RmPwHCuC2m6gvz9TnVLapHySk1ZU72FTSru
 
 ```bash
 # create btc testnet address by base16
-~ nx base58check-encode -v btctestnet c1c3092d17c917c2799c041aeaeac18822772149
+~ qx base58check-encode -v btctestnet c1c3092d17c917c2799c041aeaeac18822772149
 
 # base58 string
 myBUMQTmZGK8yKLDranjSQEHbCYCaaywQD
