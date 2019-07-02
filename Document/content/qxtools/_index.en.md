@@ -36,7 +36,7 @@ Qx Version : "0.0.1"
 
 ## qx Commands
 
-```shell
+```bash
 ~ qx
 
 Usage: qx [--version] [--help] <command> [<args>]
