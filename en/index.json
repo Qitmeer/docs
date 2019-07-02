@@ -49,13 +49,6 @@
 	"content": ""
 },
 {
-	"uri": "https://halalchain.github.io/docs/en/getstart/ecc/",
-	"title": "elliptic curve cryptography",
-	"tags": [],
-	"description": "",
-	"content": "Understanding the ECC The basic math that you need to understand ECC, elliptic curve cryptography. The Elliptic curve cryptography works in the core of the crypto alogritham of qitmeer, which works internally when every qitmeer node sign and verify transactions commnuited inside the qitmeer network. The transaction is the basic value transfer unit of the qitmeer blockDAG. You need to understand the elliptic curve cyptography as the fundamentals to understand more advanced topic such as Schnorr signature. zero-knowledage proof \u0026amp; homomorphic encryption etc.\nFinite Fields For cryptographic applications we are mostly interested in elliptic curves over finite fields.\nA finite field is a finite set of numbers. More precisely, it is a field \\(F\\) which contains a finite number of elements.\nThe order of \\(F\\) is the number of elements in \\(F\\).\ntwo operations + (addition) and ⋅ (multiplication) that satisfy the following:\n 1 2  "
-},
-{
 	"uri": "https://halalchain.github.io/docs/en/tutorials/qitmeer-docker-test/",
 	"title": "Qitmeer Testing Guide",
 	"tags": [],
