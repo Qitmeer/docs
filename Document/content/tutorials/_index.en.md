@@ -9,3 +9,4 @@ weight: 3
 
 - [Qitmeer Tesing Guide: Step-by-Step Guide by Using Docker Image](./qitmeer-docker-test)
 
+- [Qitmeer compatible cross-chain atomic swapping](./atomicswap-compatible)
