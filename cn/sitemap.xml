@@ -3,21 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://halalchain.github.io/docs/cn/nxtools/</loc>
+    <loc>https://halalchain.github.io/docs/cn/qxtools/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/nxtools/"
+                href="https://halalchain.github.io/docs/en/qxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/nxtools/"
+                href="https://halalchain.github.io/docs/ar/qxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/nxtools/"
+                href="https://halalchain.github.io/docs/cn/qxtools/"
                 />
   </url>
   
