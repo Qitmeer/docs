@@ -248,6 +248,8 @@ $ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip
 ```
 2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer="IP_OF_MINER:53962 (inbound)" user-agent=/noxd:0.0.1/nox:0.3.0/
 Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
+```
+
 ```shell
 $ cd ~/github.com/HalalChain/qitmeer-cli/
 $ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
