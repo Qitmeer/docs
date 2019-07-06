@@ -247,9 +247,6 @@ $ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip
  Now observe the log of Node A, if the connection is OK, a new log like following should display
 ```
 2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer="IP_OF_MINER:53962 (inbound)" user-agent=/noxd:0.0.1/nox:0.3.0/
-```
-
-##### config  qitmeer-cli 
 Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
 ```shell
 $ cd ~/github.com/HalalChain/qitmeer-cli/
