@@ -100,6 +100,7 @@ go build
 
 * Usage
 ~~~~
+qitmeer cli is a RPC tool for the qitmeer network
 
 Usage:
   qitmeer-cli [command]
@@ -120,8 +121,9 @@ Available Commands:
   txSign               txSign private_key raw_tx
 
 Flags:
-      --c string           RPC server certificate file path
-      --conf string        RPC username (default "config.toml")
+      --cert string        RPC server certificate file path
+  -c, --config string      config file path (default "config.toml")
+      --debug              debug print log
   -h, --help               help for qitmeer-cli
       --notls              Do not verify tls certificates (not recommended!) (default true)
   -P, --password string    RPC password
@@ -132,6 +134,7 @@ Flags:
       --simnet             Connect to the simulation test network
       --skipverify         Do not verify tls certificates (not recommended!) (default true)
       --testnet            Connect to testnet
+      --timeout string     rpc timeout,s:second h:hour m:minute (default "30s")
   -u, --user string        RPC username
 
 Use "qitmeer-cli [command] --help" for more information about a command.
@@ -247,16 +250,11 @@ $ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip
 ```
 
 ##### config  qitmeer-cli 
-Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first.
-```shell
-$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
-```
-
- config working home of qitmeer-cli
+Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
 ```shell
 $ cd ~/github.com/HalalChain/qitmeer-cli/
-$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ./
-$ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --c=./rpc.cert  --server=127.0.0.1:18131"
+$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+$ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131"
 ```
 
 ##### Generate Block
@@ -311,11 +309,17 @@ $ cli getblock BLOCK_HASH |jq '.transactions[0].txid'| tr -d '"' > ~/tx_id.txt
 A coinbase transaction can be spent only with at least 16 blocks confirmation. From the the log, we know that the transacation is created at block height 1000, so we wait until the block height is greater than 1016.
 
 ```shell
-$ cli generate 16
 $ cli getblockcount 
 1017 
 ```
 Note: this operation may be slow because this is CPU mining, anyway, Qitmeer GPU Miner will be ready soon and will make this process really fast.
+
+Currently the miner node  has enabled auto mining by adding --generate parameter. If we remove it, the node will retuen to the default manual mining mode. So we can control how many blocks to be mined accurately, for example:
+
+```shell
+$ cli generate 16
+```
+
 
 ##### Build Transaction
 Qitmeer doesn't accept zero fee transaction to prevent sybli-attack, so we send 2 coins to the reciepient and 2 coins back to the miner as change, leaving the 0.5 difference as the miner fee.
