@@ -99,7 +99,7 @@ go build
 ```
 
 * Usage
-~~~~
+```plain
 qitmeer cli is a RPC tool for the qitmeer network
 
 Usage:
@@ -138,7 +138,7 @@ Flags:
   -u, --user string        RPC username
 
 Use "qitmeer-cli [command] --help" for more information about a command.
-~~~~
+```
 
 ##### qx tool
 qx is a command-line tool that provides a variety of commands for key management and transaction construction. 
@@ -153,7 +153,7 @@ qx
 ```
 
 * Usage
-```bash
+```plain
 Usage: qx [--version] [--help] <command> [<args>]
 
 encode and decode :
@@ -206,7 +206,7 @@ addr & tx & sign
 
 
 ### Step-by-Step Guide
-This experiment demostrates a typical transfer process. The network consists of two nodes, a miner and a recipient. The miner mines a block and receives mining rewards; then he will transfer 1 Qitmeer Coin (HLC) to the recipient.
+This experiment demostrates a typical transfer process. The network consists of two nodes, a miner and a recipient. The miner mines a block and receives mining rewards; then he will transfer 2 Qitmeer Coins to the recipient.
 
 #### Recipient Node
 This node is playing the role of transfer recipient, it starts with a normal full node setting, that's to say that it has no mining functionality.
@@ -228,7 +228,7 @@ $ curl ipinfo.io/ip > ~/recipient_ip.txt
 ```
 
  Share recpient's address and IP
-Share recipient_address.txt and recipient_ip.txt with node B, i,e., the miner.
+Share recipient_address.txt and recipient_ip.txt with the miner.
 
 #### Miner Node
 This node is playing the role of miner and transfer originator, it starts with a full miner setting .
@@ -244,8 +244,8 @@ $ qx ec-to-addr $(qx ec-to-public $(cat ~/miner_key.txt)) > ~/miner_address.txt
 $ alias qitmeer=docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer
 $ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
 ```
- Now observe the log of Node A, if the connection is OK, a new log like following should display
-```
+ Now observe the log of Node Recipient, if the connection is OK, a new log like following should display
+```plain
 2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer="IP_OF_MINER:53962 (inbound)" user-agent=/noxd:0.0.1/nox:0.3.0/
 Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
 ```
@@ -259,10 +259,10 @@ $ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --te
 ##### Generate Block
 
 watch the log window until we find a new block is mining and the log would be like:
-~~~~
+```plain
 2019-07-06|04:23:36.760 [INFO ] Block submitted accepted            module="cpu miner" hash=BLOCK_HASH height=BLOCK_HEIGHT amount=2500000000
 why [MINER_ADDRESS], 1
-~~~~
+```
 In this case, BLOCK_HASH is 00000012524082d9144908e28eddb9e8a971c1b220b5301afa3e4f1597413294 and BLOCK_HEIGHT is 1000
 
 ##### Get UTXO 
