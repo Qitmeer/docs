@@ -320,7 +320,8 @@ Note: this operation may be slow because this is CPU mining, anyway, Qitmeer GPU
 Currently the miner node  has enabled auto mining by adding \--generate parameter. If we remove it, the node will retuen to the default manual mining mode. So we can control how many blocks to be mined accurately, for example:
 
 ```shell
-$ cli generate 16
+# this command may be slow, please increate timeout if got timeout error
+$ cli --timeout=9m generate 16
 ```
 
 
