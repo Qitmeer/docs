@@ -5,16 +5,16 @@ weight: 31
 # chapter: true
 ---
 
-# Testing Qitmeer Using Docker Image
+## Testing Qitmeer Using Docker Image
 
 Here is the step by step guide to show to how setup the testing Qitmeer network by using the Qitmeer docker image.
 
-## Prerequisites
+### Prerequisites
 Before we go with the experiment, we need to ensure the system and qitmeer suite are ready. Since the following experiment pertains two nodes, so we need to perform theses steps on each node.
 
+#### System
 
-### System
-#### Hardware and OS
+##### Hardware and OS
 * Memory: >= 2G
 * Storage: >= 10G
 * OS: >= Ubuntu 16.04
@@ -22,7 +22,8 @@ Before we go with the experiment, we need to ensure the system and qitmeer suite
 
 **Note:** currently, Qitmeer's seeder is not open-sourced and the nodes need to connect with each other directly, thus PUBLIC IP is an obligation. Late on, once seeder is ready, this requirement will be removed.
 
-#### Golang
+##### Golang
+Most of Qitmeer Suite are golang projects and using go modules. 
 
 ```shell
 sudo add-apt-repository ppa:longsleep/golang-backports
@@ -30,9 +31,8 @@ sudo apt-get update
 sudo apt-get install golang-go
 ```
 
-#### Docker
-
-* Install docker on ubuntu:
+##### Docker
+Install docker on ubuntu:
 ```
 sudo apt-get install \
     apt-transport-https \
@@ -47,7 +47,8 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce
 ```
-* If you are already a root user, you can ignore next step
+
+If you are already a root user, you can ignore next step
 ```
 # Add docker user group and add the logged-in user to the docker user group.
 
@@ -56,22 +57,24 @@ sudo gpasswd -a $USER docker
 newgrp docker
 docker ps
 ```
-* You can use `docker -v` to test whether the installation is successful or not.
+ You can use `docker -v` to test whether the installation is successful or not.
 Other systems platforms are similar.You can go [docker](https://www.docker.com/get-started)
 
 
-### Qitmeer suite
-#### Qitmeer Docker image
+#### Qitmeer Suite
+Qitmeer Suite consists of qitmeer Docker, qx, cli
 
-* Pull Docker Image
+##### Qitmeer Docker image
+
+* Installation
 ```shell
 docker pull halalchain/qitmeer
-* Usage:
+```
+
+* Usage
 ```shell
 docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --httpmodules=miner --httpmodules=nox 
 ```
-
-> *Parameters introduction:*
 | Field | Explain |
 | --- | --- |
 | -p 18130:18130 | P2P port mapping, used for nodes to communicate with each other|
@@ -84,7 +87,7 @@ docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Yo
 | httpmodules | It is a list of API modules to expose via the HTTP RPC interface. (Current valid values:nox,miner)|
 
 
-###  Qitmeer-cli
+#####  Qitmeer-cli
 qitmeer cli is a RPC tool for the qitmeer network
 
 * Installation
@@ -97,6 +100,7 @@ go build
 
 * Usage
 ~~~~
+qitmeer cli is a RPC tool for the qitmeer network
 
 Usage:
   qitmeer-cli [command]
@@ -117,8 +121,9 @@ Available Commands:
   txSign               txSign private_key raw_tx
 
 Flags:
-      --c string           RPC server certificate file path
-      --conf string        RPC username (default "config.toml")
+      --cert string        RPC server certificate file path
+  -c, --config string      config file path (default "config.toml")
+      --debug              debug print log
   -h, --help               help for qitmeer-cli
       --notls              Do not verify tls certificates (not recommended!) (default true)
   -P, --password string    RPC password
@@ -129,15 +134,16 @@ Flags:
       --simnet             Connect to the simulation test network
       --skipverify         Do not verify tls certificates (not recommended!) (default true)
       --testnet            Connect to testnet
+      --timeout string     rpc timeout,s:second h:hour m:minute (default "30s")
   -u, --user string        RPC username
 
 Use "qitmeer-cli [command] --help" for more information about a command.
 ~~~~
 
-#### qx tool
+##### qx tool
 qx is a command-line tool that provides a variety of commands for key management and transaction construction. 
 
-* Install
+* Installation
 ```shell
 git clone https://github.com/HalalChain/qx ~/github.com/HalalChain/qx
 cd ~/github.com/HalalChain/qx
@@ -147,7 +153,7 @@ qx
 ```
 
 * Usage
-~~~~
+```bash
 Usage: qx [--version] [--help] <command> [<args>]
 
 encode and decode :
@@ -196,86 +202,72 @@ addr & tx & sign
     msg-verify            validate a message signature
     signature-decode      decode a ECDSA signature
 
-~~~~
+```
 
 
-## Step-by-Step Guide
-### Overview
+### Step-by-Step Guide
 This experiment demostrates a typical transfer process. The network consists of two nodes, a miner and a recipient. The miner mines a block and receives mining rewards; then he will transfer 1 Qitmeer Coin (HLC) to the recipient.
 
-### Node A
+#### Recipient Node
 This node is playing the role of transfer recipient, it starts with a normal full node setting, that's to say that it has no mining functionality.
 
-#### Launch
-
+##### Launch
 ```shell
 docker run -it -p 18130:18130  halalchain/qitmeer 
 ```
-#### Generate Recipient Address
+
+##### Generate Recipient Address
 ```shell
 $ qx ec-new $(qx entropy) > ~/recipient_key.txt
 $ qx ec-to-addr $(qx ec-to-public $(cat ~/recipient_key.txt)) > ~/recipient_address.txt 
 ```
-#### Save IP address
+
+##### Save IP address
 ```shell
 $ curl ipinfo.io/ip > ~/recipient_ip.txt 
 ```
 
-#### Share recpient's address and IP
+ Share recpient's address and IP
 Share recipient_address.txt and recipient_ip.txt with node B, i,e., the miner.
 
-### Node B
+#### Miner Node
 This node is playing the role of miner and transfer originator, it starts with a full miner setting .
 
-#### Generate Minning address
+##### Generate Minning address
 ```shell
 $ qx ec-new $(qx entropy) > ~/miner_key.txt
 $ qx ec-to-addr $(qx ec-to-public $(cat ~/miner_key.txt)) > ~/miner_address.txt 
 ```
 
-#### Launch Node
-
+##### Launch Node
 ```shell
 $ alias qitmeer=docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer
 $ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
 ```
-
-Now observe the log of Node A, if the connection is OK, a new log like following should display
-
-~~~~
+ Now observe the log of Node A, if the connection is OK, a new log like following should display
+```
 2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer="IP_OF_MINER:53962 (inbound)" user-agent=/noxd:0.0.1/nox:0.3.0/
-~~~~
-
-#### config wokring environment of qitmeer-cli 
-Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first.
-
-```shell
-$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
 ```
 
-#### config working home of qitmeer-cli
 ```shell
 $ cd ~/github.com/HalalChain/qitmeer-cli/
-$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ./
-$ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --c=./rpc.cert  --server=127.0.0.1:18131"
+$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+$ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131"
 ```
 
-#### Generate Block
+##### Generate Block
+
 watch the log window until we find a new block is mining and the log would be like:
 ~~~~
 2019-07-06|04:23:36.760 [INFO ] Block submitted accepted            module="cpu miner" hash=BLOCK_HASH height=BLOCK_HEIGHT amount=2500000000
 why [MINER_ADDRESS], 1
 ~~~~
-
 In this case, BLOCK_HASH is 00000012524082d9144908e28eddb9e8a971c1b220b5301afa3e4f1597413294 and BLOCK_HEIGHT is 1000
 
-#### Inspect block
-
-* Get UTXO
-```shell
-$ cli getblock BLOCK_HASH |jq '.transactions[0].vout' 
-```
+##### Get UTXO 
 ```JSON
+$ cli getblock BLOCK_HASH |jq '.transactions[0].vout' 
 [
   {
     "amount": 250000000,
@@ -308,58 +300,47 @@ $ cli getblock BLOCK_HASH |jq '.transactions[0].vout'
 ```
 From the result, we could get the index and the amount of the UTXO, in this case it is the third UTXO, so the index is **2**.; besides, we could know the miner reward is *22.5* Qitmeer Coin (2250000000).
 
-* Get coinbase transaction ID
+##### Get coinbase transaction ID
 ```shell
-cli getblock BLOCK_HASH |jq '.transactions[0].txid'| tr -d '"' > ~/tx_id.txt
-$ 
+$ cli getblock BLOCK_HASH |jq '.transactions[0].txid'| tr -d '"' > ~/tx_id.txt
 ```
-### Wait for the transaction maturity
+##### Transaction maturity
 A coinbase transaction can be spent only with at least 16 blocks confirmation. From the the log, we know that the transacation is created at block height 1000, so we wait until the block height is greater than 1016.
 
 ```shell
-$ cli generate 16
 $ cli getblockcount 
 1017 
 ```
 Note: this operation may be slow because this is CPU mining, anyway, Qitmeer GPU Miner will be ready soon and will make this process really fast.
 
-#### Build Transaction
+Currently the miner node  has enabled auto mining by adding --generate parameter. If we remove it, the node will retuen to the default manual mining mode. So we can control how many blocks to be mined accurately, for example:
 
-* Usage
-```
- qitmeer-cli createrawtransaction {inTxid:vout}... {toAddr:amount}... [flags]
+```shell
+$ cli generate 16
 ```
 
-* Run
+
+##### Build Transaction
 Qitmeer doesn't accept zero fee transaction to prevent sybli-attack, so we send 2 coins to the reciepient and 2 coins back to the miner as change, leaving the 0.5 difference as the miner fee.
 ```shell
-cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '"'> ~/tx.txt
+# Usage: qitmeer-cli createrawtransaction {inTxid:vout}... {toAddr:amount}... [flags]
+
+$ cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '"'> ~/tx.txt
 ```
 
-#### Sign Transaction
-* Usage
-```
-Usage: qitmeer-cli txSign {private_key} {raw_tx} [flags] 
-```
-
-
-* Run
+##### Sign Transaction
 ```shell
+# Usage: qitmeer-cli txSign {private_key} {raw_tx} [flags] 
+
 $ cli txSign $(cat ~/miner_key.txt) $(cat ~/tx.txt) | tr -d '"' > ~/tx.txt
 ```
-
-
-#### Send Transcation
-* Usage:
-```
-  qitmeer-cli sendrawtransaction {raw_tx} {allow_high_fee bool,defalut false} [flags]
-```
-* RUN
+##### Send Transcation
 ```shell
+# Usage: qitmeer-cli sendrawtransaction {raw_tx} {allow_high_fee bool,defalut false} [flags]
 $ cli sendRawTransaction $(cat ~/tx.txt) true 
 "12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc"
 ```
-#### Verify Transcation
+##### Verify Transcation
 Wait for the coming block generated, then check if this transaction is packed inside. It is a unspent transaction, so we should find its UTXO.
 
 ```JSON
