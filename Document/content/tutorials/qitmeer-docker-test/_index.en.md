@@ -95,7 +95,7 @@ qitmeer cli is a RPC tool for the qitmeer network
 git clone https://github.com/HalalChain/qitmeer-cli ~/github.com/HalalChain/qitmeer-cli
 cd ~/github.com/HalalChain/qitmeer-cli
 go build
-./cli
+./qitmeer-cli
 ```
 
 * Usage
@@ -241,7 +241,7 @@ This node is playing the role of miner and transfer originator, it starts with a
 
 ##### Launch Node
 ```shell
- alias qitmeer=docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer
+ alias qitmeer="docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer"  
  qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
 ```
  Now observe the log of Node Recipient, if the connection is OK, a new log like following should display
@@ -321,7 +321,7 @@ Currently the miner node  has enabled auto mining by adding \--generate paramete
 
 ```shell
 # this command may be slow, please increate timeout if got timeout error
-$ cli --timeout=9m generate 16
+cli --timeout=9m generate 16
 ```
 
 
@@ -330,19 +330,19 @@ Qitmeer doesn't accept zero fee transaction to prevent sybli-attack, so we send 
 ```shell
 # Usage: qitmeer-cli createrawtransaction {inTxid:vout}... {toAddr:amount}... [flags]
 
- cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '"'> ~/tx.txt
+ cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '"'> ~/raw_tx.txt
 ```
 
 ##### Sign Transaction
 ```shell
 # Usage: qitmeer-cli txSign {private_key} {raw_tx} [flags] 
 
- cli txSign $(cat ~/miner_key.txt) $(cat ~/tx.txt) | tr -d '"' > ~/tx.txt
+ cli txSign $(cat ~/miner_key.txt) $(cat ~/raw_tx.txt) | tr -d '"' > ~/signed_tx.txt
 ```
 ##### Send Transcation
 ```shell
 # Usage: qitmeer-cli sendrawtransaction {raw_tx} {allow_high_fee bool,defalut false} [flags]
- cli sendRawTransaction $(cat ~/tx.txt) true 
+ cli sendRawTransaction $(cat ~/signed_tx.txt) true 
 "12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc"
 ```
 ##### Verify Transcation
