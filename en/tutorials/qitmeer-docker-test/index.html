@@ -12,20 +12,20 @@
     <title>Qitmeer Testing Guide :: Qitmeer Documentation</title>
 
     
-    <link href="https://halalchain.github.io/docs/css/nucleus.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/fontawesome-all.min.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/hybrid.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/featherlight.min.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/perfect-scrollbar.min.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/auto-complete.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/atom-one-dark-reasonable.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/theme.css?1562033506" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/hugo-theme.css?1562033506" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/nucleus.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/fontawesome-all.min.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/hybrid.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/featherlight.min.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/perfect-scrollbar.min.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/auto-complete.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/atom-one-dark-reasonable.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/theme.css?1562589329" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/hugo-theme.css?1562589329" rel="stylesheet">
     
-      <link href="https://halalchain.github.io/docs/css/theme-mine.css?1562033506" rel="stylesheet">
+      <link href="https://halalchain.github.io/docs/css/theme-mine.css?1562589329" rel="stylesheet">
     
 
-    <script src="https://halalchain.github.io/docs/js/jquery-3.3.1.min.js?1562033506"></script>
+    <script src="https://halalchain.github.io/docs/js/jquery-3.3.1.min.js?1562589329"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://halalchain.github.io/docs/js/lunr.min.js?1562033506"></script>
-<script type="text/javascript" src="https://halalchain.github.io/docs/js/auto-complete.js?1562033506"></script>
+<script type="text/javascript" src="https://halalchain.github.io/docs/js/lunr.min.js?1562589329"></script>
+<script type="text/javascript" src="https://halalchain.github.io/docs/js/auto-complete.js?1562589329"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/halalchain.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://halalchain.github.io/docs/js/search.js?1562033506"></script>
+<script type="text/javascript" src="https://halalchain.github.io/docs/js/search.js?1562589329"></script>
 
     
   </div>
@@ -428,22 +428,40 @@
 <ul>
 <li><a href="#prerequisites">Prerequisites</a>
 <ul>
-<li><a href="#install-docker">Install Docker</a></li>
-<li><a href="#install-qitmeer-cli">Install Qitmeer-cli</a></li>
-<li><a href="#install-nx-tool">Install Nx tool</a></li>
+<li><a href="#system">System</a>
+<ul>
+<li><a href="#hardware-and-os">Hardware and OS</a></li>
+<li><a href="#golang">Golang</a></li>
+<li><a href="#docker">Docker</a></li>
+</ul></li>
+<li><a href="#qitmeer-suite">Qitmeer Suite</a>
+<ul>
+<li><a href="#qitmeer-docker-image">Qitmeer Docker image</a></li>
+<li><a href="#qitmeer-cli">Qitmeer-cli</a></li>
+<li><a href="#qx-tool">qx tool</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#step-by-step-guide">Step-by-Step Guide</a>
 <ul>
-<li><a href="#pull-the-qitmeer-docker-image">Pull the Qitmeer Docker image</a></li>
+<li><a href="#recipient-node">Recipient Node</a>
+<ul>
+<li><a href="#launch">Launch</a></li>
+<li><a href="#generate-recipient-address">Generate Recipient Address</a></li>
+<li><a href="#save-ip-address">Save IP address</a></li>
+</ul></li>
+<li><a href="#miner-node">Miner Node</a>
+<ul>
 <li><a href="#generate-minning-address">Generate Minning address</a></li>
-<li><a href="#start-up-node">Start up Node</a></li>
+<li><a href="#launch-node">Launch Node</a></li>
 <li><a href="#generate-block">Generate Block</a></li>
-<li><a href="#inspect-generated-block">Inspect generated Block</a></li>
+<li><a href="#get-utxo">Get UTXO</a></li>
+<li><a href="#get-coinbase-transaction-id">Get coinbase transaction ID</a></li>
+<li><a href="#transaction-maturity">Transaction maturity</a></li>
 <li><a href="#build-transaction">Build Transaction</a></li>
 <li><a href="#sign-transaction">Sign Transaction</a></li>
 <li><a href="#send-transcation">Send Transcation</a></li>
-<li><a href="#minning">Minning</a></li>
 <li><a href="#verify-transcation">Verify Transcation</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -479,33 +497,427 @@
 
 <h3 id="prerequisites">Prerequisites</h3>
 
-<h4 id="install-docker">Install Docker</h4>
+<p>Before we go with the experiment, we need to ensure the system and qitmeer suite are ready. Since the following experiment pertains two nodes, so we need to perform theses steps on each node.</p>
 
-<h4 id="install-qitmeer-cli">Install Qitmeer-cli</h4>
+<h4 id="system">System</h4>
 
-<h4 id="install-nx-tool">Install Nx tool</h4>
+<h5 id="hardware-and-os">Hardware and OS</h5>
+
+<ul>
+<li>Memory: &gt;= 2G</li>
+<li>Storage: &gt;= 10G</li>
+<li>OS: &gt;= Ubuntu 16.04</li>
+<li>Network: &gt;= 2M b/s bandwidth, with PUBLIC IP</li>
+</ul>
+
+<p><strong>Note:</strong> currently, Qitmeer&rsquo;s seeder is not open-sourced and the nodes need to connect with each other directly, thus PUBLIC IP is an obligation. Late on, once seeder is ready, this requirement will be removed.</p>
+
+<h5 id="golang">Golang</h5>
+
+<p>Most of Qitmeer Suite are golang projects and using go modules.</p>
+
+<pre><code class="language-shell">sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt-get update
+sudo apt-get install golang-go
+</code></pre>
+
+<h5 id="docker">Docker</h5>
+
+<p>Install docker on ubuntu:</p>
+
+<pre><code>sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable&quot;
+sudo apt-get update
+sudo apt-get install docker-ce
+</code></pre>
+
+<p>If you are already a root user, you can ignore next step</p>
+
+<pre><code># Add docker user group and add the logged-in user to the docker user group.
+
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
+docker ps
+</code></pre>
+
+<p>You can use <code>docker -v</code> to test whether the installation is successful or not.
+Other systems platforms are similar.You can go <a href="https://www.docker.com/get-started">docker</a></p>
+
+<h4 id="qitmeer-suite">Qitmeer Suite</h4>
+
+<p>Qitmeer Suite consists of qitmeer Docker, qx, cli</p>
+
+<h5 id="qitmeer-docker-image">Qitmeer Docker image</h5>
+
+<ul>
+<li><p>Installation</p>
+
+<pre><code class="language-shell">docker pull halalchain/qitmeer
+</code></pre></li>
+
+<li><p>Usage</p>
+
+<pre><code class="language-shell">docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --httpmodules=miner --httpmodules=nox 
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Explain</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>-p 18130:18130</td>
+<td>P2P port mapping, used for nodes to communicate with each other</td>
+</tr>
+
+<tr>
+<td>-p 18131:18131</td>
+<td>PRC port mapping, used for clients to call  services  remotely</td>
+</tr>
+
+<tr>
+<td>miningaddr</td>
+<td>Miner account address</td>
+</tr>
+
+<tr>
+<td>debuglevel</td>
+<td>Logging level {trace, debug, info, warn, error, critical}</td>
+</tr>
+
+<tr>
+<td>addpeer</td>
+<td>Add a peer to connect with at startup</td>
+</tr>
+
+<tr>
+<td>generate</td>
+<td>Generate (mine) coins using the CPU</td>
+</tr>
+
+<tr>
+<td>connect</td>
+<td>Connect only to the specified peers at startup</td>
+</tr>
+
+<tr>
+<td>httpmodules</td>
+<td>It is a list of API modules to expose via the HTTP RPC interface. (Current valid values:nox,miner)</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+<h5 id="qitmeer-cli">Qitmeer-cli</h5>
+
+<p>qitmeer cli is a RPC tool for the qitmeer network</p>
+
+<ul>
+<li><p>Installation</p>
+
+<pre><code class="language-shell">git clone https://github.com/HalalChain/qitmeer-cli ~/github.com/HalalChain/qitmeer-cli
+cd ~/github.com/HalalChain/qitmeer-cli
+go build
+./qitmeer-cli
+</code></pre></li>
+
+<li><p>Usage</p>
+
+<pre><code class="language-plain">qitmeer cli is a RPC tool for the qitmeer network
+
+Usage:
+qitmeer-cli [command]
+
+Available Commands:
+createrawtransaction createRawTransaction
+decoderawtransaction decodeRawTransaction
+generate             generate {n}, cpu mine n blocks
+getUtxo              getUtxo tx_hash vout include_mempool,
+getblock             get block by number or hash
+getblockcount        get block count
+getblockhash         get block hash by number
+getblocktemplate     getblocktemplate
+getmempool           get mempool
+getrawtransaction    getrawtransaction
+help                 Help about any command
+sendrawtransaction   sendRawTransaction
+txSign               txSign private_key raw_tx
+
+Flags:
+  --cert string        RPC server certificate file path
+-c, --config string      config file path (default &quot;config.toml&quot;)
+  --debug              debug print log
+-h, --help               help for qitmeer-cli
+  --notls              Do not verify tls certificates (not recommended!) (default true)
+-P, --password string    RPC password
+  --proxy string       Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
+  --proxypass string   Password for proxy server
+  --proxyuser string   Username for proxy server
+-s, --server string      RPC server to connect to (default &quot;127.0.0.1:18131&quot;)
+  --simnet             Connect to the simulation test network
+  --skipverify         Do not verify tls certificates (not recommended!) (default true)
+  --testnet            Connect to testnet
+  --timeout string     rpc timeout,s:second h:hour m:minute (default &quot;30s&quot;)
+-u, --user string        RPC username
+
+Use &quot;qitmeer-cli [command] --help&quot; for more information about a command.
+</code></pre></li>
+</ul>
+
+<h5 id="qx-tool">qx tool</h5>
+
+<p>qx is a command-line tool that provides a variety of commands for key management and transaction construction.</p>
+
+<ul>
+<li><p>Installation</p>
+
+<pre><code class="language-shell">git clone https://github.com/HalalChain/qx ~/github.com/HalalChain/qx
+cd ~/github.com/HalalChain/qx
+go build
+alias qx=~/github.com/HalalChain/qx/qx
+qx
+</code></pre></li>
+
+<li><p>Usage</p>
+
+<pre><code class="language-plain">Usage: qx [--version] [--help] &lt;command&gt; [&lt;args&gt;]
+
+encode and decode :
+base58-encode         encode a base16 string to a base58 string
+base58-decode         decode a base58 string to a base16 string
+base58check-encode    encode a base58check string
+base58check-decode    decode a base58check string
+base64-encode         encode a base16 string to a base64 string
+base64-encode         encode a base64 string to a base16 string
+rlp-encode            encode a string to a rlp encoded base16 string
+rlp-decode            decode a rlp base16 string to a human-readble representation
+
+hash :
+blake2b256            calculate Blake2b 256 hash of a base16 data.
+blake2b512            calculate Blake2b 512 hash of a base16 data.
+sha256                calculate SHA256 hash of a base16 data.
+sha3-256              calculate SHA3 256 hash of a base16 data.
+keccak-256            calculate legacy keccak 256 hash of a bash16 data.
+blake256              calculate blake256 hash of a base16 data.
+ripemd160             calculate ripemd160 hash of a base16 data.
+bitcion160            calculate ripemd160(sha256(data))
+hash160               calculate ripemd160(blake2b256(data))
+
+entropy (seed) &amp; mnemoic &amp; hd &amp; ec
+entropy               generate a cryptographically secure pseudorandom entropy (seed)
+hd-new                create a new HD(BIP32) private key from an entropy (seed)
+hd-to-ec              convert the HD (BIP32) format private/public key to a EC private/public key
+hd-to-public          derive the HD (BIP32) public key from a HD private key
+hd-decode             decode a HD (BIP32) private/public key serialization format
+hd-derive             Derive a child HD (BIP32) key from another HD public or private key.
+mnemonic-new          create a mnemonic world-list (BIP39) from an entropy
+mnemonic-to-entropy   return back to the entropy (the random seed) from a mnemonic world list (BIP39)
+mnemonic-to-seed      convert a mnemonic world-list (BIP39) to its 512 bits seed
+ec-new                create a new EC private key from an entropy (seed).
+ec-to-public          derive the EC public key from an EC private key (the compressed format by default )
+ec-to-wif             convert an EC private key to a WIF, associates with the compressed public key by default.
+wif-to-ec             convert a WIF private key to an EC private key.
+wif-to-public         derive the EC public key from a WIF private key.
+
+addr &amp; tx &amp; sign
+ec-to-addr            convert an EC public key to a paymant address. default is nox address
+tx-encode             encode a unsigned transaction.
+tx-decode             decode a transaction in base16 to json format.
+tx-sign               sign a transactions using a private key.
+msg-sign              create a message signature
+msg-verify            validate a message signature
+signature-decode      decode a ECDSA signature
+
+</code></pre></li>
+</ul>
 
 <h3 id="step-by-step-guide">Step-by-Step Guide</h3>
 
-<h4 id="pull-the-qitmeer-docker-image">Pull the Qitmeer Docker image</h4>
+<p>This experiment demostrates a typical transfer process. The network consists of two nodes, a miner and a recipient. The miner mines a block and receives mining rewards; then he will transfer 2 Qitmeer Coins to the recipient.</p>
 
-<h4 id="generate-minning-address">Generate Minning address</h4>
+<h4 id="recipient-node">Recipient Node</h4>
 
-<h4 id="start-up-node">Start up Node</h4>
+<p>This node is playing the role of transfer recipient, it starts with a normal full node setting, that&rsquo;s to say that it has no mining functionality.</p>
 
-<h4 id="generate-block">Generate Block</h4>
+<h5 id="launch">Launch</h5>
 
-<h4 id="inspect-generated-block">Inspect generated Block</h4>
+<pre><code class="language-shell">docker run -it -p 18130:18130  halalchain/qitmeer 
+</code></pre>
 
-<h4 id="build-transaction">Build Transaction</h4>
+<h5 id="generate-recipient-address">Generate Recipient Address</h5>
 
-<h4 id="sign-transaction">Sign Transaction</h4>
+<pre><code class="language-shell"> qx ec-new $(qx entropy) &gt; ~/recipient_key.txt
+ qx ec-to-addr $(qx ec-to-public $(cat ~/recipient_key.txt)) &gt; ~/recipient_address.txt 
+</code></pre>
 
-<h4 id="send-transcation">Send Transcation</h4>
+<h5 id="save-ip-address">Save IP address</h5>
 
-<h4 id="minning">Minning</h4>
+<pre><code class="language-shell"> curl ipinfo.io/ip &gt; ~/recipient_ip.txt 
+</code></pre>
 
-<h4 id="verify-transcation">Verify Transcation</h4>
+<p>Share recpient&rsquo;s address and IP
+Share recipient_address.txt and recipient_ip.txt with the miner.</p>
+
+<h4 id="miner-node">Miner Node</h4>
+
+<p>This node is playing the role of miner and transfer originator, it starts with a full miner setting .</p>
+
+<h5 id="generate-minning-address">Generate Minning address</h5>
+
+<pre><code class="language-shell"> qx ec-new $(qx entropy) &gt; ~/miner_key.txt
+ qx ec-to-addr $(qx ec-to-public $(cat ~/miner_key.txt)) &gt; ~/miner_address.txt 
+</code></pre>
+
+<h5 id="launch-node">Launch Node</h5>
+
+<pre><code class="language-shell"> alias qitmeer=&quot;docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer&quot;  
+ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
+</code></pre>
+
+<p>Now observe the log of Node Recipient, if the connection is OK, a new log like following should display</p>
+
+<pre><code class="language-plain">2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer=&quot;IP_OF_MINER:53962 (inbound)&quot; user-agent=/noxd:0.0.1/nox:0.3.0/
+Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
+</code></pre>
+
+<pre><code class="language-shell"> cd ~/github.com/HalalChain/qitmeer-cli/
+ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+ alias cli=&quot;./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131&quot;
+</code></pre>
+
+<h5 id="generate-block">Generate Block</h5>
+
+<p>watch the log window until we find a new block is mining and the log would be like:</p>
+
+<pre><code class="language-plain">2019-07-06|04:23:36.760 [INFO ] Block submitted accepted            module=&quot;cpu miner&quot; hash=BLOCK_HASH height=BLOCK_HEIGHT amount=2500000000
+why [MINER_ADDRESS], 1
+</code></pre>
+
+<p>In this case, BLOCK_HASH is 00000012524082d9144908e28eddb9e8a971c1b220b5301afa3e4f1597413294 and BLOCK_HEIGHT is 1000</p>
+
+<h5 id="get-utxo">Get UTXO</h5>
+
+<pre><code> cli getblock BLOCK_HASH |jq '.transactions[0].vout' 
+</code></pre>
+
+<pre><code class="language-JSON">[
+  {
+    &quot;amount&quot;: 250000000,
+    &quot;scriptPubKey&quot;: {
+      &quot;asm&quot;: &quot;&quot;,
+      &quot;type&quot;: &quot;nonstandard&quot;
+    }
+  },
+  {
+    &quot;amount&quot;: 0,
+    &quot;scriptPubKey&quot;: {
+      &quot;asm&quot;: &quot;OP_RETURN e803000067e7a740bf8fdd3a&quot;,
+      &quot;hex&quot;: &quot;6a0ce803000067e7a740bf8fdd3a&quot;,
+      &quot;type&quot;: &quot;nulldata&quot;
+    }
+  },
+  {
+    &quot;amount&quot;: 2250000000,
+    &quot;scriptPubKey&quot;: {
+      &quot;asm&quot;: &quot;OP_DUP OP_HASH160 f3f61ce15d8b686f2b29d268a901b9d8beef3d3a OP_EQUALVERIFY OP_CHECKSIG&quot;,
+      &quot;hex&quot;: &quot;76a914f3f61ce15d8b686f2b29d268a901b9d8beef3d3a88ac&quot;,
+      &quot;reqSigs&quot;: 1,
+      &quot;type&quot;: &quot;pubkeyhash&quot;,
+      &quot;addresses&quot;: [
+        &quot;TmmC2jmGKUbnhjjhBtRFfJ7m2tRPVvoaXnM&quot;
+      ]
+    }
+  }
+]
+</code></pre>
+
+<p>From the result, we could get the index and the amount of the UTXO, in this case it is the third UTXO, so the index is <strong>2</strong>.; besides, we could know the miner reward is <em>22.5</em> Qitmeer Coin (2250000000).</p>
+
+<h5 id="get-coinbase-transaction-id">Get coinbase transaction ID</h5>
+
+<pre><code class="language-shell"> cli getblock BLOCK_HASH |jq '.transactions[0].txid'| tr -d '&quot;' &gt; ~/tx_id.txt
+</code></pre>
+
+<h5 id="transaction-maturity">Transaction maturity</h5>
+
+<p>A coinbase transaction can be spent only with at least 16 blocks confirmation. From the the log, we know that the transacation is created at block height 1000, so we wait until the block height is greater than 1016.</p>
+
+<pre><code class="language-shell"> cli getblockcount 
+</code></pre>
+
+<pre><code class="language-plain">1017
+</code></pre>
+
+<p>Note: this operation may be slow because this is CPU mining, anyway, Qitmeer GPU Miner will be ready soon and will make this process really fast.</p>
+
+<p>Currently the miner node  has enabled auto mining by adding --generate parameter. If we remove it, the node will retuen to the default manual mining mode. So we can control how many blocks to be mined accurately, for example:</p>
+
+<pre><code class="language-shell"># this command may be slow, please increate timeout if got timeout error
+cli --timeout=9m generate 16
+</code></pre>
+
+<h5 id="build-transaction">Build Transaction</h5>
+
+<p>Qitmeer doesn&rsquo;t accept zero fee transaction to prevent sybli-attack, so we send 2 coins to the reciepient and 2 coins back to the miner as change, leaving the 0.5 difference as the miner fee.</p>
+
+<pre><code class="language-shell"># Usage: qitmeer-cli createrawtransaction {inTxid:vout}... {toAddr:amount}... [flags]
+
+ cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '&quot;'&gt; ~/raw_tx.txt
+</code></pre>
+
+<h5 id="sign-transaction">Sign Transaction</h5>
+
+<pre><code class="language-shell"># Usage: qitmeer-cli txSign {private_key} {raw_tx} [flags] 
+
+ cli txSign $(cat ~/miner_key.txt) $(cat ~/raw_tx.txt) | tr -d '&quot;' &gt; ~/signed_tx.txt
+</code></pre>
+
+<h5 id="send-transcation">Send Transcation</h5>
+
+<pre><code class="language-shell"># Usage: qitmeer-cli sendrawtransaction {raw_tx} {allow_high_fee bool,defalut false} [flags]
+ cli sendRawTransaction $(cat ~/signed_tx.txt) true 
+&quot;12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc&quot;
+</code></pre>
+
+<h5 id="verify-transcation">Verify Transcation</h5>
+
+<p>Wait for the coming block generated, then check if this transaction is packed inside. It is a unspent transaction, so we should find its UTXO.</p>
+
+<pre><code class="language-shell">  cli getUtxo 12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc 0 |jq
+</code></pre>
+
+<pre><code class="language-JSON"> {
+  &quot;bestblock&quot;: &quot;0000000f9cfb63585fcce7df4e10ead67f27ae330d61643d640916fff5e3fe3b&quot;,
+  &quot;confirmations&quot;: 9,
+  &quot;amount&quot;: 20,
+  &quot;scriptPubKey&quot;: {
+    &quot;asm&quot;: &quot;OP_DUP OP_HASH160 f3f61ce15d8b686f2b29d268a901b9d8beef3d3a OP_EQUALVERIFY OP_CHECKSIG&quot;,
+    &quot;hex&quot;: &quot;76a914f3f61ce15d8b686f2b29d268a901b9d8beef3d3a88ac&quot;,
+    &quot;reqSigs&quot;: 1,
+    &quot;type&quot;: &quot;pubkeyhash&quot;,
+    &quot;addresses&quot;: [
+      &quot;TmmC2jmGKUbnhjjhBtRFfJ7m2tRPVvoaXnM&quot;
+    ]
+  },
+  &quot;version&quot;: 1,
+  &quot;coinbase&quot;: false
+}
+</code></pre>
+
+<p>The UXTO is found, thus this transfer is done succesfully.</p>
 
 
 
@@ -761,22 +1173,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://halalchain.github.io/docs/js/clipboard.min.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.min.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.jquery.min.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/jquery.sticky.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/featherlight.min.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/html5shiv-printshiv.min.js?1562033506"></script>
+<script src="https://halalchain.github.io/docs/js/clipboard.min.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.min.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.jquery.min.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/jquery.sticky.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/featherlight.min.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/html5shiv-printshiv.min.js?1562589329"></script>
 
-<script src="https://halalchain.github.io/docs/js/highlight.pack.js?1562033506"></script>
+<script src="https://halalchain.github.io/docs/js/highlight.pack.js?1562589329"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://halalchain.github.io/docs/js/modernizr.custom-3.6.0.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/learn.js?1562033506"></script>
-<script src="https://halalchain.github.io/docs/js/hugo-learn.js?1562033506"></script>
-<link href="https://halalchain.github.io/docs/mermaid/mermaid.css?1562033506" rel="stylesheet" />
-<script src="https://halalchain.github.io/docs/mermaid/mermaid.js?1562033506"></script>
+<script src="https://halalchain.github.io/docs/js/modernizr.custom-3.6.0.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/learn.js?1562589329"></script>
+<script src="https://halalchain.github.io/docs/js/hugo-learn.js?1562589329"></script>
+<link href="https://halalchain.github.io/docs/mermaid/mermaid.css?1562589329" rel="stylesheet" />
+<script src="https://halalchain.github.io/docs/mermaid/mermaid.js?1562589329"></script>
 
 
 <script>
