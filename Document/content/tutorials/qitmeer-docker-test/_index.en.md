@@ -95,7 +95,7 @@ qitmeer cli is a RPC tool for the qitmeer network
 git clone https://github.com/HalalChain/qitmeer-cli ~/github.com/HalalChain/qitmeer-cli
 cd ~/github.com/HalalChain/qitmeer-cli
 go build
-./cli
+./qitmeer-cli
 ```
 
 * Usage
@@ -218,13 +218,13 @@ docker run -it -p 18130:18130  halalchain/qitmeer
 
 ##### Generate Recipient Address
 ```shell
-$ qx ec-new $(qx entropy) > ~/recipient_key.txt
-$ qx ec-to-addr $(qx ec-to-public $(cat ~/recipient_key.txt)) > ~/recipient_address.txt 
+ qx ec-new $(qx entropy) > ~/recipient_key.txt
+ qx ec-to-addr $(qx ec-to-public $(cat ~/recipient_key.txt)) > ~/recipient_address.txt 
 ```
 
 ##### Save IP address
 ```shell
-$ curl ipinfo.io/ip > ~/recipient_ip.txt 
+ curl ipinfo.io/ip > ~/recipient_ip.txt 
 ```
 
  Share recpient's address and IP
@@ -235,14 +235,14 @@ This node is playing the role of miner and transfer originator, it starts with a
 
 ##### Generate Minning address
 ```shell
-$ qx ec-new $(qx entropy) > ~/miner_key.txt
-$ qx ec-to-addr $(qx ec-to-public $(cat ~/miner_key.txt)) > ~/miner_address.txt 
+ qx ec-new $(qx entropy) > ~/miner_key.txt
+ qx ec-to-addr $(qx ec-to-public $(cat ~/miner_key.txt)) > ~/miner_address.txt 
 ```
 
 ##### Launch Node
 ```shell
-$ alias qitmeer=docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer
-$ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
+ alias qitmeer="docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer"  
+ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
 ```
  Now observe the log of Node Recipient, if the connection is OK, a new log like following should display
 ```plain
@@ -251,9 +251,9 @@ Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certi
 ```
 
 ```shell
-$ cd ~/github.com/HalalChain/qitmeer-cli/
-$ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
-$ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131"
+ cd ~/github.com/HalalChain/qitmeer-cli/
+ docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+ alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131"
 ```
 
 ##### Generate Block
@@ -266,8 +266,10 @@ why [MINER_ADDRESS], 1
 In this case, BLOCK_HASH is 00000012524082d9144908e28eddb9e8a971c1b220b5301afa3e4f1597413294 and BLOCK_HEIGHT is 1000
 
 ##### Get UTXO 
+```
+ cli getblock BLOCK_HASH |jq '.transactions[0].vout' 
+```
 ```JSON
-$ cli getblock BLOCK_HASH |jq '.transactions[0].vout' 
 [
   {
     "amount": 250000000,
@@ -302,21 +304,24 @@ From the result, we could get the index and the amount of the UTXO, in this case
 
 ##### Get coinbase transaction ID
 ```shell
-$ cli getblock BLOCK_HASH |jq '.transactions[0].txid'| tr -d '"' > ~/tx_id.txt
+ cli getblock BLOCK_HASH |jq '.transactions[0].txid'| tr -d '"' > ~/tx_id.txt
 ```
 ##### Transaction maturity
 A coinbase transaction can be spent only with at least 16 blocks confirmation. From the the log, we know that the transacation is created at block height 1000, so we wait until the block height is greater than 1016.
 
 ```shell
-$ cli getblockcount 
-1017 
+ cli getblockcount 
+```
+```plain
+1017
 ```
 Note: this operation may be slow because this is CPU mining, anyway, Qitmeer GPU Miner will be ready soon and will make this process really fast.
 
-Currently the miner node  has enabled auto mining by adding --generate parameter. If we remove it, the node will retuen to the default manual mining mode. So we can control how many blocks to be mined accurately, for example:
+Currently the miner node  has enabled auto mining by adding \--generate parameter. If we remove it, the node will retuen to the default manual mining mode. So we can control how many blocks to be mined accurately, for example:
 
 ```shell
-$ cli generate 16
+# this command may be slow, please increate timeout if got timeout error
+cli --timeout=9m generate 16
 ```
 
 
@@ -325,26 +330,28 @@ Qitmeer doesn't accept zero fee transaction to prevent sybli-attack, so we send 
 ```shell
 # Usage: qitmeer-cli createrawtransaction {inTxid:vout}... {toAddr:amount}... [flags]
 
-$ cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '"'> ~/tx.txt
+ cli createrawtransaction $(cat ~/tx_id.txt):2 $(cat ~/recipient_address.txt):2 $(cat ~/miner_address.txt):20 | tr -d '"'> ~/raw_tx.txt
 ```
 
 ##### Sign Transaction
 ```shell
 # Usage: qitmeer-cli txSign {private_key} {raw_tx} [flags] 
 
-$ cli txSign $(cat ~/miner_key.txt) $(cat ~/tx.txt) | tr -d '"' > ~/tx.txt
+ cli txSign $(cat ~/miner_key.txt) $(cat ~/raw_tx.txt) | tr -d '"' > ~/signed_tx.txt
 ```
 ##### Send Transcation
 ```shell
 # Usage: qitmeer-cli sendrawtransaction {raw_tx} {allow_high_fee bool,defalut false} [flags]
-$ cli sendRawTransaction $(cat ~/tx.txt) true 
+ cli sendRawTransaction $(cat ~/signed_tx.txt) true 
 "12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc"
 ```
 ##### Verify Transcation
 Wait for the coming block generated, then check if this transaction is packed inside. It is a unspent transaction, so we should find its UTXO.
 
+``` shell
+  cli getUtxo 12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc 0 |jq
+```
 ```JSON
- $ cli getUtxo 12844dbc6b829ee021a9a9772c97efbb4afd410698775363be95786c39585bfc 0 |jq
  {
   "bestblock": "0000000f9cfb63585fcce7df4e10ead67f27ae330d61643d640916fff5e3fe3b",
   "confirmations": 9,
