@@ -47,7 +47,7 @@ encode and decode :
     base58check-encode    encode a base58check string
     base58check-decode    decode a base58check string
     base64-encode         encode a base16 string to a base64 string
-    base64-encode         encode a base64 string to a base16 string
+    base64-decode         decode a base64 string to a base16 string
     rlp-encode            encode a string to a rlp encoded base16 string
     rlp-decode            decode a rlp base16 string to a human-readble representation
 
@@ -71,7 +71,7 @@ entropy (seed) & mnemoic & hd & ec
     hd-derive             Derive a child HD (BIP32) key from another HD public or private key.
     mnemonic-new          create a mnemonic world-list (BIP39) from an entropy
     mnemonic-to-entropy   return back to the entropy (the random seed) from a mnemonic world list (BIP39)
-    mnemonic-to-seed      convert a mnemonic world-list (BIP39) to its 512 bits seed 
+    mnemonic-to-seed      convert a mnemonic world-list (BIP39) to its 512 bits seed.
     ec-new                create a new EC private key from an entropy (seed).
     ec-to-public          derive the EC public key from an EC private key (the compressed format by default )
     ec-to-wif             convert an EC private key to a WIF, associates with the compressed public key by default.
@@ -79,12 +79,10 @@ entropy (seed) & mnemoic & hd & ec
     wif-to-public         derive the EC public key from a WIF private key.
 
 addr & tx & sign
-    ec-to-addr            convert an EC public key to a paymant address. default is nox address
+    ec-to-addr            convert an EC public key to a paymant address. default is qx address
     tx-encode             encode a unsigned transaction.
     tx-decode             decode a transaction in base16 to json format.
     tx-sign               sign a transactions using a private key.
     msg-sign              create a message signature
     msg-verify            validate a message signature
-    signature-decode      decode a ECDSA signature
-
 ```
