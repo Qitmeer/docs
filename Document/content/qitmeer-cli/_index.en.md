@@ -25,6 +25,7 @@ go version go1.12 darwin/amd64
 $ mkdir -p /tmp/work
 $ cd /tmp/work
 $ git clone https://github.com/HalalChain/qitmeer-cli.git
+$ cd qitmeer-cli
 $ go build
 
 ```
