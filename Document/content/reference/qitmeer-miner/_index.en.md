@@ -1,5 +1,5 @@
 ---
-title: "Mining"
+title: "Qitmeer-Miner"
 date: 2019-07-11T21:56:43+08:00
 weight: 5
 #pre: "<b>1. </b>"
