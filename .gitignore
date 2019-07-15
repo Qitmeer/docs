@@ -1,2 +1,4 @@
 Document/public/
 .DS_Store
+config.toml
+.gitignore

@@ -1,5 +1,4 @@
-baseURL = "https://halalchain.github.io/docs"
-canonifyURLs = true
+baseURL = "https://zhangyi999.github.io/docs"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
