@@ -5,36 +5,36 @@ weight: 2
 # chapter: true
 ---
 
-### Qitmeer Cross-chain Atomic-Swapping
+## Qitmeer Cross-chain Atomic-Swapping
 
 Through this tutorial, we demonstrate the QITMEER/BTC atomic-swapp by using qitmeer-cli and qx tool under the qitmeer TestNet.
 
-#### Introduction 
+### Introduction 
 
 What's Atomic-swapping ...
 
-#### Prerequisites 
+### Prerequisites 
 
 - golang
 - qitmeer-cli
 - qx tool
 
-#### Step By Step QIMEER/BTC Atomicswap Demo
+### Step By Step QIMEER/BTC Atomicswap Demo
 
-##### Prepare Private Key & Address
+#### Prepare Private Key & Address
 
-##### Create Secret Key & Secret Key Hash
+#### Create Secret Key & Secret Key Hash
 
-##### Create Qitmeer HTLC (Hash Time-Lock Contract)
+#### Create Qitmeer HTLC (Hash Time-Lock Contract)
 
-##### Broadcasting transaction
+#### Broadcasting transaction
 
-##### Verify 
+#### Verify 
 
-##### Create BTC HTLC 
+#### Create BTC HTLC 
 
-##### Broadcasting transaction
+#### Broadcasting transaction
 
-##### Unlock BTC/Qitmeer HTLC 
+#### Unlock BTC/Qitmeer HTLC 
 
-##### User get BTC/Qitmeer
+#### User get BTC/Qitmeer
