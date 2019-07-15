@@ -15,8 +15,26 @@ What's Atomic-swapping ...
 
 #### Prerequisites 
 
+- golang
+- qitmeer-cli
+- qx tool
+
 #### Step By Step QIMEER/BTC Atomicswap Demo
 
-##### Step 1 
-##### Step 2 
-##### Discovery raw transactions
+##### Prepare Private Key & Address
+
+##### Create Secret Key & Secret Key Hash
+
+##### Create Qitmeer HTLC (Hash Time-Lock Contract)
+
+##### Broadcasting transaction
+
+##### Verify 
+
+##### Create BTC HTLC 
+
+##### Broadcasting transaction
+
+##### Unlock BTC/Qitmeer HTLC 
+
+##### User get BTC/Qitmeer
