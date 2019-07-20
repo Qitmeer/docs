@@ -3,21 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://halalchain.github.io/docs/cn/qxtools/</loc>
+    <loc>https://halalchain.github.io/docs/cn/reference/qxtools/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/qxtools/"
+                href="https://halalchain.github.io/docs/en/reference/qxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/qxtools/"
+                href="https://halalchain.github.io/docs/ar/reference/qxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/qxtools/"
+                href="https://halalchain.github.io/docs/cn/reference/qxtools/"
                 />
   </url>
   
@@ -76,6 +76,26 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://halalchain.github.io/docs/cn/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/cn/reference/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://halalchain.github.io/docs/en/reference/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://halalchain.github.io/docs/ar/reference/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://halalchain.github.io/docs/cn/reference/"
                 />
   </url>
   

@@ -1,6 +1,6 @@
 [
 {
-	"uri": "https://halalchain.github.io/docs/cn/qxtools/",
+	"uri": "https://halalchain.github.io/docs/cn/reference/qxtools/",
 	"title": "Qx 工具集",
 	"tags": [],
 	"description": "",
@@ -26,6 +26,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Qitmeer 技术文档 Qitmeer/HLC 文档，开发手册，指南以及教程\n文档列表  Qx Tools  "
+},
+{
+	"uri": "https://halalchain.github.io/docs/cn/reference/",
+	"title": "References",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://halalchain.github.io/docs/cn/tags/",

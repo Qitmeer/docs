@@ -1,6 +1,6 @@
 [
 {
-	"uri": "https://halalchain.github.io/docs/ar/qxtools/",
+	"uri": "https://halalchain.github.io/docs/ar/reference/qxtools/",
 	"title": "أدوات QX",
 	"tags": [],
 	"description": "",
@@ -26,6 +26,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Qitmeer دليل المستندات التقنية Qitmeer/HLC دليل التطوير الكامل للوثائق\nقائمة الملفات  Qx Tools: QX هي أداة إصدار الأوامر، وهي مجموعة فائقة من الأوامر BX توفر مجموعة متنوعة من الأوامر لإدارة المفاتيح وبناء الخدمات.  "
+},
+{
+	"uri": "https://halalchain.github.io/docs/ar/reference/",
+	"title": "References",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://halalchain.github.io/docs/ar/tags/",
