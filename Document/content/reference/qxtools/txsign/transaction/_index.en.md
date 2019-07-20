@@ -10,7 +10,7 @@ weight: 2
 encode a unsigned transaction.
 
 ```bash
-~ qx ec-to-addr --help
+~ qx tx-encode --help
 
 Usage: qx tx-encode [ec_public_key]
     -i value
