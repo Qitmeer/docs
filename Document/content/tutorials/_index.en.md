@@ -10,3 +10,5 @@ weight: 3
 - [Qitmeer Tesing Guide: Step-by-Step Guide by Using Docker Image](./qitmeer-docker-test)
 
 - [Qitmeer Cross-chain Atomic-swapping](./qitmeer-atomicswap)
+
+- [Qitmeer Miner Guide](./qitmeer-miner)
