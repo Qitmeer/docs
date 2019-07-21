@@ -1,4 +1,4 @@
-# <font color=Chocolate size=6>Miner and mining tutorial</font>
+# <font color=Chocolate size=6>Mining Tutorial</font>
 
 ##  Step 1: Prepare Enviroment
 - Windows 10
@@ -7,7 +7,7 @@
   
 - Ubuntu 19 
 
-   - need display card driver
+   - need graph card driver
     
 ```bash
 $ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit 
@@ -60,3 +60,4 @@ $ ./hlc-miner -s 127.0.0.1:1234 -u test -P test --symbol HLC --notls -i 24 -W 25
 - `--mineraddress` the miner address
 - `-o` the pool address
 - `-m` the pool user account address
+- `--notls` disable TLS for the RPC server
