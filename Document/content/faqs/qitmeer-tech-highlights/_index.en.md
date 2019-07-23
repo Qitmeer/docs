@@ -1,12 +1,9 @@
 ---
-title:  Qitmeer Feature
+title:  Qitmeer Tech Highlights
 weight: 5
 #pre: "<b>1. </b>"
 # chapter: true
 ---
-
-* Classic Blockchain Setting
-  * BlockDAG consensus protocol, which is an optimized balance of Security, Scalabiliy, Fairness and Openess
 
 * Security
   * 50% fault tolerent, fully decentralized
