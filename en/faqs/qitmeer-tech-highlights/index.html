@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://halalchain.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>EC :: Qitmeer Documentation</title>
+    <title>Qitmeer Feature :: Qitmeer Documentation</title>
 
     
     <link href="https://halalchain.github.io/docs/css/nucleus.css?1563874364" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/reference/qxtools/entropy/ec/">
+  <body class="" data-url="/en/faqs/qitmeer-tech-highlights/">
     <nav id="sidebar" class="">
 
 
@@ -235,7 +235,7 @@
   
     
     <li data-nav-id="/en/reference/" title="Commands References" class="dd-item 
-        parent
+        
         
         
         ">
@@ -262,7 +262,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/" title="Qx Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -577,7 +577,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/entropy/" title="Entropy and Mnemoic" class="dd-item 
-        parent
+        
         
         
         ">
@@ -676,8 +676,8 @@
   
     
     <li data-nav-id="/en/reference/qxtools/entropy/ec/" title="EC" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://halalchain.github.io/docs/en/reference/qxtools/entropy/ec/">
@@ -905,7 +905,7 @@
   
     
     <li data-nav-id="/en/faqs/" title="Frequently Asked Questions" class="dd-item 
-        
+        parent
         
         
         ">
@@ -932,8 +932,8 @@
   
     
     <li data-nav-id="/en/faqs/qitmeer-tech-highlights/" title="Qitmeer Feature" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://halalchain.github.io/docs/en/faqs/qitmeer-tech-highlights/">
@@ -1100,7 +1100,7 @@
                   
                     
                     
-                      <option id="en" value="https://halalchain.github.io/docs/en/reference/qxtools/entropy/ec/" selected>English</option>
+                      <option id="en" value="https://halalchain.github.io/docs/en/faqs/qitmeer-tech-highlights/" selected>English</option>
                     
                   
               
@@ -1158,7 +1158,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/reference/qxtools/entropy/ec/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/faqs/qitmeer-tech-highlights/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1189,19 +1189,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://halalchain.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://halalchain.github.io/docs/en/reference/'>Commands References</a> > <a href='https://halalchain.github.io/docs/en/reference/qxtools/'>Qx Tools</a> > <a href='https://halalchain.github.io/docs/en/reference/qxtools/entropy/'>Entropy and Mnemoic</a> > EC
-          
-         
-          
-         
+            <a href='https://halalchain.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://halalchain.github.io/docs/en/faqs/'>Frequently Asked Questions</a> > Qitmeer Feature
           
          
           
@@ -1214,30 +1202,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#ec-new">ec-new</a>
-<ul>
-<li><a href="#use-secp256k1">use secp256k1</a></li>
-</ul></li>
-<li><a href="#ec-to-public">ec-to-public</a>
-<ul>
-<li><a href="#compressed">compressed</a></li>
-<li><a href="#uncompressed">uncompressed</a></li>
-</ul></li>
-<li><a href="#ec-to-wif">ec-to-wif</a>
-<ul>
-<li><a href="#wif-compressed">wif compressed</a></li>
-<li><a href="#wif-uncompressed">wif uncompressed</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -1253,89 +1218,56 @@
           
             <h1>
               
-              EC
+              Qitmeer Feature
             </h1>
           
 
         
 
 
-	
+	<ul>
+<li><p>Classic Blockchain Setting</p>
 
-<h3 id="ec-new">ec-new</h3>
+<ul>
+<li>BlockDAG consensus protocol, which is an optimized balance of Security, Scalabiliy, Fairness and Openess</li>
+</ul></li>
 
-<p>create a new EC private key from an entropy (seed).</p>
+<li><p>Security</p>
 
-<pre><code class="language-bash">~ qx ec-new --help
+<ul>
+<li>50% fault tolerent, fully decentralized</li>
+</ul></li>
 
-Usage: qx ec-new [entropy]  
-    -c string
-       the elliptic curve is using (default &quot;secp256k1&quot;)
-</code></pre>
+<li><p>Scalability</p>
 
-<h4 id="use-secp256k1">use secp256k1</h4>
+<ul>
+<li>Fast confirmation to seconds order, high throughput to thousands order</li>
+</ul></li>
 
-<pre><code class="language-bash">~ qx ec-new 4ec6a3a135aba433b0d0ae5ec31d69c26eb3bd5ac532496529660f61c674d99e
+<li><p>Fairness</p>
 
-3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-</code></pre>
+<ul>
+<li>Not obliged to join mining pools, contribute more mining power, gain more return.</li>
+</ul></li>
 
+<li><p>Inclusion</p>
 
-<div class="notices warning" ><p>Currently only secp256k1 is supported.</p>
-</div>
+<ul>
+<li>Multiple cross-chain solutions to incorprate various decentralized financal scenarios.</li>
+</ul></li>
 
+<li><p>Intrisic Value Guarantee</p>
 
-<hr />
+<ul>
+<li>Tokens are backed by native currency, which is mined by Proof-of-work</li>
+</ul></li>
 
-<h3 id="ec-to-public">ec-to-public</h3>
+<li><p>Assets Authentication Measure</p>
 
-<p>derive the EC public key from an EC private key (the compressed format by default ).</p>
-
-<pre><code class="language-bash">~ qx ec-to-public --help
-
-Usage: qx ec-to-public [ec_private_key]
-    -u    using the uncompressed public key format
-</code></pre>
-
-<h4 id="compressed">compressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-public 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-034d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d70
-</code></pre>
-
-<h4 id="uncompressed">uncompressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-public -u 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-044d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d701df9f31658a5578a8ded7ef2c681033ce0037823f3ed308c06ae7b1b06ce070f
-</code></pre>
-
-<hr />
-
-<h3 id="ec-to-wif">ec-to-wif</h3>
-
-<p>convert an EC private key to a WIF, associates with the compressed public key by default.</p>
-
-<pre><code class="language-bash">~ qx ec-to-wif --help
-
-Usage: qx ec-to-wif [ec_private_key]
-    -u    using the uncompressed public key format
-</code></pre>
-
-<h4 id="wif-compressed">wif compressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-wif 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
-</code></pre>
-
-<h4 id="wif-uncompressed">wif uncompressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-wif -u 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-5JJ6LEMXQhpjLKzBDe23XJXwSfZuafnSJDG6v3QiQtiStcHbZYA
-</code></pre>
+<ul>
+<li>Require a license warranted by renowned organizations to issue Assets</li>
+</ul></li>
+</ul>
 
 
 
@@ -1494,7 +1426,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-        
     
     
 
@@ -1510,7 +1441,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-        
     
     
 
@@ -1525,9 +1455,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
 
     
-        
-            
-            
         
     
     
@@ -1709,7 +1636,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-        
     
     
 
@@ -1724,9 +1650,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
 
     
-        
-            
-            
         
     
     
@@ -1776,7 +1699,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-        
     
     
 
@@ -1792,9 +1714,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
 
     
-        
-            
-            
         
     
     
@@ -1919,6 +1838,7 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
+        
     
     
 
@@ -1934,21 +1854,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
-            
-
-
-    
         
     
     
@@ -1966,21 +1871,8 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
             
-
-
-    
+            
         
     
     
@@ -1988,9 +1880,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
         
         
         
-
-        
-
 
         
 
@@ -2030,6 +1919,39 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
         
 
 
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
 
 
 
@@ -2037,10 +1959,12 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
 
 
-<a class="nav nav-prev" href="https://halalchain.github.io/docs/en/reference/qxtools/entropy/mnemonic/" title="mnemonic"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://halalchain.github.io/docs/en/reference/qxtools/entropy/wif/" title="WIF" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href="https://halalchain.github.io/docs/en/faqs/" title="Frequently Asked Questions"> <i class="fa fa-chevron-left"></i></a>
+
+
+<a class="nav nav-next" href="https://halalchain.github.io/docs/en/faqs/qitmeer-tech-architecture/" title="Qitmeer Tech Architecture" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -2056,9 +1980,9 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=EC&body=Link%3A%C2%A0reference%2fqxtools%2fentropy%2fec%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/reference/qxtools/entropy/ec/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/reference/qxtools/entropy/ec/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=Qitmeer%20Feature&body=Link%3A%C2%A0faqs%2fqitmeer-tech-highlights%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/faqs/qitmeer-tech-highlights/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/faqs/qitmeer-tech-highlights/_index.en.md">Edit File</a >
             </p >
           </div>    
         

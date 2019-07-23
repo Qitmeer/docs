@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://halalchain.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>EC :: Qitmeer Documentation</title>
+    <title> :: Qitmeer Documentation</title>
 
     
     <link href="https://halalchain.github.io/docs/css/nucleus.css?1563874364" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/reference/qxtools/entropy/ec/">
+  <body class="" data-url="/en/tutorials/qitmeer-miner/">
     <nav id="sidebar" class="">
 
 
@@ -129,7 +129,7 @@
   
     
     <li data-nav-id="/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -204,8 +204,8 @@
   
     
     <li data-nav-id="/en/tutorials/qitmeer-miner/" title="" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://halalchain.github.io/docs/en/tutorials/qitmeer-miner/">
@@ -235,7 +235,7 @@
   
     
     <li data-nav-id="/en/reference/" title="Commands References" class="dd-item 
-        parent
+        
         
         
         ">
@@ -262,7 +262,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/" title="Qx Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -577,7 +577,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/entropy/" title="Entropy and Mnemoic" class="dd-item 
-        parent
+        
         
         
         ">
@@ -676,8 +676,8 @@
   
     
     <li data-nav-id="/en/reference/qxtools/entropy/ec/" title="EC" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://halalchain.github.io/docs/en/reference/qxtools/entropy/ec/">
@@ -1100,7 +1100,7 @@
                   
                     
                     
-                      <option id="en" value="https://halalchain.github.io/docs/en/reference/qxtools/entropy/ec/" selected>English</option>
+                      <option id="en" value="https://halalchain.github.io/docs/en/tutorials/qitmeer-miner/" selected>English</option>
                     
                   
               
@@ -1158,7 +1158,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/reference/qxtools/entropy/ec/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/HalalChain/docs/edit/master/Document/content/tutorials/qitmeer-miner/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1189,19 +1189,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://halalchain.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://halalchain.github.io/docs/en/reference/'>Commands References</a> > <a href='https://halalchain.github.io/docs/en/reference/qxtools/'>Qx Tools</a> > <a href='https://halalchain.github.io/docs/en/reference/qxtools/entropy/'>Entropy and Mnemoic</a> > EC
-          
-         
-          
-         
+            <a href='https://halalchain.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://halalchain.github.io/docs/en/tutorials/'>Tutorials</a> > 
           
          
           
@@ -1216,24 +1204,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#font-color-chocolate-size-6-mining-tutorial-font"><font color=Chocolate size=6>Mining Tutorial</font></a>
 <ul>
-<li>
+<li><a href="#step-1-prepare-enviroment">Step 1: Prepare Enviroment</a></li>
+<li><a href="#step-2-run-miner">Step 2: Run Miner</a>
 <ul>
-<li><a href="#ec-new">ec-new</a>
-<ul>
-<li><a href="#use-secp256k1">use secp256k1</a></li>
-</ul></li>
-<li><a href="#ec-to-public">ec-to-public</a>
-<ul>
-<li><a href="#compressed">compressed</a></li>
-<li><a href="#uncompressed">uncompressed</a></li>
-</ul></li>
-<li><a href="#ec-to-wif">ec-to-wif</a>
-<ul>
-<li><a href="#wif-compressed">wif compressed</a></li>
-<li><a href="#wif-uncompressed">wif uncompressed</a></li>
-</ul></li>
+<li><a href="#param-description">Param Description</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1253,7 +1229,7 @@
           
             <h1>
               
-              EC
+              
             </h1>
           
 
@@ -1262,80 +1238,83 @@
 
 	
 
-<h3 id="ec-new">ec-new</h3>
+<h1 id="font-color-chocolate-size-6-mining-tutorial-font"><font color=Chocolate size=6>Mining Tutorial</font></h1>
 
-<p>create a new EC private key from an entropy (seed).</p>
+<h2 id="step-1-prepare-enviroment">Step 1: Prepare Enviroment</h2>
 
-<pre><code class="language-bash">~ qx ec-new --help
+<ul>
+<li><p>Windows 10</p>
 
-Usage: qx ec-new [entropy]  
-    -c string
-       the elliptic curve is using (default &quot;secp256k1&quot;)
+<ul>
+<li>install opencl sdk ,recommend cuda v10.1 see <a href="https://developer.nvidia.com/cuda-downloads">here</a>
+<br /></li>
+</ul></li>
+
+<li><p>Ubuntu 19</p>
+
+<ul>
+<li><p>need graph card driver</p>
+
+<pre><code class="language-bash">$ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit 
+</code></pre></li>
+</ul></li>
+</ul>
+
+<h2 id="step-2-run-miner">Step 2: Run Miner</h2>
+
+<ul>
+<li><p>Download miner from the release <a href="https://github.com/HalalChain/qitmeer-docker-test/tree/master/hlc-miner">here</a></p></li>
+
+<li><p>Unzip the file</p></li>
+
+<li><p>Run with config file <code>halachainminer.conf</code></p>
+
+<ul>
+<li><p>modify the config params</p>
+
+<ul>
+<li><code>mineraddress</code>=TmRvuqtjb3DsYQJTcEZQZD5qfJWcMggdEYP</li>
+<li><code>rpcserver</code>=127.0.0.1:1234</li>
+<li><code>rpcuser</code>=test</li>
+<li><code>rpcpass</code>=test<br />
+
+<br /></li>
+</ul></li>
+
+<li><p>open <code>cmd</code> tools</p></li>
+
+<li><p>cd miner directory</p>
+
+<pre><code class="language-bash"># run
+$ cd (miner directory)
+$ ./hlc-miner
+</code></pre></li>
+</ul></li>
+</ul>
+
+<p><img src="https://github.com/HalalChain/qitmeer-docker-test/blob/master/images/miner.png" alt="dir" /><br />
+- Run with solo command line</p>
+
+<pre><code class="language-bash">#run 
+$ cd (miner directory)
+$ ./hlc-miner -s 127.0.0.1:1234 -u test -P test --symbol HLC --notls -i 24 -W 256 --mineraddress RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn 
 </code></pre>
 
-<h4 id="use-secp256k1">use secp256k1</h4>
+<h3 id="param-description">Param Description</h3>
 
-<pre><code class="language-bash">~ qx ec-new 4ec6a3a135aba433b0d0ae5ec31d69c26eb3bd5ac532496529660f61c674d99e
-
-3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-</code></pre>
-
-
-<div class="notices warning" ><p>Currently only secp256k1 is supported.</p>
-</div>
-
-
-<hr />
-
-<h3 id="ec-to-public">ec-to-public</h3>
-
-<p>derive the EC public key from an EC private key (the compressed format by default ).</p>
-
-<pre><code class="language-bash">~ qx ec-to-public --help
-
-Usage: qx ec-to-public [ec_private_key]
-    -u    using the uncompressed public key format
-</code></pre>
-
-<h4 id="compressed">compressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-public 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-034d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d70
-</code></pre>
-
-<h4 id="uncompressed">uncompressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-public -u 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-044d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d701df9f31658a5578a8ded7ef2c681033ce0037823f3ed308c06ae7b1b06ce070f
-</code></pre>
-
-<hr />
-
-<h3 id="ec-to-wif">ec-to-wif</h3>
-
-<p>convert an EC private key to a WIF, associates with the compressed public key by default.</p>
-
-<pre><code class="language-bash">~ qx ec-to-wif --help
-
-Usage: qx ec-to-wif [ec_private_key]
-    -u    using the uncompressed public key format
-</code></pre>
-
-<h4 id="wif-compressed">wif compressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-wif 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
-</code></pre>
-
-<h4 id="wif-uncompressed">wif uncompressed</h4>
-
-<pre><code class="language-bash">~ qx ec-to-wif -u 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239
-
-5JJ6LEMXQhpjLKzBDe23XJXwSfZuafnSJDG6v3QiQtiStcHbZYA
-</code></pre>
+<ul>
+<li><code>--dag</code> the node is dag node</li>
+<li><code>-s</code> the node rpc listen address</li>
+<li><code>-u</code> the node rpc username</li>
+<li><code>-P</code> the node rpc password</li>
+<li><code>--symbol</code> now just <code>HLC</code> is supported</li>
+<li><code>--i</code> Intensities (the work size is 2^intensity) up to device</li>
+<li><code>--W</code> The explicitly declared sizes of the work to do up to device (overrides intensity)</li>
+<li><code>--mineraddress</code> the miner address</li>
+<li><code>-o</code> the pool address</li>
+<li><code>-m</code> the pool user account address</li>
+<li><code>--notls</code> disable TLS for the RPC server</li>
+</ul>
 
 
 
@@ -1428,6 +1407,110 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+            
+            
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+
+
+        
+            
+
+
+    
+        
+            
+            
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
     
     
 
@@ -1494,7 +1577,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
-        
     
     
 
@@ -1503,122 +1585,6 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
             
         
         
-
-        
-            
-
-
-    
-        
-        
-    
-    
-
-        
-        
-            
-        
-        
-
-        
-            
-
-
-    
-        
-            
-            
-        
-    
-    
-
-        
-        
-            
-        
-        
-
-        
-            
-
-
-    
-        
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
-            
-
-
-    
-        
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
-            
-
-
-    
-        
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
-
-
-        
-            
-
-
-    
-        
-    
-    
-
-        
-        
-            
-        
-        
-
-        
-            
-
-
-    
-        
-    
-    
-
-        
-        
-        
-
-        
-
 
         
             
@@ -1701,39 +1667,20 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
 
         
-
-
-        
             
 
 
     
         
-        
-    
-    
-
-        
-        
-            
-        
-        
-
-        
-            
-
-
-    
-        
-            
-            
-        
     
     
 
         
         
         
+
+        
+
 
         
 
@@ -1749,10 +1696,9 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
         
         
+            
         
-
         
-
 
         
             
@@ -1776,6 +1722,21 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
         
     
     
@@ -1793,8 +1754,21 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
     
         
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
             
-            
+
+
+    
         
     
     
@@ -2037,10 +2011,10 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
 
 
 
-<a class="nav nav-prev" href="https://halalchain.github.io/docs/en/reference/qxtools/entropy/mnemonic/" title="mnemonic"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://halalchain.github.io/docs/en/tutorials/qitmeer-atomicswap/" title="Qitmeer Atomic-swap"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://halalchain.github.io/docs/en/reference/qxtools/entropy/wif/" title="WIF" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://halalchain.github.io/docs/en/reference/" title="Commands References" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -2056,9 +2030,9 @@ KyLSXswbDdBfrJoN6nPc8kPZJHEF5cBYey7f77dfnTFwGVEw1XGQ
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=EC&body=Link%3A%C2%A0reference%2fqxtools%2fentropy%2fec%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/reference/qxtools/entropy/ec/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/reference/qxtools/entropy/ec/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/HalalChain/docs/issues/new?title=&body=Link%3A%C2%A0tutorials%2fqitmeer-miner%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/tree/master/Document/content/tutorials/qitmeer-miner/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/HalalChain/docs/edit/master/Document/content/tutorials/qitmeer-miner/_index.en.md">Edit File</a >
             </p >
           </div>    
         

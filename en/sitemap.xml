@@ -138,6 +138,10 @@
   </url>
   
   <url>
+    <loc>https://halalchain.github.io/docs/en/faqs/qitmeer-tech-highlights/</loc>
+  </url>
+  
+  <url>
     <loc>https://halalchain.github.io/docs/en/faqs/qitmeer-tech-architecture/</loc>
   </url>
   
@@ -190,6 +194,11 @@
                 hreflang="en"
                 href="https://halalchain.github.io/docs/en/test/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/tutorials/qitmeer-miner/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
