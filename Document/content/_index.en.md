@@ -12,8 +12,9 @@ The Qitmeer/HLC documentation &amp; guides and tutorials.
  - [Introduction](./intro/)
  - [Getting Started](./getstart/)
  - [Tutorials](./tutorials/)
- - Commands Reference
-   - [Qx Tools](./qxtools/)
-   - [Qitmeer-cli](./qitmeer-cli/)
+ - [User Guide & Commands Reference](./reference)
+   - [Qx Tools](./reference/qxtools/)
+   - [Qitmeer-cli](./reference/qitmeer-cli/)
+   - [Qitmeer-Miner](./reference/qitmeer-miner)
  - [Frequently Asked Questions](./faqs/)
  - [Glossary](./glossary)
