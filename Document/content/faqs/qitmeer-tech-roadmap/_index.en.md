@@ -8,8 +8,8 @@ weight: 5
 ## recent plan
 
 1. 2019.6.30, Qitmeer Lib and whitepaper open source
-2. 2019.8.1,   Economy Model whitepaper open source
-2. 2019.9.1, Business whitepaper, All Qitmeer Project projects open souce 
+2. 2019.8.1, miner open source 
+2. 2019.9.1, Business whitepaper,Economy Model whitepaper of test net ready, all Qitmeer Project projects open souce 
 3. 2019.10.1, Qitmeer Token Issurance ready  
 4. 2019.11.1, Qitmeer Block DAG ready 
 5. 2019.12.1, Qitmeer OffChain protocol ready  
