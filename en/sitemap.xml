@@ -138,6 +138,10 @@
   </url>
   
   <url>
+    <loc>https://halalchain.github.io/docs/en/faqs/qitmeer-block-dag/</loc>
+  </url>
+  
+  <url>
     <loc>https://halalchain.github.io/docs/en/faqs/qitmeer-tech-architecture/</loc>
   </url>
   
@@ -151,10 +155,6 @@
   
   <url>
     <loc>https://halalchain.github.io/docs/en/faqs/qitmeer-token-issurance/</loc>
-  </url>
-  
-  <url>
-    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/</loc>
   </url>
   
   <url>
@@ -194,6 +194,141 @@
                 hreflang="en"
                 href="https://halalchain.github.io/docs/en/test/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/createrawtransaction/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/decoderawtransaction/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/miner/generate/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getbestblockhash/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblock/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblockbyorder/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblockcount/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblockhash/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblockhashbyrange/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblockheader/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/miner/getblocktemplate/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getblockweight/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/getmainchainheight/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/mempool/getmempool/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/getnodeinfo/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/getpeerinfo/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/getrawtransaction/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/getutxo/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/block/isonmainchain/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/mempool/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/miner/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/sendrawtransaction/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/miner/submitblock/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://halalchain.github.io/docs/en/reference/qitmeer-cli/blockchain/txsign/</loc>
+    <lastmod>2019-07-25T10:02:56+08:00</lastmod>
   </url>
   
   <url>
