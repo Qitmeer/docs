@@ -12,20 +12,20 @@
     <title>Qitmeer-Miner :: Qitmeer Documentation</title>
 
     
-    <link href="https://halalchain.github.io/docs/css/nucleus.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/fontawesome-all.min.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/hybrid.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/featherlight.min.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/perfect-scrollbar.min.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/auto-complete.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/atom-one-dark-reasonable.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/theme.css?1564139308" rel="stylesheet">
-    <link href="https://halalchain.github.io/docs/css/hugo-theme.css?1564139308" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/nucleus.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/fontawesome-all.min.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/hybrid.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/featherlight.min.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/perfect-scrollbar.min.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/auto-complete.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/atom-one-dark-reasonable.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/theme.css?1564139615" rel="stylesheet">
+    <link href="https://halalchain.github.io/docs/css/hugo-theme.css?1564139615" rel="stylesheet">
     
-      <link href="https://halalchain.github.io/docs/css/theme-mine.css?1564139308" rel="stylesheet">
+      <link href="https://halalchain.github.io/docs/css/theme-mine.css?1564139615" rel="stylesheet">
     
 
-    <script src="https://halalchain.github.io/docs/js/jquery-3.3.1.min.js?1564139308"></script>
+    <script src="https://halalchain.github.io/docs/js/jquery-3.3.1.min.js?1564139615"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://halalchain.github.io/docs/js/lunr.min.js?1564139308"></script>
-<script type="text/javascript" src="https://halalchain.github.io/docs/js/auto-complete.js?1564139308"></script>
+<script type="text/javascript" src="https://halalchain.github.io/docs/js/lunr.min.js?1564139615"></script>
+<script type="text/javascript" src="https://halalchain.github.io/docs/js/auto-complete.js?1564139615"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/halalchain.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://halalchain.github.io/docs/js/search.js?1564139308"></script>
+<script type="text/javascript" src="https://halalchain.github.io/docs/js/search.js?1564139615"></script>
 
     
   </div>
@@ -1916,7 +1916,19 @@
 <ul>
 <li><a href="#qitmeer-miner-user-guide">Qitmeer-Miner user guide</a></li>
 <li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#compile">Compile</a></li>
+<li><a href="#compile">Compile</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#any-questions-can-see-issues-https-github-com-halalchain-hlc-miner-issues-q-is-3aissue-is-3aclosed-or-can-create-https-github-com-halalchain-qitmeer-miner-issues-new">Any questions can see <a href="https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed">issues</a> or can <a href="https://github.com/HalalChain/qitmeer-miner/issues/new">create</a></a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
 <li><a href="#run">Run</a></li>
 </ul></li>
 </ul>
@@ -1989,16 +2001,16 @@ $ go build
 <pre><code class="language-bash">$ go build 
 </code></pre>
 
-<p>any questions can see <a href="https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed">issues</a></p></li>
+<h6 id="any-questions-can-see-issues-https-github-com-halalchain-hlc-miner-issues-q-is-3aissue-is-3aclosed-or-can-create-https-github-com-halalchain-qitmeer-miner-issues-new">Any questions can see <a href="https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed">issues</a> or can <a href="https://github.com/HalalChain/qitmeer-miner/issues/new">create</a></h6></li>
 </ul>
 
 <h2 id="run">Run</h2>
 
-<pre><code class="language-bash">$ cp halalchainminer.conf.example halalchainminer.conf
+<pre><code class="language-bash">$ cp qitmeer.conf.example qitmeer.conf
 </code></pre>
 
 <ul>
-<li>1.run with the config file <code>halalchainminer.conf</code></li>
+<li>1.run with the config file <code>qitmeer.conf</code></li>
 
 <li><p>2.run with command</p>
 
@@ -2011,19 +2023,19 @@ Debug Command:
 -T, --testpow=      test pow blake2bd|cuckaroo|cuckatoo
 
 The Config File Options:
--C, --configfile=   Path to configuration file (/Users/fanxu/www/go/src/hlc-miner/halalchainminer.conf)
+-C, --configfile=   Path to configuration file (/Users/fanxu/www/go/src/hlc-miner/qitmeer.conf)
   --minerlog=     Write miner log file (/Users/fanxu/www/go/src/hlc-miner/miner.log)
 
 The Necessary Config Options:
--P, --pow=          blake2bd|cuckaroo|cuckatoo (cuckaroo)
--S, --symbol=       Symbol (HLC)
+-P, --pow=          blake2bd|cuckaroo|cuckatoo (blake2bd)
+-S, --symbol=       Symbol (PMEER)
 
 The Solo Config Option:
 -M, --mineraddress= Miner Address (RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn)
 -s, --rpcserver=    RPC server to connect to (127.0.0.1:1234)
 -u, --rpcuser=      RPC username (test)
 -p, --rpcpass=      RPC password
-  --randstr=      Rand String,Your Unique Marking. (Come from halalchain!)
+  --randstr=      Rand String,Your Unique Marking. (Come from qitmeer!)
   --notls         Do not verify tls certificates (true)
   --rpccert=      RPC server certificate chain for validation (CA.cert)
 
@@ -3224,22 +3236,22 @@ Help Options:
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://halalchain.github.io/docs/js/clipboard.min.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.min.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.jquery.min.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/jquery.sticky.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/featherlight.min.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/html5shiv-printshiv.min.js?1564139308"></script>
+<script src="https://halalchain.github.io/docs/js/clipboard.min.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.min.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/perfect-scrollbar.jquery.min.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/jquery.sticky.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/featherlight.min.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/html5shiv-printshiv.min.js?1564139615"></script>
 
-<script src="https://halalchain.github.io/docs/js/highlight.pack.js?1564139308"></script>
+<script src="https://halalchain.github.io/docs/js/highlight.pack.js?1564139615"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://halalchain.github.io/docs/js/modernizr.custom-3.6.0.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/learn.js?1564139308"></script>
-<script src="https://halalchain.github.io/docs/js/hugo-learn.js?1564139308"></script>
-<link href="https://halalchain.github.io/docs/mermaid/mermaid.css?1564139308" rel="stylesheet" />
-<script src="https://halalchain.github.io/docs/mermaid/mermaid.js?1564139308"></script>
+<script src="https://halalchain.github.io/docs/js/modernizr.custom-3.6.0.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/learn.js?1564139615"></script>
+<script src="https://halalchain.github.io/docs/js/hugo-learn.js?1564139615"></script>
+<link href="https://halalchain.github.io/docs/mermaid/mermaid.css?1564139615" rel="stylesheet" />
+<script src="https://halalchain.github.io/docs/mermaid/mermaid.js?1564139615"></script>
 
 
 <script>
