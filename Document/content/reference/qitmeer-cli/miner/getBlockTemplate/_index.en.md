@@ -1,6 +1,6 @@
 ---
 title: "getBlockTemplate"
-date: 2019-07-25T10:02:56+08:00
+date: 2019-07-29T00:38:09+08:00
 weight: 0
 ---
 
@@ -11,7 +11,7 @@ getBlockTemplate; get new block work to mine
 ### Usage
 
 ```
-qitmeer-cli miner getBlockTemplate [flags]
+qitmeer-cli getBlockTemplate [flags]
 ```
 
 get best block template to mine work

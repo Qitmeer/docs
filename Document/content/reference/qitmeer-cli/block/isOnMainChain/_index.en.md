@@ -1,6 +1,6 @@
 ---
 title: "isOnMainChain"
-date: 2019-07-25T10:02:56+08:00
+date: 2019-07-29T00:38:09+08:00
 weight: 0
 ---
 
@@ -11,7 +11,7 @@ isOnMainChain {hash}; query whether a given block is on the main chain
 ### Usage
 
 ```
-qitmeer-cli block isOnMainChain {hash} [flags]
+qitmeer-cli isOnMainChain [flags]
 ```
 
 

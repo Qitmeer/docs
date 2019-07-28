@@ -1,6 +1,6 @@
 ---
 title: "sendRawTransaction"
-date: 2019-07-25T10:02:56+08:00
+date: 2019-07-29T00:38:09+08:00
 weight: 0
 ---
 
@@ -11,7 +11,7 @@ sendRawTransaction {sign_raw_tx} {allow_high_fee}; allow_high_fee: default false
 ### Usage
 
 ```
-qitmeer-cli blockChain sendRawTransaction {sign_raw_tx} {allow_high_fee} [flags]
+qitmeer-cli sendRawTransaction [flags]
 ```
 
 
