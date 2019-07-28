@@ -1,6 +1,6 @@
 ---
 title: "getBlockHashByRange"
-date: 2019-07-25T10:02:56+08:00
+date: 2019-07-29T00:38:09+08:00
 weight: 0
 ---
 
@@ -11,7 +11,7 @@ getBlockHashByRange {start} {end};Return the hash range of block from 'start' to
 ### Usage
 
 ```
-qitmeer-cli block getBlockHashByRange {start} {end} [flags]
+qitmeer-cli getBlockHashByRange [flags]
 ```
 
 

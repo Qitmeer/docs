@@ -1,6 +1,6 @@
 ---
 title: "getRawTransaction"
-date: 2019-07-25T10:02:56+08:00
+date: 2019-07-29T00:38:09+08:00
 weight: 0
 ---
 
@@ -11,7 +11,7 @@ getRawTransaction {tx_hash} [verbose]; verbose: bool,show detail,defalut true
 ### Usage
 
 ```
-qitmeer-cli blockChain getRawTransaction {tx_hash} [verbose] [flags]
+qitmeer-cli getRawTransaction [flags]
 ```
 
 
