@@ -28,3 +28,4 @@ Qitmeer originates a UTXO-based unique token insurance scheme, which has effecti
 
 Qitmeer devises a family of specifications and protocols to embrace the whole Isamlic financial ecosystem, such as wallet and miners. As for interoperability, Qitmeer calls for utilizing cross-chain protocols to integrate various cryptocurrencies and offer reliable off-chain smart contract services.
 
+#### [Qitmeer mining difficulty adjustment](./qitmeer-difficulty-description)
