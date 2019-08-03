@@ -12,3 +12,4 @@ weight: 15
 - [Qitmeer Tech Roadmap](./qitmeer-tech-roadmap)
 - [Qitmeer Tech Highlights](./qitmeer-tech-highlights)
 - [Qitmeer BlockDAG](./qitmeer-block-dag)
+- [Qitmeer Mining](./qitmeer-mining)
