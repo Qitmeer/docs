@@ -73,7 +73,7 @@ docker pull halalchain/qitmeer
 
 * Usage
 ```shell
-docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --httpmodules=miner --httpmodules=nox 
+docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --modules=miner --modules=qitmeer 
 ```
 | Field | Explain |
 | --- | --- |
@@ -84,7 +84,7 @@ docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Yo
 | addpeer | Add a peer to connect with at startup |
 | generate | Generate (mine) coins using the CPU |
 | connect | Connect only to the specified peers at startup |
-| httpmodules | It is a list of API modules to expose via the HTTP RPC interface. (Current valid values:nox,miner)|
+| modules | It is a list of API modules to expose via the HTTP RPC interface. (Current valid values:qitmeer,miner)|
 
 
 #####  Qitmeer-cli
@@ -242,11 +242,11 @@ This node is playing the role of miner and transfer originator, it starts with a
 ##### Launch Node
 ```shell
  alias qitmeer="docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer"  
- qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=nox  --testnet --rpcuser=test --rpcpass=test --generate
+ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --pmodules=miner --modules=qitmeer  --testnet --rpcuser=test --rpcpass=test --generate
 ```
  Now observe the log of Node Recipient, if the connection is OK, a new log like following should display
 ```plain
-2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer="IP_OF_MINER:53962 (inbound)" user-agent=/noxd:0.0.1/nox:0.3.0/
+2019-07-06|00:20:45.627 [INFO ] New valid peer                      module=blockchain peer="IP_OF_MINER:53962 (inbound)" user-agent=/qitmeerd:0.0.1/qitmeer:0.3.0/
 Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
 ```
 
