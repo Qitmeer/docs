@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qitmeer docs on Qitmeer Documentation</title>
+    <link>https://qitmeer.github.io/docs/en/</link>
+    <description>Recent content in Qitmeer docs on Qitmeer Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://qitmeer.github.io/docs/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mining</title>
+      <link>https://qitmeer.github.io/docs/en/faqs/qitmeer-mining/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qitmeer.github.io/docs/en/faqs/qitmeer-mining/</guid>
+      <description>Q: Why choose Cuckoo Cycle POW?
+A: Proof-of-Work(PoW) is used to confirm transactions and produces new blocks, therefore it is a very important engine in PoW cryptocurrencies. PoW must not enable a participant to have a significant advantage over another participant. That is why Satoshi said: &amp;ldquo;Proof-of-work is essentially one-CPU-one-vote.&amp;rdquo; However, most widely used proof-of-work algorithms, such as SHA-256, Blake2b, Scrypt, are more efficient on ASIC devices when compared to CPUs and GPUs.</description>
+    </item>
+    
+  </channel>
+</rss>

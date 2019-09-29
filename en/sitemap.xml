@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/intro/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-docker-test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/intro/qitmeer-difficulty-description/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/address/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase58/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/seed/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/sha256/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/getstart/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/hd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-atomicswap/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase58check/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/blakehash/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/transaction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase64/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/keccak256/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/mnemonic/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/sign_verify/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/reference/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/reference/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/reference/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/ec/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/reference/qxtools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/reference/qxtools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/reference/qxtools/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/ripemd160/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-miner/</loc>
+    <lastmod>2019-07-11T21:56:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-block-dag/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-mining/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-tech-architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-tech-highlights/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-tech-roadmap/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-token-issurance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/wif/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/bitcion160/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/hash160/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/glossary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/test/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/createrawtransaction/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/decoderawtransaction/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/miner/generate/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getbestblockhash/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblock/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockbyorder/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockcount/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockhash/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockhashbyrange/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockheader/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/miner/getblocktemplate/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockweight/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getmainchainheight/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/mempool/getmempool/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/getnodeinfo/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/getpeerinfo/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/getrawtransaction/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/getutxo/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/isonmainchain/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/mempool/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/miner/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/sendrawtransaction/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/miner/submitblock/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/txsign/</loc>
+    <lastmod>2019-07-29T00:38:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-miner/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/tags/"
+                />
+  </url>
+  
+</urlset>
