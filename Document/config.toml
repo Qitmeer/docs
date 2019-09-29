@@ -1,4 +1,4 @@
-baseURL = "https://halalchain.github.io/docs"
+baseURL = "https://qitmeer.github.io/docs"
 canonifyURLs = true
 languageCode = "en-US"
 defaultContentLanguage = "en"
@@ -10,9 +10,9 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
-  editURL = "https://github.com/HalalChain/docs/edit/master/Document/content/"
-  viewURL = "https://github.com/HalalChain/docs/tree/master/Document/content/"
-  issueURL = "https://github.com/HalalChain/docs/issues/new"
+  editURL = "https://github.com/Qitmeer/docs/edit/master/Document/content/"
+  viewURL = "https://github.com/Qitmeer/docs/tree/master/Document/content/"
+  issueURL = "https://github.com/Qitmeer/docs/issues/new"
   description = "Documentation for Hugo qitmeer-doc"
   author = "Mathieu Cornic"
   showVisitedLinks = false
