@@ -3,8 +3,15 @@
 ##  Step 1: Prepare Enviroment
 - Windows 10
   
-  - install opencl sdk ,recommend cuda v10.1 see [here](https://developer.nvidia.com/cuda-downloads) 
-  
+  - **install opencl sdk**:
+    
+    N card recommend cuda v10.1 see [here](https://developer.nvidia.com/cuda-downloads) .
+    
+    A card recommend Official driver
+                 
+  - **Build Tools for Visual Studio**:  
+    https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
+
 - Ubuntu 19 
 
    - need graph card driver
@@ -16,11 +23,11 @@ $ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit
     
 ## Step 2: Run Miner
 
-- Download miner from the release [here](https://github.com/HalalChain/qitmeer-docker-test/tree/master/hlc-miner)
+- Download miner from the release [here](https://github.com/Qitmeer/qitmeer-miner/releases/tag/v0.2.4)
 
 - Unzip the file
 
-- Run with config file `halachainminer.conf`
+- Run with config file `qitmeer.conf`
 
     - modify the config params 
         
@@ -37,7 +44,7 @@ $ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit
 ```bash
 # run
 $ cd (miner directory)
-$ ./hlc-miner
+$ ./qitmeer-miner
 ```
 ![dir](https://github.com/HalalChain/qitmeer-docker-test/blob/master/images/miner.png)   
 - Run with solo command line
@@ -45,7 +52,7 @@ $ ./hlc-miner
 ```bash
 #run 
 $ cd (miner directory)
-$ ./hlc-miner -s 127.0.0.1:1234 -u test -P test --symbol HLC --notls -i 24 -W 256 --mineraddress RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn 
+$ ./qitmeer-miner -s 127.0.0.1:1234 -u test -P test --symbol PMEER --notls -i 24 -W 256 --mineraddress RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn 
 ```
 
 ### Param Description 
