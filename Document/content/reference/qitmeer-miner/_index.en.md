@@ -1,6 +1,6 @@
 ---
 title: "Qitmeer-Miner"
-date: 2019-07-11T21:56:43+08:00
+date: 2019-10-03T10:56:43+08:00
 weight: 5
 #pre: "<b>1. </b>"
 # chapter: true
@@ -15,15 +15,17 @@ Update Go to version at least 1.12 (required >= **1.12**)
 
 Check your golang version
 
-```shell
-$ go version
-go version go1.12 darwin/amd64
+```bash
+$ go version >= 1.12
+$ cargo >= 1.36.0 (c4fcfb725 2019-05-15)
 ```
-
+    
 ## Compile
 
 ```bash
-$ git clone git@github.com:HalalChain/hlc-miner.git
+$ git clone git@github.com:Qitmeer/qitmeer-miner.git
+$ cd lib/cuckoo
+$ cargo build --release
 ```
 
 * Ubuntu ENV
@@ -48,6 +50,10 @@ go build
 ```
 
 * Windows ENV
+##### Prequisite: 
+1. Install **Build Tools for Visual Studio**:  
+https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
+2. Build
 ```bash
 $ go build 
 ```
@@ -61,46 +67,68 @@ $ cp qitmeer.conf.example qitmeer.conf
 - 1.run with the config file `qitmeer.conf`
 - 2.run with command
 ```bash
-$ ./hlc-miner -h
+
+- 1.run with the config file `qitmeer.conf`
+- 2.run with command
+```
+```bash
+$ ./qitmeer-miner -h
 Usage:
-  hlc-miner [OPTIONS]
+    qitmeer-miner [OPTIONS]
 
 Debug Command:
-  -l, --listdevices   List number of devices.
-  -T, --testpow=      test pow blake2bd|cuckaroo|cuckatoo
+  -l, --listdevices    List number of devices.
 
 The Config File Options:
-  -C, --configfile=   Path to configuration file (/Users/fanxu/www/go/src/hlc-miner/qitmeer.conf)
-      --minerlog=     Write miner log file (/Users/fanxu/www/go/src/hlc-miner/miner.log)
+  -C, --configfile=    Path to configuration file
+      --minerlog=      Write miner log file
 
 The Necessary Config Options:
-  -P, --pow=          blake2bd|cuckaroo|cuckatoo (blake2bd)
-  -S, --symbol=       Symbol (PMEER)
+  -P, --pow=           blake2bd|cuckaroo|cuckatoo (blake2bd)
+  -S, --symbol=        Symbol (PMEER)
+  -N, --network=       network privnet|testnet|mainnet (mainnet)
 
 The Solo Config Option:
-  -M, --mineraddress= Miner Address (RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn)
-  -s, --rpcserver=    RPC server to connect to (127.0.0.1:1234)
-  -u, --rpcuser=      RPC username (test)
-  -p, --rpcpass=      RPC password
-      --randstr=      Rand String,Your Unique Marking. (Come from qitmeer!)
-      --notls         Do not verify tls certificates (true)
-      --rpccert=      RPC server certificate chain for validation (CA.cert)
+  -M, --mineraddress=  Miner Address
+  -s, --rpcserver=     RPC server to connect to (127.0.0.1)
+  -u, --rpcuser=       RPC username
+  -p, --rpcpass=       RPC password
+      --randstr=       Rand String,Your Unique Marking. (Come from Qitmeer!)
+      --notls          Do not verify tls certificates (true)
+      --rpccert=       RPC server certificate chain for validation
 
 The pool Config Option:
-  -o, --pool=         Pool to connect to (e.g.stratum+tcp://pool:port)
-  -m, --pooluser=     Pool username
-  -n, --poolpass=     Pool password
+  -o, --pool=          Pool to connect to (e.g.stratum+tcp://pool:port)
+  -m, --pooluser=      Pool username
+  -n, --poolpass=      Pool password
 
 The Optional Config Option:
-      --trimmerTimes= the cuckaroo trimmer times (40)
-      --proxy=        Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
-      --proxyuser=    Username for proxy server
-      --proxypass=    Password for proxy server
-      --intensity=    Intensities (the work size is 2^intensity) per device. Single global value or a comma
-                      separated list. (24)
-      --worksize=     The explicitly declared sizes of the work to do per device (overrides intensity). Single
-                      global value or a comma separated list. (256)
+      --cpuminer       CPUMiner (false)
+      --proxy=         Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
+      --proxyuser=     Username for proxy server
+      --proxypass=     Password for proxy server
+      --trimmerTimes=  the cuckaroo trimmer times (40)
+      --intensity=     Intensities (the work size is 2^intensity) per device. Single global value or a comma
+                       separated list. (24)
+      --worksize=      The explicitly declared sizes of the work to do per device (overrides intensity). Single
+                       global value or a comma separated list. (256)
+      --timeout=       rpc timeout. (60)
+      --use_devices=   all gpu devices,you can use ./qitmeer-miner -l to see. examples:0,1 use the #0 device
+                       and #1 device
+      --max_tx_count=  max pack tx count (1000)
+      --max_sig_count= max sign tx count (5000)
+      --log_level=     info|debug|error|warn|trace (debug)
+      --stats_server=  stats web server (127.0.0.1:1235)
+      --edge_bits=     edge bits (24)
+      --local_size=    local size (4096)
+      --group_size=    work group size (256)
 
 Help Options:
-  -h, --help          Show this help message
+  -h, --help           Show this help message
 ```
+## Stats Web Server
+- add param `stats_server=127.0.0.1:1235` in qitmeer.conf
+- brower explorer http://127.0.0.1:1235    
+![stats](public/img/miner1.png)  
+![stats](public/img/miner2.png)  
+![stats](public/img/miner3.png)  
