@@ -57,7 +57,7 @@ https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Buil
 ```bash
 $ go build 
 ```
-###### Any questions can see [issues](https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed) or can [create](https://github.com/HalalChain/qitmeer-miner/issues/new)
+#### Any questions can see [issues](https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed) or can [create](https://github.com/HalalChain/qitmeer-miner/issues/new)
         
     
 ## Run
@@ -71,6 +71,7 @@ $ cp qitmeer.conf.example qitmeer.conf
 - 1.run with the config file `qitmeer.conf`
 - 2.run with command
 ```
+
 ```bash
 $ ./qitmeer-miner -h
 Usage:
@@ -126,9 +127,10 @@ The Optional Config Option:
 Help Options:
   -h, --help           Show this help message
 ```
+
 ## Stats Web Server
 - add param `stats_server=127.0.0.1:1235` in qitmeer.conf
-- brower explorer http://127.0.0.1:1235    
-![stats](public/img/miner1.png)  
-![stats](public/img/miner2.png)  
-![stats](public/img/miner3.png)  
+- brower explorer http://127.0.0.1:1235  
+![stats](https://raw.githubusercontent.com/Qitmeer/qitmeer-miner/master/public/img/miner1.png)  
+![stats](https://raw.githubusercontent.com/Qitmeer/qitmeer-miner/master/public/img/miner2.png)  
+![stats](https://raw.githubusercontent.com/Qitmeer/qitmeer-miner/master/public/img/miner3.png)  
