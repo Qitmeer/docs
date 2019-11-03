@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
     <meta name="description" content="Documentation for Hugo qitmeer-doc">
 <meta name="author" content="Mathieu Cornic">
 
@@ -12,20 +12,20 @@
     <title> :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1569746364" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1569746364" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1572750007" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1569746364" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1572750007" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1569746364"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1572750007"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1569746364"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1569746364"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1572750007"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1572750007"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1569746364"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1572750007"></script>
 
     
   </div>
@@ -2009,29 +2009,37 @@
 <li><p>Windows 10</p>
 
 <ul>
-<li>install opencl sdk ,recommend cuda v10.1 see <a href="https://developer.nvidia.com/cuda-downloads">here</a>
+<li><strong>install opencl sdk</strong>:
 <br /></li>
+</ul>
+
+<p>N card recommend cuda v10.1 see <a href="https://developer.nvidia.com/cuda-downloads">here</a> .</p>
+
+<p>A card recommend Official driver</p>
+
+<ul>
+<li><strong>Build Tools for Visual Studio</strong>:<br />
+<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&amp;rel=16">https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&amp;rel=16</a></li>
 </ul></li>
 
 <li><p>Ubuntu 19</p>
 
 <ul>
-<li>need graph card driver
-<br /></li>
-</ul></li>
-</ul>
+<li><p>need graph card driver</p>
 
 <pre><code class="language-bash">$ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit 
-</code></pre>
+</code></pre></li>
+</ul></li>
+</ul>
 
 <h2 id="step-2-run-miner">Step 2: Run Miner</h2>
 
 <ul>
-<li><p>Download miner from the release <a href="https://github.com/HalalChain/qitmeer-docker-test/tree/master/hlc-miner">here</a></p></li>
+<li><p>Download miner from the release <a href="https://github.com/Qitmeer/qitmeer-miner/releases/tag/v0.2.4">here</a></p></li>
 
 <li><p>Unzip the file</p></li>
 
-<li><p>Run with config file <code>halachainminer.conf</code></p>
+<li><p>Run with config file <code>qitmeer.conf</code></p>
 
 <ul>
 <li><p>modify the config params</p>
@@ -2047,21 +2055,21 @@
 
 <li><p>open <code>cmd</code> tools</p></li>
 
-<li><p>cd miner directory</p></li>
-</ul></li>
-</ul>
+<li><p>cd miner directory</p>
 
 <pre><code class="language-bash"># run
 $ cd (miner directory)
-$ ./hlc-miner
-</code></pre>
+$ ./qitmeer-miner
+</code></pre></li>
+</ul></li>
+</ul>
 
 <p><img src="https://github.com/HalalChain/qitmeer-docker-test/blob/master/images/miner.png" alt="dir" /><br />
 - Run with solo command line</p>
 
 <pre><code class="language-bash">#run 
 $ cd (miner directory)
-$ ./hlc-miner -s 127.0.0.1:1234 -u test -P test --symbol HLC --notls -i 24 -W 256 --mineraddress RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn 
+$ ./qitmeer-miner -s 127.0.0.1:1234 -u test -P test --symbol PMEER --notls -i 24 -W 256 --mineraddress RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn 
 </code></pre>
 
 <h3 id="param-description">Param Description</h3>
@@ -3291,22 +3299,22 @@ $ ./hlc-miner -s 127.0.0.1:1234 -u test -P test --symbol HLC --notls -i 24 -W 25
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1569746364"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1572750007"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1569746364"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1572750007"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1569746364"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1569746364"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1569746364" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1569746364"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1572750007"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1572750007" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1572750007"></script>
 
 
 <script>

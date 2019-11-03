@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
     <meta name="description" content="Documentation for Hugo qitmeer-doc">
 <meta name="author" content="Mathieu Cornic">
 
@@ -12,20 +12,20 @@
     <title>Qitmeer-Miner :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1569746363" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1572750007" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1572750007" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1569746363" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1572750007" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1569746363"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1572750007"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1569746363"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1569746363"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1572750007"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1572750007"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1569746363"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1572750007"></script>
 
     
   </div>
@@ -1977,7 +1977,7 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#prequisite">Prequisite:</a>
 <ul>
 <li><a href="#any-questions-can-see-issues-https-github-com-halalchain-hlc-miner-issues-q-is-3aissue-is-3aclosed-or-can-create-https-github-com-halalchain-qitmeer-miner-issues-new">Any questions can see <a href="https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed">issues</a> or can <a href="https://github.com/HalalChain/qitmeer-miner/issues/new">create</a></a></li>
 </ul></li>
@@ -1985,6 +1985,7 @@
 </ul></li>
 </ul></li>
 <li><a href="#run">Run</a></li>
+<li><a href="#stats-web-server">Stats Web Server</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2022,13 +2023,15 @@
 
 <p>Check your golang version</p>
 
-<pre><code class="language-shell">$ go version
-go version go1.12 darwin/amd64
+<pre><code class="language-bash">$ go version &gt;= 1.12
+$ cargo &gt;= 1.36.0 (c4fcfb725 2019-05-15)
 </code></pre>
 
 <h2 id="compile">Compile</h2>
 
-<pre><code class="language-bash">$ git clone git@github.com:HalalChain/hlc-miner.git
+<pre><code class="language-bash">$ git clone git@github.com:Qitmeer/qitmeer-miner.git
+$ cd lib/cuckoo
+$ cargo build --release
 </code></pre>
 
 <ul>
@@ -2036,86 +2039,116 @@ go version go1.12 darwin/amd64
 
 <pre><code class="language-bash">$ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit
 $ go build 
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>Centos ENV
-<code>bash
-$ sudo yum install opencl-headers
+<li><p>Centos ENV</p>
+
+<pre><code class="language-bash">$ sudo yum install opencl-headers
 $ sudo yum install ocl-icd
 $ sudo ln -s /usr/lib64/libOpenCL.so.1 /usr/lib/libOpenCL.so
 $ go build
-</code>
-<br /></li>
-</ul></li>
+</code></pre></li>
 
-<li><p>MAC</p></li>
-</ul>
+<li><p>MAC</p>
 
 <pre><code class="language-bash">go build
-</code></pre>
+</code></pre></li>
 
-<ul>
 <li><p>Windows ENV</p>
+
+<h5 id="prequisite">Prequisite:</h5></li>
+
+<li><p>Install <strong>Build Tools for Visual Studio</strong>:<br />
+<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&amp;rel=16">https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&amp;rel=16</a></p></li>
+
+<li><p>Build</p>
 
 <pre><code class="language-bash">$ go build 
 </code></pre>
 
-<h6 id="any-questions-can-see-issues-https-github-com-halalchain-hlc-miner-issues-q-is-3aissue-is-3aclosed-or-can-create-https-github-com-halalchain-qitmeer-miner-issues-new">Any questions can see <a href="https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed">issues</a> or can <a href="https://github.com/HalalChain/qitmeer-miner/issues/new">create</a></h6>
+<h6 id="any-questions-can-see-issues-https-github-com-halalchain-hlc-miner-issues-q-is-3aissue-is-3aclosed-or-can-create-https-github-com-halalchain-qitmeer-miner-issues-new">Any questions can see <a href="https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed">issues</a> or can <a href="https://github.com/HalalChain/qitmeer-miner/issues/new">create</a></h6></li>
+</ul>
 
 <h2 id="run">Run</h2>
 
 <pre><code class="language-bash">$ cp qitmeer.conf.example qitmeer.conf
-</code></pre></li>
+</code></pre>
 
-<li><p>1.run with the config file <code>qitmeer.conf</code></p></li>
+<ul>
+<li>1.run with the config file <code>qitmeer.conf</code></li>
 
-<li><p>2.run with command
-```bash
-$ ./hlc-miner -h
+<li><p>2.run with command</p>
+
+<pre><code class="language-bash">
+- 1.run with the config file `qitmeer.conf`
+- 2.run with command
+</code></pre>
+
+<pre><code class="language-bash">$ ./qitmeer-miner -h
 Usage:
-hlc-miner [OPTIONS]</p></li>
+qitmeer-miner [OPTIONS]
+
+Debug Command:
+-l, --listdevices    List number of devices.
+
+The Config File Options:
+-C, --configfile=    Path to configuration file
+  --minerlog=      Write miner log file
+
+The Necessary Config Options:
+-P, --pow=           blake2bd|cuckaroo|cuckatoo (blake2bd)
+-S, --symbol=        Symbol (PMEER)
+-N, --network=       network privnet|testnet|mainnet (mainnet)
+
+The Solo Config Option:
+-M, --mineraddress=  Miner Address
+-s, --rpcserver=     RPC server to connect to (127.0.0.1)
+-u, --rpcuser=       RPC username
+-p, --rpcpass=       RPC password
+  --randstr=       Rand String,Your Unique Marking. (Come from Qitmeer!)
+  --notls          Do not verify tls certificates (true)
+  --rpccert=       RPC server certificate chain for validation
+
+The pool Config Option:
+-o, --pool=          Pool to connect to (e.g.stratum+tcp://pool:port)
+-m, --pooluser=      Pool username
+-n, --poolpass=      Pool password
+
+The Optional Config Option:
+  --cpuminer       CPUMiner (false)
+  --proxy=         Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
+  --proxyuser=     Username for proxy server
+  --proxypass=     Password for proxy server
+  --trimmerTimes=  the cuckaroo trimmer times (40)
+  --intensity=     Intensities (the work size is 2^intensity) per device. Single global value or a comma
+                   separated list. (24)
+  --worksize=      The explicitly declared sizes of the work to do per device (overrides intensity). Single
+                   global value or a comma separated list. (256)
+  --timeout=       rpc timeout. (60)
+  --use_devices=   all gpu devices,you can use ./qitmeer-miner -l to see. examples:0,1 use the #0 device
+                   and #1 device
+  --max_tx_count=  max pack tx count (1000)
+  --max_sig_count= max sign tx count (5000)
+  --log_level=     info|debug|error|warn|trace (debug)
+  --stats_server=  stats web server (127.0.0.1:1235)
+  --edge_bits=     edge bits (24)
+  --local_size=    local size (4096)
+  --group_size=    work group size (256)
+
+Help Options:
+-h, --help           Show this help message
+</code></pre></li>
 </ul>
 
-<p>Debug Command:
-  -l, &ndash;listdevices   List number of devices.
-  -T, &ndash;testpow=      test pow blake2bd|cuckaroo|cuckatoo</p>
+<h2 id="stats-web-server">Stats Web Server</h2>
 
-<p>The Config File Options:
-  -C, &ndash;configfile=   Path to configuration file (/Users/fanxu/www/go/src/hlc-miner/qitmeer.conf)
-      &ndash;minerlog=     Write miner log file (/Users/fanxu/www/go/src/hlc-miner/miner.log)</p>
-
-<p>The Necessary Config Options:
-  -P, &ndash;pow=          blake2bd|cuckaroo|cuckatoo (blake2bd)
-  -S, &ndash;symbol=       Symbol (PMEER)</p>
-
-<p>The Solo Config Option:
-  -M, &ndash;mineraddress= Miner Address (RmN4SADy42FKmN8ARKieX9iHh9icptdgYNn)
-  -s, &ndash;rpcserver=    RPC server to connect to (127.0.0.1:1234)
-  -u, &ndash;rpcuser=      RPC username (test)
-  -p, &ndash;rpcpass=      RPC password
-      &ndash;randstr=      Rand String,Your Unique Marking. (Come from qitmeer!)
-      &ndash;notls         Do not verify tls certificates (true)
-      &ndash;rpccert=      RPC server certificate chain for validation (CA.cert)</p>
-
-<p>The pool Config Option:
-  -o, &ndash;pool=         Pool to connect to (e.g.stratum+tcp://pool:port)
-  -m, &ndash;pooluser=     Pool username
-  -n, &ndash;poolpass=     Pool password</p>
-
-<p>The Optional Config Option:
-      &ndash;trimmerTimes= the cuckaroo trimmer times (40)
-      &ndash;proxy=        Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
-      &ndash;proxyuser=    Username for proxy server
-      &ndash;proxypass=    Password for proxy server
-      &ndash;intensity=    Intensities (the work size is 2^intensity) per device. Single global value or a comma
-                      separated list. (24)
-      &ndash;worksize=     The explicitly declared sizes of the work to do per device (overrides intensity). Single
-                      global value or a comma separated list. (256)</p>
-
-<p>Help Options:
-  -h, &ndash;help          Show this help message
-```</p>
+<ul>
+<li>add param <code>stats_server=127.0.0.1:1235</code> in qitmeer.conf</li>
+<li>brower explorer <a href="http://127.0.0.1:1235">http://127.0.0.1:1235</a><br />
+<img src="public/img/miner1.png" alt="stats" /><br />
+<img src="public/img/miner2.png" alt="stats" /><br />
+<img src="public/img/miner3.png" alt="stats" /><br /></li>
+</ul>
 
 
 
@@ -3328,22 +3361,22 @@ hlc-miner [OPTIONS]</p></li>
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1569746363"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1572750007"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1569746363"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1572750007"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1569746363"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1569746363" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1569746363"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1572750007"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1572750007" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1572750007"></script>
 
 
 <script>

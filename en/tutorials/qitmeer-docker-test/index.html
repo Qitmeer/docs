@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
     <meta name="description" content="Documentation for Hugo qitmeer-doc">
 <meta name="author" content="Mathieu Cornic">
 
@@ -12,20 +12,20 @@
     <title>Qitmeer Testing Guide :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1569746363" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1569746363" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1572750006" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1572750006" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1569746363" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1572750006" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1569746363"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1572750006"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1569746363"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1569746363"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1572750006"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1572750006"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1569746363"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1572750006"></script>
 
     
   </div>
@@ -2107,15 +2107,12 @@ Other systems platforms are similar.You can go <a href="https://www.docker.com/g
 <li><p>Installation</p>
 
 <pre><code class="language-shell">docker pull halalchain/qitmeer
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>Usage
-<code>shell
-docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --modules=miner --modules=qitmeer 
-</code></li>
-</ul></li>
-</ul>
+<li><p>Usage</p>
+
+<pre><code class="language-shell">docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --modules=miner --modules=qitmeer 
+</code></pre>
 
 <table>
 <thead>
@@ -2166,7 +2163,8 @@ docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Yo
 <td>It is a list of API modules to expose via the HTTP RPC interface. (Current valid values:qitmeer,miner)</td>
 </tr>
 </tbody>
-</table>
+</table></li>
+</ul>
 
 <h5 id="qitmeer-cli">Qitmeer-cli</h5>
 
@@ -2179,18 +2177,16 @@ docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Yo
 cd ~/github.com/HalalChain/qitmeer-cli
 go build
 ./qitmeer-cli
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>Usage
-```plain
-qitmeer cli is a RPC tool for the qitmeer network</li>
-</ul>
+<li><p>Usage</p>
 
-<p>Usage:
-qitmeer-cli [command]</p>
+<pre><code class="language-plain">qitmeer cli is a RPC tool for the qitmeer network
 
-<p>Available Commands:
+Usage:
+qitmeer-cli [command]
+
+Available Commands:
 createrawtransaction createRawTransaction
 decoderawtransaction decodeRawTransaction
 generate             generate {n}, cpu mine n blocks
@@ -2203,27 +2199,27 @@ getmempool           get mempool
 getrawtransaction    getrawtransaction
 help                 Help about any command
 sendrawtransaction   sendRawTransaction
-txSign               txSign private_key raw_tx</p>
+txSign               txSign private_key raw_tx
 
-<p>Flags:
-  &ndash;cert string        RPC server certificate file path
--c, &ndash;config string      config file path (default &ldquo;config.toml&rdquo;)
-  &ndash;debug              debug print log
--h, &ndash;help               help for qitmeer-cli
-  &ndash;notls              Do not verify tls certificates (not recommended!) (default true)
--P, &ndash;password string    RPC password
-  &ndash;proxy string       Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
-  &ndash;proxypass string   Password for proxy server
-  &ndash;proxyuser string   Username for proxy server
--s, &ndash;server string      RPC server to connect to (default &ldquo;127.0.0.1:18131&rdquo;)
-  &ndash;simnet             Connect to the simulation test network
-  &ndash;skipverify         Do not verify tls certificates (not recommended!) (default true)
-  &ndash;testnet            Connect to testnet
-  &ndash;timeout string     rpc timeout,s:second h:hour m:minute (default &ldquo;30s&rdquo;)
--u, &ndash;user string        RPC username</p>
+Flags:
+  --cert string        RPC server certificate file path
+-c, --config string      config file path (default &quot;config.toml&quot;)
+  --debug              debug print log
+-h, --help               help for qitmeer-cli
+  --notls              Do not verify tls certificates (not recommended!) (default true)
+-P, --password string    RPC password
+  --proxy string       Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
+  --proxypass string   Password for proxy server
+  --proxyuser string   Username for proxy server
+-s, --server string      RPC server to connect to (default &quot;127.0.0.1:18131&quot;)
+  --simnet             Connect to the simulation test network
+  --skipverify         Do not verify tls certificates (not recommended!) (default true)
+  --testnet            Connect to testnet
+  --timeout string     rpc timeout,s:second h:hour m:minute (default &quot;30s&quot;)
+-u, --user string        RPC username
 
-<p>Use &ldquo;qitmeer-cli [command] &ndash;help&rdquo; for more information about a command.
-```</p></li>
+Use &quot;qitmeer-cli [command] --help&quot; for more information about a command.
+</code></pre></li>
 </ul>
 
 <h5 id="qx-tool">qx tool</h5>
@@ -2238,15 +2234,13 @@ cd ~/github.com/HalalChain/qx
 go build
 alias qx=~/github.com/HalalChain/qx/qx
 qx
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>Usage
-```plain
-Usage: qx [&ndash;version] [&ndash;help] <command> [<args>]</li>
-</ul>
+<li><p>Usage</p>
 
-<p>encode and decode :
+<pre><code class="language-plain">Usage: qx [--version] [--help] &lt;command&gt; [&lt;args&gt;]
+
+encode and decode :
 base58-encode         encode a base16 string to a base58 string
 base58-decode         decode a base58 string to a base16 string
 base58check-encode    encode a base58check string
@@ -2254,9 +2248,9 @@ base58check-decode    decode a base58check string
 base64-encode         encode a base16 string to a base64 string
 base64-encode         encode a base64 string to a base16 string
 rlp-encode            encode a string to a rlp encoded base16 string
-rlp-decode            decode a rlp base16 string to a human-readble representation</p>
+rlp-decode            decode a rlp base16 string to a human-readble representation
 
-<p>hash :
+hash :
 blake2b256            calculate Blake2b 256 hash of a base16 data.
 blake2b512            calculate Blake2b 512 hash of a base16 data.
 sha256                calculate SHA256 hash of a base16 data.
@@ -2265,9 +2259,9 @@ keccak-256            calculate legacy keccak 256 hash of a bash16 data.
 blake256              calculate blake256 hash of a base16 data.
 ripemd160             calculate ripemd160 hash of a base16 data.
 bitcion160            calculate ripemd160(sha256(data))
-hash160               calculate ripemd160(blake2b256(data))</p>
+hash160               calculate ripemd160(blake2b256(data))
 
-<p>entropy (seed) &amp; mnemoic &amp; hd &amp; ec
+entropy (seed) &amp; mnemoic &amp; hd &amp; ec
 entropy               generate a cryptographically secure pseudorandom entropy (seed)
 hd-new                create a new HD(BIP32) private key from an entropy (seed)
 hd-to-ec              convert the HD (BIP32) format private/public key to a EC private/public key
@@ -2281,18 +2275,18 @@ ec-new                create a new EC private key from an entropy (seed).
 ec-to-public          derive the EC public key from an EC private key (the compressed format by default )
 ec-to-wif             convert an EC private key to a WIF, associates with the compressed public key by default.
 wif-to-ec             convert a WIF private key to an EC private key.
-wif-to-public         derive the EC public key from a WIF private key.</p>
+wif-to-public         derive the EC public key from a WIF private key.
 
-<p>addr &amp; tx &amp; sign
+addr &amp; tx &amp; sign
 ec-to-addr            convert an EC public key to a paymant address. default is nox address
 tx-encode             encode a unsigned transaction.
 tx-decode             decode a transaction in base16 to json format.
 tx-sign               sign a transactions using a private key.
 msg-sign              create a message signature
 msg-verify            validate a message signature
-signature-decode      decode a ECDSA signature</p>
+signature-decode      decode a ECDSA signature
 
-<p>```</p></li>
+</code></pre></li>
 </ul>
 
 <h3 id="step-by-step-guide">Step-by-Step Guide</h3>
@@ -3678,22 +3672,22 @@ cli --timeout=9m generate 16
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1569746363"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1572750007"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1569746363"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1572750007"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1569746363"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1569746363"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1569746363" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1569746363"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1572750007"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1572750007"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1572750007" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1572750007"></script>
 
 
 <script>
