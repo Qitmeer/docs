@@ -1,121 +1,118 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://halalchain.github.io/docs/ar/reference/qxtools/</loc>
+    <loc>https://qitmeer.github.io/docs/ar/reference/qxtools/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/reference/qxtools/"
+                href="https://qitmeer.github.io/docs/en/reference/qxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/reference/qxtools/"
+                href="https://qitmeer.github.io/docs/cn/reference/qxtools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/reference/qxtools/"
+                href="https://qitmeer.github.io/docs/ar/reference/qxtools/"
                 />
   </url>
   
   <url>
-    <loc>https://halalchain.github.io/docs/ar/test/</loc>
+    <loc>https://qitmeer.github.io/docs/ar/test/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/test/"
+                href="https://qitmeer.github.io/docs/en/test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/test/"
+                href="https://qitmeer.github.io/docs/cn/test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/test/"
+                href="https://qitmeer.github.io/docs/ar/test/"
                 />
   </url>
   
   <url>
-    <loc>https://halalchain.github.io/docs/ar/categories/</loc>
-    <priority>0</priority>
+    <loc>https://qitmeer.github.io/docs/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/categories/"
+                href="https://qitmeer.github.io/docs/cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/categories/"
+                href="https://qitmeer.github.io/docs/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/categories/"
+                href="https://qitmeer.github.io/docs/ar/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://halalchain.github.io/docs/ar/</loc>
+    <loc>https://qitmeer.github.io/docs/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/"
+                href="https://qitmeer.github.io/docs/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/"
+                href="https://qitmeer.github.io/docs/cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/"
+                href="https://qitmeer.github.io/docs/ar/"
                 />
   </url>
   
   <url>
-    <loc>https://halalchain.github.io/docs/ar/reference/</loc>
-    <priority>0</priority>
+    <loc>https://qitmeer.github.io/docs/ar/reference/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/reference/"
+                href="https://qitmeer.github.io/docs/en/reference/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/reference/"
+                href="https://qitmeer.github.io/docs/cn/reference/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/reference/"
+                href="https://qitmeer.github.io/docs/ar/reference/"
                 />
   </url>
   
   <url>
-    <loc>https://halalchain.github.io/docs/ar/tags/</loc>
-    <priority>0</priority>
+    <loc>https://qitmeer.github.io/docs/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://halalchain.github.io/docs/cn/tags/"
+                href="https://qitmeer.github.io/docs/cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://halalchain.github.io/docs/en/tags/"
+                href="https://qitmeer.github.io/docs/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://halalchain.github.io/docs/ar/tags/"
+                href="https://qitmeer.github.io/docs/ar/tags/"
                 />
   </url>
   

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="cn" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.0-DEV" />
+    <meta name="description" content="Documentation for Hugo qitmeer-doc">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
+
+    <title> :: Qitmeer 文档</title>
+
+    
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1573145270" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573145270" rel="stylesheet">
+    
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573145270" rel="stylesheet">
+    
+
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573145270"></script>
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/cn/tutorials/qitmeer-js/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<style type="text/css">
+	#logo h2{
+		color: #fff !important;
+		margin: 10px 0px;
+		font-size: 30px
+	}	
+</style>
+<a id="logo" href="https://qitmeer.github.io/docs/cn" >
+    <h2>QITMEER DOCS</h2>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="搜索...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573145270"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573145270"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/qitmeer.github.io\/docs\/cn";
+    
+</script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573145270"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/test/" title="测试字体显示和 语法高亮" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/test/">
+          测试字体显示和 语法高亮
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/reference/" title="References" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/reference/">
+          References
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/reference/qxtools/" title="Qx 工具集" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/reference/qxtools/">
+          Qx 工具集
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/tutorials/" title="Tutorials" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/tutorials/">
+          Tutorials
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/tutorials/qitmeer-js/" title="" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-js/">
+          
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/tutorials/qitmeer-rpc/" title="" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-rpc/">
+          
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="cn" value="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-js/" selected>中文（简体）</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/">English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    
+
+    
+    
+
+    
+    
+    
+    <p> <a href="https://github.com/Qitmeer/docs" target="_blank">Contribute on GitHub <i class='fab fa-fw fa-github'></i> </a></p>
+</center>
+
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='编辑页面' href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-js/_index.cn.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">编辑页面</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://qitmeer.github.io/docs/cn/'>Qitmeer 技术文档</a> > <a href='https://qitmeer.github.io/docs/cn/tutorials/'>Tutorials</a> > 
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#qitmeer-js-说明">qitmeer-js 说明</a></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              
+            </h1>
+          
+
+        
+
+
+	
+
+<h1 id="qitmeer-js-说明">qitmeer-js 说明</h1>
+
+<ol>
+<li><p>安装</p>
+
+<pre><code class="language-bash">npm i qitmeer-js --save
+</code></pre></li>
+
+<li><p>导入</p>
+
+<pre><code class="language-js">const qitmeer = require('qitmeer-js')
+</code></pre></li>
+
+<li><p>如何生成地址（随机数（助记词），私钥，公钥，地址）</p>
+
+<pre><code class="language-js">const qitmeer = require('qitmeer-js')
+
+// 生成 随机数 npm i randombytes --save
+const randomBytes = require('randombytes')
+const secretKey = randomBytes(32)
+// &lt;Buffer 3d 2b 7c e0 8b 12 be ed f3 12 88 2b bd fa 0d 58 22 ad 4c f2 b8 9a ad 84 24 2b 80 15 93 3d e6 16&gt;
+
+secretKey.toString('hex')
+// 3d2b7ce08b12beedf312882bbdfa0d5822ad4cf2b89aad84242b8015933de616
+
+
+// 生成公钥
+const keyPair = qitmeer.ec.fromPrivateKey( secretKey )
+const publicKey = keyPair.publicKey
+// &lt;Buffer 02 6c 21 c3 28 5b 26 be ed 8b 5c 8b f1 36 c4 9d fb bb 28 cf 6e b6 de a7 79 81 47 b8 98 93 8c 8f dc&gt;
+
+publicKey.toString('hex')
+// 026c21c3285b26beed8b5c8bf136c49dfbbb28cf6eb6dea7798147b898938c8fdc
+
+// 生成地址
+// 设置网络 mainnet【主网】, testnet【测试】, privnet【私有】
+const network = qitmeer.networks.mainnet
+
+const hash160 = qitmeer.hash.hash160(keyPair.publicKey)
+
+const p2pkhAddress = qitmeer.address.toBase58Check(hash160, network.pubKeyHashAddrId)
+// NmcMJfyzyKbuD9Jy7ZPL6AGCUz5nfPaXBbx
+</code></pre></li>
+
+<li><p>如何签名一个交易（单个utxo，多个utxo）</p>
+
+<pre><code class="language-js">const UTXO = {
+&quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;d46a58fced5a05b1dc1f4450e1bdf09696291348a7eccec069ed59343ec35b4d&quot;,
+      &quot;vout&quot;: 2,
+      &quot;sequence&quot;: 4294967295,
+      &quot;amountin&quot;: 45000000000,
+      &quot;blockheight&quot;: 1,
+      &quot;txindex&quot;: 0,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;3044022005422cf4f7a082fe931509b44aee54c3d3c80b1f0d43ed1483ffeb7248857fe402202b9c050ed0fbb9883c8ff98d8a48c33483b32ad776d6746365f9b8851e6dcda501 02abb13cd5260d3e9f8bc3db8687147ace7b6e5b63b061afe37d09a8e4550cd174&quot;,
+        &quot;hex&quot;: &quot;473044022005422cf4f7a082fe931509b44aee54c3d3c80b1f0d43ed1483ffeb7248857fe402202b9c050ed0fbb9883c8ff98d8a48c33483b32ad776d6746365f9b8851e6dcda5012102abb13cd5260d3e9f8bc3db8687147ace7b6e5b63b061afe37d09a8e4550cd174&quot;
+      }
+    },
+    {
+      &quot;txid&quot;: &quot;46a6d3d9e1ef552dc9b0eba147ea97e481654a2bccf59fd764652971cb4d9fdd&quot;,
+      &quot;vout&quot;: 2,
+      &quot;sequence&quot;: 4294967295,
+      &quot;amountin&quot;: 45000000000,
+      &quot;blockheight&quot;: 2,
+      &quot;txindex&quot;: 0,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;3045022100be434e16f4c83947b1a19fefbf319b7170b280c9a0d89c0786624a83bda337910220395753153ab55b21d7041705c75f42778d7846a41ca5cbb5b033f875d20a9f1501 02abb13cd5260d3e9f8bc3db8687147ace7b6e5b63b061afe37d09a8e4550cd174&quot;,
+        &quot;hex&quot;: &quot;483045022100be434e16f4c83947b1a19fefbf319b7170b280c9a0d89c0786624a83bda337910220395753153ab55b21d7041705c75f42778d7846a41ca5cbb5b033f875d20a9f15012102abb13cd5260d3e9f8bc3db8687147ace7b6e5b63b061afe37d09a8e4550cd174&quot;
+      }
+    }
+  ],
+&quot;vout&quot;: [
+    {
+      &quot;amount&quot;: 89000000000,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 69570a6c1fcb68db1b1c50b34960e714d42c7b9c OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91469570a6c1fcb68db1b1c50b34960e714d42c7b9c88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;
+      }
+    },
+    {
+      &quot;amount&quot;: 990000000,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 c693f8fbfe6836f1fb55579b427cfc4fd2014953 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914c693f8fbfe6836f1fb55579b427cfc4fd201495388ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;
+      }
+    }
+  ],
+&quot;blockheight&quot;: 101,
+&quot;confirmations&quot;: 1
+}
+
+const qitmeer = require('qitmeer-js')
+
+// 设置网络 mainnet【主网】, testnet【测试】, privnet【私有】
+const network = qitmeer.networks.mainnet
+
+// 私钥
+const secretKey = '3d2b7ce08b12beedf312882bbdfa0d5822ad4cf2b89aad84242b8015933de616'
+const keyPair = qitmeer.ec.fromPrivateKey( secretKey )
+
+// 构造交易
+const txb = qitmeer.txsign.newSigner( network );
+
+// 设置打包时间，一般不用设置
+txb.setLockTime(1573046495)
+UTXO.vin.map( {txid,txindex} =&gt; {
+// txid: 交易id ， txindex: 交易序号
+txb.addInput( txid,txindex);
+})
+
+// 1 QIT = 100000000 MEER
+// 输入的 amount 总数减去输出总数等于手续费
+txb.addOutput( 'NmcMJfyzyKbuD9Jy7ZPL6AGCUz5nfPaXBbx', 89900000000);
+txb.addOutput( 'NmbiHCrN796d74wXccqzqYHBLawn7NHyRX6', 80000000);
+utxo.map( (v,i) =&gt; {
+txb.sign(i, keyPair);
+})
+
+// 获取 交易体
+const newTransaction = txb.build().toBuffer().toString('hex');
+
+// 计算收费
+const BigNumber = require('bignumber.js')
+
+function getFee( tx, speed = 'fast' ) {
+const size = tx.__tx.byteLength()
+const s = {
+    fast: 2,
+    normal: 1,
+    slow: 0.6
+}
+return BigNumber( size ).div(2).multipliedBy(5000).multipliedBy(s[speed])
+}
+        
+</code></pre></li>
+</ol>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+</div> 
+
+<style>
+  .qitmeer-eidt {
+    background-color: #abb2bf;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 16px;
+    transition: all .3s;
+    -moz-transition: all .3s;	 
+    -webkit-transition: all .3s;	 
+    -o-transition: all .3s;	 
+  }
+
+  .qitmeer-eidt:hover {
+    background-color: #74b559;
+    box-shadow: 0px 0px 8px #abd699;
+  }
+
+</style>
+</div>
+
+<div id="navigation">
+
+
+
+
+
+
+    
+        
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+            
+            
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+
+
+        
+            
+
+
+    
+        
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+            
+            
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/cn/tutorials/" title="Tutorials"> <i class="fa fa-chevron-left"></i></a>
+
+
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-rpc/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+
+
+</div>
+<div style="text-align: center"> 
+        
+        
+        
+        
+        
+        
+        
+          <div class="library-github" markdown="0">
+            <i class="fab fa-fw fa-github"></i>
+            <strong>Contribute on GitHub</strong>
+            <p>
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=&body=Link%3A%C2%A0tutorials%2fqitmeer-js%2f_index.cn.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/tutorials/qitmeer-js/_index.cn.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-js/_index.cn.md">Edit File</a >
+            </p >
+          </div>    
+        
+      
+</div>
+<div class="cca4" >
+  <p>&copy; Copyright Qitmeer 2019.
+  <br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:10px auto;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  </p>
+</div>
+
+</section>
+
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+<div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>
+
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573145270"></script>
+
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573145270"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+
+
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1573145270"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573145270"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573145270" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573145270"></script>
+
+
+<script>
+mermaid.initialize({ startOnLoad: true });
+
+</script>
+
+
+
+
+<script>
+  
+  
+  
+  
+
+  
+  
+
+</script>
+</body>
+
+</html>
