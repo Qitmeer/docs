@@ -15,4 +15,4 @@ weight: 3
 
 - [Qitmeer Rpc Guide](./qitmeer-rpc)
 
-- [Qitmeer Rpc Guide](./qitmeer-js)
+- [Qitmeer JS Guide](./qitmeer-js)
