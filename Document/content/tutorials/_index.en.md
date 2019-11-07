@@ -12,3 +12,7 @@ weight: 3
 - [Qitmeer Cross-chain Atomic-swapping](./qitmeer-atomicswap)
 
 - [Qitmeer Miner Guide](./qitmeer-miner)
+
+- [Qitmeer Rpc Guide](./qitmeer-rpc)
+
+- [Qitmeer Rpc Guide](./qitmeer-js)
