@@ -57,7 +57,7 @@ https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Buil
 ```bash
 $ go build 
 ```
-#### Any questions can see [issues](https://github.com/HalalChain/hlc-miner/issues?q=is%3Aissue+is%3Aclosed) or can [create](https://github.com/HalalChain/qitmeer-miner/issues/new)
+###### Any questions can see [issues](https://github.com/Qitmeer/qitmeer-miner/issues?q=is%3Aissue+is%3Aclosed) or can [create](https://github.com/Qitmeer/qitmeer-miner/issues/new)
         
     
 ## Run

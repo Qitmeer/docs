@@ -7,9 +7,9 @@ weight: 4
 
 ## Qx user guide
 
-[Qx](https://github.com/HalalChain/qx) is a command-line tool that provides a variety of commands for key management and transaction construction, such as random "seed" generation, public/private key encoding etc. qx cab be built and distributed as a single file binary, which works like the swiss army knife of qitmeer.
+[Qx](https://github.com/Qitmeer/qx) is a command-line tool that provides a variety of commands for key management and transaction construction, such as random "seed" generation, public/private key encoding etc. qx cab be built and distributed as a single file binary, which works like the swiss army knife of qitmeer.
 
-Please see more details at [https://github.com/HalalChain/qx](https://github.com/HalalChain/qx)
+Please see more details at [https://github.com/Qitmeer/qx](https://github.com/Qitmeer/qx)
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ go version go1.12 darwin/amd64
 ```bash
 ~ mkdir -p /tmp/work
 ~ cd /tmp/work
-~ git clone https://github.com/HalalChain/qx.git
+~ git clone https://github.com/Qitmeer/qx.git
 ~ cd qx
 ~ go build
 ~ ./qx --version

@@ -46,7 +46,7 @@ $ sudo apt-get install beignet-dev nvidia-cuda-dev nvidia-cuda-toolkit
 $ cd (miner directory)
 $ ./qitmeer-miner
 ```
-![dir](https://github.com/HalalChain/qitmeer-docker-test/blob/master/images/miner.png)   
+![dir](https://github.com/Qitmeer/qitmeer-docker-test/blob/master/images/miner.png)   
 - Run with solo command line
     
 ```bash
@@ -61,7 +61,7 @@ $ ./qitmeer-miner -s 127.0.0.1:1234 -u test -P test --symbol PMEER --notls -i 24
 - `-s` the node rpc listen address
 - `-u` the node rpc username
 - `-P` the node rpc password
-- `--symbol` now just `HLC` is supported
+- `--symbol` now just `MEER` is supported
 - `--i` Intensities (the work size is 2^intensity) up to device
 - `--W` The explicitly declared sizes of the work to do up to device (overrides intensity)
 - `--mineraddress` the miner address

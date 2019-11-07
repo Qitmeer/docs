@@ -68,12 +68,12 @@ Qitmeer Suite consists of qitmeer Docker, qx, cli
 
 * Installation
 ```shell
-docker pull halalchain/qitmeer
+docker pull qitmeer/qitmeerd
 ```
 
 * Usage
 ```shell
-docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --modules=miner --modules=qitmeer 
+docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeerd --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --httpmodules=miner --httpmodules=qitmeer
 ```
 | Field | Explain |
 | --- | --- |
@@ -92,8 +92,8 @@ qitmeer cli is a RPC tool for the qitmeer network
 
 * Installation
 ```shell
-git clone https://github.com/HalalChain/qitmeer-cli ~/github.com/HalalChain/qitmeer-cli
-cd ~/github.com/HalalChain/qitmeer-cli
+git clone https://github.com/Qitmeer/qitmeer-cli ~/github.com/Qitmeer/qitmeer-cli
+cd ~/github.com/Qitmeer/qitmeer-cli
 go build
 ./qitmeer-cli
 ```
@@ -145,10 +145,10 @@ qx is a command-line tool that provides a variety of commands for key management
 
 * Installation
 ```shell
-git clone https://github.com/HalalChain/qx ~/github.com/HalalChain/qx
-cd ~/github.com/HalalChain/qx
+git clone https://github.com/Qitmeer/qx ~/github.com/Qitmeer/qx
+cd ~/github.com/Qitmeer/qx
 go build
-alias qx=~/github.com/HalalChain/qx/qx
+alias qx=~/github.com/Qitmeer/qx/qx
 qx
 ```
 
@@ -213,7 +213,7 @@ This node is playing the role of transfer recipient, it starts with a normal ful
 
 ##### Launch
 ```shell
-docker run -it -p 18130:18130  halalchain/qitmeer 
+docker run -it -p 18130:18130  qitmeer/qitmeerd
 ```
 
 ##### Generate Recipient Address
@@ -241,8 +241,8 @@ This node is playing the role of miner and transfer originator, it starts with a
 
 ##### Launch Node
 ```shell
- alias qitmeer="docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer"  
- qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --pmodules=miner --modules=qitmeer  --testnet --rpcuser=test --rpcpass=test --generate
+ alias qitmeer="docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeerd"  
+ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=qitmeer  --testnet --rpcuser=test --rpcpass=test --generate
 ```
  Now observe the log of Node Recipient, if the connection is OK, a new log like following should display
 ```plain
@@ -251,8 +251,8 @@ Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certi
 ```
 
 ```shell
- cd ~/github.com/HalalChain/qitmeer-cli/
- docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+ cd ~/github.com/Qitmeer/qitmeer-cli/
+ docker cp $(docker ps -q --filter ancestor=qitmeer/qitmeerd):/qitmeer/rpc.cert ~/
  alias cli="./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131"
 ```
 
