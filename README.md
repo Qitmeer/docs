@@ -79,10 +79,22 @@ mathjax: true
 ### content
 ```
 
-# Deploy
+## Update github pages
 
+### create gh-pages branch if doesn't exists
 ```bash
+git checkout -b gh-pages origin/gh-pages
+```
+###  update gh-pages
+```bash
+git checkout master
 cd Document
 hugo
 
+cd ..
+git checkout gh-pages
+cp -rf Document/public/* ./
+git add .
+git commit -m"update YYMMDD"
+git push
 ```
