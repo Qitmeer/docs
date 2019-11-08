@@ -12,20 +12,20 @@
     <title>Qitmeer Testing Guide :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1573119798" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573119798" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1573193061" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573193061" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573119798" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573193061" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573119798"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573193061"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573119798"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573119798"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573193061"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573193061"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573119798"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573193061"></script>
 
     
   </div>
@@ -1945,7 +1945,7 @@
     
     
     
-    <p> <a href="https://github.com/HalalChain/docs" target="_blank">Contribute on GitHub <i class='fab fa-fw fa-github'></i> </a></p>
+    <p> <a href="https://github.com/Qitmeer/docs" target="_blank">Contribute on GitHub <i class='fab fa-fw fa-github'></i> </a></p>
 </center>
 
 
@@ -2154,12 +2154,12 @@ Other systems platforms are similar.You can go <a href="https://www.docker.com/g
 <ul>
 <li><p>Installation</p>
 
-<pre><code class="language-shell">docker pull halalchain/qitmeer
+<pre><code class="language-shell">docker pull qitmeer/qitmeerd
 </code></pre></li>
 
 <li><p>Usage</p>
 
-<pre><code class="language-shell">docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --modules=miner --modules=qitmeer 
+<pre><code class="language-shell">docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeerd --miningaddr=[Your mining address] --addpeer=[peer1 IP:PORT] [--addpeer=[peer2 IP:PORT]] --httpmodules=miner --httpmodules=qitmeer
 </code></pre>
 
 <table>
@@ -2221,8 +2221,8 @@ Other systems platforms are similar.You can go <a href="https://www.docker.com/g
 <ul>
 <li><p>Installation</p>
 
-<pre><code class="language-shell">git clone https://github.com/HalalChain/qitmeer-cli ~/github.com/HalalChain/qitmeer-cli
-cd ~/github.com/HalalChain/qitmeer-cli
+<pre><code class="language-shell">git clone https://github.com/Qitmeer/qitmeer-cli ~/github.com/Qitmeer/qitmeer-cli
+cd ~/github.com/Qitmeer/qitmeer-cli
 go build
 ./qitmeer-cli
 </code></pre></li>
@@ -2277,10 +2277,10 @@ Use &quot;qitmeer-cli [command] --help&quot; for more information about a comman
 <ul>
 <li><p>Installation</p>
 
-<pre><code class="language-shell">git clone https://github.com/HalalChain/qx ~/github.com/HalalChain/qx
-cd ~/github.com/HalalChain/qx
+<pre><code class="language-shell">git clone https://github.com/Qitmeer/qx ~/github.com/Qitmeer/qx
+cd ~/github.com/Qitmeer/qx
 go build
-alias qx=~/github.com/HalalChain/qx/qx
+alias qx=~/github.com/Qitmeer/qx/qx
 qx
 </code></pre></li>
 
@@ -2347,7 +2347,7 @@ signature-decode      decode a ECDSA signature
 
 <h5 id="launch">Launch</h5>
 
-<pre><code class="language-shell">docker run -it -p 18130:18130  halalchain/qitmeer 
+<pre><code class="language-shell">docker run -it -p 18130:18130  qitmeer/qitmeerd
 </code></pre>
 
 <h5 id="generate-recipient-address">Generate Recipient Address</h5>
@@ -2376,8 +2376,8 @@ Share recipient_address.txt and recipient_ip.txt with the miner.</p>
 
 <h5 id="launch-node">Launch Node</h5>
 
-<pre><code class="language-shell"> alias qitmeer=&quot;docker run -it -p 18130:18130 -p 18131:18131 halalchain/qitmeer&quot;  
- qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --pmodules=miner --modules=qitmeer  --testnet --rpcuser=test --rpcpass=test --generate
+<pre><code class="language-shell"> alias qitmeer=&quot;docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeerd&quot;  
+ qitmeer --miningaddr=$(cat ~/miner_address.txt) --addpeer=$(cat ~/recipient_ip.txt):18130 --httpmodules=miner --httpmodules=qitmeer  --testnet --rpcuser=test --rpcpass=test --generate
 </code></pre>
 
 <p>Now observe the log of Node Recipient, if the connection is OK, a new log like following should display</p>
@@ -2386,8 +2386,8 @@ Share recipient_address.txt and recipient_ip.txt with the miner.</p>
 Qitmeer's RPC is encrypted, to call RPC service, you should obtain the RPC certificate first; also, the working home of cli must be changed to where it is located.
 </code></pre>
 
-<pre><code class="language-shell"> cd ~/github.com/HalalChain/qitmeer-cli/
- docker cp $(docker ps -q --filter ancestor=halalchain/qitmeer):/qitmeer/rpc.cert ~/
+<pre><code class="language-shell"> cd ~/github.com/Qitmeer/qitmeer-cli/
+ docker cp $(docker ps -q --filter ancestor=qitmeer/qitmeerd):/qitmeer/rpc.cert ~/
  alias cli=&quot;./qitmeer-cli --notls=false --password=test --skipverify=false --testnet=true --user=test --cert=$HOME/rpc.cert  --server=127.0.0.1:18131&quot;
 </code></pre>
 
@@ -3740,7 +3740,7 @@ cli --timeout=9m generate 16
       
 </div>
 <div class="cca4" >
-  <p>&copy; Copyright HalalChain 2019.
+  <p>&copy; Copyright Qitmeer 2019.
   <br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:10px auto;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
   </p>
@@ -3752,22 +3752,22 @@ cli --timeout=9m generate 16
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573119798"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573193061"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573119798"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573193061"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1573119798"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573119798"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573119798" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573119798"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1573193061"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573193061"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573193061" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573193061"></script>
 
 
 <script>

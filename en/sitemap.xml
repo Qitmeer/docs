@@ -68,16 +68,6 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/tutorials/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/tutorials/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/tutorials/"
-                />
   </url>
   
   <url>
@@ -352,16 +342,6 @@
   <url>
     <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-js/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/"
-                />
   </url>
   
   <url>
@@ -372,16 +352,6 @@
   <url>
     <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-rpc/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-rpc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-rpc/"
-                />
   </url>
   
   <url>
