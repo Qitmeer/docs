@@ -5,11 +5,11 @@
 ```
 
 curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getPeerInfo","params":null,"id":1}' http://127.0.0.1:1234 | jq
-
 ```
 
+[点击下载java版rpc调用示例](https://github.com/qitmeers/files/blob/master/rpcdemo-java.zip)
 
-###1. getBlockByOrder
+### 1. getBlockByOrder
 #### 函数名：getBlockByOrder {order} {fullTx}
 #### 说明：
 - order:区块orderid，由于qitmeer采用DAG算法，区块的orderid会发生变动，该值并非是区块高度
@@ -82,26 +82,26 @@ curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jso
 
 ```
 
-###2.getBlockByID
+### 2.getBlockByID
 #### 函数名：getBlockByID {blockid} {fullTx}
 #### 说明：
 - blockid：所请求节点接收的区块顺序，节点内置id，与全网其他节点无关
 - fullTx：true/false，一般为true
 
-###3.getBlockCount
+### 3.getBlockCount
 #### 函数名：getBlockCount 
 #### 说明：无参数，获取区块数量
 
-###4.getMempool
+### 4.getMempool
 #### 函数名：getMempool 
 #### 说明：无参数，获取交易池交易
 
-###5.getPeerInfo
+### 5.getPeerInfo
 #### 函数名：getPeerInfo 
 #### 说明：无参数，取邻近节点信息
 
 
-###6.getNodeInfo
+### 6.getNodeInfo
 #### 函数名：getNodeInfo 
 #### 说明：无参数，获取该节点信息
 
@@ -145,7 +145,7 @@ curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jso
 - confirmations：代表区块中非coinbase输出可用的最小确认数，凡是区块confirmations确认数大于该值的区块中的非coinbase输出可进行交易
 - coinbasematurity：代表区块coinbase输出可以用的最小确认数，凡是区块confirmations确认数大于该值的区块中的coinbase输出可进行交易的第一个条件，第二个条件是必须是蓝色区块，见rpc isBule
 
-###7.isBlue
+### 7.isBlue
 #### 函数名：isBlue {blockhash}
 #### 说明：通过节点判断该块是否为蓝色区块
 
@@ -157,7 +157,7 @@ curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jso
 - 2:还不能确定是蓝色或红色，待确认
 
 
-###8.getRawTransaction
+### 8.getRawTransaction
 #### 函数名：getRawTransaction {txid}
 #### 说明：通过txid获取交易
 
@@ -200,7 +200,7 @@ getRawTransaction 000000e4c6b7f5b89827711d412957bfff5c51730df05c2eedd1352468313e
 
 ```
 
-###9.sendRawTransaction
+### 9.sendRawTransaction
 #### 函数名：sendRawTransaction {sign_raw_tx} {allow_high_fee}
 #### 说明：发送交易
 
