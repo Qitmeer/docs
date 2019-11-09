@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>address :: Qitmeer Documentation</title>
+    <title>Development Environment :: Qitmeer Documentation</title>
 
     
     <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573305730" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/reference/qxtools/txsign/address/">
+  <body class="" data-url="/en/tutorials/development-environment/">
     <nav id="sidebar" class="">
 
 
@@ -165,7 +165,7 @@
   
     
     <li data-nav-id="/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -192,8 +192,8 @@
   
     
     <li data-nav-id="/en/tutorials/development-environment/" title="Development Environment" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://qitmeer.github.io/docs/en/tutorials/development-environment/">
@@ -343,7 +343,7 @@
   
     
     <li data-nav-id="/en/reference/" title="Commands References" class="dd-item 
-        parent
+        
         
         
         ">
@@ -370,7 +370,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/" title="Qx Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -841,7 +841,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/txsign/" title="Addr Tx Sign" class="dd-item 
-        parent
+        
         
         
         ">
@@ -868,8 +868,8 @@
   
     
     <li data-nav-id="/en/reference/qxtools/txsign/address/" title="address" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://qitmeer.github.io/docs/en/reference/qxtools/txsign/address/">
@@ -1935,7 +1935,7 @@
                   
                     
                     
-                      <option id="en" value="https://qitmeer.github.io/docs/en/reference/qxtools/txsign/address/" selected>English</option>
+                      <option id="en" value="https://qitmeer.github.io/docs/en/tutorials/development-environment/" selected>English</option>
                     
                   
               
@@ -1993,7 +1993,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qxtools/txsign/address/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/development-environment/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -2024,19 +2024,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/reference/'>Commands References</a> > <a href='https://qitmeer.github.io/docs/en/reference/qxtools/'>Qx Tools</a> > <a href='https://qitmeer.github.io/docs/en/reference/qxtools/txsign/'>Addr Tx Sign</a> > address
-          
-         
-          
-         
+            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/tutorials/'>Tutorials</a> > Development Environment
           
          
           
@@ -2055,10 +2043,16 @@
 <ul>
 <li>
 <ul>
-<li><a href="#ec-to-addr">ec-to-addr</a>
+<li><a href="#shell-and-package-manager">Shell and package manager</a>
 <ul>
-<li><a href="#creat-testnet-address">creat testnet address</a></li>
-<li><a href="#creat-mainnet-address">creat mainnet address</a></li>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#mac">Mac</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+</ul></li>
+<li><a href="#install-requisite">Install Requisite</a>
+<ul>
+<li><a href="#windows-1">Windows</a></li>
+<li><a href="#mac-1">Mac</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2079,7 +2073,7 @@
           
             <h1>
               
-              address
+              Development Environment
             </h1>
           
 
@@ -2088,32 +2082,65 @@
 
 	
 
-<h3 id="ec-to-addr">ec-to-addr</h3>
+<p>This tutorial covers most qitmeer applications, including qitmeer, qitmeer-cli, qitmeer-miner, etc.</p>
 
-<p>convert an <strong>EC public key</strong> to a paymant address. default is qx address.</p>
+<h3 id="shell-and-package-manager">Shell and package manager</h3>
 
-<pre><code class="language-bash">~ qx ec-to-addr --help
+<p>A uniform command style and a handy package manager will greatly increase efficiency.</p>
 
-Usage: qx ec-to-addr [ec_public_key]
-    -v version
-       base58check version [mainnet|testnet|privnet] (default testnet)
+<h4 id="windows">Windows</h4>
+
+<p>Since windows commands are not in unix-like style, so it is strongly command to install Msys2, which presents a unix shell and a package manager (pacman). It would provide consistent experience as Mac or Ubuntu do.</p>
+
+<ul>
+<li>Download and install msys2 from <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe">http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe</a></li>
+<li>Find and run &ldquo;MSYS2 MSYS&rdquo; in Start Menu to MSYS2 shell</li>
+
+<li><p>Run following command to setup system environment variables</p>
+
+<pre><code class="language-shell">export PATH=/mingw64/bin:$PATH
+export LD_LIBRARY_PATH=/mingw64/lib:$LD_LIBRARY_PATH
+
+# update packages, it may ask you to re-open a terminal to process
+# repeat this instruction until no packages to update
+pacman -Syu
+
+</code></pre></li>
+</ul>
+
+<p><img src="https://qitmeer.github.io/docs/images/development-environment/msys2.png" alt="Figure 2" /></p>
+
+<h4 id="mac">Mac</h4>
+
+<p>Mac is a Unix based OS, we just need to install the package manager.</p>
+
+<pre><code class="language-shell">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+brew update
+brew upgrade
 </code></pre>
 
-<h4 id="creat-testnet-address">creat testnet address</h4>
+<h4 id="ubuntu">Ubuntu</h4>
 
-<pre><code class="language-bash">~ qx ec-to-addr 034d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d70
+<p>Ubuntu has build-in package manager apt, just update to the latest state</p>
 
-TmPip5CkA4e3fBRp7eo9onDYfVnba547uts
-
-# be equivalent to
-~ qx ec-to-public 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239 | qx ec-to-addr
+<pre><code class="language-shell">sudo apt update
+sudo apt upgrade
 </code></pre>
 
-<h4 id="creat-mainnet-address">creat mainnet address</h4>
+<h3 id="install-requisite">Install Requisite</h3>
 
-<pre><code class="language-bash">~ qx ec-to-addr -v mainnet 034d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d70
+<p>Before install Qitmeer, we need install git and golang.</p>
 
-NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
+<h4 id="windows-1">Windows</h4>
+
+<pre><code class="language-shell"> pacman -S git mingw64/mingw-w64-x86_64-go
+export GOROOT=/mingw64/lib/go
+export GOPATH=/mingw64
+</code></pre>
+
+<h4 id="mac-1">Mac</h4>
+
+<pre><code class="language-shell">brew install git go
 </code></pre>
 
 
@@ -2225,6 +2252,7 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
     
         
+        
     
     
 
@@ -2240,6 +2268,7 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
     
         
+        
     
     
 
@@ -2255,6 +2284,9 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
 
     
+        
+            
+            
         
     
     
@@ -2339,7 +2371,6 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
     
         
-        
     
     
 
@@ -2354,7 +2385,6 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
 
     
-        
         
     
     
@@ -2371,9 +2401,6 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
     
         
-            
-            
-        
     
     
 
@@ -2651,7 +2678,6 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
 
     
-        
         
     
     
@@ -2668,7 +2694,6 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
     
         
-        
     
     
 
@@ -2684,9 +2709,6 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
 
     
-        
-            
-            
         
     
     
@@ -3419,10 +3441,10 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/reference/qxtools/txsign/" title="Addr Tx Sign"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/" title="Tutorials"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/reference/qxtools/txsign/transaction/" title="transaction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/" title="Qitmeer Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -3438,9 +3460,9 @@ NmH2v9uqS9ZwwXvHf1K129pJSi5qTSpXAv6
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=address&body=Link%3A%C2%A0reference%2fqxtools%2ftxsign%2faddress%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/reference/qxtools/txsign/address/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qxtools/txsign/address/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=Development%20Environment&body=Link%3A%C2%A0tutorials%2fdevelopment-environment%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/tutorials/development-environment/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/development-environment/_index.en.md">Edit File</a >
             </p >
           </div>    
         

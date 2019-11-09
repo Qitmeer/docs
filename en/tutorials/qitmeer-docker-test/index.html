@@ -12,20 +12,20 @@
     <title>Qitmeer Testing Guide :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1573145909" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573145909" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1573250407" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573250407" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573145909" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573250407" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573145909"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573250407"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573145909"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573145909"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573250407"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573250407"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573145909"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573250407"></script>
 
     
   </div>
@@ -183,6 +183,30 @@
           
           
         
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/en/tutorials/qitmeer-installation/" title="Qitmeer Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/">
+          Qitmeer Installation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
           
             
             
@@ -2019,12 +2043,18 @@
 <ul>
 <li><a href="#testing-qitmeer-using-docker-image">Testing Qitmeer Using Docker Image</a>
 <ul>
-<li><a href="#prerequisites">Prerequisites</a>
+<li><a href="#system-requirements">System Requirements</a>
 <ul>
-<li><a href="#system">System</a>
+<li><a href="#hardware">Hardware</a></li>
+</ul></li>
+<li><a href="#os-specific-dependencies">OS Specific dependencies</a>
 <ul>
-<li><a href="#hardware-and-os">Hardware and OS</a></li>
+<li><a href="#mac">Mac</a></li>
 <li><a href="#golang">Golang</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#mac-1">Mac</a>
+<ul>
 <li><a href="#docker">Docker</a></li>
 </ul></li>
 <li><a href="#qitmeer-suite">Qitmeer Suite</a>
@@ -2088,35 +2118,49 @@
 
 <p>Here is the step by step guide to show to how setup the testing Qitmeer network by using the Qitmeer docker image.</p>
 
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id="system-requirements">System Requirements</h3>
 
 <p>Before we go with the experiment, we need to ensure the system and qitmeer suite are ready. Since the following experiment pertains two nodes, so we need to perform theses steps on each node.</p>
 
-<h4 id="system">System</h4>
-
-<h5 id="hardware-and-os">Hardware and OS</h5>
+<h4 id="hardware">Hardware</h4>
 
 <ul>
-<li>Memory: &gt;= 2G</li>
-<li>Storage: &gt;= 10G</li>
-<li>OS: &gt;= Ubuntu 16.04</li>
-<li>Network: &gt;= 2M b/s bandwidth, with PUBLIC IP</li>
+<li>Memory:  2G+</li>
+<li>Storage:  10G+</li>
+<li>Network:  20M+ bps</li>
 </ul>
 
-<p><strong>Note:</strong> currently, Qitmeer&rsquo;s seeder is not open-sourced and the nodes need to connect with each other directly, thus PUBLIC IP is an obligation. Late on, once seeder is ready, this requirement will be removed.</p>
+<h3 id="os-specific-dependencies">OS Specific dependencies</h3>
 
-<h5 id="golang">Golang</h5>
+<p>Different OS has different dependencies, such as package managers, development libraries</p>
+
+<h4 id="mac">Mac</h4>
+
+<pre><code class="language-shell"># Package manager
+/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<h4 id="golang">Golang</h4>
 
 <p>Most of Qitmeer Suite are golang projects and using go modules.</p>
+
+<h4 id="ubuntu">Ubuntu</h4>
 
 <pre><code class="language-shell">sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
 </code></pre>
 
+<h4 id="windows">Windows</h4>
+
+<h4 id="mac-1">Mac</h4>
+
+<pre><code class="language-shell">brew install go
+</code></pre>
+
 <h5 id="docker">Docker</h5>
 
-<p>Install docker on ubuntu:</p>
+<p>Ubuntu:</p>
 
 <pre><code>sudo apt-get install \
     apt-transport-https \
@@ -2131,6 +2175,12 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce
 </code></pre>
+
+<p>Mac:
+<a href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p>
+
+<p>Win:
+<a href="https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe">https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe</a></p>
 
 <p>If you are already a root user, you can ignore next step</p>
 
@@ -2637,6 +2687,25 @@ cli --timeout=9m generate 16
 
     
         
+            
+            
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
         
     
     
@@ -3794,7 +3863,7 @@ cli --timeout=9m generate 16
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/" title="Tutorials"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/" title="Qitmeer Installation"> <i class="fa fa-chevron-left"></i></a>
 
 
 <a class="nav nav-next" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-atomicswap/" title="Qitmeer Atomic-swap" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -3834,22 +3903,22 @@ cli --timeout=9m generate 16
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573145909"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573250407"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573145909"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573250407"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1573145909"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573145909"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573145909" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573145909"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1573250407"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573250407"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573250407" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573250407"></script>
 
 
 <script>

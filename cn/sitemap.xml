@@ -41,36 +41,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/cn/tutorials/qitmeer-js/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-js/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/cn/tutorials/qitmeer-rpc/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-rpc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/tutorials/qitmeer-rpc/"
-                />
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -143,20 +113,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://qitmeer.github.io/docs/cn/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/cn/tutorials/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/tutorials/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/tutorials/"
                 />
   </url>
   
