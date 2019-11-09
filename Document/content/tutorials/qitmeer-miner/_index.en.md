@@ -1,3 +1,10 @@
+---
+title: Qitmeer Miner
+weight: 1
+#pre: "<b>1. </b>"
+# chapter: true
+---
+
 # <font color=Chocolate size=6>Mining Tutorial</font>
 
 ##  Step 1: Prepare Enviroment
