@@ -6,6 +6,12 @@ weight: 2
 ---
 
 ## Prerequisites
+### Introduction
+This tutorial gives a quick practice on how to use qitmeer to send a transaction from scratch. It covers 3 core roles in the network: qitmeer, miner, wallet. So, it would help you get a basic concept of qitmeer network in short time. 
+
+It includes four sections: first we launch a Qitmeer test node as server to provide the fundamental blockchain service; then we launch the qitmeer command line wallet to generate wallet for miner; in the next step, we run a miner node to win the mining reward from the network; lastly, we use wallet to send a transaction to an arbitrary recipient using our mining reward.
+
+Note: this tutorial is  just targeted for beginners to experience the core functionality of Qitmeer network as soon as possible. So we tried to skip some steps which should have been best practice. Such as , TLS , strong password, saving important information, etc. So, after gone through this tutorial, please dive into the our documents of each project to get a better practice.
 
 ### Development Environment
 Follow [Development Environment](../tutorials/development-environment)
@@ -34,7 +40,7 @@ alias qitmeer="~/${QITMEER_URI}/qitmeer"
 
 ### Run
 ```shell
- qitmeer --notls 
+ qitmeer --notls --rpcuser=test --rpcpass=test
 ```
 
 ## Run Wallet
@@ -116,5 +122,8 @@ Switch to wallet terminal
 ```bash
 export RECIPIENT_MNEMONIC=$(qx generatemnemonic)
 export RECIPIENT_ADDRESS=$(qx mnemonictoaddr "${RECIPIENT_MNEMONIC}" testnet)
+
+#  make sure your mining reward matured before executing this command
 qc sendtoaddress $RECIPIENT_ADDRESS 9 $WALLET_PASSWORD
+
 ```
