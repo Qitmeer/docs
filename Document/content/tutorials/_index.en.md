@@ -7,7 +7,9 @@ weight: 3
 
 #### Qitmeer Tutorials List
 
-- [Qitmeer Tesing Guide: Step-by-Step Guide by Using Docker Image](./qitmeer-docker-test)
+- [Development Environment](./development-environment)
+
+- [Qitmeer Installation](./qitmeer-installation)
 
 - [Qitmeer Cross-chain Atomic-swapping](./qitmeer-atomicswap)
 
