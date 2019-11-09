@@ -12,20 +12,20 @@
     <title>Getting Started :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1573305730" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573305730" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1573307933" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1573307933" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573305730" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1573307933" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573305730"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1573307933"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573305730"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573305730"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1573307933"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1573307933"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573305730"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1573307933"></script>
 
     
   </div>
@@ -2037,6 +2037,7 @@
 <ul>
 <li><a href="#prerequisites">Prerequisites</a>
 <ul>
+<li><a href="#introduction">Introduction</a></li>
 <li><a href="#development-environment">Development Environment</a></li>
 </ul></li>
 <li><a href="#run-qitmeer">Run Qitmeer</a>
@@ -2086,6 +2087,14 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
+<h3 id="introduction">Introduction</h3>
+
+<p>This tutorial gives a quick practice on how to use qitmeer to send a transaction from scratch. It covers 3 core roles in the network: qitmeer, miner, wallet. So, it would help you get a basic concept of qitmeer network in short time.</p>
+
+<p>It includes four sections: first we launch a Qitmeer test node as server to provide the fundamental blockchain service; then we launch the qitmeer command line wallet to generate wallet for miner; in the next step, we run a miner node to win the mining reward from the network; lastly, we use wallet to send a transaction to an arbitrary recipient using our mining reward.</p>
+
+<p>Note: this tutorial is  just targeted for beginners to experience the core functionality of Qitmeer network as soon as possible. So we tried to skip some steps which should have been best practice. Such as , TLS , strong password, saving important information, etc. So, after gone through this tutorial, please dive into the our documents of each project to get a better practice.</p>
+
 <h3 id="development-environment">Development Environment</h3>
 
 <p>Follow <a href="../tutorials/development-environment">Development Environment</a></p>
@@ -2117,7 +2126,7 @@ alias qitmeer=&quot;~/${QITMEER_URI}/qitmeer&quot;
 
 <h3 id="run">Run</h3>
 
-<pre><code class="language-shell"> qitmeer --notls 
+<pre><code class="language-shell"> qitmeer --notls --rpcuser=test --rpcpass=test
 </code></pre>
 
 <h2 id="run-wallet">Run Wallet</h2>
@@ -2201,7 +2210,10 @@ miner --mineraddress=${MINER_ADDRESS} --network=testnet --rpcuser=test --rpcpass
 
 <pre><code class="language-bash">export RECIPIENT_MNEMONIC=$(qx generatemnemonic)
 export RECIPIENT_ADDRESS=$(qx mnemonictoaddr &quot;${RECIPIENT_MNEMONIC}&quot; testnet)
+
+#  make sure your mining reward matured before executing this command
 qc sendtoaddress $RECIPIENT_ADDRESS 9 $WALLET_PASSWORD
+
 </code></pre>
 
 
@@ -3541,22 +3553,22 @@ qc sendtoaddress $RECIPIENT_ADDRESS 9 $WALLET_PASSWORD
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573305730"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1573307933"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573305730"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1573307933"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1573305730"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573305730"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573305730" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573305730"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1573307933"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1573307933"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1573307933" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1573307933"></script>
 
 
 <script>
