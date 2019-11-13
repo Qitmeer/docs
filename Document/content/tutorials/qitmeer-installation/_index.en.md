@@ -51,7 +51,7 @@ sudo apt-get install docker-ce
 ### Run Qitmeer on Docker
 ```shell
 docker pull qitmeer/qitmeerd
-docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeer --notls --rpcuser=test --rpcpass=test
+docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeerd --notls --rpcuser=test --rpcpass=test
 ```
 
 ## [Approach 2: Build from source](#approach-2)
