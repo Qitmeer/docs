@@ -6,7 +6,7 @@ title: "Qitmeer docs"
 
 ------------
 
-The Qitmeer/HLC documentation &amp; guides and tutorials.
+The Qitmeer/Meer documentation &amp; guides and tutorials.
 
 #### Document List
  - [Introduction](./intro/)

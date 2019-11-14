@@ -24,7 +24,7 @@ go version go1.12 darwin/amd64
 ```bash
 ~ mkdir -p /tmp/work
 ~ cd /tmp/work
-~ git clone https://github.com/HalalChain/qx.git
+~ git clone https://github.com/Qitmeer/qx.git
 ~ cd qx
 ~ go build
 ~ ./qx --version

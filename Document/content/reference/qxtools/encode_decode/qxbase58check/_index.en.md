@@ -64,10 +64,10 @@ BTC type addresses can be created using -m and -v
 
 #### Example 4
 
-Different address types can be created using different hashers, such as double sha256 hasher for BTC and double blake2b256 for HLC
+Different address types can be created using different hashers, such as double sha256 hasher for BTC and double blake2b256 for Meer
 
 ```bash
-# create HLC address by base16
+# create Meer address by base16
 ~ qx base58check-encode -a dblake2b256 c1c3092d17c917c2799c041aeaeac18822772149
 
 # base58 string

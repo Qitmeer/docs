@@ -1,3 +1,10 @@
+---
+title: Qitmeer Miner
+weight: 1
+#pre: "<b>1. </b>"
+# chapter: true
+---
+
 # <font color=Chocolate size=6>Mining Tutorial</font>
 
 ## Table of Contents
@@ -56,8 +63,7 @@ Install [**Build Tools for Visual Studio**](https://visualstudio.microsoft.com/t
 ```bash
 $ git clone git@github.com:Qitmeer/qitmeer-miner.git
 ```
-
-### 2. Build the curkoo library 
+### 2. Install the cuckoo and opencl library 
 
 ```bash
 $ cd qitmeer-miner 

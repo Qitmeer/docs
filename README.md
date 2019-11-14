@@ -31,7 +31,7 @@ Hugo Static Site Generator v0.55.6/extended darwin/amd64 BuildDate: unknown
 #### Run
 
 ```bash
-git clone https://github.com/HalalChain/docs.git
+git clone https://github.com/qitmeer/docs.git
 cd docs/Document/
 
 hugo serve
@@ -41,7 +41,7 @@ open http://localhost:1313/docs/
 
 # How To Add Document
 
-#### creat a document item
+#### create a document item
 
 ```bash
 hugo new content/example/_index.en.md
@@ -77,4 +77,24 @@ mathjax: true
 ---
 
 ### content
+```
+
+## Update github pages
+
+### create gh-pages branch if doesn't exists
+```bash
+git checkout -b gh-pages origin/gh-pages
+```
+###  update gh-pages
+```bash
+git checkout master
+cd Document
+hugo
+
+cd ..
+git checkout gh-pages
+cp -rf Document/public/* ./
+git add .
+git commit -m"update YYMMDD"
+git push
 ```
