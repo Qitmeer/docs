@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>block :: Qitmeer Documentation</title>
+    <title>Development Environment :: Qitmeer Documentation</title>
 
     
     <link href="https://qitmeer.github.io/docs/css/nucleus.css?1574040994" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/reference/qitmeer-cli/block/">
+  <body class="" data-url="/en/tutorials/development-environment/">
     <nav id="sidebar" class="">
 
 
@@ -165,7 +165,7 @@
   
     
     <li data-nav-id="/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -192,8 +192,8 @@
   
     
     <li data-nav-id="/en/tutorials/development-environment/" title="Development Environment" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://qitmeer.github.io/docs/en/tutorials/development-environment/">
@@ -343,7 +343,7 @@
   
     
     <li data-nav-id="/en/reference/" title="Commands References" class="dd-item 
-        parent
+        
         
         
         ">
@@ -982,7 +982,7 @@
   
     
     <li data-nav-id="/en/reference/qitmeer-cli/" title="qitmeer-cli" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1009,8 +1009,8 @@
   
     
     <li data-nav-id="/en/reference/qitmeer-cli/block/" title="block" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/">
@@ -1935,7 +1935,7 @@
                   
                     
                     
-                      <option id="en" value="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/" selected>English</option>
+                      <option id="en" value="https://qitmeer.github.io/docs/en/tutorials/development-environment/" selected>English</option>
                     
                   
               
@@ -1993,7 +1993,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qitmeer-cli/block/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/development-environment/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -2024,13 +2024,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/reference/'>Commands References</a> > <a href='https://qitmeer.github.io/docs/en/reference/qitmeer-cli/'>qitmeer-cli</a> > block
-          
-         
+            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/tutorials/'>Tutorials</a> > Development Environment
           
          
           
@@ -2047,11 +2041,19 @@
 <ul>
 <li>
 <ul>
-<li><a href="#block">block</a>
+<li>
 <ul>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#options">Options</a></li>
-<li><a href="#see-also">SEE ALSO</a></li>
+<li><a href="#shell-and-package-manager">Shell and package manager</a>
+<ul>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#mac">Mac</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+</ul></li>
+<li><a href="#install-requisite">Install Requisite</a>
+<ul>
+<li><a href="#windows-1">Windows</a></li>
+<li><a href="#mac-1">Mac</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2071,7 +2073,7 @@
           
             <h1>
               
-              block
+              Development Environment
             </h1>
           
 
@@ -2080,32 +2082,66 @@
 
 	
 
-<h2 id="block">block</h2>
+<p>This tutorial covers most qitmeer applications, including qitmeer, qitmeer-cli, qitmeer-miner, etc.</p>
 
-<h3 id="usage">Usage</h3>
+<h3 id="shell-and-package-manager">Shell and package manager</h3>
 
-<p>See list Command Usage</p>
+<p>A uniform command style and a handy package manager will greatly increase efficiency.</p>
 
-<h3 id="options">Options</h3>
+<h4 id="windows">Windows</h4>
 
-<pre><code>  -h, --help   help for block
-</code></pre>
-
-<h3 id="see-also">SEE ALSO</h3>
+<p>Since windows commands are not in unix-like style, so it is strongly command to install Msys2, which presents a unix shell and a package manager (pacman). It would provide consistent experience as Mac or Ubuntu do.</p>
 
 <ul>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/">qitmeer-cli</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getbestblockhash/">getBestBlockHash</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblock/">getBlock</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockbyorder/">getBlockByOrder</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockcount/">getBlockCount</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockhash/">getBlockHash</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockhashbyrange/">getBlockHashByRange</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockheader/">getBlockHeader</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockweight/">getBlockWeight</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getmainchainheight/">getMainChainHeight</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/isonmainchain/">isOnMainChain</a><br /></li>
+<li>Download and install msys2 from <a href="http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe">http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe</a></li>
+<li>Find and run &ldquo;MSYS2 MSYS&rdquo; in Start Menu to MSYS2 shell</li>
+
+<li><p>Run following command to setup system environment variables</p>
+
+<pre><code class="language-shell">export PATH=/mingw64/bin:$PATH
+export LD_LIBRARY_PATH=/mingw64/lib:$LD_LIBRARY_PATH
+
+# update packages, it may ask you to re-open a terminal to process
+# repeat this instruction until no packages to update
+pacman -Syu
+
+</code></pre></li>
 </ul>
+
+<p><img src="https://qitmeer.github.io/docs/images/development-environment/msys2.png" alt="Figure 2" /></p>
+
+<h4 id="mac">Mac</h4>
+
+<p>Mac is a Unix based OS, we just need to install the package manager.</p>
+
+<pre><code class="language-shell">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+brew update
+brew upgrade
+</code></pre>
+
+<h4 id="ubuntu">Ubuntu</h4>
+
+<p>Ubuntu has build-in package manager apt, just update to the latest state</p>
+
+<pre><code class="language-shell">sudo apt update
+sudo apt upgrade
+</code></pre>
+
+<h3 id="install-requisite">Install Requisite</h3>
+
+<p>Before install Qitmeer, we need install git and golang.</p>
+
+<h4 id="windows-1">Windows</h4>
+
+<pre><code class="language-shell"> pacman -S git mingw64/mingw-w64-x86_64-go
+export GOROOT=/mingw64/lib/go
+export GOPATH=/mingw64
+</code></pre>
+
+<h4 id="mac-1">Mac</h4>
+
+<pre><code class="language-shell">brew install git go
+</code></pre>
 
 
 
@@ -2216,6 +2252,7 @@
 
     
         
+        
     
     
 
@@ -2231,6 +2268,7 @@
 
     
         
+        
     
     
 
@@ -2246,6 +2284,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -2330,7 +2371,6 @@
 
     
         
-        
     
     
 
@@ -2345,9 +2385,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -2726,7 +2763,6 @@
 
 
     
-        
         
     
     
@@ -2743,7 +2779,6 @@
 
     
         
-        
     
     
 
@@ -2758,9 +2793,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -3327,10 +3359,10 @@
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/" title="qitmeer-cli"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/" title="Tutorials"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getbestblockhash/" title="getBestBlockHash" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/" title="Qitmeer Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -3346,9 +3378,9 @@
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=block&body=Link%3A%C2%A0reference%2fqitmeer-cli%2fblock%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/reference/qitmeer-cli/block/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qitmeer-cli/block/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=Development%20Environment&body=Link%3A%C2%A0tutorials%2fdevelopment-environment%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/tutorials/development-environment/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/development-environment/_index.en.md">Edit File</a >
             </p >
           </div>    
         

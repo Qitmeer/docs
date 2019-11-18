@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/development-environment/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/</loc>
   </url>
   
@@ -11,7 +15,19 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-docker-test/</loc>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-miner/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-rpc/</loc>
   </url>
   
   <url>
@@ -337,21 +353,6 @@
   <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-cli/blockchain/txsign/</loc>
     <lastmod>2019-07-29T00:38:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-miner/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-rpc/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

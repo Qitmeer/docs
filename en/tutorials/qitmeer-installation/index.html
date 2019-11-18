@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>block :: Qitmeer Documentation</title>
+    <title>Qitmeer Installation :: Qitmeer Documentation</title>
 
     
     <link href="https://qitmeer.github.io/docs/css/nucleus.css?1574040994" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/reference/qitmeer-cli/block/">
+  <body class="" data-url="/en/tutorials/qitmeer-installation/">
     <nav id="sidebar" class="">
 
 
@@ -165,7 +165,7 @@
   
     
     <li data-nav-id="/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -216,8 +216,8 @@
   
     
     <li data-nav-id="/en/tutorials/qitmeer-installation/" title="Qitmeer Installation" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/">
@@ -343,7 +343,7 @@
   
     
     <li data-nav-id="/en/reference/" title="Commands References" class="dd-item 
-        parent
+        
         
         
         ">
@@ -982,7 +982,7 @@
   
     
     <li data-nav-id="/en/reference/qitmeer-cli/" title="qitmeer-cli" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1009,8 +1009,8 @@
   
     
     <li data-nav-id="/en/reference/qitmeer-cli/block/" title="block" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/">
@@ -1935,7 +1935,7 @@
                   
                     
                     
-                      <option id="en" value="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/" selected>English</option>
+                      <option id="en" value="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/" selected>English</option>
                     
                   
               
@@ -1993,7 +1993,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qitmeer-cli/block/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-installation/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -2024,13 +2024,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/reference/'>Commands References</a> > <a href='https://qitmeer.github.io/docs/en/reference/qitmeer-cli/'>qitmeer-cli</a> > block
-          
-         
+            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/tutorials/'>Tutorials</a> > Qitmeer Installation
           
          
           
@@ -2047,11 +2041,21 @@
 <ul>
 <li>
 <ul>
-<li><a href="#block">block</a>
+<li><a href="#approach-1-docker-approach-1"><a href="#approach-1">Approach 1: Docker</a></a>
 <ul>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#options">Options</a></li>
-<li><a href="#see-also">SEE ALSO</a></li>
+<li><a href="#install-docker">Install docker</a>
+<ul>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#mac">Mac</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+</ul></li>
+<li><a href="#run-qitmeer-on-docker">Run Qitmeer on Docker</a></li>
+</ul></li>
+<li><a href="#approach-2-build-from-source-approach-2"><a href="#approach-2">Approach 2: Build from source</a></a>
+<ul>
+<li><a href="#setup-development-environment">Setup development environment</a></li>
+<li><a href="#install-qitmeer">Install Qitmeer</a></li>
+<li><a href="#run-qitmeer">Run Qitmeer</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2071,7 +2075,7 @@
           
             <h1>
               
-              block
+              Qitmeer Installation
             </h1>
           
 
@@ -2080,32 +2084,88 @@
 
 	
 
-<h2 id="block">block</h2>
+<h2 id="approach-1-docker-approach-1"><a href="#approach-1">Approach 1: Docker</a></h2>
 
-<h3 id="usage">Usage</h3>
+<p>For most users, run Qitmeer with a docker is recommended since this would the easiest and fastest way to experience Qitmeer. No worry about the system requisite and no need to wait for compiling build.</p>
 
-<p>See list Command Usage</p>
+<h3 id="install-docker">Install docker</h3>
 
-<h3 id="options">Options</h3>
+<h4 id="windows">Windows</h4>
 
-<pre><code>  -h, --help   help for block
-</code></pre>
+<ol>
+<li><p>Download and install package from: <a href="https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe">https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe</a></p></li>
 
-<h3 id="see-also">SEE ALSO</h3>
+<li><p>After installation, you need to logout and login again</p></li>
+
+<li><p>Add current user to docker-users group</p>
 
 <ul>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/">qitmeer-cli</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getbestblockhash/">getBestBlockHash</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblock/">getBlock</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockbyorder/">getBlockByOrder</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockcount/">getBlockCount</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockhash/">getBlockHash</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockhashbyrange/">getBlockHashByRange</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockheader/">getBlockHeader</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getblockweight/">getBlockWeight</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getmainchainheight/">getMainChainHeight</a><br /></li>
-<li><a href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/isonmainchain/">isOnMainChain</a><br /></li>
+<li>open Local Users and Groups<br />
+search &ldquo;lusrmgr.msc&rdquo; in Start Menu and Open it</li>
+<li>Follow the steps in Figure 1 to add current user to group, replace &ldquo;Qitmeer&rdquo; in step 3 with your account</li>
 </ul>
+
+<p><img src="https://qitmeer.github.io/docs/images/qitmeer-installation/docker-users.png" alt="Figure 1" /></p>
+
+<blockquote>
+<p>Figure 1: Add current user to docker-users group</p>
+</blockquote>
+
+<ul>
+<li>restart or re-login to make the new configuration take effect</li>
+</ul></li>
+</ol>
+
+<h4 id="mac">Mac</h4>
+
+<p>Download and install package from: <a href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p>
+
+<h4 id="ubuntu">Ubuntu</h4>
+
+<pre><code class="language-shell">sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable&quot;
+sudo apt-get update
+sudo apt-get install docker-ce
+</code></pre>
+
+<h3 id="run-qitmeer-on-docker">Run Qitmeer on Docker</h3>
+
+<pre><code class="language-shell">docker pull qitmeer/qitmeerd
+docker run -it -p 18130:18130 -p 18131:18131 qitmeer/qitmeerd --notls --rpcuser=test --rpcpass=test
+</code></pre>
+
+<h2 id="approach-2-build-from-source-approach-2"><a href="#approach-2">Approach 2: Build from source</a></h2>
+
+<p>For developers or people with technical background, we also welcome you to build qitmeer from source</p>
+
+<h3 id="setup-development-environment">Setup development environment</h3>
+
+<p>Follow <a href="../development-environment">Development Environment</a></p>
+
+<h3 id="install-qitmeer">Install Qitmeer</h3>
+
+<p>From this steps on, all the commands are consistent among all platforms</p>
+
+<pre><code class="language-shell">git clone https://github.com/Qitmeer/qitmeer ~//github.com/Qitmeer/qitmeer
+</code></pre>
+
+<h3 id="run-qitmeer">Run Qitmeer</h3>
+
+<pre><code class="language-shell">cd ~//github.com/Qitmeer/qitmeer
+git pull
+go build
+# once needs cleaning data or problems happened, please uncomment this line to clean data
+# ./qitmeer --testnet -L
+./qitmeer --testnet --notls --rpcuser=test --rpcpass=test
+</code></pre>
 
 
 
@@ -2216,6 +2276,7 @@
 
     
         
+        
     
     
 
@@ -2230,6 +2291,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -2247,6 +2311,7 @@
 
     
         
+        
     
     
 
@@ -2262,6 +2327,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -2330,7 +2398,6 @@
 
     
         
-        
     
     
 
@@ -2345,9 +2412,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -2727,7 +2791,6 @@
 
     
         
-        
     
     
 
@@ -2742,7 +2805,6 @@
 
 
     
-        
         
     
     
@@ -2758,9 +2820,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -3327,10 +3386,10 @@
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/" title="qitmeer-cli"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/development-environment/" title="Development Environment"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/reference/qitmeer-cli/block/getbestblockhash/" title="getBestBlockHash" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/" title="Qitmeer JS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -3346,9 +3405,9 @@
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=block&body=Link%3A%C2%A0reference%2fqitmeer-cli%2fblock%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/reference/qitmeer-cli/block/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qitmeer-cli/block/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=Qitmeer%20Installation&body=Link%3A%C2%A0tutorials%2fqitmeer-installation%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/tutorials/qitmeer-installation/_index.en.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-installation/_index.en.md">Edit File</a >
             </p >
           </div>    
         
