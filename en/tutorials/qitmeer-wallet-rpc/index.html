@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>entropy :: Qitmeer Documentation</title>
+    <title>Qitmeer-wallet RPC :: Qitmeer Documentation</title>
 
     
     <link href="https://qitmeer.github.io/docs/css/nucleus.css?1574831168" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/reference/qxtools/entropy/seed/">
+  <body class="" data-url="/en/tutorials/qitmeer-wallet-rpc/">
     <nav id="sidebar" class="">
 
 
@@ -165,7 +165,7 @@
   
     
     <li data-nav-id="/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -312,8 +312,8 @@
   
     
     <li data-nav-id="/en/tutorials/qitmeer-wallet-rpc/" title="Qitmeer-wallet RPC" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-wallet-rpc/">
@@ -367,7 +367,7 @@
   
     
     <li data-nav-id="/en/reference/" title="Commands References" class="dd-item 
-        parent
+        
         
         
         ">
@@ -394,7 +394,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/" title="Qx Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -709,7 +709,7 @@
   
     
     <li data-nav-id="/en/reference/qxtools/entropy/" title="Entropy and Mnemoic" class="dd-item 
-        parent
+        
         
         
         ">
@@ -736,8 +736,8 @@
   
     
     <li data-nav-id="/en/reference/qxtools/entropy/seed/" title="entropy" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://qitmeer.github.io/docs/en/reference/qxtools/entropy/seed/">
@@ -1959,7 +1959,7 @@
                   
                     
                     
-                      <option id="en" value="https://qitmeer.github.io/docs/en/reference/qxtools/entropy/seed/" selected>English</option>
+                      <option id="en" value="https://qitmeer.github.io/docs/en/tutorials/qitmeer-wallet-rpc/" selected>English</option>
                     
                   
               
@@ -2017,7 +2017,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qxtools/entropy/seed/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-wallet-rpc/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -2048,19 +2048,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/reference/'>Commands References</a> > <a href='https://qitmeer.github.io/docs/en/reference/qxtools/'>Qx Tools</a> > <a href='https://qitmeer.github.io/docs/en/reference/qxtools/entropy/'>Entropy and Mnemoic</a> > entropy
-          
-         
-          
-         
+            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/tutorials/'>Tutorials</a> > Qitmeer-wallet RPC
           
          
           
@@ -2075,15 +2063,66 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#qitmeer-wallet-rpc-reference">Qitmeer-wallet RPC Reference</a></li>
+<li><a href="#api-list">API List</a>
 <ul>
-<li>
+<li><a href="#1-wallet-unlock-password-second">1. wallet_unlock {password} {second}</a>
 <ul>
-<li><a href="#entropy">entropy</a>
-<ul>
-<li><a href="#example-1">Example 1</a></li>
-<li><a href="#example-2">Example 2</a></li>
+<li><a href="#info-解锁钱包">info: 解锁钱包</a></li>
+<li><a href="#args">args：</a></li>
+<li><a href="#example">example:</a></li>
 </ul></li>
+<li><a href="#2-wallet-lock">2. wallet_lock</a>
+<ul>
+<li><a href="#info-锁定钱包">info：锁定钱包</a></li>
+<li><a href="#example-1">example:</a></li>
+</ul></li>
+<li><a href="#3-wallet-getaccountsandbalance">3. wallet_getAccountsAndBalance</a>
+<ul>
+<li><a href="#info-获取所有的账号和余额">info: 获取所有的账号和余额</a></li>
+<li><a href="#example-2">example:</a></li>
+</ul></li>
+<li><a href="#4-wallet-createaccount-accountname">4. wallet_createAccount {accountName}</a>
+<ul>
+<li><a href="#info-添加账户">info: 添加账户</a></li>
+<li><a href="#args-1">args：</a></li>
+<li><a href="#example-3">example:</a></li>
+</ul></li>
+<li><a href="#5-wallet-getaddressesbyaccount-accountname">5. wallet_getAddressesByAccount {accountName}</a>
+<ul>
+<li><a href="#info-获取账户所有的地址">info: 获取账户所有的地址</a></li>
+<li><a href="#args-2">args：</a></li>
+<li><a href="#example-4">example:</a></li>
+</ul></li>
+<li><a href="#6-wallet-createaddress-accountname">6. wallet_createAddress {accountName}</a>
+<ul>
+<li><a href="#info-创建地址">info: 创建地址</a></li>
+<li><a href="#args-3">args：</a></li>
+<li><a href="#example-5">example:</a></li>
+</ul></li>
+<li><a href="#7-wallet-sendtoaddressbyaccount-fromaccount-toaddr-amount-comment-commentto">7. wallet_sendToAddressByAccount {fromAccount} {toAddr} {amount} {comment} {commentTo}</a>
+<ul>
+<li><a href="#info-发送交易">info: 发送交易</a></li>
+<li><a href="#args-4">args：</a></li>
+<li><a href="#example-6">example:</a></li>
+</ul></li>
+<li><a href="#8-wallet-gettxlistbyaddr-addr-type-page-pagesize">8. wallet_getTxListByAddr {addr} {type} {page} {pageSize}</a>
+<ul>
+<li><a href="#info-获取地址相关交易列表">info: 获取地址相关交易列表</a></li>
+<li><a href="#args-5">args：</a></li>
+<li><a href="#example-7">example:</a></li>
+</ul></li>
+<li><a href="#9-wallet-importwifprivkey-accountname-privkey-rescan">9. wallet_importWifPrivKey {accountName} {privKey} {rescan}</a>
+<ul>
+<li><a href="#info-导入地址私钥">info: 导入地址私钥</a></li>
+<li><a href="#args-6">args：</a></li>
+<li><a href="#example-8">example:</a></li>
+</ul></li>
+<li><a href="#10-wallet-dumpprivkey-addr">10. wallet_dumpPrivKey {addr}</a>
+<ul>
+<li><a href="#info-导出地址私钥">info: 导出地址私钥</a></li>
+<li><a href="#args-7">args：</a></li>
+<li><a href="#example-9">example:</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2103,7 +2142,7 @@
           
             <h1>
               
-              entropy
+              Qitmeer-wallet RPC
             </h1>
           
 
@@ -2112,36 +2151,266 @@
 
 	
 
-<h3 id="entropy">entropy</h3>
+<h1 id="qitmeer-wallet-rpc-reference">Qitmeer-wallet RPC Reference</h1>
 
-<p>generate a cryptographically secure pseudorandom entropy (seed).</p>
+<p>Downlocad Qitmeer Wallet from <a href="https://github.com/Qitmeer/qitmeer-wallet">github.com/Qitmeer/qitmeer-wallet</a></p>
 
+<pre><code class="language-sh"># run rpc or ul model  will support rpc interface
 
-<div class="notices warning" ><p>WARNING: Pseudorandom seeding can introduce cryptographic weakness into your keys. This command is provided as a convenience.</p>
-</div>
-
-
-<pre><code class="language-bash">~ qx entropy --help
-
-Usage: qx entropy [-s size]
-    -s uint
-        The length in bits for a seed (entropy) (default 256)
+./qitmeer-wallet qc web
 </code></pre>
 
-<h4 id="example-1">Example 1</h4>
+<p>Useage:</p>
 
-<pre><code class="language-bash">~ qx entropy
+<p>RPC interface URL <a href="http://127.0.0.1:38130/api">http://127.0.0.1:38130/api</a></p>
 
-492ac7d4d0eb37eda0a9f40a4dee41acb3df0260502a616ac0baa8838c75c0a6
+<pre><code class="language-sh">
+curl -k -u &quot;user:password&quot; -X POST -H 'Content-Type: application/json' --data '{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_createAccount&quot;,&quot;params&quot;:[&quot;account&quot;],&quot;id&quot;:1}' http://127.0.0.1:38130/api | jq
 </code></pre>
 
-<h4 id="example-2">Example 2</h4>
+<h1 id="api-list">API List</h1>
 
-<pre><code class="language-bash"># 1024 bit seed
-~ qx entropy -s 1024
+<h2 id="1-wallet-unlock-password-second">1. wallet_unlock {password} {second}</h2>
 
-819f7ad8b044aa076af96155eb85cd3581043065476530d1f4fc0e1ea812f42e484d34f976a726fe6e4cf6269a4f5c7b311407f3657cc33205f4170d5bf2b026708eefde3c64d02571d1de6193d3ac2c03888bed613e278713d72957613e3da34b60dec43bfdd475e460d53628b5ec3c9ecfc24fadf8486461a99e396bd5181d
+<h3 id="info-解锁钱包">info: 解锁钱包</h3>
+
+<h3 id="args">args：</h3>
+
+<ul>
+<li>password 钱包密码</li>
+
+<li><p>second 解锁时间,单位秒</p>
+
+<h3 id="example">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_unlock&quot;,&quot;params&quot;:[&quot;password&quot;,30],&quot;id&quot;:1}
+</code></pre></li>
+</ul>
+
+<h2 id="2-wallet-lock">2. wallet_lock</h2>
+
+<h3 id="info-锁定钱包">info：锁定钱包</h3>
+
+<h3 id="example-1">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_lock&quot;,&quot;params&quot;:[],&quot;id&quot;:1}
 </code></pre>
+
+<h2 id="3-wallet-getaccountsandbalance">3. wallet_getAccountsAndBalance</h2>
+
+<h3 id="info-获取所有的账号和余额">info: 获取所有的账号和余额</h3>
+
+<h3 id="example-2">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_getAccountsAndBalance&quot;,&quot;params&quot;:[],&quot;id&quot;:1}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 1,
+    &quot;result&quot;: {
+        &quot;account&quot;: {
+            &quot;TotalAmount&quot;: 0,
+            &quot;SpendAmount&quot;: 0,
+            &quot;UnspendAmount&quot;: 0,
+            &quot;ConfirmAmount&quot;: 0
+        },
+        &quot;default&quot;: {
+            &quot;TotalAmount&quot;: 280000000000,
+            &quot;SpendAmount&quot;: 0,
+            &quot;UnspendAmount&quot;: 280000000000,
+            &quot;ConfirmAmount&quot;: 0
+        },
+        &quot;imported&quot;: {
+            &quot;TotalAmount&quot;: 11172999678800,
+            &quot;SpendAmount&quot;: 325000000000,
+            &quot;UnspendAmount&quot;: 8754999678800,
+            &quot;ConfirmAmount&quot;: 2418000000000
+        }
+    }
+}
+
+</code></pre>
+
+<h2 id="4-wallet-createaccount-accountname">4. wallet_createAccount {accountName}</h2>
+
+<h3 id="info-添加账户">info: 添加账户</h3>
+
+<h3 id="args-1">args：</h3>
+
+<ul>
+<li><p>accountName 新账户名</p>
+
+<h3 id="example-3">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_createAccount&quot;,&quot;params&quot;:[&quot;accountName&quot;],&quot;id&quot;:1}
+</code></pre></li>
+</ul>
+
+<h2 id="5-wallet-getaddressesbyaccount-accountname">5. wallet_getAddressesByAccount {accountName}</h2>
+
+<h3 id="info-获取账户所有的地址">info: 获取账户所有的地址</h3>
+
+<h3 id="args-2">args：</h3>
+
+<ul>
+<li><p>accountName 账户名</p>
+
+<h3 id="example-4">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_getAddressesByAccount&quot;,&quot;params&quot;:[&quot;default&quot;],&quot;id&quot;:1}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+&quot;jsonrpc&quot;: &quot;2.0&quot;,
+&quot;id&quot;: 1,
+&quot;result&quot;: [
+    &quot;TmSbEJs3nDmy68Af7M4Rsuj4pyAwcAret5a&quot;,
+    &quot;Tmbzp2af9Ereh2hRejcVH9mCQgYdY2GHCAa&quot;,
+    &quot;TmZu8zU1i6xbZMpLQZLMAJsyWHanZXUZtiV&quot;
+]
+}
+</code></pre>
+
+<h2 id="6-wallet-createaddress-accountname">6. wallet_createAddress {accountName}</h2>
+
+<h3 id="info-创建地址">info: 创建地址</h3>
+
+<h3 id="args-3">args：</h3></li>
+
+<li><p>accountName 账户名</p>
+
+<h3 id="example-5">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_createAddress&quot;,&quot;params&quot;:[&quot;default&quot;],&quot;id&quot;:1}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+&quot;jsonrpc&quot;: &quot;2.0&quot;,
+&quot;id&quot;: 1,
+&quot;result&quot;: &quot;TmhMzHPCH6F2k3WYQkyvjhwAXoZt7q8TFv9&quot;
+}
+</code></pre></li>
+</ul>
+
+<h2 id="7-wallet-sendtoaddressbyaccount-fromaccount-toaddr-amount-comment-commentto">7. wallet_sendToAddressByAccount {fromAccount} {toAddr} {amount} {comment} {commentTo}</h2>
+
+<h3 id="info-发送交易">info: 发送交易</h3>
+
+<h3 id="args-4">args：</h3>
+
+<ul>
+<li>fromAccount from account</li>
+<li>toAddr send to address</li>
+<li>amount send amount coin</li>
+<li>comment</li>
+
+<li><p>commentTo</p>
+
+<h3 id="example-6">example:</h3>
+
+<pre><code class="language-json">{&quot;id&quot;:1574828051839,&quot;method&quot;:&quot;wallet_sendToAddressByAccount&quot;,&quot;params&quot;:[&quot;default&quot;,&quot;TmZu8zU1i6xbZMpLQZLMAJsyWHanZXUZtiV&quot;,800,&quot;&quot;,&quot;&quot;]}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+&quot;jsonrpc&quot;: &quot;2.0&quot;,
+&quot;id&quot;: 1574828051839,
+&quot;result&quot;: &quot;b1ff3645c374992313e66d504fdf4fd3f2006f9414b97a7e1f6382328cc74fb1&quot;
+}
+</code></pre></li>
+</ul>
+
+<h2 id="8-wallet-gettxlistbyaddr-addr-type-page-pagesize">8. wallet_getTxListByAddr {addr} {type} {page} {pageSize}</h2>
+
+<h3 id="info-获取地址相关交易列表">info: 获取地址相关交易列表</h3>
+
+<h3 id="args-5">args：</h3>
+
+<ul>
+<li>addr</li>
+<li>type  0: in tx; 1: out tx; 2: all tx</li>
+<li>page</li>
+
+<li><p>pageSize</p>
+
+<h3 id="example-7">example:</h3>
+
+<pre><code class="language-json">{&quot;id&quot;:1574750774018,&quot;method&quot;:&quot;wallet_getTxListByAddr&quot;,&quot;params&quot;:[&quot;TmhJcjphz3Y3jRysKT56JaH8m9pzAzsFMu7&quot;,2,-1,100]}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+&quot;jsonrpc&quot;: &quot;2.0&quot;,
+&quot;id&quot;: 1574750774018,
+&quot;result&quot;: {
+    &quot;Total&quot;: 1,
+    &quot;Page&quot;: 1,
+    &quot;PageSize&quot;: 1000000000,
+    &quot;transactions&quot;: [
+        {
+            &quot;hex&quot;: &quot;&quot;,
+            &quot;txid&quot;: &quot;47879fb9dea684e4ce6f24f30812d3832d11fee34400754c6d8b34cd7d7eba8f&quot;,
+            &quot;txhash&quot;: &quot;937de7e15ec48e9cd58d79c594e7395015d5c663924ab5af929a9ef5e5f2e446&quot;,
+            &quot;size&quot;: 377,
+            &quot;version&quot;: 1,
+            &quot;locktime&quot;: 0,
+            &quot;expire&quot;: 0,
+            &quot;vin&quot;: [
+               ...
+            ],
+            &quot;vout&quot;: [
+               ...
+            ],
+            &quot;blockhash&quot;: &quot;026c6c85a1ae0183fe2e8bfda3450b9990acf9b8c4af3e995f9e361c7bb3d4cd&quot;,
+            &quot;confirmations&quot;: 0
+        }
+    ]
+}
+}
+</code></pre></li>
+</ul>
+
+<h2 id="9-wallet-importwifprivkey-accountname-privkey-rescan">9. wallet_importWifPrivKey {accountName} {privKey} {rescan}</h2>
+
+<h3 id="info-导入地址私钥">info: 导入地址私钥</h3>
+
+<h3 id="args-6">args：</h3>
+
+<ul>
+<li>accountName 导入账户,目前只支持imported</li>
+<li>privKey 私钥</li>
+
+<li><p>rescan  bool,是否重新扫描交易记录</p>
+
+<h3 id="example-8">example:</h3>
+
+<pre><code class="language-json">{&quot;id&quot;:1574750774018,&quot;method&quot;:&quot;wallet_importWifPrivKey&quot;,&quot;params&quot;:[&quot;imported&quot;,&quot;xxxxx&quot;,false]}
+</code></pre></li>
+</ul>
+
+<h2 id="10-wallet-dumpprivkey-addr">10. wallet_dumpPrivKey {addr}</h2>
+
+<h3 id="info-导出地址私钥">info: 导出地址私钥</h3>
+
+<h3 id="args-7">args：</h3>
+
+<ul>
+<li><p>addr 地址</p>
+
+<h3 id="example-9">example:</h3>
+
+<pre><code class="language-json">{&quot;id&quot;:1574829854509,&quot;method&quot;:&quot;wallet_dumpPrivKey&quot;,&quot;params&quot;:[&quot;Tmh3je9zbnHAvPfwwHhQsFSJmKkeRTtKqmV&quot;]}
+</code></pre></li>
+</ul>
 
 
 
@@ -2252,6 +2521,7 @@ Usage: qx entropy [-s size]
 
     
         
+        
     
     
 
@@ -2266,6 +2536,9 @@ Usage: qx entropy [-s size]
 
 
     
+        
+            
+            
         
     
     
@@ -2347,6 +2620,7 @@ Usage: qx entropy [-s size]
 
     
         
+        
     
     
 
@@ -2362,6 +2636,9 @@ Usage: qx entropy [-s size]
 
 
     
+        
+            
+            
         
     
     
@@ -2381,7 +2658,6 @@ Usage: qx entropy [-s size]
 
 
     
-        
         
     
     
@@ -2398,7 +2674,6 @@ Usage: qx entropy [-s size]
 
     
         
-        
     
     
 
@@ -2413,9 +2688,6 @@ Usage: qx entropy [-s size]
 
 
     
-        
-            
-            
         
     
     
@@ -2597,7 +2869,6 @@ Usage: qx entropy [-s size]
 
     
         
-        
     
     
 
@@ -2612,7 +2883,6 @@ Usage: qx entropy [-s size]
 
 
     
-        
         
     
     
@@ -2629,9 +2899,6 @@ Usage: qx entropy [-s size]
 
 
     
-        
-            
-            
         
     
     
@@ -3380,10 +3647,10 @@ Usage: qx entropy [-s size]
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/reference/qxtools/entropy/" title="Entropy and Mnemoic"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-rpc/" title="Qitmeer RPC"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/reference/qxtools/entropy/hd/" title="HD" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-atomicswap/" title="Qitmeer Atomic-swap" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -3399,9 +3666,9 @@ Usage: qx entropy [-s size]
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=entropy&body=Link%3A%C2%A0reference%2fqxtools%2fentropy%2fseed%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/reference/qxtools/entropy/seed/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/reference/qxtools/entropy/seed/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=Qitmeer-wallet%20RPC&body=Link%3A%C2%A0tutorials%2fqitmeer-wallet-rpc%2f_index.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/tutorials/qitmeer-wallet-rpc/_index.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-wallet-rpc/_index.md">Edit File</a >
             </p >
           </div>    
         
