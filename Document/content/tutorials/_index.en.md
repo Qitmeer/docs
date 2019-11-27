@@ -18,3 +18,5 @@ weight: 3
 - [Qitmeer Rpc Guide](./qitmeer-rpc)
 
 - [Qitmeer JS Guide](./qitmeer-js)
+
+- [Qitmeer-wallet Rpc Guide](./qitmeer-wallet-rpc)
