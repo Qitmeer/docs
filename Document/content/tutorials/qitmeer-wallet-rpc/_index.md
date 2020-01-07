@@ -190,7 +190,7 @@ result:
 ```
 
 ## 9. wallet_importWifPrivKey {accountName} {privKey} {rescan}
-### info: 导入地址私钥
+### info: 导入wif格式私钥
 ### args：
 - accountName 导入账户,目前只支持imported
 - privKey 私钥
@@ -201,10 +201,94 @@ result:
 ```
 
 ## 10. wallet_dumpPrivKey {addr}
-### info: 导出地址私钥
+### info: 导出地址wif格式私钥
 ### args：
 - addr 地址
 ### example:
 ```json
 {"id":1574829854509,"method":"wallet_dumpPrivKey","params":["Tmh3je9zbnHAvPfwwHhQsFSJmKkeRTtKqmV"]}
 ```
+
+## 11. ui_openWallet {pass}
+### info: 打开钱包 
+### args：
+- pass 钱包密码
+### example:
+```json
+{"jsonrpc":"1.0","method":"ui_openWallet","params":["pass"],"id":1}
+```
+
+## 12. wallet_syncStats
+### info: 查看当前钱包同步高度 
+### args：
+### example:
+```json
+{"jsonrpc":"1.0","method":"wallet_syncStats","params":[],"id":1}
+```
+result:
+```json
+{
+	"jsonrpc": "2.0",
+	"id": 1,
+	"result": {
+		"Height": 20460
+	}
+}
+```
+
+## 13. wallet_getUtxo {addr}
+### info: 获取指定地址可用utxo
+### args：
+- addr 地址
+### example:
+```json
+{"jsonrpc":"1.0","method":"wallet_getUtxo","params":["TmgD1mu8zMMV9aWmJrXqQYnWRhR9SBfDZG6"],"id":1}
+```
+result:
+```json
+{
+	"jsonrpc": "2.0",
+	"id": 1,
+	"result": [{
+		"Txid": "54c47af3a17201c64a8f3b27164d4e09e8e38e05501b16bfd4f001caeddfa86a",
+		"Index": 1,
+		"Amount": 699925600
+	}]
+}
+```
+
+## 14. wallet_importPrivKey {accountName} {privKey} {rescan}
+### info: 导入私钥
+### args：
+- accountName 导入账户,目前只支持imported
+- privKey 私钥
+- rescan  bool,是否重新扫描交易记录
+### example:
+```json
+{"jsonrpc":"1.0","method":"wallet_importPrivKey","params":["imported","xxxxxx",true],"id":1}
+```
+
+
+## 15. wallet_getBalanceByAddr {addr}
+### info: 获取地址余额 
+### args：
+- addr 地址
+### example:
+```json
+{"jsonrpc":"1.0","method":"wallet_getBalanceByAddr","params":["TmfDniZnvsjdH98GsH4aetL3XQKFUTWPp4e",1],"id":16}
+```
+result:
+```json
+{
+	"jsonrpc": "2.0",
+	"id": 16,
+	"result": {
+		"TotalAmount": 400000000,
+		"SpendAmount": 0,
+		"UnspendAmount": 400000000,
+		"ConfirmAmount": 0
+	}
+}
+```
+
+
