@@ -12,20 +12,20 @@
     <title>Qitmeer-wallet RPC :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1574831168" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1574831168" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1578451724" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1578451724" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1574831168" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1578451724" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1574831168"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1578451724"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1574831168"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1574831168"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1578451724"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1578451724"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1574831168"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1578451724"></script>
 
     
   </div>
@@ -2114,15 +2114,45 @@
 </ul></li>
 <li><a href="#9-wallet-importwifprivkey-accountname-privkey-rescan">9. wallet_importWifPrivKey {accountName} {privKey} {rescan}</a>
 <ul>
-<li><a href="#info-导入地址私钥">info: 导入地址私钥</a></li>
+<li><a href="#info-导入wif格式私钥">info: 导入wif格式私钥</a></li>
 <li><a href="#args-6">args：</a></li>
 <li><a href="#example-8">example:</a></li>
 </ul></li>
 <li><a href="#10-wallet-dumpprivkey-addr">10. wallet_dumpPrivKey {addr}</a>
 <ul>
-<li><a href="#info-导出地址私钥">info: 导出地址私钥</a></li>
+<li><a href="#info-导出地址wif格式私钥">info: 导出地址wif格式私钥</a></li>
 <li><a href="#args-7">args：</a></li>
 <li><a href="#example-9">example:</a></li>
+</ul></li>
+<li><a href="#11-ui-openwallet-pass">11. ui_openWallet {pass}</a>
+<ul>
+<li><a href="#info-打开钱包">info: 打开钱包</a></li>
+<li><a href="#args-8">args：</a></li>
+<li><a href="#example-10">example:</a></li>
+</ul></li>
+<li><a href="#12-wallet-syncstats">12. wallet_syncStats</a>
+<ul>
+<li><a href="#info-查看当前钱包同步高度">info: 查看当前钱包同步高度</a></li>
+<li><a href="#args-9">args：</a></li>
+<li><a href="#example-11">example:</a></li>
+</ul></li>
+<li><a href="#13-wallet-getutxo-addr">13. wallet_getUtxo {addr}</a>
+<ul>
+<li><a href="#info-获取指定地址可用utxo">info: 获取指定地址可用utxo</a></li>
+<li><a href="#args-10">args：</a></li>
+<li><a href="#example-12">example:</a></li>
+</ul></li>
+<li><a href="#14-wallet-importprivkey-accountname-privkey-rescan">14. wallet_importPrivKey {accountName} {privKey} {rescan}</a>
+<ul>
+<li><a href="#info-导入私钥">info: 导入私钥</a></li>
+<li><a href="#args-11">args：</a></li>
+<li><a href="#example-13">example:</a></li>
+</ul></li>
+<li><a href="#15-wallet-getbalancebyaddr-addr">15. wallet_getBalanceByAddr {addr}</a>
+<ul>
+<li><a href="#info-获取地址余额">info: 获取地址余额</a></li>
+<li><a href="#args-12">args：</a></li>
+<li><a href="#example-14">example:</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2381,7 +2411,7 @@ curl -k -u &quot;user:password&quot; -X POST -H 'Content-Type: application/json'
 
 <h2 id="9-wallet-importwifprivkey-accountname-privkey-rescan">9. wallet_importWifPrivKey {accountName} {privKey} {rescan}</h2>
 
-<h3 id="info-导入地址私钥">info: 导入地址私钥</h3>
+<h3 id="info-导入wif格式私钥">info: 导入wif格式私钥</h3>
 
 <h3 id="args-6">args：</h3>
 
@@ -2399,7 +2429,7 @@ curl -k -u &quot;user:password&quot; -X POST -H 'Content-Type: application/json'
 
 <h2 id="10-wallet-dumpprivkey-addr">10. wallet_dumpPrivKey {addr}</h2>
 
-<h3 id="info-导出地址私钥">info: 导出地址私钥</h3>
+<h3 id="info-导出地址wif格式私钥">info: 导出地址wif格式私钥</h3>
 
 <h3 id="args-7">args：</h3>
 
@@ -2409,6 +2439,118 @@ curl -k -u &quot;user:password&quot; -X POST -H 'Content-Type: application/json'
 <h3 id="example-9">example:</h3>
 
 <pre><code class="language-json">{&quot;id&quot;:1574829854509,&quot;method&quot;:&quot;wallet_dumpPrivKey&quot;,&quot;params&quot;:[&quot;Tmh3je9zbnHAvPfwwHhQsFSJmKkeRTtKqmV&quot;]}
+</code></pre></li>
+</ul>
+
+<h2 id="11-ui-openwallet-pass">11. ui_openWallet {pass}</h2>
+
+<h3 id="info-打开钱包">info: 打开钱包</h3>
+
+<h3 id="args-8">args：</h3>
+
+<ul>
+<li><p>pass 钱包密码</p>
+
+<h3 id="example-10">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;ui_openWallet&quot;,&quot;params&quot;:[&quot;pass&quot;],&quot;id&quot;:1}
+</code></pre></li>
+</ul>
+
+<h2 id="12-wallet-syncstats">12. wallet_syncStats</h2>
+
+<h3 id="info-查看当前钱包同步高度">info: 查看当前钱包同步高度</h3>
+
+<h3 id="args-9">args：</h3>
+
+<h3 id="example-11">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_syncStats&quot;,&quot;params&quot;:[],&quot;id&quot;:1}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+	&quot;jsonrpc&quot;: &quot;2.0&quot;,
+	&quot;id&quot;: 1,
+	&quot;result&quot;: {
+		&quot;Height&quot;: 20460
+	}
+}
+</code></pre>
+
+<h2 id="13-wallet-getutxo-addr">13. wallet_getUtxo {addr}</h2>
+
+<h3 id="info-获取指定地址可用utxo">info: 获取指定地址可用utxo</h3>
+
+<h3 id="args-10">args：</h3>
+
+<ul>
+<li><p>addr 地址</p>
+
+<h3 id="example-12">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_getUtxo&quot;,&quot;params&quot;:[&quot;TmgD1mu8zMMV9aWmJrXqQYnWRhR9SBfDZG6&quot;],&quot;id&quot;:1}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+	&quot;jsonrpc&quot;: &quot;2.0&quot;,
+	&quot;id&quot;: 1,
+	&quot;result&quot;: [{
+		&quot;Txid&quot;: &quot;54c47af3a17201c64a8f3b27164d4e09e8e38e05501b16bfd4f001caeddfa86a&quot;,
+		&quot;Index&quot;: 1,
+		&quot;Amount&quot;: 699925600
+	}]
+}
+</code></pre></li>
+</ul>
+
+<h2 id="14-wallet-importprivkey-accountname-privkey-rescan">14. wallet_importPrivKey {accountName} {privKey} {rescan}</h2>
+
+<h3 id="info-导入私钥">info: 导入私钥</h3>
+
+<h3 id="args-11">args：</h3>
+
+<ul>
+<li>accountName 导入账户,目前只支持imported</li>
+<li>privKey 私钥</li>
+
+<li><p>rescan  bool,是否重新扫描交易记录</p>
+
+<h3 id="example-13">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_importPrivKey&quot;,&quot;params&quot;:[&quot;imported&quot;,&quot;xxxxxx&quot;,true],&quot;id&quot;:1}
+</code></pre></li>
+</ul>
+
+<h2 id="15-wallet-getbalancebyaddr-addr">15. wallet_getBalanceByAddr {addr}</h2>
+
+<h3 id="info-获取地址余额">info: 获取地址余额</h3>
+
+<h3 id="args-12">args：</h3>
+
+<ul>
+<li><p>addr 地址</p>
+
+<h3 id="example-14">example:</h3>
+
+<pre><code class="language-json">{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;method&quot;:&quot;wallet_getBalanceByAddr&quot;,&quot;params&quot;:[&quot;TmfDniZnvsjdH98GsH4aetL3XQKFUTWPp4e&quot;,1],&quot;id&quot;:16}
+</code></pre>
+
+<p>result:</p>
+
+<pre><code class="language-json">{
+	&quot;jsonrpc&quot;: &quot;2.0&quot;,
+	&quot;id&quot;: 16,
+	&quot;result&quot;: {
+		&quot;TotalAmount&quot;: 400000000,
+		&quot;SpendAmount&quot;: 0,
+		&quot;UnspendAmount&quot;: 400000000,
+		&quot;ConfirmAmount&quot;: 0
+	}
+}
 </code></pre></li>
 </ul>
 
@@ -3687,22 +3829,22 @@ curl -k -u &quot;user:password&quot; -X POST -H 'Content-Type: application/json'
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1574831168"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1578451724"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1574831168"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1578451724"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1574831168"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1574831168"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1574831168" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1574831168"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1578451724"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1578451724"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1578451724" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1578451724"></script>
 
 
 <script>
