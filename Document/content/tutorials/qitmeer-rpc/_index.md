@@ -577,7 +577,7 @@ $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"
 }
 ```
 #### 实例2
-可以观察到对于是否蓝色区块的判断，由2变为了1。由不能确认，变为的蓝色区块儿。
+可以观察到对于是否蓝色区块的判断结果，由2变为1。即由不能确认变为蓝色区块。
 
 ```
 $ date
