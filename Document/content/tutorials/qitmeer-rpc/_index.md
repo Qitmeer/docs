@@ -7,15 +7,15 @@ weight: 1
 
 # Qitmeer RPC 说明
 
-### 1. getBlockByOrder
-#### 函数名：getBlockByOrder {order} {fullTx} 
-#### 说明：
+## getBlockByOrder
+### 函数名：getBlockByOrder {order} {fullTx} 
+### 说明：
 - order:区块order，qitmeer采用BlockDAG算法进行共识，对区块的先后顺序进行排序。order指区块序列的序号，一个从0开始增大的整数值。请注意order不是区块的高度。
 - verbose: 是否显示详细信息，默认为false
 - inclTx: 是否包含交易信息，默认为true
 - fullTx：是否显示完整交易信息，默认为true
 
-实例1:
+#### 实例1:
 ```
 curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockByOrder","params":[1,true],"id":1}' https://127.0.0.1:18131
 ```
@@ -88,7 +88,7 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 
 ```
 
-实例2:
+#### 实例2:
 ```
 curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockByOrder","params":[1,false],"id":1}' https://127.0.0.1:18131
 ```
@@ -101,7 +101,7 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 }
 ```
 
-实例3:
+#### 实例3:
 ```
 curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockByOrder","params":[1,true,false],"id":1}' https://127.0.0.1:18131
 ```
@@ -143,27 +143,121 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 }
 ```
 
-### 2.getBlockByNum
-#### 函数名：getBlockByNum {number}
-#### 说明：
+## getBlockByNum
+### 函数名：getBlockByNum {number}
+### 说明：
 - number：number指按照当前节点所接受到的区块先后顺序，进行顺序的序号，一个从0开始向上增大的整数值。该序号（Num）与全网其他节点无关，即非BlockDAG共识结果的Block排序。
 
-### 3.getBlockCount
-#### 函数名：getBlockCount 
-#### 说明：无参数，获取区块数量
+#### 实例1:
 
-### 4.getMempool
-#### 函数名：getMempool 
-#### 说明：无参数，获取交易池交易
+```
+$ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockByNum","params":[1,true],"id":1}' https://127.0.0.1:18131
+```
 
-### 5.getPeerInfo
-#### 函数名：getPeerInfo 
-#### 说明：无参数，取邻近节点信息
+```
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "hash": "83d98f64ff6517e5899a1c392d91c334ae77a8c7705cd3ca0b147a6470d8eb08",
+    "txsvalid": false,
+    "confirmations": 0,
+    "version": 12,
+    "weight": 443,
+    "height": 1,
+    "txRoot": "0cda5bc3744da7fcdd4a6dbbd72b24a58b9dcd927a171021646af87aa926315d",
+    "transactions": [
+      {
+        "hex": "010000000114898f3cc6b4de34ca419365fee41fd78d74d71a70a98caa88e1260efb876a79ffffffffffffffff01007841cb020000001976a914499896c7814a6f49fa256bc5feaa5882a665339188ac000000000000000000000000012151080300009030da6dd9162f7777772e6d656572706f6f6c2e636f6d2f32303230",
+        "txid": "0cda5bc3744da7fcdd4a6dbbd72b24a58b9dcd927a171021646af87aa926315d",
+        "txhash": "0ac294d88ec9ab3f9cdfff2775d3c881a44cf4b73a1aaa2c2b57e58f055e3168",
+        "size": 127,
+        "version": 1,
+        "locktime": 0,
+        "expire": 0,
+        "vin": [
+          {
+            "coinbase": "51080300009030da6dd9162f7777772e6d656572706f6f6c2e636f6d2f32303230",
+            "sequence": 4294967295
+          }
+        ],
+        "vout": [
+          {
+            "amount": 12000000000,
+            "scriptPubKey": {
+              "asm": "OP_DUP OP_HASH160 499896c7814a6f49fa256bc5feaa5882a6653391 OP_EQUALVERIFY OP_CHECKSIG",
+              "hex": "76a914499896c7814a6f49fa256bc5feaa5882a665339188ac",
+              "reqSigs": 1,
+              "type": "pubkeyhash",
+              "addresses": [
+                "TmVfDq18VqSg735ko9aAo36tFwYww4PBGMC"
+              ]
+            }
+          }
+        ],
+        "blockhash": "83d98f64ff6517e5899a1c392d91c334ae77a8c7705cd3ca0b147a6470d8eb08",
+        "confirmations": 0
+      }
+    ],
+    "stateRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bits": "1b00ffff",
+    "difficulty": 453050367,
+    "pow": {
+      "pow_name": "qitmeer_keccak256",
+      "pow_type": 6,
+      "nonce": 1067495060
+    },
+    "timestamp": "2020-06-24T10:06:46+08:00",
+    "parentroot": "36988b21b970fe3cbc7381dec7760eea50bc869e3bfbc44856a402fac94d3a8a",
+    "parents": [
+      "36988b21b970fe3cbc7381dec7760eea50bc869e3bfbc44856a402fac94d3a8a"
+    ],
+    "children": [
+      "null"
+    ]
+  }
+}
+```
 
 
-### 6.getNodeInfo
-#### 函数名：getNodeInfo 
-#### 说明：无参数，获取该节点信息
+## getBlockCount
+### 函数名：getBlockCount 
+### 说明：无参数，获取区块数量
+
+```
+$ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockCount","params":[],"id":1}' https://127.0.0.1:18131
+```
+
+```
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": 21177
+}
+```
+
+## getMempool
+### 函数名：getMempool 
+### 说明：无参数，获取交易池交易
+
+```
+```
+```
+```
+
+## getPeerInfo
+### 函数名：getPeerInfo 
+### 说明：无参数，取邻近节点信息
+
+
+## getNodeInfo
+### 函数名：getNodeInfo 
+### 说明：无参数，获取该节点信息
+
+#### 结果说明：
+
+- confirmations：代表区块中非coinbase输出可用的最小确认数，凡是区块confirmations确认数大于该值的区块中的非coinbase输出可进行交易
+- coinbasematurity：代表区块coinbase输出可以用的最小确认数，凡是区块confirmations确认数大于该值的区块中的coinbase输出可进行交易的第一个条件，第二个条件是必须是蓝色区块，见rpc isBule
 
 ```
 
@@ -200,26 +294,20 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 }
 
 ```
-### 结果说明：
-
-- confirmations：代表区块中非coinbase输出可用的最小确认数，凡是区块confirmations确认数大于该值的区块中的非coinbase输出可进行交易
-- coinbasematurity：代表区块coinbase输出可以用的最小确认数，凡是区块confirmations确认数大于该值的区块中的coinbase输出可进行交易的第一个条件，第二个条件是必须是蓝色区块，见rpc isBule
-
-### 7.isBlue
-#### 函数名：isBlue {blockhash}
-#### 说明：通过节点判断该块是否为蓝色区块
-
+# isBlue
+### 函数名：isBlue {blockhash}
+### 说明：通过节点判断该块是否为蓝色区块
 - blockhash：需要查找额块hash
 
-#### 结果说明：
+### 结果说明：
 - 0:为红色区块，该块coinbase不能交易
 - 1:为蓝色区块，该块的coinbase可以交易
 - 2:还不能确定是蓝色或红色，待确认
 
 
-### 8.getRawTransaction
-#### 函数名：getRawTransaction {txid}
-#### 说明：通过txid获取交易
+## getRawTransaction
+### 函数名：getRawTransaction {txid}
+### 说明：通过txid获取交易
 
 ```
 
@@ -260,14 +348,14 @@ getRawTransaction 000000e4c6b7f5b89827711d412957bfff5c51730df05c2eedd1352468313e
 
 ```
 
-### 9.sendRawTransaction
-#### 函数名：sendRawTransaction {sign_raw_tx} {allow_high_fee}
-#### 说明：发送交易
+## sendRawTransaction
+### 函数名：sendRawTransaction {sign_raw_tx} {allow_high_fee}
+### 说明：发送交易
 
 - sign_raw_tx:签名后的交易
 - allow_high_fee：允许的最大交易费
 
-### 例：
+#### 实例：
 
 ```
 
