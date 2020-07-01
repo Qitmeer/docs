@@ -10,7 +10,7 @@ weight: 1
 ## getBlockByOrder
 ### 函数名：getBlockByOrder {order} {fullTx} 
 ### 说明：
-- order:区块order，qitmeer采用BlockDAG算法进行共识，对区块的先后顺序进行排序。order指区块序列的序号，一个从0开始增大的整数值。请注意order不是区块的高度。
+- order:区块order，qitmeer采用BlockDAG算法进行共识，对区块的先后顺序进行排序。order指区块序列的序号，是一个从0开始，按顺序连续递增的整数值。请注意order不是区块的高度。
 - verbose: 是否显示详细信息，默认为false
 - inclTx: 是否包含交易信息，默认为true
 - fullTx：是否显示完整交易信息，默认为true
@@ -146,7 +146,7 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 ## getBlockByNum
 ### 函数名：getBlockByNum {number}
 ### 说明：
-- number：number指按照当前节点所接受到的区块先后顺序，进行顺序的序号，一个从0开始向上增大的整数值。该序号（Num）与全网其他节点无关，即非BlockDAG共识结果的Block排序。
+- number：number指按照当前节点所观察到的区块所构造的本地DAG图的区块序号，是一个从0开始，按顺序递增的连续整数值。该序号（Num）与全网其他节点无关，即并非BlockDAG共识结果的Block排序，请注意该方法和`getBlockByOder`的区别。该方法只用于帮助二级应用构造特殊业务场景而存在，返回结构并非BlockDAG共识结果，使用时请注意。
 - verbose: 是否显示详细信息，默认为false
 - inclTx: 是否包含交易信息，默认为true
 - fullTx：是否显示完整交易信息，默认为true
