@@ -8,7 +8,7 @@ weight: 1
 # Qitmeer RPC 说明
 
 ## getBlockByOrder
-### 函数名：getBlockByOrder {order} {fullTx} 
+### 函数名：getBlockByOrder {order} {verbose} {inclTx} {fullTx} 
 ### 说明：
 - order:区块order，qitmeer采用BlockDAG算法进行共识，对区块的先后顺序进行排序。order指区块序列的序号，是一个从0开始，按顺序连续递增的整数值。请注意order不是区块的高度。
 - verbose: 是否显示详细信息，默认为false
@@ -144,7 +144,7 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 ```
 
 ## getBlockByNum
-### 函数名：getBlockByNum {number}
+### 函数名：getBlockByNum {number} {verbose} {inclTx} {fullTx}
 ### 说明：
 - number：number指按照当前节点所观察到的区块所构造的本地DAG图的区块序号，是一个从0开始，按顺序递增的连续整数值。该序号（Num）与全网其他节点无关，即并非BlockDAG共识结果的Block排序，请注意该方法和`getBlockByOder`的区别。该方法只用于帮助二级应用构造特殊业务场景而存在，返回结构并非BlockDAG共识结果，使用时请注意。
 - verbose: 是否显示详细信息，默认为false
@@ -222,6 +222,116 @@ $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"
 }
 ```
 
+## getBlocK
+### 函数名：getBlocK {blockhash} {verbose} {inclTx} {fullTx}
+### 说明：根据区块hash获取区块
+- blockhash : 256位区块hash
+- verbose: 是否显示详细信息，默认为false
+- inclTx: 是否包含交易信息，默认为true
+- fullTx：是否显示完整交易信息，默认为true
+
+#### 实例:
+```
+curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlock","params":["98294db0634d5afed36554a60d4565a6507e3a78dfb8cc66cc08ba29f328c682",true,true,false],"id":1}' https://127.0.0.1:18131
+```
+输出
+```
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "hash": "0002232d1b2da3609633f148d383d986678bb7d80a6c71212a90dc5ad220ded5",
+    "txsvalid": true,
+    "confirmations": 5,
+    "version": 12,
+    "weight": 435,
+    "height": 21128,
+    "txRoot": "39ff496a208b7cf8b701b24ea601244df174ceea3c9a7917be81464f30a8005a",
+    "order": 21599,
+    "transactions": [
+      "39ff496a208b7cf8b701b24ea601244df174ceea3c9a7917be81464f30a8005a"
+    ],
+    "stateRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bits": "402854d",
+    "difficulty": 67274061,
+    "pow": {
+      "pow_name": "cuckaroom",
+      "pow_type": 3,
+      "nonce": 148224134,
+      "proof_data": {
+        "edge_bits": 29,
+        "circle_nonces": "78a152001480af0103ce31027bea3f02bccb5d02f47a4803126ece060ef4e806832c7c078b67f0075607050947014209569c9209387bbc0a34b6cf0a4c28c60bf3ef370c58ad030d7d010f0f652f1b117943d111374be01217341e13fef75f1301bb9b138e28a01364fc9214938acf14a27559150c54d117f4f8601852c7ed18874cf318037313196ffc4419f5e8bd1acc8fcc1b7656f31b26d64f1c3566821d18d9a71fa107b41f"
+      }
+    },
+    "timestamp": "2020-07-01T15:19:28+08:00",
+    "parentroot": "4621ad5d3951114ca93b1f27b42f39c0f16557d2a1efb1e2c7e9ce8ba087bd1f",
+    "parents": [
+      "4621ad5d3951114ca93b1f27b42f39c0f16557d2a1efb1e2c7e9ce8ba087bd1f"
+    ],
+    "children": [
+      "f43a6e8e015c3ef9db792c801290a0219cf9a477559941fb3dd792df1fb5c7e4"
+    ]
+  }
+}
+
+
+```
+
+## getBlocKV2
+### 函数名：getBlocK {blockhash} {verbose} {inclTx} {fullTx}
+### 说明：根据区块hash获取区块 版本2
+- blockhash : 256位区块hash
+- verbose: 是否显示详细信息，默认为false
+- inclTx: 是否包含交易信息，默认为true
+- fullTx：是否显示完整交易信息，默认为true
+
+V2版本RPC将交易手续费显示在单独的`transactionfee`属性中。而之前版本的交易手续费体现在coinbase的Amount中，和挖矿奖励合并显示。请注意，不论使用V1或者V2版本的API，只影响JSON数据的显示。内部的数据模型和共识模型是完全是一致的。
+
+#### 实例
+
+```
+curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockV2","params":["98294db0634d5afed36554a60d4565a6507e3a78dfb8cc66cc08ba29f328c682",true,true,false],"id":1}' https://127.0.0.1:18131
+```
+
+输出：
+```
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "hash": "98294db0634d5afed36554a60d4565a6507e3a78dfb8cc66cc08ba29f328c682",
+    "txsvalid": true,
+    "confirmations": 304,
+    "version": 12,
+    "weight": 682,
+    "height": 20831,
+    "txRoot": "040807f45457c94ed905bf72ed923154a5e951278e80a5c0eb2de0d7b269c5c1",
+    "order": 21300,
+    "transactions": [
+      "5844ca2e091f8c2a770f4a0ff23318ae780b9e3a9b2076cc27b8c493dce30c03",
+      "c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32"
+    ],
+    "transactionfee": 32000,
+    "stateRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bits": "1a1c60ed",
+    "difficulty": 438067437,
+    "pow": {
+      "pow_name": "qitmeer_keccak256",
+      "pow_type": 6,
+      "nonce": 1457503796
+    },
+    "timestamp": "2020-07-01T12:48:52+08:00",
+    "parentroot": "000073e5c2787d1d2a04358c8b2fad422a602a38a6070570c2d8b724c054987f",
+    "parents": [
+      "000073e5c2787d1d2a04358c8b2fad422a602a38a6070570c2d8b724c054987f"
+    ],
+    "children": [
+      "00018c75188cc658705af615684b095bbc85a2dde6772e4bf3929b5d5505f5fb"
+    ]
+  }
+} 
+```
+
 
 ## getBlockCount
 ### 函数名：getBlockCount 
@@ -238,6 +348,9 @@ $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"
   "result": 21177
 }
 ```
+
+
+
 
 ## getMempool
 ### 函数名：getMempool 
