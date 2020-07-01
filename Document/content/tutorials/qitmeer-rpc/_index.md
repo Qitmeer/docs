@@ -147,13 +147,16 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 ### 函数名：getBlockByNum {number}
 ### 说明：
 - number：number指按照当前节点所接受到的区块先后顺序，进行顺序的序号，一个从0开始向上增大的整数值。该序号（Num）与全网其他节点无关，即非BlockDAG共识结果的Block排序。
+- verbose: 是否显示详细信息，默认为false
+- inclTx: 是否包含交易信息，默认为true
+- fullTx：是否显示完整交易信息，默认为true
 
-#### 实例1:
+#### 实例:
 
 ```
 $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockByNum","params":[1,true],"id":1}' https://127.0.0.1:18131
 ```
-
+输出：
 ```
 {
   "jsonrpc": "2.0",
@@ -501,46 +504,57 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 ### 函数名：getNodeInfo 
 ### 说明：无参数，获取该节点信息
 
-#### 结果说明：
-
-- confirmations：代表区块中非coinbase输出可用的最小确认数，凡是区块confirmations确认数大于该值的区块中的非coinbase输出可进行交易
-- coinbasematurity：代表区块coinbase输出可以用的最小确认数，凡是区块confirmations确认数大于该值的区块中的coinbase输出可进行交易的第一个条件，第二个条件是必须是蓝色区块，见rpc isBule
+#### 实例
 
 ```
+curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getNodeInfo","params":[],"id":null}' https://127.0.0.1:18131
+```
 
+输出：
+```
 {
-    "UUID": "d66d8f6d-c5c8-422a-befe-aa0b7ec3c5f1",
-    "version": 70800,
-    "protocolversion": 12,
-    "totalsubsidy": 102856000000000,
-    "graphstate": {
-        "tips": [
-            "078f9626c4fc6b18dfc6698bddbeb212808f148f31ac0aa777829b56e5469929"
-        ],
-        "mainorder": 7912,
-        "mainheight": 7816,
-        "layer": 7816
-    },
-    "timeoffset": 0,
-    "connections": 5,
-    "pow_diff": {
-        "blake2bd_diff": 5.200604516135472e+63,
-        "cuckaroo_diff": 0.14814815,
-        "cuckatoo_diff": 2.86419753
-    },
-    "testnet": true,
-    "mixnet": false,
-    "confirmations": 10,
-    "coinbasematurity": 720,
-    "errors": "",
-    "modules": [
-        "qitmeer",
-        "miner",
-        "test"
-    ]
+  "UUID": "dc4dffc6-9c0c-417f-9cb2-a1fdc4877915",
+  "version": 90100,
+  "buildversion": "0.9.1+dev-7ae8c17",
+  "protocolversion": 21,
+  "totalsubsidy": 254484000000000,
+  "graphstate": {
+    "tips": [
+      "00006869b1f1e29db24cc528a86370b4355f1dc6a618ac0549495679f0bc484b main"
+    ],
+    "mainorder": 21207,
+    "mainheight": 20738,
+    "layer": 20738
+  },
+  "timeoffset": 0,
+  "connections": 8,
+  "pow_diff": {
+    "blake2bd_diff": 1,
+    "cuckaroo_diff": 1,
+    "cuckatoo_diff": 1
+  },
+  "testnet": true,
+  "mixnet": false,
+  "confirmations": 10,
+  "coinbasematurity": 720,
+  "errors": "",
+  "modules": [
+    "qitmeer",
+    "miner",
+    "test"
+  ]
 }
-
 ```
+
+#### 结果说明：
+- confirmations：代表非coinbase交易的UXTO可以被花费的最小确认数，当前的共识的最小确认数为10个确认。
+- coinbasematurity：代表coinbase交易的UXTO可以被花费的最小确认数，当前的共识是720个确认。
+- 注：不论coinbase交易还是非coinbase交易，除了满足各自的最小确认条件外，还需要包含该交易的区块满足如下条件，才能满足该该交易的UTXO可花费：
+  - 1.）BlockDAG共识约束，即该区块为蓝色区块，详见见rpc isBule
+  - 2.）该区块为交易合法区块，即区块的`txsvalid`属性为true。详见rpc getBlockByOrder
+
+
+
 # isBlue
 ### 函数名：isBlue {blockhash}
 ### 说明：通过节点判断该块是否为蓝色区块
@@ -550,6 +564,32 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 - 0:为红色区块，该块coinbase不能交易
 - 1:为蓝色区块，该块的coinbase可以交易
 - 2:还不能确定是蓝色或红色，待确认
+
+#### 实例1 
+```
+$ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"isBlue","params":["0003409cc9bcfc328630982797326e62135d6fc2431db7b85c2a0fe38ff5749c"],"id":1}' https://127.0.0.1:18131
+```
+```
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": 2
+}
+```
+#### 实例2
+
+```
+$ date
+Wed Jul  1 12:23:39 CST 2020
+$ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"isBlue","params":
+```
+["0003409cc9bcfc328630982797326e62135d6fc2431db7b85c2a0fe38ff5749c"],"id":1}' https://127.0.0.1:18137|jq .
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": 1
+}
+```
 
 
 ## getRawTransaction
