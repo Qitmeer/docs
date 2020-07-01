@@ -558,7 +558,7 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 # isBlue
 ### 函数名：isBlue {blockhash}
 ### 说明：通过节点判断该块是否为蓝色区块
-- blockhash：需要查找额块hash
+- blockhash：区块hash
 
 ### 结果说明：
 - 0:为红色区块，该块coinbase不能交易
@@ -577,13 +577,16 @@ $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"
 }
 ```
 #### 实例2
+可以观察到对于是否蓝色区块的判断，由2变为了1。由不能确认，变为的蓝色区块儿。
 
 ```
 $ date
 Wed Jul  1 12:23:39 CST 2020
 $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"isBlue","params":
+["0003409cc9bcfc328630982797326e62135d6fc2431db7b85c2a0fe38ff5749c"],"id":1}' https://127.0.0.1:18131
 ```
-["0003409cc9bcfc328630982797326e62135d6fc2431db7b85c2a0fe38ff5749c"],"id":1}' https://127.0.0.1:18137|jq .
+
+```
 {
   "jsonrpc": "2.0",
   "id": 1,
