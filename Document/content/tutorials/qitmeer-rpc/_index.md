@@ -19,7 +19,7 @@ curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jso
 ### 1. getBlockByOrder
 #### 函数名：getBlockByOrder {order} {fullTx}
 #### 说明：
-- order:区块orderid，由于qitmeer采用DAG算法，区块的orderid会发生变动，该值并非是区块高度
+- order:区块order，qitmeer采用BlockDAG算法进行共识，对区块的先后顺序进行排序。order指区块序列的序号，一个从0开始增大的整数值。请注意order不是区块的高度。
 - fullTx: true/false,该值一般为true，
 
 ```
@@ -89,10 +89,10 @@ curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jso
 
 ```
 
-### 2.getBlockByID
-#### 函数名：getBlockByID {blockid} {fullTx}
+### 2.getBlockByNum
+#### 函数名：getBlockByNum {number} {fullTx}
 #### 说明：
-- blockid：所请求节点接收的区块顺序，节点内置id，与全网其他节点无关
+- number：number指按照当前节点所接受到的区块先后顺序，进行顺序的序号，一个从0开始向上增大的整数值。该序号（Num）与全网其他节点无关，即非BlockDAG共识结果的Block排序。
 - fullTx：true/false，一般为true
 
 ### 3.getBlockCount
