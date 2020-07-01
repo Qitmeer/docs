@@ -11,8 +11,8 @@ Table of Contents
    * [Qitmeer RPC 说明](#qitmeer-rpc-说明)
       * [getBlockByOrder](#getblockbyorder)
       * [getBlockByNum](#getblockbynum)
-      * [getBlocK](#getblock)
-      * [getBlocKV2](#getblockv2)
+      * [getBlock](#getblock)
+      * [getBlockV2](#getblockv2)
       * [getBlockHeader](#getblockheader)
       * [getBlockCount](#getblockcount)
       * [getBlockTotal](#getblocktotal)
@@ -248,8 +248,8 @@ $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"
 }
 ```
 
-## getBlocK
-### 函数名：getBlocK {blockhash} {verbose} {inclTx} {fullTx}
+## getBlock
+### 函数名：getBlock {blockhash} {verbose} {inclTx} {fullTx}
 ### 说明：根据区块hash获取区块
 - blockhash : 256位区块hash
 - verbose: 是否显示详细信息，默认为false
@@ -298,9 +298,9 @@ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"js
 }
 ```
 
-## getBlocKV2
-### 函数名：getBlocK {blockhash} {verbose} {inclTx} {fullTx}
-### 说明：根据区块hash获取区块 版本2
+## getBlockV2
+### 函数名：getBlocKV2 {blockhash} {verbose} {inclTx} {fullTx}
+### 说明：根据区块hash获取区块（版本2）
 - blockhash : 256位区块hash
 - verbose: 是否显示详细信息，默认为false
 - inclTx: 是否包含交易信息，默认为true
