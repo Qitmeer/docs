@@ -598,42 +598,62 @@ $ curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"
 ## getRawTransaction
 ### 函数名：getRawTransaction {txid}
 ### 说明：通过txid获取交易
+- txid 交易id 为一个256位hash值。
+- verbose 是否显示详细信息，默认为false
 
+#### 实例
 ```
-
-getRawTransaction 000000e4c6b7f5b89827711d412957bfff5c51730df05c2eedd1352468313eca
-
-
+curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getRawTransaction","params":["c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32",true],"id":1}' https://127.0.0.1:18131
+```
+输出
+```
 {
-    "hex": "0100000001cf6849e307726cfd51ad93b994c4dcdc390b782ad34cfafbcacf47f17c639606ffffffffffffffff010042dc06030000001976a914883e0d08cf453696b756baabadae1da8ab3f227888ac000000000000000001435c08d0b7b3581e39345913363432373832353337303636343531353533362431613037373964612d616466352d346365392d613962652d626238613732636639333232",
-    "txid": "df492c0f85fee7fd883c45dbb1bbbcec4bf2ea1e315f33aee0e27bddaede35c3",
-    "txhash": "26f8a70736ef23ac4ba57c91563360ba44ec8c0b448c2b20d05ad5387040acaa",
-    "size": 157,
-    "version": 1,
-    "locktime": 0,
-    "expire": 0,
-    "vin": [
-        {
-            "coinbase": "5c08d0b7b3581e39345913363432373832353337303636343531353533362431613037373964612d616466352d346365392d613962652d626238613732636639333232",
-            "sequence": 4294967295
-        }
-    ],
-    "vout": [
-        {
-            "amount": 13000000000,
-            "scriptPubKey": {
-                "asm": "OP_DUP OP_HASH160 883e0d08cf453696b756baabadae1da8ab3f2278 OP_EQUALVERIFY OP_CHECKSIG",
-                "hex": "76a914883e0d08cf453696b756baabadae1da8ab3f227888ac",
-                "reqSigs": 1,
-                "type": "pubkeyhash",
-                "addresses": [
-                    "TmbNTwPm9aTN7TtStnJjrcjsaRJWm4gt3Fs"
-                ]
-            }
-        }
-    ],
-    "blockhash": "3df0e5bb739d7ac0e4d34f621514d485dff3a3c0be31c161cc891787172caade",
-    "confirmations": 7838
+  "hex": "0100000001dc7d54db024a1ef06e38b85ab01af2d60043e3d36b5411691224c05dcf36f63c01000000ffffffff02659ca300000000001976a91406e2097d585337cdd10aefa09994b511127af0bb88acf0e8cd6f230200001976a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac00000000000000008015fc5e016b48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8",
+  "txid": "c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32",
+  "txhash": "9b603ba3b17fd8491749ac366a5064d8b7b70be02568e405406a9acd70e971a8",
+  "size": 235,
+  "version": 1,
+  "locktime": 0,
+  "timestamp": "2020-07-01T12:48:00+08:00",
+  "expire": 0,
+  "vin": [
+    {
+      "txid": "3cf636cf5dc024126911546bd3e34300d6f21ab05ab8386ef01e4a02db547ddc",
+      "vout": 1,
+      "sequence": 4294967295,
+      "scriptSig": {
+        "asm": "304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a01 03cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8",
+        "hex": "48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8"
+      }
+    }
+  ],
+  "vout": [
+    {
+      "amount": 10722405,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 06e2097d585337cdd10aefa09994b511127af0bb OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91406e2097d585337cdd10aefa09994b511127af0bb88ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "TmPaUYQuUtfCysrYVHc4AdhpVHxw7EskHTP"
+        ]
+      }
+    },
+    {
+      "amount": 2351222876400,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 fe27c90d4ed4de3269c0bb9ae1d7639865e3bf28 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "Tmn7vzzSrvAPNLtwpD5YjiWwVUBD74Hjdww"
+        ]
+      }
+    }
+  ],
+  "confirmations": 0
 }
 
 ```
