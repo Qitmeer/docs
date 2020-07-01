@@ -7,15 +7,6 @@ weight: 1
 
 # Qitmeer RPC 说明
 
-## 以下rpc均可通过curl可进行调用
-
-```
-
-curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getPeerInfo","params":null,"id":1}' http://127.0.0.1:1234 | jq
-```
-
-[点击下载java版rpc调用示例](https://github.com/qitmeers/files/blob/master/rpcdemo-java.zip)
-
 ### 1. getBlockByOrder
 #### 函数名：getBlockByOrder {order} {fullTx}
 #### 说明：
@@ -23,68 +14,73 @@ curl -k -u "admin:123" -X POST -H 'Content-Type: application/json' --data '{"jso
 - fullTx: true/false,该值一般为true，
 
 ```
+curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getBlockByOrder","params":[1,true,true,true],"id":1}' https://127.0.0.1:18131
+```
+
+```
 {
-    "hash": "40f714e882292041d5a02bc5286fc465d04ae84e7a784debe8e93fef7f7e14f6",
-    "txsvalid": true,
-    "confirmations": 7784,
-    "version": 8,
-    "weight": 473,
-    "height": 11,
-    "txRoot": "e59a81ecd2d013adfb2c73068a672ef0805c0aa4877ef114b275829c863c5608",
-    "order": 11,
-    "transactions": [
+  "hash": "0012c535ed43311b0670341fad3a489642c0bc6e6796f836aa6d235826fc9c66",
+  "txsvalid": true,
+  "confirmations": 20651,
+  "version": 12,
+  "weight": 433,
+  "height": 1,
+  "txRoot": "845738befb45db6872e37295b39837cd8dc98e77417754fd4ddab5ff169317be",
+  "order": 1,
+  "transactions": [
+    {
+      "hex": "0c000000010a7ebb3e65b3be8a2e3425407e8e649c4bde818b7db70bdb3d4b8c3256745f37ffffffffffffffff01007841cb020000001976a91409eb5fc744c14c8cdd5a05b552c58c1fb6e7ebd088ac000000000000000072b6f25e01175108461004cbac974daf0c2f363636706f6f6c2e636e2f",
+      "txid": "845738befb45db6872e37295b39837cd8dc98e77417754fd4ddab5ff169317be",
+      "txhash": "93772af2957ecd066841fda4606bfa5e001ac151062c0b3ca7cfea60ec35e8b3",
+      "size": 117,
+      "version": 12,
+      "locktime": 0,
+      "timestamp": "2020-06-24T10:12:02+08:00",
+      "expire": 0,
+      "vin": [
         {
-            "hex": "010000000139d821f342cd463794ea5a2ae70f1059124d6398caf4197d6dc13798574cdd42ffffffffffffffff010042dc06030000001976a914883e0d08cf453696b756baabadae1da8ab3f227888ac000000000000000001435b086c0dd1ff9a9c865213353934363631323534373532303130353833362430633136653839622d393438372d343865622d396536332d656130646430663735373236",
-            "txid": "e59a81ecd2d013adfb2c73068a672ef0805c0aa4877ef114b275829c863c5608",
-            "txhash": "aaf2a2357b41950f27403e6f5841cfcd894b80f18fc724a8d4155c7a4706066f",
-            "size": 157,
-            "version": 1,
-            "locktime": 0,
-            "expire": 0,
-            "vin": [
-                {
-                    "coinbase": "5b086c0dd1ff9a9c865213353934363631323534373532303130353833362430633136653839622d393438372d343865622d396536332d656130646430663735373236",
-                    "sequence": 4294967295
-                }
-            ],
-            "vout": [
-                {
-                    "amount": 13000000000,
-                    "scriptPubKey": {
-                        "asm": "OP_DUP OP_HASH160 883e0d08cf453696b756baabadae1da8ab3f2278 OP_EQUALVERIFY OP_CHECKSIG",
-                        "hex": "76a914883e0d08cf453696b756baabadae1da8ab3f227888ac",
-                        "reqSigs": 1,
-                        "type": "pubkeyhash",
-                        "addresses": [
-                            "TmbNTwPm9aTN7TtStnJjrcjsaRJWm4gt3Fs"
-                        ]
-                    }
-                }
-            ],
-            "blockhash": "40f714e882292041d5a02bc5286fc465d04ae84e7a784debe8e93fef7f7e14f6",
-            "confirmations": 7784
+          "coinbase": "5108461004cbac974daf0c2f363636706f6f6c2e636e2f",
+          "sequence": 4294967295
         }
-    ],
-    "stateRoot": "0000000000000000000000000000000000000000000000000000000000000000",
-    "bits": "1600000",
-    "difficulty": 23068672,
-    "pow": {
-        "pow_name": "cuckaroo",
-        "pow_type": 1,
-        "nonce": 3412159405,
-        "proof_data": {
-            "edge_bits": 24,
-            "circle_nonces": "81de0400ce680600790822004fe43f000f934200a9ac4500cd695800689a5e00c9566100a46670001d7c7100820276007c6c770089f47b0039847c0069327e0085647e00caa07e009a508c001082950052979a00c717a1005827ab00975faf004c93b5000852b600a3dfb600d8f0c500a6b0c60074cbcf007ec7d3003a23db0099bce000d752f20027bff2003492f50011a1f600bde2f700de98f900afc6f900932ffd00ed89fe00"
+      ],
+      "vout": [
+        {
+          "amount": 12000000000,
+          "scriptPubKey": {
+            "asm": "OP_DUP OP_HASH160 09eb5fc744c14c8cdd5a05b552c58c1fb6e7ebd0 OP_EQUALVERIFY OP_CHECKSIG",
+            "hex": "76a91409eb5fc744c14c8cdd5a05b552c58c1fb6e7ebd088ac",
+            "reqSigs": 1,
+            "type": "pubkeyhash",
+            "addresses": [
+              "TmPrXkjpjSUBiFG9RZKPjfdsAPbiaar94Ta"
+            ]
+          }
         }
-    },
-    "timestamp": "2019-11-02T18:13:50+08:00",
-    "parentroot": "5f852ecc306c4ec7f792fbfb8f9d4b1e15b7c80cc4a4678f7ea28e1d3edb98f6",
-    "parents": [
-        "5f852ecc306c4ec7f792fbfb8f9d4b1e15b7c80cc4a4678f7ea28e1d3edb98f6"
-    ],
-    "children": [
-        "3df0e5bb739d7ac0e4d34f621514d485dff3a3c0be31c161cc891787172caade"
-    ]
+      ],
+      "blockhash": "0012c535ed43311b0670341fad3a489642c0bc6e6796f836aa6d235826fc9c66",
+      "confirmations": 20651
+    }
+  ],
+  "stateRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+  "bits": "34ad1ec",
+  "difficulty": 55235052,
+  "pow": {
+    "pow_name": "cuckaroom",
+    "pow_type": 3,
+    "nonce": 5,
+    "proof_data": {
+      "edge_bits": 29,
+      "circle_nonces": "fa50c20086aef40090ebab01295d5102697fcb0229e83b04b0ac4604fd9a6505118a6f05deb21206e88f9c07184fae075e218408884ed90bdfca630cf9e2a60c12fae80f909b831084669a109390e6105aa9c611aea1e71288408713c670641405f9a714abfcf81557ded81665b20f17a17370170628de17d4ccfb1755515618f5456918efd27918d4f4d218f91bb71954e3b11cb648ca1c9779541d51ee6b1ee12a711e0679131f"
+    }
+  },
+  "timestamp": "2020-06-24T10:05:33+08:00",
+  "parentroot": "36988b21b970fe3cbc7381dec7760eea50bc869e3bfbc44856a402fac94d3a8a",
+  "parents": [
+    "36988b21b970fe3cbc7381dec7760eea50bc869e3bfbc44856a402fac94d3a8a"
+  ],
+  "children": [
+    "000de974590581de8294866535b3af182041a4cb29b71a7680b024e3bd7d12da"
+  ]
 }
 
 ```
