@@ -37,7 +37,7 @@ weight: 5
 
 - [createRawTransaction](createrawtransaction)
 - [decodeRawTransaction](decoderawtransaction)
-- [getRawTransactionByHash](getrawtransactionbyhash)
+- [getRawTransaction](getrawtransaction)
 - [getUtxo](getutxo)
 - [sendRawTransaction](sendrawtransaction)
 
