@@ -3,20 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/json-rpc-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/json-rpc-api/"
-                />
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getbestblockhash/</loc>
     <xhtml:link
                 rel="alternate"
@@ -230,6 +216,16 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/"
+                />
   </url>
   
   <url>
@@ -281,6 +277,20 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://qitmeer.github.io/docs/cn/reference/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/"
                 />
   </url>
   

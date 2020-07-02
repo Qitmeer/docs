@@ -23,20 +23,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/json-rpc-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/json-rpc-api/"
-                />
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-miner/</loc>
   </url>
   
@@ -160,10 +146,6 @@
                 hreflang="en"
                 href="https://qitmeer.github.io/docs/en/json-rpc-api/getblocktotal/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getblockweight/</loc>
   </url>
   
   <url>
@@ -341,7 +323,17 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransactionbyhash/</loc>
+    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/"
+                />
   </url>
   
   <url>
@@ -431,6 +423,20 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-mining/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/"
+                />
   </url>
   
   <url>
