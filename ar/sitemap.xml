@@ -22,25 +22,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/ar/test/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://qitmeer.github.io/docs/ar/test/"
-                />
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/ar/categories/</loc>
     <priority>0</priority>
     <xhtml:link

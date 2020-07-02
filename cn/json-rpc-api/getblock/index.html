@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="cn" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
+    <meta name="description" content="Documentation for Hugo qitmeer-doc">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
+
+    <title>getBlock :: Qitmeer 文档</title>
+
+    
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1593666727" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1593666727" rel="stylesheet">
+    
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1593666727" rel="stylesheet">
+    
+
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1593666727"></script>
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/cn/json-rpc-api/getblock/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<style type="text/css">
+	#logo h2{
+		color: #fff !important;
+		margin: 10px 0px;
+		font-size: 30px
+	}	
+</style>
+<a id="logo" href="https://qitmeer.github.io/docs/cn" >
+    <h2>QITMEER DOCS</h2>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="搜索...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1593666727"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1593666727"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/qitmeer.github.io\/docs\/cn";
+    
+</script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1593666727"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/" title="Qitmeer JSON RPC 说明" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/">
+          Qitmeer JSON RPC 说明
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblock/" title="getBlock" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblock/">
+          getBlock
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockbesthash/" title="getBlockBestHash" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbesthash/">
+          getBlockBestHash
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockbynum/" title="getBlockByNum" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbynum/">
+          getBlockByNum
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockbyorder/" title="getBlockByOrder" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbyorder/">
+          getBlockByOrder
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockcount/" title="getBlockCount" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockcount/">
+          getBlockCount
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockheader/" title="getBlockHeader" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockheader/">
+          getBlockHeader
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblocktotal/" title="getBlockTotal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblocktotal/">
+          getBlockTotal
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockv2/" title="getBlockV2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockv2/">
+          getBlockV2
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getblockhashbyrange/" title="getBlockhashByRange" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/">
+          getBlockhashByRange
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getfees/" title="getFees" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getfees/">
+          getFees
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getmainchainheight/" title="getMainChainHeight" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getmainchainheight/">
+          getMainChainHeight
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getmempool/" title="getMempool" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getmempool/">
+          getMempool
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getnodeinfo/" title="getNodeInfo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getnodeinfo/">
+          getNodeInfo
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getorphanstotal/" title="getOrphansTotal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getorphanstotal/">
+          getOrphansTotal
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getpeerinfo/" title="getPeerInfo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getpeerinfo/">
+          getPeerInfo
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getrawtransaction/" title="getRawTransaction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/">
+          getRawTransaction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/gettips/" title="getTips" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/gettips/">
+          getTips
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/isblue/" title="isBlue" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/isblue/">
+          isBlue
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/isonmainchain/" title="isOnMainChain" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/isonmainchain/">
+          isOnMainChain
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/sendrawtransaction/" title="sendRawTransaction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/sendrawtransaction/">
+          sendRawTransaction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/reference/" title="命令行参考" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/reference/">
+          命令行参考
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/reference/qxtools/" title="Qx 工具集" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/reference/qxtools/">
+          Qx 工具集
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="cn" value="https://qitmeer.github.io/docs/cn/json-rpc-api/getblock/" selected>中文（简体）</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    
+
+    
+    
+
+    
+    
+    
+    <p> <a href="https://github.com/Qitmeer/docs" target="_blank">Contribute on GitHub <i class='fab fa-fw fa-github'></i> </a></p>
+</center>
+
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='编辑页面' href="https://github.com/Qitmeer/docs/edit/master/Document/content/JSON%20RPC%20API/getBlock/_index.cn.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">编辑页面</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://qitmeer.github.io/docs/cn/'>Qitmeer 技术文档</a> > <a href='https://qitmeer.github.io/docs/cn/json-rpc-api/'>Qitmeer JSON RPC 说明</a> > getBlock
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#getblock">getBlock</a>
+<ul>
+<li><a href="#函数名-getblock-blockhash-verbose-incltx-fulltx">函数名：getBlock {blockhash} {verbose} {inclTx} {fullTx}</a></li>
+<li><a href="#说明-根据区块hash获取区块">说明：根据区块hash获取区块</a>
+<ul>
+<li><a href="#实例">实例:</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              getBlock
+            </h1>
+          
+
+        
+
+
+	
+
+<h2 id="getblock">getBlock</h2>
+
+<h3 id="函数名-getblock-blockhash-verbose-incltx-fulltx">函数名：getBlock {blockhash} {verbose} {inclTx} {fullTx}</h3>
+
+<h3 id="说明-根据区块hash获取区块">说明：根据区块hash获取区块</h3>
+
+<ul>
+<li>blockhash : 256位区块hash</li>
+<li>verbose: 是否显示详细信息，默认为false</li>
+<li>inclTx: 是否包含交易信息，默认为true</li>
+<li>fullTx：是否显示完整交易信息，默认为true</li>
+</ul>
+
+<h4 id="实例">实例:</h4>
+
+<pre><code>curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getBlock&quot;,&quot;params&quot;:[&quot;98294db0634d5afed36554a60d4565a6507e3a78dfb8cc66cc08ba29f328c682&quot;,true,true,false],&quot;id&quot;:1}' https://127.0.0.1:18131
+</code></pre>
+
+<p>输出</p>
+
+<pre><code>{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 1,
+  &quot;result&quot;: {
+    &quot;hash&quot;: &quot;98294db0634d5afed36554a60d4565a6507e3a78dfb8cc66cc08ba29f328c682&quot;,
+    &quot;txsvalid&quot;: true,
+    &quot;confirmations&quot;: 338,
+    &quot;version&quot;: 12,
+    &quot;weight&quot;: 682,
+    &quot;height&quot;: 20831,
+    &quot;txRoot&quot;: &quot;040807f45457c94ed905bf72ed923154a5e951278e80a5c0eb2de0d7b269c5c1&quot;,
+    &quot;order&quot;: 21300,
+    &quot;transactions&quot;: [
+      &quot;5844ca2e091f8c2a770f4a0ff23318ae780b9e3a9b2076cc27b8c493dce30c03&quot;,
+      &quot;c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32&quot;
+    ],
+    &quot;stateRoot&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+    &quot;bits&quot;: &quot;1a1c60ed&quot;,
+    &quot;difficulty&quot;: 438067437,
+    &quot;pow&quot;: {
+      &quot;pow_name&quot;: &quot;qitmeer_keccak256&quot;,
+      &quot;pow_type&quot;: 6,
+      &quot;nonce&quot;: 1457503796
+    },
+    &quot;timestamp&quot;: &quot;2020-07-01T12:48:52+08:00&quot;,
+    &quot;parentroot&quot;: &quot;000073e5c2787d1d2a04358c8b2fad422a602a38a6070570c2d8b724c054987f&quot;,
+    &quot;parents&quot;: [
+      &quot;000073e5c2787d1d2a04358c8b2fad422a602a38a6070570c2d8b724c054987f&quot;
+    ],
+    &quot;children&quot;: [
+      &quot;00018c75188cc658705af615684b095bbc85a2dde6772e4bf3929b5d5505f5fb&quot;
+    ]
+  }
+}
+</code></pre>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+</div> 
+
+<style>
+  .qitmeer-eidt {
+    background-color: #abb2bf;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 16px;
+    transition: all .3s;
+    -moz-transition: all .3s;	 
+    -webkit-transition: all .3s;	 
+    -o-transition: all .3s;	 
+  }
+
+  .qitmeer-eidt:hover {
+    background-color: #74b559;
+    box-shadow: 0px 0px 8px #abd699;
+  }
+
+</style>
+</div>
+
+<div id="navigation">
+
+
+
+
+
+
+    
+        
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+            
+            
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+            
+        
+        
+
+        
+            
+
+
+    
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/cn/json-rpc-api/" title="Qitmeer JSON RPC 说明"> <i class="fa fa-chevron-left"></i></a>
+
+
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbesthash/" title="getBlockBestHash" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+
+
+</div>
+<div style="text-align: center"> 
+        
+        
+        
+        
+        
+        
+        
+          <div class="library-github" markdown="0">
+            <i class="fab fa-fw fa-github"></i>
+            <strong>Contribute on GitHub</strong>
+            <p>
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=getBlock&body=Link%3A%C2%A0JSON%20RPC%20API%2fgetBlock%2f_index.cn.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/JSON%20RPC%20API/getBlock/_index.cn.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/JSON%20RPC%20API/getBlock/_index.cn.md">Edit File</a >
+            </p >
+          </div>    
+        
+      
+</div>
+<div class="cca4" >
+  <p>&copy; Copyright Qitmeer 2019.
+  <br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:10px auto;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+  </p>
+</div>
+
+</section>
+
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+<div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>
+
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1593666727"></script>
+
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1593666727"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+
+
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1593666727"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1593666727"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1593666727" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1593666727"></script>
+
+
+<script>
+mermaid.initialize({ startOnLoad: true });
+
+</script>
+
+
+
+
+<script>
+  
+  
+  
+  
+
+  
+  
+
+</script>
+</body>
+
+</html>

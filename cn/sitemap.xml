@@ -3,6 +3,100 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblock/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbesthash/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbynum/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockbyorder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockcount/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockheader/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblocktotal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockv2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getfees/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getmainchainheight/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getmempool/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getnodeinfo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getorphanstotal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getpeerinfo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/gettips/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/isblue/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/isonmainchain/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/sendrawtransaction/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/cn/reference/qxtools/</loc>
     <xhtml:link
                 rel="alternate"
@@ -22,21 +116,21 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/cn/test/</loc>
+    <loc>https://qitmeer.github.io/docs/cn/reference/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://qitmeer.github.io/docs/en/test/"
+                href="https://qitmeer.github.io/docs/en/reference/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://qitmeer.github.io/docs/ar/test/"
+                href="https://qitmeer.github.io/docs/ar/reference/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/test/"
+                href="https://qitmeer.github.io/docs/cn/reference/"
                 />
   </url>
   
@@ -76,26 +170,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://qitmeer.github.io/docs/cn/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/cn/reference/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/reference/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://qitmeer.github.io/docs/ar/reference/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/reference/"
                 />
   </url>
   
