@@ -1,6 +1,6 @@
 ---
 title: Qitmeer JSON RPC 
-weight: 1
+weight: 5
 ---
 
 ### JSON-RPC API Reference
@@ -15,7 +15,6 @@ weight: 1
 - [getBlockhashByRange](getblockhashbyrange)
 - [getBlockHeader](getblockheader)
 - [getBlockTotal](getblocktotal)
-- [getBlockWeight](getblockweight)
 - [getCoinbase](getcoinbase)
 - [getMainChainHeight](getmainchainheight)
 - [getOrphansTotal](getorphanstotal)

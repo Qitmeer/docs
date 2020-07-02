@@ -1,6 +1,6 @@
 ---
 title: Qitmeer JSON RPC 说明
-weight: 1
+weight: 5
 ---
 
 ### Qitmeer JSON RPC 命令列表
