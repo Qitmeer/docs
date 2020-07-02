@@ -1,10 +1,10 @@
 ---
-title: getBlockBestHash
+title: getBestBlockHash
 weight: 1
 ---
 
-## getBlockBestHash
-### 函数名：getBlockBestHash
+## getBestBlocktHash
+### 函数名：getBestBlockHash
 ### 说明：无参数，获取当前最大区块Order的区块hash
 ### 实例
 

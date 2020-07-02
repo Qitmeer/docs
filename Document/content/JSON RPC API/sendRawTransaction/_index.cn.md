@@ -1,6 +1,6 @@
 ---
 title: sendRawTransaction
-weight: 1
+weight: 3
 ---
 
 ## sendRawTransaction
