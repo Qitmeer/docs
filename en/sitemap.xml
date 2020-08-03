@@ -1,38 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/development-environment/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/intro/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-miner/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/intro/qitmeer-difficulty-description/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-wallet-rpc/</loc>
-  </url>
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/address/</loc>
@@ -40,6 +8,14 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase58/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/development-environment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/</loc>
   </url>
   
   <url>
@@ -117,6 +93,24 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getblockhash/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getblockhashbyrange/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/getblockhashbyrange/"
+                />
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getblockheader/</loc>
     <xhtml:link
                 rel="alternate"
@@ -145,24 +139,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://qitmeer.github.io/docs/en/json-rpc-api/getblocktotal/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getblockhash/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getblockhashbyrange/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/json-rpc-api/getblockhashbyrange/"
                 />
   </url>
   
@@ -231,6 +207,10 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/intro/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/json-rpc-api/isblue/</loc>
     <xhtml:link
                 rel="alternate"
@@ -263,6 +243,26 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-miner/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/intro/qitmeer-difficulty-description/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-wallet-rpc/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/sha256/</loc>
   </url>
   
@@ -275,22 +275,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/getstart/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/hd/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-atomicswap/</loc>
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase58check/</loc>
   </url>
   
@@ -299,15 +283,23 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/getstart/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/hd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/qitmeer-atomicswap/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/transaction/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/tutorials/</loc>
   </url>
   
   <url>
@@ -320,6 +312,10 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/json-rpc-api/decoderawtransaction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/</loc>
   </url>
   
   <url>
@@ -363,11 +359,12 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/</loc>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/</loc>
   </url>
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/reference/</loc>
+    <lastmod>2019-10-03T10:56:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -383,6 +380,10 @@
                 hreflang="en"
                 href="https://qitmeer.github.io/docs/en/reference/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/</loc>
   </url>
   
   <url>
@@ -415,6 +416,10 @@
   <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qitmeer-miner/</loc>
     <lastmod>2019-10-03T10:56:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/bitcion160/</loc>
   </url>
   
   <url>
@@ -460,10 +465,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/bitcion160/</loc>
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/hash160/</loc>
   </url>
   
@@ -473,6 +474,26 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/glossary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/</loc>
+    <lastmod>2019-10-03T10:56:43+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://qitmeer.github.io/docs/ar/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/"
+                />
   </url>
   
   <url>
@@ -612,7 +633,6 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/categories/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -631,27 +651,7 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://qitmeer.github.io/docs/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/"
-                />
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/en/tags/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"

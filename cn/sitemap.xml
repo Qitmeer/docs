@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -73,6 +73,20 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/getblockhashbyrange/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/"
+                />
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockheader/</loc>
     <xhtml:link
                 rel="alternate"
@@ -102,20 +116,6 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockv2/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://qitmeer.github.io/docs/en/json-rpc-api/getblockhashbyrange/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getblockhashbyrange/"
-                />
   </url>
   
   <url>
@@ -296,7 +296,6 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/cn/categories/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -335,7 +334,6 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/cn/tags/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"

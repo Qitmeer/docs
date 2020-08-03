@@ -1,2 +1,0 @@
-hello
-Deleted the file after test
