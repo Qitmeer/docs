@@ -12,7 +12,7 @@ Downlocad Qitmeer Wallet from [github.com/Qitmeer/qitmeer-wallet](https://github
 ```sh
 # run rpc or ul model  will support rpc interface
 
-./qitmeer-wallet qc web
+./qitmeer-wallet web
 ```
 
 Useage: 
