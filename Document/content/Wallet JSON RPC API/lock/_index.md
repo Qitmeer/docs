@@ -1,6 +1,6 @@
 
 ---
-title: unlock
+title: lock
 weight: 3
 ---
 
@@ -20,4 +20,3 @@ lock wallet
 {"jsonrpc":"1.0","method":"wallet_lock","params":[],"id":1}
 ```
 ##### Response
-
