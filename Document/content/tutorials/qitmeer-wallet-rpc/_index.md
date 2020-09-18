@@ -7,7 +7,7 @@ weight: 1
 
 # Qitmeer-wallet RPC Reference
 
-Downlocad Qitmeer Wallet from [github.com/Qitmeer/qitmeer-wallet](https://github.com/Qitmeer/qitmeer-wallet)
+Download Qitmeer Wallet from [github.com/Qitmeer/qitmeer-wallet](https://github.com/Qitmeer/qitmeer-wallet)
 
 ```sh
 # run rpc or ul model  will support rpc interface
@@ -15,7 +15,7 @@ Downlocad Qitmeer Wallet from [github.com/Qitmeer/qitmeer-wallet](https://github
 ./qitmeer-wallet web
 ```
 
-Useage: 
+Usage: 
 
 RPC interface URL http://127.0.0.1:38130/api
 
