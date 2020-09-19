@@ -1,4 +1,4 @@
----
+  ---
 title:  API List
 weight: 2
 ---
@@ -29,5 +29,15 @@ weight: 2
 
 ## UI
   - [openWallet](ui_openWallet)
+  - [createWallet](ui_createWallet)
+  - [makeSeed](ui_makeSeed)
+  - [walletStatus](ui_walletStatus)
+  - [recoverWallet](ui_recoverWallet)
 
 ## QitmeerD
+  - [add](qitmeed_add)
+  - [del](qitmeed_del)
+  - [list](qitmeed_list)
+  - [reset](qitmeerd_reset)
+  - [status](qitmeerd_status)
+  - [update](qitmeerd_update)
