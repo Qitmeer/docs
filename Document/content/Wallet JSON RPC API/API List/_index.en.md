@@ -1,10 +1,10 @@
-  ---
+---
 title:  API List
 weight: 2
 ---
 
 ## Wallet
-  - [createAccount](wallet_createAccount)
+  - [createAccount](wallet-create-account)
   - [createAddress](wallet_createAddress)
   - [importPrivKey](wallet_importPrivKey)
   - [importWifPrivKey](wallet_importWifPrivKey)
@@ -25,7 +25,7 @@ weight: 2
 
   - [lock](wallet_lock)
   - [syncStats](wallet_syncStats)
-  - [unlock](wallet_unlock)
+  - [unlock](wallet-unlock)
 
 ## UI
   - [openWallet](ui_openWallet)

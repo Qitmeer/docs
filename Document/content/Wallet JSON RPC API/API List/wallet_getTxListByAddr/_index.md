@@ -8,8 +8,8 @@ weight: 3
 
 #### Parameters
 1. `addr: (string)` 地址
-1. `type: (number)` 0: in tx; 1: out tx; 2: all tx 
-1. `page  : (number)` 页号
+1. `type: (numeric)` 0: in tx; 1: out tx; 2: all tx 
+1. `page  : (numeric)` 页号
 1. `pageSize`: (string)` 页大小
 
 
