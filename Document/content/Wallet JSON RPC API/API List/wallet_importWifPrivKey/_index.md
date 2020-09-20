@@ -1,4 +1,9 @@
-## 9. wallet_importWifPrivKey {accountName} {privKey} {rescan}
+---
+title: wallet_getAccountsAndBalance
+weight: 3
+---
+
+## wallet_importWifPrivKey 
 ### info: 导入wif格式私钥
 ### args：
 - accountName 导入账户,目前只支持imported

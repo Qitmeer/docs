@@ -31,11 +31,11 @@ vi config.toml
 curl -k -u "${USER}:${PASSWORD}" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"${METHOD}","params":[${PARAMS}],"id":1}' ${API_URL} | jq
 ```
 ### Parameters
-1. USER - rpcUser in the config
-2. PASSWORD - rpcPass in the config
-3. API_URL - listeners in the config
-4. METHOD - RPC call name
-5. PARAMS - RPC call parameters 
+1. `USER: (string)` rpcUser in the config
+2. `PASSWORD: (string)` rpcPass in the config
+3. `API_URL: (string)` listeners in the config
+4. `METHOD: (string)` RPC call name
+5. `PARAMS: (array)` RPC call parameters 
 
 ### Example
 ```sh

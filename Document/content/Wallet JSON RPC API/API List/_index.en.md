@@ -4,35 +4,35 @@ weight: 2
 ---
 
 ## Wallet
-  - [createAccount](wallet-create-account)
-  - [createAddress](wallet_createAddress)
-  - [importPrivKey](wallet_importPrivKey)
-  - [importWifPrivKey](wallet_importWifPrivKey)
-  - [dumpPrivKey](wallet_dumpPrivKey)
+  - [createAccount](wallet_createaccount)
+  - [createAddress](wallet_createaddress)
+  - [importPrivKey](wallet_importprivkey)
+  - [importWIFPrivKey](wallet_importwifprivkey)
+  - [dumpPrivKey](wallet_dumpprivkey)
 
-  - [sendToAddress](wallet_sendToAddress)
-  - [sendToAddressByAccount](wallet_sendToAddressByAccount)
-  - [sendToMany](wallet_sendToMany)
+  - [sendToAddress](wallet_sendtoaddress)
+  - [sendToAddressByAccount](wallet_sendtoaddressbyaccount)
+  - [sendToMany](wallet_sendtomany)
 
-  - [getAccountByAddress](wallet_getAccountByAddress)
-  - [getAccountsAndBalance](wallet_getAccountsAndBalance)
-  - [getAddressesByAccount](wallet_getAddressesByAccount)
-  - [getBalanceByAccount](wallet_getBalanceByAccount)
-  - [getBalanceByAddr](wallet_getBalanceByAddr)
-  - [getBillByAddr](wallet_getBillByAddr)
-  - [getTxListByAddr](wallet_getTxListByAddr)
-  - [getUTXO](wallet_getUtxo)
+  - [getAccountByAddress](wallet_getaccountbyaddress)
+  - [getAccountsAndBalance](wallet_getaccountsandbalance)
+  - [getAddressesByAccount](wallet_getaddressesbyaccount)
+  - [getBalanceByAccount](wallet_getbalancebyaccount)
+  - [getBalanceByAddr](wallet_getbalancebyaddr)
+  - [getBillByAddr](wallet_getbillbyaddr)
+  - [getTxListByAddr](wallet_gettxlistbyaddr)
+  - [getUTXO](wallet_getutxo)
 
   - [lock](wallet_lock)
-  - [syncStats](wallet_syncStats)
-  - [unlock](wallet-unlock)
+  - [syncStats](wallet_syncstats)
+  - [unlock](wallet_unlock)
 
 ## UI
-  - [openWallet](ui_openWallet)
-  - [createWallet](ui_createWallet)
-  - [makeSeed](ui_makeSeed)
-  - [walletStatus](ui_walletStatus)
-  - [recoverWallet](ui_recoverWallet)
+  - [openWallet](ui_openwallet)
+  - [createWallet](ui_createwallet)
+  - [makeSeed](ui_makeseed)
+  - [walletStatus](ui_walletstatus)
+  - [recoverWallet](ui_recoverwallet)
 
 ## QitmeerD
   - [add](qitmeed_add)

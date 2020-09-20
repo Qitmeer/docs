@@ -1,10 +1,9 @@
-
 ---
-title: lock
+title: wallet_lock
 weight: 3
 ---
 
-### wallet_lock 
+### Lock 
 lock wallet
 
 #### Parameters

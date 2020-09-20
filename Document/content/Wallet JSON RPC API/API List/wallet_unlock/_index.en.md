@@ -1,9 +1,9 @@
 ---
-title: unlock
+title: wallet_unlock
 weight: 3
 ---
 
-## wallet_unlock 
+## Unlock 
  unlocks the wallet's address manager and relocks it after timeout has
  expired.  If the wallet is already unlocked and the new passphrase is
  correct, the current timeout is replaced with the new one.  The wallet will

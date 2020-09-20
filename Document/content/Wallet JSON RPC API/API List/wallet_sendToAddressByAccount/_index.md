@@ -1,5 +1,5 @@
 ---
-title: sendToAddressByAccount
+title: wallet_sendToAddressByAccount
 weight: 3
 ---
 

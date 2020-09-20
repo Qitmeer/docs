@@ -1,9 +1,9 @@
 ---
-title: qitmeed_del
+title: qitmeed_status
 weight: 3
 ---
 
-## Del
+## Status
 
 ### Parameters
 

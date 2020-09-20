@@ -1,10 +1,9 @@
-
 ---
-title: getAccountsAndBalance
+title: wallet_getAccountsAndBalance
 weight: 3
 ---
 
-### wallet_getAccountsAndBalance 
+### wallet_getAccountsAndBalance
 获取所有的账号和余额
 
 #### Parameters
