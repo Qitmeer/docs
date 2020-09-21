@@ -147,6 +147,13 @@
 	"content": ""
 },
 {
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/instruction/",
+	"title": "Instruction",
+	"tags": [],
+	"description": "",
+	"content": "Build git clone https://github.com/qitmeer/qitmeer-wallet ~/github.com/qitmeer/qitmeer-wallet cd ~/github.com/qitmeer/qitmeer-wallet make build Config vi config.toml # make sure ui=false Run ./qitmeer-wallet web Call API Command # by cURL curl -k -u \u0026#34;${USER}:${PASSWORD}\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;${METHOD}\u0026#34;,\u0026#34;params\u0026#34;:[${PARAMS}],\u0026#34;id\u0026#34;:1}\u0026#39; ${API_URL} | jq Parameters  USER: (string) rpcUser in the config PASSWORD: (string) rpcPass in the config API_URL: (string) listeners in the config METHOD: (string) RPC call name PARAMS: (array) RPC call parameters  Example curl -k -u \u0026#34;user:password\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;account\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:38130/api | jq "
+},
+{
 	"uri": "https://qitmeer.github.io/docs/en/intro/",
 	"title": "Introduction",
 	"tags": [],
@@ -231,6 +238,20 @@
 	"content": "tips None\nParameters Returns (array of string) list of tip hashes Example Request curl --data \u0026#39;{\u0026#34;method\u0026#34;:\u0026#34;tips\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;id\u0026#34;:1}\u0026#39; -s -k -u \u0026#34;rpcuser:rpcpass\u0026#34; -H \u0026#39;Content-Type: application/json\u0026#39; http://127.0.0.1:18131 |jq . Response [ \u0026#34;00001a78e4405cf0b1eeebf4c707bbbeea3fbad53dd60718092b08c6fb1cb95f\u0026#34; ] "
 },
 {
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/",
+	"title": "Wallet JSON PRC",
+	"tags": [],
+	"description": "",
+	"content": " Instruction API List Errors  "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/",
+	"title": "API List",
+	"tags": [],
+	"description": "",
+	"content": "Wallet   createAccount\n  createAddress\n  importPrivKey\n  importWIFPrivKey\n  dumpPrivKey\n  sendToAddress\n  sendToAddressByAccount\n  sendToMany\n  getAccountByAddress\n  getAccountsAndBalance\n  getAddressesByAccount\n  getBalanceByAccount\n  getBalanceByAddr\n  getBillByAddr\n  getTxListByAddr\n  getUTXO\n  lock\n  syncStats\n  unlock\n  UI  openWallet createWallet makeSeed walletStatus recoverWallet  QitmeerD  add del list reset status update  "
+},
+{
 	"uri": "https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase58check/",
 	"title": "base58check",
 	"tags": [],
@@ -287,13 +308,6 @@
 	"content": "base64-encode Convert a base16 string to a base64 string.\n~ qx base64-encode --help Usage: qx base64-encode [hexstring] Example 1 ~ qx base64-encode 1234567890abcdef # base64 string EjRWeJCrze8=  base64-decode Convert a base64 string to a base16 string.\n~ qx base64-decode --help Usage: qx base64-decode [hexstring] Example 2 ~ qx base64-decode EjRWeJCrze8= # base16 string 1234567890abcdef "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/createaccount/",
-	"title": "createAccount",
-	"tags": [],
-	"description": "",
-	"content": "wallet_createAccount 添加账户\nParameters  accountName: (string) 新账户名  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;accountName\u0026#34;],\u0026#34;id\u0026#34;:1} Response "
-},
-{
 	"uri": "https://qitmeer.github.io/docs/en/json-rpc-api/createrawtransaction/",
 	"title": "createRawTransaction",
 	"tags": [],
@@ -315,13 +329,6 @@
 	"content": "entropy (seed) \u0026amp; mnemoic \u0026amp; hd \u0026amp; ec entropy generate a cryptographically secure pseudorandom entropy (seed). hd-new create a new HD(BIP32) private key from an entropy (seed). hd-to-ec convert the HD (BIP32) format private/public key to a EC private/public key. hd-to-public derive the HD (BIP32) public key from a HD private key. hd-decode decode a HD (BIP32) private/public key serialization format. hd-derive Derive a child HD (BIP32) key from another HD public or private key. mnemonic-new create a mnemonic world-list (BIP39) from an entropy. mnemonic-to-entropy return back to the entropy (the random seed) from a mnemonic world list (BIP39). mnemonic-to-seed convert a mnemonic world-list (BIP39) to its 512 bits seed. ec-new create a new EC private key from an entropy (seed). ec-to-public derive the EC public key from an EC private key (the compressed format by default ). ec-to-wif convert an EC private key to a WIF, associates with the compressed public key by default. wif-to-ec convert a WIF private key to an EC private key. wif-to-public derive the EC public key from a WIF private key. "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/getaccountsandbalance/",
-	"title": "getAccountsAndBalance",
-	"tags": [],
-	"description": "",
-	"content": "wallet_getAccountsAndBalance 获取所有的账号和余额\nParameters Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_getAccountsAndBalance\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1 Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: { \u0026#34;account\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 0, \u0026#34;SpendAmount\u0026#34;: 0, \u0026#34;UnspendAmount\u0026#34;: 0, \u0026#34;ConfirmAmount\u0026#34;: 0 }, \u0026#34;default\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 280000000000, \u0026#34;SpendAmount\u0026#34;: 0, \u0026#34;UnspendAmount\u0026#34;: 280000000000, \u0026#34;ConfirmAmount\u0026#34;: 0 }, \u0026#34;imported\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 11172999678800, \u0026#34;SpendAmount\u0026#34;: 325000000000, \u0026#34;UnspendAmount\u0026#34;: 8754999678800, \u0026#34;ConfirmAmount\u0026#34;: 2418000000000 } } } "
-},
-{
 	"uri": "https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/",
 	"title": "getRawTransaction",
 	"tags": [],
@@ -336,13 +343,6 @@
 	"content": "Perform a keccak256 of Base16 data.\nkeccak256 calculate legacy keccak 256 hash of a bash16 data.\n~ qx keccak-256 --help Usage: qx keccak-256 [hexstring] Example ~ qx keccak-256 900df00d 4ceee8dafd892f10425a56dfde748a49fdc1b6ff85822170a059ad9080c2b3f3 "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/lock/",
-	"title": "lock",
-	"tags": [],
-	"description": "",
-	"content": "wallet_lock lock wallet\nParameters  password: (string) wallet password second: (numeric) unlock duration, unit second  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_lock\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1} Response "
-},
-{
 	"uri": "https://qitmeer.github.io/docs/en/reference/qxtools/entropy/mnemonic/",
 	"title": "mnemonic",
 	"tags": [],
@@ -350,18 +350,53 @@
 	"content": "mnemonic-new create a mnemonic world-list (BIP39) from an entropy.\n~ qx mnemonic-new --help Usage: qx mnemonic-new [entropy] Example ~ qx mnemonic-new 4ec6a3a135aba433b0d0ae5ec31d69c26eb3bd5ac532496529660f61c674d99e excite crush tribe hero ripple border select beyond gain body foil luggage twenty team help play enact citizen flower burst broccoli denial grid spike  mnemonic-to-entropy return back to the entropy (the random seed) from a mnemonic world list (BIP39).\n~ qx mnemonic-to-entropy --help Usage: qx mnemonic-to-entropy [mnemonic] Example 1 ~ qx mnemonic-to-entropy \u0026#39;excite crush tribe hero ripple border select beyond gain body foil luggage twenty team help play enact citizen flower burst broccoli denial grid spike\u0026#39; 4ec6a3a135aba433b0d0ae5ec31d69c26eb3bd5ac532496529660f61c674d99e  mnemonic-to-seed convert a mnemonic world-list (BIP39) to its 512 bits seed.\n~ qx mnemonic-to-seed --help Usage: qx mnemonic-to-seed [mnemonic] -p string An optional passphrase for converting the mnemonic to a seed Example 2 ~ qx mnemonic-to-seed \u0026#39;excite crush tribe hero ripple border select beyond gain body foil luggage twenty team help play enact citizen flower burst broccoli denial grid spike\u0026#39; 5ccb173392641a7e5edc8d5f30e5ce314aada7f0b8e1169c2b67f81e80b5d95504629aabcd108264e0a16f03a9146f75552f37ed33cce16b9b4bf279b5df96a0 "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/json-rpc-api/sendrawtransaction/",
-	"title": "sendRawTransaction",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_add/",
+	"title": "qitmeed_add",
+	"tags": [],
+	"description": "",
+	"content": "Add Parameters Returns Success Error Example Request Response "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_del/",
+	"title": "qitmeed_del",
+	"tags": [],
+	"description": "",
+	"content": "Del Parameters Returns Success Error Example Request Response "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_list/",
+	"title": "qitmeed_list",
+	"tags": [],
+	"description": "",
+	"content": "List Parameters Returns Success Error Example Request Response "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeerd_status/",
+	"title": "qitmeed_status",
+	"tags": [],
+	"description": "",
+	"content": "Status Parameters Returns Success Error Example Request Response "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeerd_reset/",
+	"title": "qitmeerd_reset",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/sendtoaddressbyaccount/",
-	"title": "sendToAddressByAccount",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeerd_update/",
+	"title": "qitmeerd_update",
 	"tags": [],
 	"description": "",
-	"content": "wallet_sendToAddressByAccount 发送交易\nParameters  fromAccount: (string) from account toAccount: (string) to address amount: (string) send amount coin comment: (string) commentTo: (string)  Returns Example Request {\u0026#34;id\u0026#34;:1574828051839,\u0026#34;method\u0026#34;:\u0026#34;wallet_sendToAddressByAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;default\u0026#34;,\u0026#34;TmZu8zU1i6xbZMpLQZLMAJsyWHanZXUZtiV\u0026#34;,800,\u0026#34;\u0026#34;,\u0026#34;\u0026#34;]} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1574828051839, \u0026#34;result\u0026#34;: \u0026#34;b1ff3645c374992313e66d504fdf4fd3f2006f9414b97a7e1f6382328cc74fb1\u0026#34; } "
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/json-rpc-api/sendrawtransaction/",
+	"title": "sendRawTransaction",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/reference/qxtools/txsign/sign_verify/",
@@ -378,74 +413,172 @@
 	"content": "Qitmeer Tutorials List   Development Environment\n  Qitmeer Installation\n  Qitmeer Cross-chain Atomic-swapping\n  Qitmeer Miner Guide\n  Qitmeer Rpc Guide\n  Qitmeer Wallet Rpc Guide\n  Qitmeer JS Guide\n  "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/unlock/",
-	"title": "unlock",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_createwallet/",
+	"title": "ui_createWallet",
 	"tags": [],
 	"description": "",
-	"content": "wallet_unlock unlock wallet\nParameters  password: (string) wallet password second: (numeric) unlock duration, unit second  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_unlock\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;password\u0026#34;,30],\u0026#34;id\u0026#34;:1} Response "
+	"content": "CreateWallet create wallet by seed\nParameters  name: (string) account name  Returns Success null\nError -32000 Creating an account requires the wallet to be unlocked. Enter the wallet passphrase with walletpassphrase to unlock\nExample Request curl -k -u \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;test_account\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api Response {\u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;id\u0026#34;:1,\u0026#34;result\u0026#34;:null} "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/createaddress/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_makeseed/",
+	"title": "ui_makeSeed",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_openwallet/",
+	"title": "ui_openWallet",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_recoverwallet/",
+	"title": "ui_recoverWallet",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_walletstatus/",
+	"title": "ui_walletStatus",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_createaccount/",
+	"title": "wallet_createAccount",
+	"tags": [],
+	"description": "",
+	"content": "CreateAccount creates the next account and returns its account number. The name must be unique to the account. In order to support automatic seed restoring, new accounts may not be created when all of the previous 100 accounts have no transaction history (this is a deviation from the BIP0044 spec, which allows no unused account gaps).\nParameters  name: (string) account name  Returns Success null\nError -32000 -13 Creating an account requires the wallet to be unlocked. Enter the wallet passphrase with walletpassphrase to unlock\nExample Request curl -k -u \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;test_account\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api Response {\u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;id\u0026#34;:1,\u0026#34;result\u0026#34;:null} "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_createaddress/",
 	"title": "wallet_createAddress",
 	"tags": [],
 	"description": "",
-	"content": "wallet_createAddress 创建地址\nParameters  accountName: (string) 账户名  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAddress\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;default\u0026#34;],\u0026#34;id\u0026#34;:1} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: \u0026#34;TmhMzHPCH6F2k3WYQkyvjhwAXoZt7q8TFv9\u0026#34; } "
+	"content": "CreateAddress returns the next external chained address for a wallet.\nParameters  accountName: (string) name of the account on which the address created  Returns Success new address (base58)\nError -32000 account name \u0026lsquo;test_account\u0026rsquo; not found\nExample Request curl -k -u \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAddress\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;test_account\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: \u0026#34;Tmdy4W4FeDD2M8Tm8syZJmR2BPdug4Zeozj\u0026#34; } "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/dumpprivkey/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_dumpprivkey/",
 	"title": "wallet_dumpPrivKey",
 	"tags": [],
 	"description": "",
 	"content": "wallet_dumpPrivKey 创建地址\nParameters  addr: (string) 地址  Returns Example Request {\u0026#34;id\u0026#34;:1574829854509,\u0026#34;method\u0026#34;:\u0026#34;wallet_dumpPrivKey\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;Tmh3je9zbnHAvPfwwHhQsFSJmKkeRTtKqmV\u0026#34;]} Response "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/getaddressesbyaccount/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaccountbyaddress/",
+	"title": "wallet_getAccountByAddress",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaccountsandbalance/",
+	"title": "wallet_getAccountsAndBalance",
+	"tags": [],
+	"description": "",
+	"content": "wallet_getAccountsAndBalance 获取所有的账号和余额\nParameters Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_getAccountsAndBalance\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1 Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: { \u0026#34;account\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 0, \u0026#34;SpendAmount\u0026#34;: 0, \u0026#34;UnspendAmount\u0026#34;: 0, \u0026#34;ConfirmAmount\u0026#34;: 0 }, \u0026#34;default\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 280000000000, \u0026#34;SpendAmount\u0026#34;: 0, \u0026#34;UnspendAmount\u0026#34;: 280000000000, \u0026#34;ConfirmAmount\u0026#34;: 0 }, \u0026#34;imported\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 11172999678800, \u0026#34;SpendAmount\u0026#34;: 325000000000, \u0026#34;UnspendAmount\u0026#34;: 8754999678800, \u0026#34;ConfirmAmount\u0026#34;: 2418000000000 } } } "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/",
+	"title": "wallet_getAccountsAndBalance",
+	"tags": [],
+	"description": "",
+	"content": "wallet_importWifPrivKey info: 导入wif格式私钥 args：  accountName 导入账户,目前只支持imported privKey 私钥 rescan bool,是否重新扫描交易记录  example: {\u0026#34;id\u0026#34;:1574750774018,\u0026#34;method\u0026#34;:\u0026#34;wallet_importWifPrivKey\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;imported\u0026#34;,\u0026#34;xxxxx\u0026#34;,false]} "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaddressesbyaccount/",
 	"title": "wallet_getAddressesByAccount",
 	"tags": [],
 	"description": "",
 	"content": "wallet_getAddressesByAccount 获取账户所有的地址\nParameters  accountName: (string) 账户名  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_getAddressesByAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;default\u0026#34;],\u0026#34;id\u0026#34;:1} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: [ \u0026#34;TmSbEJs3nDmy68Af7M4Rsuj4pyAwcAret5a\u0026#34;, \u0026#34;Tmbzp2af9Ereh2hRejcVH9mCQgYdY2GHCAa\u0026#34;, \u0026#34;TmZu8zU1i6xbZMpLQZLMAJsyWHanZXUZtiV\u0026#34; ] } "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/getbalancebyaddr/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbalancebyaccount/",
+	"title": "wallet_getBalanceByAccount",
+	"tags": [],
+	"description": "",
+	"content": "wallet_getBalanceByAccount Parameters Returns Example Request Response "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbalancebyaddr/",
 	"title": "wallet_getBalanceByAddr",
 	"tags": [],
 	"description": "",
 	"content": "wallet_getBalanceByAddr 获取地址余额\nParameters  addr: (string) 地址  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_getBalanceByAddr\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;TmfDniZnvsjdH98GsH4aetL3XQKFUTWPp4e\u0026#34;,1],\u0026#34;id\u0026#34;:16} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 16, \u0026#34;result\u0026#34;: { \u0026#34;TotalAmount\u0026#34;: 400000000, \u0026#34;SpendAmount\u0026#34;: 0, \u0026#34;UnspendAmount\u0026#34;: 400000000, \u0026#34;ConfirmAmount\u0026#34;: 0 } } "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/gettxlistbyaddr/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbillbyaddr/",
+	"title": "wallet_getBillByAddr",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettxlistbyaddr/",
 	"title": "wallet_getTxListByAddr",
 	"tags": [],
 	"description": "",
-	"content": "wallet_getTxListByAddr 创建地址\nParameters  addr: (string) 地址 type: (number) 0: in tx; 1: out tx; 2: all tx page : (number) 页号 pageSize: (string)` 页大小  Returns Example Request {\u0026#34;id\u0026#34;:1574750774018,\u0026#34;method\u0026#34;:\u0026#34;wallet_getTxListByAddr\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;TmhJcjphz3Y3jRysKT56JaH8m9pzAzsFMu7\u0026#34;,2,-1,100]} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1574750774018, \u0026#34;result\u0026#34;: { \u0026#34;Total\u0026#34;: 1, \u0026#34;Page\u0026#34;: 1, \u0026#34;PageSize\u0026#34;: 1000000000, \u0026#34;transactions\u0026#34;: [ { \u0026#34;hex\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;txid\u0026#34;: \u0026#34;47879fb9dea684e4ce6f24f30812d3832d11fee34400754c6d8b34cd7d7eba8f\u0026#34;, \u0026#34;txhash\u0026#34;: \u0026#34;937de7e15ec48e9cd58d79c594e7395015d5c663924ab5af929a9ef5e5f2e446\u0026#34;, \u0026#34;size\u0026#34;: 377, \u0026#34;version\u0026#34;: 1, \u0026#34;locktime\u0026#34;: 0, \u0026#34;expire\u0026#34;: 0, \u0026#34;vin\u0026#34;: [ ... ], \u0026#34;vout\u0026#34;: [ ... ], \u0026#34;blockhash\u0026#34;: \u0026#34;026c6c85a1ae0183fe2e8bfda3450b9990acf9b8c4af3e995f9e361c7bb3d4cd\u0026#34;, \u0026#34;confirmations\u0026#34;: 0 } ] } }"
+	"content": "wallet_getTxListByAddr 创建地址\nParameters  addr: (string) 地址 type: (numeric) 0: in tx; 1: out tx; 2: all tx page : (numeric) 页号 pageSize: (string)` 页大小  Returns Example Request {\u0026#34;id\u0026#34;:1574750774018,\u0026#34;method\u0026#34;:\u0026#34;wallet_getTxListByAddr\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;TmhJcjphz3Y3jRysKT56JaH8m9pzAzsFMu7\u0026#34;,2,-1,100]} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1574750774018, \u0026#34;result\u0026#34;: { \u0026#34;Total\u0026#34;: 1, \u0026#34;Page\u0026#34;: 1, \u0026#34;PageSize\u0026#34;: 1000000000, \u0026#34;transactions\u0026#34;: [ { \u0026#34;hex\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;txid\u0026#34;: \u0026#34;47879fb9dea684e4ce6f24f30812d3832d11fee34400754c6d8b34cd7d7eba8f\u0026#34;, \u0026#34;txhash\u0026#34;: \u0026#34;937de7e15ec48e9cd58d79c594e7395015d5c663924ab5af929a9ef5e5f2e446\u0026#34;, \u0026#34;size\u0026#34;: 377, \u0026#34;version\u0026#34;: 1, \u0026#34;locktime\u0026#34;: 0, \u0026#34;expire\u0026#34;: 0, \u0026#34;vin\u0026#34;: [ ... ], \u0026#34;vout\u0026#34;: [ ... ], \u0026#34;blockhash\u0026#34;: \u0026#34;026c6c85a1ae0183fe2e8bfda3450b9990acf9b8c4af3e995f9e361c7bb3d4cd\u0026#34;, \u0026#34;confirmations\u0026#34;: 0 } ] } }"
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/getutxo/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getutxo/",
 	"title": "wallet_getUtxo",
 	"tags": [],
 	"description": "",
 	"content": "wallet_getUtxo 获取指定地址可用 UTXO\nParameters  addr: (string) 地址  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_getUTXO\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;TmgD1mu8zMMV9aWmJrXqQYnWRhR9SBfDZG6\u0026#34;],\u0026#34;id\u0026#34;:1} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: [{ \u0026#34;Txid\u0026#34;: \u0026#34;54c47af3a17201c64a8f3b27164d4e09e8e38e05501b16bfd4f001caeddfa86a\u0026#34;, \u0026#34;Index\u0026#34;: 1, \u0026#34;Amount\u0026#34;: 699925600 }] }} "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/importprivkey/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importprivkey/",
 	"title": "wallet_importPrivKey",
 	"tags": [],
 	"description": "",
-	"content": "wallet_importPrivKey 导入私钥\nParameters  accountName: (string) 导入账户,目前只支持imported privKey: (string) 私钥 rescan: (bool) 是否重新扫描交易记录  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_importPrivKey\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;imported\u0026#34;,\u0026#34;xxxxxx\u0026#34;,true],\u0026#34;id\u0026#34;:1} Response "
+	"content": "ImportPrivKey imports a private key to the wallet and writes the new wallet to disk.\nNote: this private key is in a hex string and you may generate it with qx wiftopriv tool from a WIF key, which should be compatible with BTC network (in contrast to dumpPrivKey and importWIFPrivKey, both are incompatible). You may export this WIF key from any wallet service that follows this rule, such as KAHF\nParameters  accountName: (string) name of the imported account. MUST be: \u0026ldquo;imported\u0026rdquo; privKey: (hex string) private key.  Returns Success null\nError -32000 -4 imported addresses must belong to the imported account\nExample Request curl --location --request POST \u0026#39;http://127.0.0.1:8130/api/\u0026#39; -u test:test -H \u0026#39;Content-Type: application/json\u0026#39; -d \u0026#39;{\u0026#34;id\u0026#34;:1, \u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_importPrivKey\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;imported\u0026#34;, \u0026#34;9999999999999999999999999999999999999999999999999999999999999999\u0026#34;]}\u0026#39; Response {\u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;id\u0026#34;:1,\u0026#34;result\u0026#34;:null} "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/sendtoaddressbatch/",
-	"title": "wallet_sendToAddressBatch",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_lock/",
+	"title": "wallet_lock",
 	"tags": [],
 	"description": "",
-	"content": "wallet_sendToAddressBatch 单地址批量交易\nParameters  addr: (string) 地址 amount: (string) 金额  Returns Example Request { \u0026#34;id\u0026#34;: 1578639635748, \u0026#34;method\u0026#34;: \u0026#34;wallet_sendToAddressBatch\u0026#34;, \u0026#34;params\u0026#34;: [{ \u0026#34;TmeUg4pxc14y64J5BQj4M7jKEryeYfJ4APh\u0026#34;: 0.1, \u0026#34;TmU3Xwo1rnh4hTKBwifDYAccDrF3kxXaEFe\u0026#34;: 0.2, \u0026#34;TmjbGfbcMN1nVVHdcvzmPA4ksKqGq4eEkXu\u0026#34;: 0.3, \u0026#34;TmmWRCMcRZ1ZGdQEw2BwZ3ibsobATw4KTrw\u0026#34;: 0.4 }] } Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1578639635748, \u0026#34;result\u0026#34;: \u0026#34;d7a7d24d47bb66ad3d3185764808af730c9a9dbb5970686cf6e5a1d5f249923c\u0026#34; } "
+	"content": "Lock lock wallet\nParameters  password: (string) wallet password second: (numeric) unlock duration, unit second  Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_lock\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1} Response "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/syncstats/",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_sendtoaddress/",
+	"title": "wallet_sendToAddress",
+	"tags": [],
+	"description": "",
+	"content": "wallet_sendToAddress Parameters Returns Example Request Response "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_sendtoaddressbyaccount/",
+	"title": "wallet_sendToAddressByAccount",
+	"tags": [],
+	"description": "",
+	"content": "wallet_sendToAddressByAccount 发送交易\nParameters  fromAccount: (string) from account toAccount: (string) to address amount: (string) send amount coin comment: (string) commentTo: (string)  Returns Example Request {\u0026#34;id\u0026#34;:1574828051839,\u0026#34;method\u0026#34;:\u0026#34;wallet_sendToAddressByAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;default\u0026#34;,\u0026#34;TmZu8zU1i6xbZMpLQZLMAJsyWHanZXUZtiV\u0026#34;,800,\u0026#34;\u0026#34;,\u0026#34;\u0026#34;]} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1574828051839, \u0026#34;result\u0026#34;: \u0026#34;b1ff3645c374992313e66d504fdf4fd3f2006f9414b97a7e1f6382328cc74fb1\u0026#34; } "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_sendtomany/",
+	"title": "wallet_sendToMany",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_syncstats/",
 	"title": "wallet_syncStats",
 	"tags": [],
 	"description": "",
 	"content": "wallet_syncStats 查看当前钱包同步高度\nParameters Returns Example Request {\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_syncStats\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1} Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: { \u0026#34;Height\u0026#34;: 20460 } } "
+},
+{
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_unlock/",
+	"title": "wallet_unlock",
+	"tags": [],
+	"description": "",
+	"content": "Unlock unlocks the wallet\u0026rsquo;s address manager and relocks it after timeout has expired. If the wallet is already unlocked and the new passphrase is correct, the current timeout is replaced with the new one. The wallet will be locked if the passphrase is incorrect or any other error occurs during the unlock.\nParameters  passphrase: (string) wallet private password timeout: (numeric) unlock duration, unit second  Returns Success null Error -32000 invalid passphrase for master private key\nExample Request curl -k -u \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_unlock\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;password\u0026#34;, 999999999],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api Response {\u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;id\u0026#34;:1,\u0026#34;result\u0026#34;:null} "
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/reference/",
@@ -560,11 +693,11 @@
 	"content": "calculate ripemd160( blake2b256( data ) )\n~ qx hash160 --help Usage: qx hash160 [hexstring] Example ~ qx hash160 900df00d a7a99d5c4c2b55f876010dd12f6733c99f1e9c1a Is equivalent to the following example\n~ qx blake2b256 900df00d | qx ripemd160 a7a99d5c4c2b55f876010dd12f6733c99f1e9c1a "
 },
 {
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/",
-	"title": "Qitmeer Wallet JSON RPC",
+	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/errors/",
+	"title": "Errors",
 	"tags": [],
 	"description": "",
-	"content": "API List Wallet  unlock lock getAccountsAndBalance createAccount getAddressesByAccount createAddress sendToAddressByAccount getTxListByAddr importWifPrivKey dumpPrivKey syncStats getUtxo importPrivKey getBalanceByAddr sendToAddressBatch  UI  openWallet  Instruction Build git clone https://github.com/qitmeer/qitmeer-wallet ~/github.com/qitmeer/qitmeer-wallet cd ~/github.com/qitmeer/qitmeer-wallet make build Config vi config.toml # make sure ui=false Run ./qitmeer-wallet web Call API Command # by cURL curl -k -u \u0026#34;${USER}:${PASSWORD}\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;${METHOD}\u0026#34;,\u0026#34;params\u0026#34;:[${PARAMS}],\u0026#34;id\u0026#34;:1}\u0026#39; ${API_URL} | jq Parameters  USER - rpcUser in the config PASSWORD - rpcPass in the config PASSWORD - listeners in the config METHOD - RPC call name PARAMS - RPC call parameters  Example curl -k -u \u0026#34;user:password\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;account\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:38130/api | jq "
+	"content": ""
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/faqs/",
@@ -775,13 +908,6 @@
 	"tags": [],
 	"description": "",
 	"content": "txSign txSign {private_key} {raw_tx}; sign rawTx\nUsage qitmeer-cli txSign [flags] Alias   txsign\n  TxSign\n  signRawTx\n  signrawtx\n  SignRawTx\n  Examples  //txSign {private_key} {raw_tx} txSign 2ad045c0df865c8f84479ea06adf00cbbfec705fb9402ea117ce2ef242a9d260 0100000001ff5d53a7070fa9f0a9d12af729d2cbaf355ef1173c106a84cf9ef3a46bff03b202000000ffffffff01005504790a0000001976a914627777996288556166614462639988446255776688ac000000000000000001000000000000000000000000ffffffff00 Options  -h, --help help for txSign SEE ALSO  qitmeer-cli blockChain  "
-},
-{
-	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/importwifprivkey/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "9. wallet_importWifPrivKey {accountName} {privKey} {rescan} info: 导入wif格式私钥 args：  accountName 导入账户,目前只支持imported privKey 私钥 rescan bool,是否重新扫描交易记录  example: {\u0026#34;id\u0026#34;:1574750774018,\u0026#34;method\u0026#34;:\u0026#34;wallet_importWifPrivKey\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;imported\u0026#34;,\u0026#34;xxxxx\u0026#34;,false]} "
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/categories/",
