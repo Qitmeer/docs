@@ -5,12 +5,16 @@ weight: 3
 ---
 
 ### wallet_getBalanceByAddr
-获取地址余额
+Get balance by address
 
 #### Parameters
-1. `addr: (string)` 地址
+1. `addr: (string)` address
 
 #### Returns
+1. `TotalAmount: (numeric)`  Total amount, spend amount+ spendable amount + frozen amount
+2. `SpendAmount: (numeric)` spent amount, already confirmed
+3. `UnspendAmount: (numeric)` spendable amount, not including frozen amount
+4. `ConfirmAmount: (numeric)` frozen amount, waiting for conformation
 
 
 #### Example
