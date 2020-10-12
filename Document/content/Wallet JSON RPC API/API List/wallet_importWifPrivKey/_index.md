@@ -1,5 +1,5 @@
 ---
-title: wallet_getAccountsAndBalance
+title: wallet_importWifPrivKey
 weight: 3
 ---
 
