@@ -12,20 +12,20 @@
     <title>wallet_getAccountsAndBalance :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1600676506" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1600676506" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1602488058" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1602488058" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1600676506" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1602488058" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1600676506"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1602488058"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1600676506"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1600676506"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1602488058"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1602488058"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1600676506"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1602488058"></script>
 
     
   </div>
@@ -604,30 +604,6 @@
  
   
     
-    <li data-nav-id="/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/" title="wallet_getAccountsAndBalance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/">
-          wallet_getAccountsAndBalance
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
     <li data-nav-id="/en/wallet-json-rpc-api/api-list/wallet_getaddressesbyaccount/" title="wallet_getAddressesByAccount" class="dd-item 
         
         
@@ -779,6 +755,30 @@
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importprivkey/">
           wallet_importPrivKey
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/" title="wallet_importWifPrivKey" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/">
+          wallet_importWifPrivKey
           
       </a>
       
@@ -3525,37 +3525,54 @@
 
 
 	<h3 id="wallet_getaccountsandbalance">wallet_getAccountsAndBalance</h3>
-<p>获取所有的账号和余额</p>
+<p>list balance of all accounts</p>
 <h4 id="parameters">Parameters</h4>
+<p>None</p>
 <h4 id="returns">Returns</h4>
+<p><code>[account name]:(account)</code></p>
+<p><code>account</code></p>
+<ol>
+<li><code>TotalAmount: (numeric)</code>  Total amount, spend amount+ spendable amount + frozen amount</li>
+<li><code>SpendAmount: (numeric)</code> spent amount, already confirmed</li>
+<li><code>UnspendAmount: (numeric)</code> spendable amount, not including frozen amount</li>
+<li><code>ConfirmAmount: (numeric)</code> frozen amount, waiting for conformation
+&hellip;</li>
+</ol>
 <h4 id="example">Example</h4>
 <h5 id="request">Request</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;jsonrpc&#34;</span>:<span style="color:#e6db74">&#34;1.0&#34;</span>,<span style="color:#f92672">&#34;method&#34;</span>:<span style="color:#e6db74">&#34;wallet_getAccountsAndBalance&#34;</span>,<span style="color:#f92672">&#34;params&#34;</span>:[],<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> $ curl -sk -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_getAccountsAndBalance&#34;,&#34;params&#34;:[],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api |jq .
 </code></pre></div><h5 id="response">Response</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
-    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
-    <span style="color:#f92672">&#34;result&#34;</span>: {
-        <span style="color:#f92672">&#34;account&#34;</span>: {
-            <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
-            <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
-            <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
-            <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
-        },
-        <span style="color:#f92672">&#34;default&#34;</span>: {
-            <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">280000000000</span>,
-            <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
-            <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">280000000000</span>,
-            <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
-        },
-        <span style="color:#f92672">&#34;imported&#34;</span>: {
-            <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">11172999678800</span>,
-            <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">325000000000</span>,
-            <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">8754999678800</span>,
-            <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">2418000000000</span>
-        }
+  <span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+  <span style="color:#f92672">&#34;result&#34;</span>: {
+    <span style="color:#f92672">&#34;default&#34;</span>: {
+      <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
+    },
+    <span style="color:#f92672">&#34;imported&#34;</span>: {
+      <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">676444792042</span>,
+      <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">1366909827084</span>,
+      <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">676444792042</span>,
+      <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
+    },
+    <span style="color:#f92672">&#34;test&#34;</span>: {
+      <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">900000000</span>,
+      <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">900000000</span>,
+      <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
+    },
+    <span style="color:#f92672">&#34;test_account&#34;</span>: {
+      <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
     }
+  }
 }
+
 </code></pre></div>
 
 
@@ -5733,7 +5750,7 @@
 <a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaccountbyaddress/" title="wallet_getAccountByAddress"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/" title="wallet_getAccountsAndBalance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaddressesbyaccount/" title="wallet_getAddressesByAccount" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -5770,22 +5787,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1600676506"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1602488058"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1600676506"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1602488058"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1600676506"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1600676506"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1600676506" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1600676506"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1602488058"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1602488058"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1602488058" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1602488058"></script>
 
 
 <script>

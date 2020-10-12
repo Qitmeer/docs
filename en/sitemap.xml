@@ -439,10 +439,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/</loc>
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaddressesbyaccount/</loc>
   </url>
   
@@ -468,6 +464,10 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importprivkey/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/</loc>
   </url>
   
   <url>
