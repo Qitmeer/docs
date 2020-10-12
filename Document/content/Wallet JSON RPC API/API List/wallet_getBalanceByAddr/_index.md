@@ -19,19 +19,21 @@ Get balance by address
 
 #### Example
 ##### Request
-```json
-{"jsonrpc":"1.0","method":"wallet_getBalanceByAddr","params":["TmfDniZnvsjdH98GsH4aetL3XQKFUTWPp4e",1],"id":16}
+```sh
+$ curl -k -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_getBalanceByAddr","params":["TmbC1Fx1UXNt7D6zpaj83UrAEW7MbcUWuQz"],"id":1}' http://127.0.0.1:8130/api
+
 ```
 ##### Response
 ```json
 {
-	"jsonrpc": "2.0",
-	"id": 16,
-	"result": {
-		"TotalAmount": 400000000,
-		"SpendAmount": 0,
-		"UnspendAmount": 400000000,
-		"ConfirmAmount": 0
-	}
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "TotalAmount": 900000000,
+    "SpendAmount": 0,
+    "UnspendAmount": 900000000,
+    "ConfirmAmount": 0
+  }
 }
+
 ```

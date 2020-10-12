@@ -4,14 +4,18 @@ weight: 3
 ---
 
 ### wallet_getTxListByAddr 
-创建地址
+get transactions affecting specific address, one transaction could affect MULTIPLE addresses
 
 #### Parameters
-1. `addr: (string)` 地址
-1. `type: (numeric)` 0: in tx; 1: out tx; 2: all tx 
-1. `page  : (numeric)` 页号
-1. `pageSize`: (string)` 页大小
-
+1. `addr: (string)` address
+2. `filter: (numeric)`  filter 
+    * `0` received payments
+    * `1` sent payments
+    * `2` all payments
+3. `page: (numeric)`   page number
+    * `0` all pages
+4. `page size: (numeric, 10)`   page size
+    * `0` use default page size 10
 
 #### Returns
 
