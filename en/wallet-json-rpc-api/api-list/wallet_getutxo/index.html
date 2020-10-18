@@ -12,20 +12,20 @@
     <title>wallet_getUtxo :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1602827988" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1602998284" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1602827988" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1602998284" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1602827988"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1602998284"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1602827988"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1602827988"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1602998284"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1602998284"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1602827988"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1602998284"></script>
 
     
   </div>
@@ -683,6 +683,30 @@
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbillbyaddr/">
           wallet_getBillByAddr
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/en/wallet-json-rpc-api/api-list/wallet_gettx/" title="wallet_getTx" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/">
+          wallet_getTx
           
       </a>
       
@@ -3495,9 +3519,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#wallet_getutxo">wallet_getUtxo</a>
       <ul>
-        <li><a href="#wallet_getutxo">wallet_getUtxo</a></li>
+        <li><a href="#parameters">Parameters</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#example">Example</a></li>
       </ul>
     </li>
   </ul>
@@ -3524,26 +3550,34 @@
         
 
 
-	<h3 id="wallet_getutxo">wallet_getUtxo</h3>
-<p>获取指定地址可用 UTXO</p>
-<h4 id="parameters">Parameters</h4>
+	<h2 id="wallet_getutxo">wallet_getUtxo</h2>
+<p>get UTXOs of specific address</p>
+<h3 id="parameters">Parameters</h3>
 <ol>
-<li><code>addr: (string)</code> 地址</li>
+<li><code>addr: (string)</code> address</li>
 </ol>
-<h4 id="returns">Returns</h4>
-<h4 id="example">Example</h4>
-<h5 id="request">Request</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;jsonrpc&#34;</span>:<span style="color:#e6db74">&#34;1.0&#34;</span>,<span style="color:#f92672">&#34;method&#34;</span>:<span style="color:#e6db74">&#34;wallet_getUTXO&#34;</span>,<span style="color:#f92672">&#34;params&#34;</span>:[<span style="color:#e6db74">&#34;TmgD1mu8zMMV9aWmJrXqQYnWRhR9SBfDZG6&#34;</span>],<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">1</span>}
-</code></pre></div><h5 id="response">Response</h5>
+<h3 id="returns">Returns</h3>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sk -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_getUTxo&#34;,&#34;params&#34;:[&#34;Tme9dVJ4GeWRninBygrA6oDwCAGYbBvNxY7&#34;],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api |jq .
+
+</code></pre></div><h4 id="response">Response</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-	<span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
-	<span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
-	<span style="color:#f92672">&#34;result&#34;</span>: [{
-		<span style="color:#f92672">&#34;Txid&#34;</span>: <span style="color:#e6db74">&#34;54c47af3a17201c64a8f3b27164d4e09e8e38e05501b16bfd4f001caeddfa86a&#34;</span>,
-		<span style="color:#f92672">&#34;Index&#34;</span>: <span style="color:#ae81ff">1</span>,
-		<span style="color:#f92672">&#34;Amount&#34;</span>: <span style="color:#ae81ff">699925600</span>
-	}]
-}<span style="color:#960050;background-color:#1e0010">}</span>
+  <span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+  <span style="color:#f92672">&#34;result&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;TxId&#34;</span>: <span style="color:#e6db74">&#34;6838ccafe8747007e9dcb918852833d5867ca4cdf5e48e2c419c0ff61927403b&#34;</span>,
+      <span style="color:#f92672">&#34;Index&#34;</span>: <span style="color:#ae81ff">0</span>,
+      <span style="color:#f92672">&#34;Amount&#34;</span>: <span style="color:#ae81ff">100000000</span>
+    },
+    {
+      <span style="color:#f92672">&#34;TxId&#34;</span>: <span style="color:#e6db74">&#34;83f481422d30ad3587afa78c36e1a2d29a28813528ad24f347c5845c32148ade&#34;</span>,
+      <span style="color:#f92672">&#34;Index&#34;</span>: <span style="color:#ae81ff">1</span>,
+      <span style="color:#f92672">&#34;Amount&#34;</span>: <span style="color:#ae81ff">676344792042</span>
+    }
+  ]
+}
 </code></pre></div>
 
 
@@ -3691,6 +3725,22 @@
         
             
             
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
         
     
     
@@ -5758,22 +5808,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1602827988"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1602998284"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1602827988"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1602998284"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1602827988"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1602827988" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1602827988"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1602998284"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1602998284" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1602998284"></script>
 
 
 <script>

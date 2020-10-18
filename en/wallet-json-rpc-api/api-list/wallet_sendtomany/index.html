@@ -12,20 +12,20 @@
     <title>wallet_sendToMany :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1602827988" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1602827988" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1602998284" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1602998284" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1602827988" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1602998284" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1602827988"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1602998284"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1602827988"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1602827988"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1602998284"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1602998284"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1602827988"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1602998284"></script>
 
     
   </div>
@@ -683,6 +683,30 @@
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbillbyaddr/">
           wallet_getBillByAddr
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/en/wallet-json-rpc-api/api-list/wallet_gettx/" title="wallet_getTx" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/">
+          wallet_getTx
           
       </a>
       
@@ -3497,6 +3521,7 @@
   <ul>
     <li><a href="#wallet_sendtomany">wallet_sendToMany</a>
       <ul>
+        <li><a href="#note">NOTE</a></li>
         <li><a href="#parameters">Parameters</a></li>
         <li><a href="#returns">Returns</a></li>
         <li><a href="#example">Example</a></li>
@@ -3528,8 +3553,11 @@
 
 	<h2 id="wallet_sendtomany">wallet_sendToMany</h2>
 <p>sends multiple amounts to multiple addresses using the provided account as a source of funds in a single transaction.  Only funds with the default number of minimum confirmations will be used.</p>
-<p><strong>NOTE:</strong> This function requires to the wallet to be unlocked.  See the
-WalletPassphrase function for more details.</p>
+<h3 id="note">NOTE</h3>
+<ul>
+<li>This function requires to the wallet to be unlocked.  See <a href="../wallet_unlock/">wallet_unlock</a></li>
+<li>The amount cannot exceed 21,000,000</li>
+</ul>
 <h3 id="parameters">Parameters</h3>
 <p><code>addAmounts: (map[address:string]amount:numeric)</code>  address to amount pairs</p>
 <h3 id="returns">Returns</h3>
@@ -3695,6 +3723,22 @@ WalletPassphrase function for more details.</p>
         
             
             
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
         
     
     
@@ -5762,22 +5806,22 @@ WalletPassphrase function for more details.</p>
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1602827988"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1602998284"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1602827988"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1602998284"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1602827988"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1602827988"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1602827988" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1602827988"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1602998284"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1602998284"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1602998284" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1602998284"></script>
 
 
 <script>

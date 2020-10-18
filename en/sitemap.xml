@@ -455,6 +455,10 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettxlistbyaddr/</loc>
   </url>
   

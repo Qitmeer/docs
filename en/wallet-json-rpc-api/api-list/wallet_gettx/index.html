@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>qitmeed_add :: Qitmeer Documentation</title>
+    <title>wallet_getTx :: Qitmeer Documentation</title>
 
     
     <link href="https://qitmeer.github.io/docs/css/nucleus.css?1602998284" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_add/">
+  <body class="" data-url="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/">
     <nav id="sidebar" class="">
 
 
@@ -221,8 +221,8 @@
   
     
     <li data-nav-id="/en/wallet-json-rpc-api/api-list/qitmeed_add/" title="qitmeed_add" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_add/">
@@ -701,8 +701,8 @@
   
     
     <li data-nav-id="/en/wallet-json-rpc-api/api-list/wallet_gettx/" title="wallet_getTx" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/">
@@ -3409,7 +3409,7 @@
                   
                     
                     
-                      <option id="en" value="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_add/" selected>English</option>
+                      <option id="en" value="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/" selected>English</option>
                     
                   
               
@@ -3467,7 +3467,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/Wallet%20JSON%20RPC%20API/API%20List/qitmeed_add/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/Wallet%20JSON%20RPC%20API/API%20List/wallet_getTx/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -3502,7 +3502,7 @@
             
           
           
-            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/wallet-json-rpc-api/'>Wallet JSON PRC</a> > <a href='https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/'>API List</a> > qitmeed_add
+            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/wallet-json-rpc-api/'>Wallet JSON PRC</a> > <a href='https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/'>API List</a> > wallet_getTx
           
          
           
@@ -3519,7 +3519,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#add">Add</a>
+    <li><a href="#wallet_gettx">wallet_getTx</a>
       <ul>
         <li><a href="#parameters">Parameters</a></li>
         <li><a href="#returns">Returns</a></li>
@@ -3543,22 +3543,78 @@
           
             <h1>
               
-              qitmeed_add
+              wallet_getTx
             </h1>
           
 
         
 
 
-	<h2 id="add">Add</h2>
+	<h2 id="wallet_gettx">wallet_getTx</h2>
+<p>get transaction by ID</p>
 <h3 id="parameters">Parameters</h3>
+<ol>
+<li><code>txID: (hex string)</code> transaction ID</li>
+</ol>
 <h3 id="returns">Returns</h3>
-<h4 id="success">Success</h4>
-<h4 id="error">Error</h4>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<h4 id="response">Response</h4>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sk -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_getTx&#34;,&#34;params&#34;:[&#34;86140f1fa1e7d95707ec7e61748b91838e24a00ca8803f299c7caca591ff1af4&#34;],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api |jq .
+</code></pre></div><h4 id="response">Response</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+  <span style="color:#f92672">&#34;result&#34;</span>: {
+    <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;010000000149bb689f3a5d0ae222dc3c51127903e6dd316b0ebdfe704e305c9e344c7f927a00000000ffffffff0200e1f505000000001976a914a0e30372347bc1e945f5086b7bbeaa38d912dcfe88aca888ae2f000000001976a91486439eb19afe8c091a01cbb3813b052f7fa3a08b88ac00000000000000008215895f016a473044022038fc5c5fef1a7a3bb0117b53556137c75dd9f4970387f2fc2c28c65d30655cea022077eeb7f1a105d9b9353517dc19c6af9ae953a875986bbbe7f5e69cfb3f8a78b2012102e8d120c3c729e636fe2909b02c65c025cb7f3f57d9891f4f566dd4724e82eb92&#34;</span>,
+    <span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;86140f1fa1e7d95707ec7e61748b91838e24a00ca8803f299c7caca591ff1af4&#34;</span>,
+    <span style="color:#f92672">&#34;txhash&#34;</span>: <span style="color:#e6db74">&#34;9f3b9d8bf6f893c3b66ef5cd09d73ef3551b93c87d706bedda6ba4a104d469e0&#34;</span>,
+    <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#ae81ff">234</span>,
+    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#ae81ff">1</span>,
+    <span style="color:#f92672">&#34;locktime&#34;</span>: <span style="color:#ae81ff">0</span>,
+    <span style="color:#f92672">&#34;timestamp&#34;</span>: <span style="color:#e6db74">&#34;2020-10-16T11:37:38+08:00&#34;</span>,
+    <span style="color:#f92672">&#34;expire&#34;</span>: <span style="color:#ae81ff">0</span>,
+    <span style="color:#f92672">&#34;vin&#34;</span>: [
+      {
+        <span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;7a927f4c349e5c304e70febd0e6b31dde6037912513cdc22e20a5d3a9f68bb49&#34;</span>,
+        <span style="color:#f92672">&#34;vout&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;sequence&#34;</span>: <span style="color:#ae81ff">4294967295</span>,
+        <span style="color:#f92672">&#34;scriptSig&#34;</span>: {
+          <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;3044022038fc5c5fef1a7a3bb0117b53556137c75dd9f4970387f2fc2c28c65d30655cea022077eeb7f1a105d9b9353517dc19c6af9ae953a875986bbbe7f5e69cfb3f8a78b201 02e8d120c3c729e636fe2909b02c65c025cb7f3f57d9891f4f566dd4724e82eb92&#34;</span>,
+          <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;473044022038fc5c5fef1a7a3bb0117b53556137c75dd9f4970387f2fc2c28c65d30655cea022077eeb7f1a105d9b9353517dc19c6af9ae953a875986bbbe7f5e69cfb3f8a78b2012102e8d120c3c729e636fe2909b02c65c025cb7f3f57d9891f4f566dd4724e82eb92&#34;</span>
+        }
+      }
+    ],
+    <span style="color:#f92672">&#34;vout&#34;</span>: [
+      {
+        <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">100000000</span>,
+        <span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+          <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 a0e30372347bc1e945f5086b7bbeaa38d912dcfe OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+          <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a914a0e30372347bc1e945f5086b7bbeaa38d912dcfe88ac&#34;</span>,
+          <span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+          <span style="color:#f92672">&#34;addresses&#34;</span>: [
+            <span style="color:#e6db74">&#34;Tmdcmmo7JqxxwHy6r46Sx2ZRbVF2dSjG9mm&#34;</span>
+          ]
+        }
+      },
+      {
+        <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">799967400</span>,
+        <span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+          <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 86439eb19afe8c091a01cbb3813b052f7fa3a08b OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+          <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a91486439eb19afe8c091a01cbb3813b052f7fa3a08b88ac&#34;</span>,
+          <span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+          <span style="color:#f92672">&#34;addresses&#34;</span>: [
+            <span style="color:#e6db74">&#34;TmbC1Fx1UXNt7D6zpaj83UrAEW7MbcUWuQz&#34;</span>
+          ]
+        }
+      }
+    ],
+    <span style="color:#f92672">&#34;blockhash&#34;</span>: <span style="color:#e6db74">&#34;2a215f23d2d4269ee235d730049cbdd18721de11b58e56fe29859f77f64ef82c&#34;</span>,
+    <span style="color:#f92672">&#34;confirmations&#34;</span>: <span style="color:#ae81ff">12</span>
+  }
+}
+</code></pre></div>
 
 
 
@@ -3703,6 +3759,8 @@
 
     
         
+            
+            
         
     
     
@@ -3719,9 +3777,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -4026,6 +4081,7 @@
 
 
     
+        
         
     
     
@@ -4042,6 +4098,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -5745,10 +5804,10 @@
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/" title="API List"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbillbyaddr/" title="wallet_getBillByAddr"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_del/" title="qitmeed_del" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettxlistbyaddr/" title="wallet_getTxListByAddr" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -5764,9 +5823,9 @@
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=qitmeed_add&body=Link%3A%C2%A0Wallet%20JSON%20RPC%20API%2fAPI%20List%2fqitmeed_add%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/Wallet%20JSON%20RPC%20API/API%20List/qitmeed_add/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/Wallet%20JSON%20RPC%20API/API%20List/qitmeed_add/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=wallet_getTx&body=Link%3A%C2%A0Wallet%20JSON%20RPC%20API%2fAPI%20List%2fwallet_getTx%2f_index.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/Wallet%20JSON%20RPC%20API/API%20List/wallet_getTx/_index.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/Wallet%20JSON%20RPC%20API/API%20List/wallet_getTx/_index.md">Edit File</a >
             </p >
           </div>    
         
