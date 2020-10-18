@@ -6,8 +6,9 @@ weight: 3
 ## wallet_sendToMany
 sends multiple amounts to multiple addresses using the provided account as a source of funds in a single transaction.  Only funds with the default number of minimum confirmations will be used.
 
-**NOTE:** This function requires to the wallet to be unlocked.  See the
-WalletPassphrase function for more details.
+### NOTE
+* This function requires to the wallet to be unlocked.  See [wallet_unlock](../wallet_unlock/)
+* The amount cannot exceed 21,000,000
 
 ### Parameters
 `addAmounts: (map[address:string]amount:numeric)`  address to amount pairs
