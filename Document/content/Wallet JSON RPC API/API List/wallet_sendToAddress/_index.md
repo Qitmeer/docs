@@ -6,11 +6,13 @@ weight: 3
 ## wallet_sendToAddress
 sends the passed amount to the given address.
 
-**NOTE:** This function requires to the wallet to be unlocked.  See [wallet_unlock](../wallet_unlock/)
+### NOTE
+* This function requires to the wallet to be unlocked.  See [wallet_unlock](../wallet_unlock/)
+* The amount cannot exceed 21,000,000
 
 ### Parameters
-`address: (hex string)` the given address
-`amount: (numeric)` passed amount
+1. `address: (hex string)` the given address
+2. `amount: (numeric)` passed amount
 
 ### Returns
 #### Success

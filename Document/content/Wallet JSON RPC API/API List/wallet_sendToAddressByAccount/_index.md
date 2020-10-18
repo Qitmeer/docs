@@ -6,9 +6,9 @@ weight: 3
 ## wallet_sendToAddressByAccount 
 send passed amount using specific account
 
-
-**NOTE:** This function requires to the wallet to be unlocked.  See the
-WalletPassphrase function for more details.
+### NOTE
+* This function requires to the wallet to be unlocked.  See [wallet_unlock](../wallet_unlock/)
+* The amount cannot exceed 21,000,000
 
 ### Parameters
 1. `accountName: (string)` from account
@@ -22,8 +22,10 @@ WalletPassphrase function for more details.
 `TxID: (hex string)` the TxID for the created transaction
 
 #### Error 
- `-32000` 
-    `-13` Enter the wallet passphrase with walletpassphrase first
+`-32000` 
+1. `-13` Enter the wallet passphrase with walletpassphrase first
+2. `-32603` transaction output amount exceeds maximum value
+3. `-32603` balance is not enough,please deduct the service charge
 
 
 ### Example
