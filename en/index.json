@@ -417,14 +417,14 @@
 	"title": "ui_createWallet",
 	"tags": [],
 	"description": "",
-	"content": "CreateWallet create wallet by seed\nParameters  name: (string) account name  Returns Success null\nError -32000 Creating an account requires the wallet to be unlocked. Enter the wallet passphrase with walletpassphrase to unlock\nExample Request curl -k -u \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;wallet_createAccount\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;test_account\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api Response {\u0026#34;jsonrpc\u0026#34;:\u0026#34;2.0\u0026#34;,\u0026#34;id\u0026#34;:1,\u0026#34;result\u0026#34;:null} "
+	"content": "CreateWallet create wallet by seed\nParameters  seed: (string) seed walletPass: (string) wallet password unlockPass: (string) unlock password  Returns Success null\nError -32000 wallet exist\nExample Request curl -sku \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;ui_createWallet\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;0d82f3214e900c039c8e05c04bef5f22bdf5804344e69e8f7426e90fabb0eb178a8c4f99850c77be09f609b7145799fb0772c1c0c1087acd55868240755a437a\u0026#34;, \u0026#34;walletPass\u0026#34;, \u0026#34;unlockPass\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api | jq Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: null } "
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_makeseed/",
 	"title": "ui_makeSeed",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "MakeSeed make wallet HD seed and mnemonic\nParameters Returns Success  seed: (hex string) a cryptographically secure random seed mnemonic: (array of string) the mnemonic words for the given seed  Example Request curl -sku \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;ui_makeSeed\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api | jq Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: { \u0026#34;seed\u0026#34;: \u0026#34;0d82f3214e900c039c8e05c04bef5f22bdf5804344e69e8f7426e90fabb0eb178a8c4f99850c77be09f609b7145799fb0772c1c0c1087acd55868240755a437a\u0026#34;, \u0026#34;mnemonic\u0026#34;: \u0026#34;river immense robust crucial patrol kingdom trick enter jacket similar feed pitch juice focus ramp merry occur blast pepper case gentle left sea margin\u0026#34; } } "
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_openwallet/",
@@ -438,14 +438,14 @@
 	"title": "ui_recoverWallet",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "RecoverWallet Recover Wallet wallet by mnemonic\nParameters  mnemonic: (hex string) the mnemonic words walletPass: (string) wallet password unlockPass: (string) unlock password  Returns Success null\nError -32000\n seed hex err: Invalid menomic wallet exist  Example Request curl -sku \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;ui_recoverWallet\u0026#34;,\u0026#34;params\u0026#34;:[\u0026#34;river immense robust crucial patrol kingdom trick enter jacket similar feed pitch juice focus ramp merry occur blast pepper case gentle left sea margin\u0026#34;, \u0026#34;walletPass\u0026#34;, \u0026#34;unlockPass\u0026#34;],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api | jq Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: null } "
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_walletstatus/",
 	"title": "ui_walletStatus",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "WalletStatus wallet info\nParameters Returns Success  status: (string)  err - error happened nil - wallet not exists closed - wallet closed lock - wallet locked unlock - wallet unlocked    Example Request curl -sku \u0026#34;test:test\u0026#34; -X POST -H \u0026#39;Content-Type: application/json\u0026#39; --data \u0026#39;{\u0026#34;jsonrpc\u0026#34;:\u0026#34;1.0\u0026#34;,\u0026#34;method\u0026#34;:\u0026#34;ui_walletStatus\u0026#34;,\u0026#34;params\u0026#34;:[],\u0026#34;id\u0026#34;:1}\u0026#39; http://127.0.0.1:8130/api | jq Response { \u0026#34;jsonrpc\u0026#34;: \u0026#34;2.0\u0026#34;, \u0026#34;id\u0026#34;: 1, \u0026#34;result\u0026#34;: { \u0026#34;stats\u0026#34;: \u0026#34;lock\u0026#34; } } "
 },
 {
 	"uri": "https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_createaccount/",
