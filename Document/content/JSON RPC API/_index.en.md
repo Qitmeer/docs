@@ -40,6 +40,7 @@ weight: 5
 - [getRawTransaction](getrawtransaction)
 - [getUtxo](getutxo)
 - [sendRawTransaction](sendrawtransaction)
+- [txSign](txSign)
 
 
 
