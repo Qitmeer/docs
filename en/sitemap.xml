@@ -283,10 +283,6 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/</loc>
-  </url>
-  
-  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/encode_decode/qxbase58check/</loc>
   </url>
   
@@ -311,7 +307,23 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/transaction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/ui/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/add/</loc>
   </url>
   
   <url>
@@ -319,7 +331,19 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/createaccount/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/createaddress/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/json-rpc-api/createrawtransaction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/ui/createwallet/</loc>
   </url>
   
   <url>
@@ -327,7 +351,39 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/del/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/dumpprivkey/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/entropy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getaccountbyaddress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getaccountsandbalance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getaddressesbyaccount/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getbalancebyaccount/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getbalancebyaddr/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getbillbyaddr/</loc>
   </url>
   
   <url>
@@ -345,7 +401,39 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/gettx/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/gettxlistbyaddr/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getutxo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/importprivkey/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/importwifprivkey/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/keccak256/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/lock/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/ui/makeseed/</loc>
   </url>
   
   <url>
@@ -353,27 +441,11 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_add/</loc>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/ui/recoverwallet/</loc>
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_del/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeed_list/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeerd_status/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeerd_reset/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/qitmeerd_update/</loc>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/reset/</loc>
   </url>
   
   <url>
@@ -391,7 +463,27 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/sendtoaddress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/sendtoaddressbyaccount/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/sendtomany/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/txsign/sign_verify/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/status/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/syncstats/</loc>
   </url>
   
   <url>
@@ -399,103 +491,15 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_createwallet/</loc>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/unlock/</loc>
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_makeseed/</loc>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/update/</loc>
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_openwallet/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_recoverwallet/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/ui_walletstatus/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_createaccount/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_createaddress/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_dumpprivkey/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaccountbyaddress/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaccountsandbalance/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getaddressesbyaccount/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbalancebyaccount/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbalancebyaddr/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getbillbyaddr/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettx/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_gettxlistbyaddr/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_getutxo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importprivkey/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_importwifprivkey/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_lock/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_sendtoaddress/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_sendtoaddressbyaccount/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_sendtomany/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_syncstats/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/api-list/wallet_unlock/</loc>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/ui/walletstatus/</loc>
   </url>
   
   <url>
@@ -602,10 +606,6 @@
   
   <url>
     <loc>https://qitmeer.github.io/docs/en/reference/qxtools/hash/hash160/</loc>
-  </url>
-  
-  <url>
-    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/errors/</loc>
   </url>
   
   <url>
