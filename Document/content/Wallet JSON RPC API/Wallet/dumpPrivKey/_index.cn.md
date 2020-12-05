@@ -4,11 +4,10 @@ weight: 3
 ---
 
 ### wallet_dumpPrivKey 
-创建地址
+导出地址的私钥
 
 #### Parameters
 1. `addr: (string)` 地址
-
 
 #### Returns
 
