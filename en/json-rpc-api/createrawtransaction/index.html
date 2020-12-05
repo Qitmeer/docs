@@ -12,20 +12,20 @@
     <title>createRawTransaction :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1607054202" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1607054202" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1607158028" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1607054202" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1607158028" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1607054202"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1607158028"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1607054202"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1607054202"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1607158028"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1607158028"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1607054202"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1607158028"></script>
 
     
   </div>
@@ -2969,13 +2969,13 @@
  
   
     
-    <li data-nav-id="/en/json-rpc-api/getutxo/" title="getUtxo" class="dd-item 
+    <li data-nav-id="/en/json-rpc-api/getutxo/" title="getUTXO" class="dd-item 
         
         
         
         ">
       <a href="https://qitmeer.github.io/docs/en/json-rpc-api/getutxo/">
-          getUtxo
+          getUTXO
           
       </a>
       
@@ -3113,6 +3113,30 @@
  
   
     
+    <li data-nav-id="/en/json-rpc-api/txsign/" title="txSign" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/en/json-rpc-api/txsign/">
+          txSign
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
     <li data-nav-id="/en/json-rpc-api/createrawtransaction/" title="createRawTransaction" class="dd-item 
         parent
         active
@@ -3161,13 +3185,13 @@
  
   
     
-    <li data-nav-id="/en/json-rpc-api/getrawtransaction/" title="getRawTransaction" class="dd-item 
+    <li data-nav-id="/en/json-rpc-api/sendrawtransaction/" title="sendRawTransaction" class="dd-item 
         
         
         
         ">
-      <a href="https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/">
-          getRawTransaction
+      <a href="https://qitmeer.github.io/docs/en/json-rpc-api/sendrawtransaction/">
+          sendRawTransaction
           
       </a>
       
@@ -3185,13 +3209,13 @@
  
   
     
-    <li data-nav-id="/en/json-rpc-api/sendrawtransaction/" title="sendRawTransaction" class="dd-item 
+    <li data-nav-id="/en/json-rpc-api/getrawtransaction/" title="getRawTransaction" class="dd-item 
         
         
         
         ">
-      <a href="https://qitmeer.github.io/docs/en/json-rpc-api/sendrawtransaction/">
-          sendRawTransaction
+      <a href="https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/">
+          getRawTransaction
           
       </a>
       
@@ -3583,9 +3607,16 @@
 <h5 id="string-hex-encoded-bytes-of-the-serialized-transaction"><code>(string)</code> hex-encoded bytes of the serialized transaction</h5>
 <h4 id="example">Example</h4>
 <h5 id="request">Request</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --data <span style="color:#e6db74">&#39;{&#34;method&#34;:&#34;createRawTransaction&#34;,&#34;params&#34;:[[{&#34;Txid&#34;:&#34;ddf99e004ed24d641ddc942272ed174b1c2ae0fb27cc0ed7e858e0a451e27633&#34;, &#34;Vout&#34;:0}], {&#34;RmG6xQsV7gnS4JZmoq5FgmyEbmUQRenrTCo&#34;:10000000000}],&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;id&#34;:1}&#39;</span> -s -k -u <span style="color:#e6db74">&#34;test:test&#34;</span>  -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> http://127.0.0.1:1234 |jq .
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+ curl -sku <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;method&#34;:&#34;createRawTransaction&#34;,&#34;params&#34;:[   [{&#34;Txid&#34;:&#34;cfd933e4590a3cfbcf94e9220c77834fe8a869414c51e3bd0ce5af23592e80f9&#34;, &#34;Vout&#34;:1}], {&#34;Tme9dVJ4GeWRninBygrA6oDwCAGYbBvNxY7&#34;:90000000}],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:18131 | jq
+
 </code></pre></div><h5 id="response">Response</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;01000000013376e251a4e058e8d70ecc27fbe02a1c4b17ed722294dc1d644dd24e009ef9dd00000000ffffffff0100e40b54020000001976a9146bd68046854813036fa042958e7f5ca29606e8d088ac00000000000000000100&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+  <span style="color:#e6db74">&#34;jsonrpc&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2.0&#34;</span>,
+  <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#e6db74">&#34;result&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0100000001f9802e5923afe50cbde3514c4169a8e84f83770c22e994cffb3c0a59e433d9cf01000000ffffffff01804a5d05000000001976a914a6b8fe2348fad076b7fd1b34b7e5b35db96dc2a088ac00000000000000001141cb5f0100&#34;</span>
+}
+
 </code></pre></div>
 
 
@@ -5571,6 +5602,22 @@
 
     
         
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
         
     
     
@@ -5776,7 +5823,7 @@
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/json-rpc-api/tips/" title="tips"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/json-rpc-api/txsign/" title="txSign"> <i class="fa fa-chevron-left"></i></a>
 
 
 <a class="nav nav-next" href="https://qitmeer.github.io/docs/en/json-rpc-api/decoderawtransaction/" title="decodeRawTransaction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -5816,22 +5863,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1607054202"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1607158028"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1607054202"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1607158028"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1607054202"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1607054202"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1607054202" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1607054202"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1607158028"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1607158028" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1607158028"></script>
 
 
 <script>

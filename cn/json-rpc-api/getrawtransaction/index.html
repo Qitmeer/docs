@@ -12,20 +12,20 @@
     <title>getRawTransaction :: Qitmeer 文档</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1607054201" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1607054201" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1607158028" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1607158028" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1607054201" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1607158028" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1607054201"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1607158028"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1607054201"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1607054201"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1607158028"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1607158028"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/cn";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1607054201"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1607158028"></script>
 
     
   </div>
@@ -601,30 +601,6 @@
  
   
     
-    <li data-nav-id="/cn/json-rpc-api/getrawtransaction/" title="getRawTransaction" class="dd-item 
-        parent
-        active
-        
-        ">
-      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/">
-          getRawTransaction
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
     <li data-nav-id="/cn/json-rpc-api/sendrawtransaction/" title="sendRawTransaction" class="dd-item 
         
         
@@ -642,8 +618,54 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/json-rpc-api/getrawtransaction/" title="getRawTransaction" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/">
+          getRawTransaction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cn/wallet-json-rpc-api/" title="Wallet JSON RPC APIs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/">
+          Wallet JSON RPC APIs
+          
+      </a>
+      
               
     </li>
   
@@ -798,8 +820,9 @@
   <ul>
     <li><a href="#getrawtransaction">getRawTransaction</a>
       <ul>
-        <li><a href="#函数名getrawtransaction-txid">函数名：getRawTransaction {txid}</a></li>
-        <li><a href="#说明通过txid获取交易">说明：通过txid获取交易</a></li>
+        <li><a href="#parameters">Parameters</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#example">Example</a></li>
       </ul>
     </li>
   </ul>
@@ -827,65 +850,72 @@
 
 
 	<h2 id="getrawtransaction">getRawTransaction</h2>
-<h3 id="函数名getrawtransaction-txid">函数名：getRawTransaction {txid}</h3>
-<h3 id="说明通过txid获取交易">说明：通过txid获取交易</h3>
-<ul>
-<li>txid 交易id 为一个256位hash值。</li>
-<li>verbose 是否显示详细信息，默认为false</li>
-</ul>
-<h4 id="实例">实例</h4>
-<pre><code>curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getRawTransaction&quot;,&quot;params&quot;:[&quot;c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32&quot;,true],&quot;id&quot;:1}' https://127.0.0.1:18131
-</code></pre><p>输出</p>
-<pre><code>{
-  &quot;hex&quot;: &quot;0100000001dc7d54db024a1ef06e38b85ab01af2d60043e3d36b5411691224c05dcf36f63c01000000ffffffff02659ca300000000001976a91406e2097d585337cdd10aefa09994b511127af0bb88acf0e8cd6f230200001976a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac00000000000000008015fc5e016b48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8&quot;,
-  &quot;txid&quot;: &quot;c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32&quot;,
-  &quot;txhash&quot;: &quot;9b603ba3b17fd8491749ac366a5064d8b7b70be02568e405406a9acd70e971a8&quot;,
-  &quot;size&quot;: 235,
-  &quot;version&quot;: 1,
-  &quot;locktime&quot;: 0,
-  &quot;timestamp&quot;: &quot;2020-07-01T12:48:00+08:00&quot;,
-  &quot;expire&quot;: 0,
-  &quot;vin&quot;: [
+<p>get raw transaction by ID</p>
+<h3 id="parameters">Parameters</h3>
+<ol>
+<li><code>txid: (hex string)</code> 256-bit transaction ID</li>
+<li><code>verbose: (bool  , default=false)</code> When the verbose flag isn&rsquo;t set, simply return the serialized transaction as a hex-encoded string.</li>
+</ol>
+<h3 id="returns">Returns</h3>
+<h4 id="verbose--true">verbose = true</h4>
+<p><code>rawTx: (hex string)</code></p>
+<h4 id="verbose--false">verbose = false</h4>
+<p><code>Tx: (object)</code></p>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -s -k -u test:test -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;method&#34;:&#34;getRawTransaction&#34;,&#34;params&#34;:[&#34;c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32&#34;,true],&#34;id&#34;:1}&#39;</span> https://127.0.0.1:18131
+
+</code></pre></div><h4 id="response">Response</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;0100000001dc7d54db024a1ef06e38b85ab01af2d60043e3d36b5411691224c05dcf36f63c01000000ffffffff02659ca300000000001976a91406e2097d585337cdd10aefa09994b511127af0bb88acf0e8cd6f230200001976a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac00000000000000008015fc5e016b48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8&#34;</span>,
+  <span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32&#34;</span>,
+  <span style="color:#f92672">&#34;txhash&#34;</span>: <span style="color:#e6db74">&#34;9b603ba3b17fd8491749ac366a5064d8b7b70be02568e405406a9acd70e971a8&#34;</span>,
+  <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#ae81ff">235</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#ae81ff">1</span>,
+  <span style="color:#f92672">&#34;locktime&#34;</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">&#34;timestamp&#34;</span>: <span style="color:#e6db74">&#34;2020-07-01T12:48:00+08:00&#34;</span>,
+  <span style="color:#f92672">&#34;expire&#34;</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">&#34;vin&#34;</span>: [
     {
-      &quot;txid&quot;: &quot;3cf636cf5dc024126911546bd3e34300d6f21ab05ab8386ef01e4a02db547ddc&quot;,
-      &quot;vout&quot;: 1,
-      &quot;sequence&quot;: 4294967295,
-      &quot;scriptSig&quot;: {
-        &quot;asm&quot;: &quot;304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a01 03cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8&quot;,
-        &quot;hex&quot;: &quot;48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8&quot;
+      <span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;3cf636cf5dc024126911546bd3e34300d6f21ab05ab8386ef01e4a02db547ddc&#34;</span>,
+      <span style="color:#f92672">&#34;vout&#34;</span>: <span style="color:#ae81ff">1</span>,
+      <span style="color:#f92672">&#34;sequence&#34;</span>: <span style="color:#ae81ff">4294967295</span>,
+      <span style="color:#f92672">&#34;scriptSig&#34;</span>: {
+        <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a01 03cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8&#34;</span>,
+        <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8&#34;</span>
       }
     }
   ],
-  &quot;vout&quot;: [
+  <span style="color:#f92672">&#34;vout&#34;</span>: [
     {
-      &quot;amount&quot;: 10722405,
-      &quot;scriptPubKey&quot;: {
-        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 06e2097d585337cdd10aefa09994b511127af0bb OP_EQUALVERIFY OP_CHECKSIG&quot;,
-        &quot;hex&quot;: &quot;76a91406e2097d585337cdd10aefa09994b511127af0bb88ac&quot;,
-        &quot;reqSigs&quot;: 1,
-        &quot;type&quot;: &quot;pubkeyhash&quot;,
-        &quot;addresses&quot;: [
-          &quot;TmPaUYQuUtfCysrYVHc4AdhpVHxw7EskHTP&quot;
+      <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">10722405</span>,
+      <span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+        <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 06e2097d585337cdd10aefa09994b511127af0bb OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+        <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a91406e2097d585337cdd10aefa09994b511127af0bb88ac&#34;</span>,
+        <span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+        <span style="color:#f92672">&#34;addresses&#34;</span>: [
+          <span style="color:#e6db74">&#34;TmPaUYQuUtfCysrYVHc4AdhpVHxw7EskHTP&#34;</span>
         ]
       }
     },
     {
-      &quot;amount&quot;: 2351222876400,
-      &quot;scriptPubKey&quot;: {
-        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 fe27c90d4ed4de3269c0bb9ae1d7639865e3bf28 OP_EQUALVERIFY OP_CHECKSIG&quot;,
-        &quot;hex&quot;: &quot;76a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac&quot;,
-        &quot;reqSigs&quot;: 1,
-        &quot;type&quot;: &quot;pubkeyhash&quot;,
-        &quot;addresses&quot;: [
-          &quot;Tmn7vzzSrvAPNLtwpD5YjiWwVUBD74Hjdww&quot;
+      <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">2351222876400</span>,
+      <span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+        <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 fe27c90d4ed4de3269c0bb9ae1d7639865e3bf28 OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+        <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac&#34;</span>,
+        <span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+        <span style="color:#f92672">&#34;addresses&#34;</span>: [
+          <span style="color:#e6db74">&#34;Tmn7vzzSrvAPNLtwpD5YjiWwVUBD74Hjdww&#34;</span>
         ]
       }
     }
   ],
-  &quot;confirmations&quot;: 0
+  <span style="color:#f92672">&#34;confirmations&#34;</span>: <span style="color:#ae81ff">0</span>
 }
 
-</code></pre>
+</code></pre></div>
 
 
 
@@ -1286,6 +1316,22 @@
 
     
         
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
+        
         
     
     
@@ -1293,6 +1339,9 @@
         
         
         
+
+        
+
 
         
 
@@ -1319,7 +1368,6 @@
         
 
 
-        
 
 
 
@@ -1327,12 +1375,10 @@
 
 
 
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/cn/json-rpc-api/sendrawtransaction/" title="sendRawTransaction"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/cn/json-rpc-api/isonmainchain/" title="isOnMainChain"> <i class="fa fa-chevron-left"></i></a>
-
-
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/cn/json-rpc-api/sendrawtransaction/" title="sendRawTransaction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/" title="Wallet JSON RPC APIs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -1369,22 +1415,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1607054201"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1607158028"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1607054201"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1607158028"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1607054201"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1607054201"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1607054201" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1607054201"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1607158028"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1607158028"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1607158028" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1607158028"></script>
 
 
 <script>

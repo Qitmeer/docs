@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wallet JSON RPC APIs on Qitmeer 文档</title>
+    <link>https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/</link>
+    <description>Recent content in Wallet JSON RPC APIs on Qitmeer 文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -215,16 +215,16 @@
   </url>
   
   <url>
-    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/</loc>
+    <loc>https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/wallet/dumpprivkey/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/"
+                href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/dumpprivkey/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/"
+                href="https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/wallet/dumpprivkey/"
                 />
   </url>
   
@@ -314,6 +314,20 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://qitmeer.github.io/docs/en/json-rpc-api/getrawtransaction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://qitmeer.github.io/docs/cn/json-rpc-api/getrawtransaction/"
+                />
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/cn/</loc>
     <xhtml:link
                 rel="alternate"
@@ -349,6 +363,10 @@
                 hreflang="cn"
                 href="https://qitmeer.github.io/docs/cn/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://qitmeer.github.io/docs/cn/wallet-json-rpc-api/</loc>
   </url>
   
 </urlset>
