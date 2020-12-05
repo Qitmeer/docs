@@ -20,12 +20,19 @@ Returns a new transaction spending the provided inputs and sending to the provid
 
 ##### Request
 ```bash
-curl --data '{"method":"createRawTransaction","params":[[{"Txid":"ddf99e004ed24d641ddc942272ed174b1c2ae0fb27cc0ed7e858e0a451e27633", "Vout":0}], {"RmG6xQsV7gnS4JZmoq5FgmyEbmUQRenrTCo":10000000000}],"jsonrpc":"2.0","id":1}' -s -k -u "test:test"  -H 'Content-Type: application/json' http://127.0.0.1:1234 |jq .
+
+ curl -sku "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"createRawTransaction","params":[   [{"Txid":"cfd933e4590a3cfbcf94e9220c77834fe8a869414c51e3bd0ce5af23592e80f9", "Vout":1}], {"Tme9dVJ4GeWRninBygrA6oDwCAGYbBvNxY7":90000000}],"id":1}' http://127.0.0.1:18131 | jq
+
 ```
 
 ##### Response
 ```js
-"01000000013376e251a4e058e8d70ecc27fbe02a1c4b17ed722294dc1d644dd24e009ef9dd00000000ffffffff0100e40b54020000001976a9146bd68046854813036fa042958e7f5ca29606e8d088ac00000000000000000100"
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0100000001f9802e5923afe50cbde3514c4169a8e84f83770c22e994cffb3c0a59e433d9cf01000000ffffffff01804a5d05000000001976a914a6b8fe2348fad076b7fd1b34b7e5b35db96dc2a088ac00000000000000001141cb5f0100"
+}
+
 ```
 
 

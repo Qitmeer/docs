@@ -1,20 +1,31 @@
----
-title: getRawTransaction
+--- 
+ title: getRawTransaction
 weight: 3
 ---
 
 ## getRawTransaction
-### 函数名：getRawTransaction {txid}
-### 说明：通过txid获取交易
-- txid 交易id 为一个256位hash值。
-- verbose 是否显示详细信息，默认为false
+get raw transaction by ID
 
-#### 实例
-```
+### Parameters
+1. `txid: (hex string)` 256-bit transaction ID
+2. `verbose: (bool  , default=false)` When the verbose flag isn't set, simply return the serialized transaction as a hex-encoded string. 
+
+### Returns
+#### verbose = true
+`rawTx: (hex string)`
+
+#### verbose = false
+`Tx: (object)`
+
+### Example
+#### Request
+
+```sh
 curl -s -k -u test:test -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"getRawTransaction","params":["c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32",true],"id":1}' https://127.0.0.1:18131
+
 ```
-输出
-```
+#### Response
+```json
 {
   "hex": "0100000001dc7d54db024a1ef06e38b85ab01af2d60043e3d36b5411691224c05dcf36f63c01000000ffffffff02659ca300000000001976a91406e2097d585337cdd10aefa09994b511127af0bb88acf0e8cd6f230200001976a914fe27c90d4ed4de3269c0bb9ae1d7639865e3bf2888ac00000000000000008015fc5e016b48304502210090910aa0190a6571319b0b638bfbb593582575703abdd4f1a7f0da2812cda7d102205dae6fee28396bfeb8f1b814884d8d03ab0dd9f30b171d906c24914ba2f85b1a012103cd4fa2ea2688ac9e0a62584635244f572d22c13730d5576722d6571aabfddca8",
   "txid": "c259a4dfb7eaaae92ab246f14762541581671135cd6030ac29d8c34cf77e9f32",

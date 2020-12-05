@@ -3,7 +3,7 @@ title: createAddress
 weight: 3
 ---
 
-## ui_createAddress 
+## wallet_createAddress 
 returns the next external chained address for a wallet.
 
 ### Parameters

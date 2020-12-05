@@ -3,7 +3,7 @@ title: createAccount
 weight: 3
 ---
 
-## ui_createAccount
+## wallet_createAccount
  creates the next account and returns its account number.  The
  name must be unique to the account.  In order to support automatic seed
  restoring, new accounts may not be created when all of the previous 100
