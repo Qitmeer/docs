@@ -12,7 +12,9 @@ weight: 3
 
 ### Parameters
 1. `passphrase: (string)` wallet private password
-2. `timeout: (numeric)` unlock duration, unit second
+2. `timeout: (numeric)`
+ - `negative` unlock indefinitely
+ - `postive`  unlock duration, unit second
 
 ### Returns
 #### Success
