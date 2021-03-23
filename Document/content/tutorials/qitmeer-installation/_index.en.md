@@ -69,8 +69,11 @@ git clone https://github.com/Qitmeer/qitmeer ~//github.com/Qitmeer/qitmeer
 ```shell
 cd ~//github.com/Qitmeer/qitmeer
 git pull
-go build
+make
+Done building.
+  qitmeer version 0.9.2+dev-7478571 (Go version go1.15.5))
+Run "./build/bin/qitmeer" to launch.
+
 # once needs cleaning data or problems happened, please uncomment this line to clean data
-# ./qitmeer --testnet -L
-./qitmeer --testnet --notls --rpcuser=test --rpcpass=test
+./build/bin/qitmeer --testnet --notls --rpcuser=test --rpcpass=test
 ```
