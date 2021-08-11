@@ -12,20 +12,20 @@
     <title>getNodeInfo :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1616472500" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1616472500" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1628659889" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1628659889" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1616472500" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1628659889" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1616472500"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1628659889"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1616472500"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1616472500"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1628659889"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1628659889"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1616472500"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1628659889"></script>
 
     
   </div>
@@ -3636,7 +3636,7 @@
 <ul>
 <li><code>result: object</code>
 <ul>
-<li><code>UUID: (string)</code> -  unique ID</li>
+<li><code>ID: (string)</code> -  mutipleaddress ID</li>
 <li><code>version: (numeric)</code> - The version of the node as a numeric.</li>
 <li><code>buildversion: (string)</code> - build version</li>
 <li><code>protocolversion: (numeric)</code> -  The protocol version of the node.</li>
@@ -3653,57 +3653,58 @@
 <li><code>connections: (numeric)</code>  - number of connections</li>
 <li><code>pow_diff: (object)</code>  - difficulty of POW
 <ul>
-<li><code>blake2bd_diff: (numeric)</code>  - difficulty of Blake2B, pure CPU mining</li>
-<li><code>cuckaroo_diff: (numeric)</code>  - difficulty of cuckaroo, anti-ASIC GPU mining</li>
-<li><code>cuckatoo_diff: (numeric)</code>  - difficulty of cuckatoo, ASIC friendly GPU mining</li>
+<li><code>current_diff: (numeric)</code>  - current difficulty</li>
 </ul>
 </li>
-<li><code>testnet: (boolean)</code> - launch test net</li>
-<li><code>mixnet: (boolean)</code> - launch mix net</li>
 <li><code>confirmations: (numeric)</code> - number of blocks to wait for safe confirmation</li>
 <li><code>coinbasematurity: (numeric)</code> - number of blocks to wait for coinbase to be spent</li>
-<li><code>error: (string)</code> - error message if happened</li>
 <li><code>modules: (array)</code> - loaded modules; qitmeer, miner, test by default</li>
+<li><code>network: (string)</code> - current network</li>
+<li><code>connections: (numeric)</code> - current connections</li>
 </ul>
 </li>
 </ul>
 <h4 id="example">Example</h4>
 <p>Request</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --data <span style="color:#e6db74">&#39;{&#34;method&#34;:&#34;getNodeInfo&#34;,&#34;params&#34;:[],&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;id&#34;:1}&#39;</span> -s -k -u <span style="color:#e6db74">&#34;rpcuser:rpcpass&#34;</span>  -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> http://127.0.0.1:18131 | jq
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --data <span style="color:#e6db74">&#39;{&#34;method&#34;:&#34;getNodeInfo&#34;,&#34;params&#34;:[],&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;id&#34;:1}&#39;</span> -s -k -u <span style="color:#e6db74">&#34;rpcuser:rpcpass&#34;</span>  -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> https://127.0.0.1:18131 | jq
 </code></pre></div><p>Response</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
-    <span style="color:#e6db74">&#34;UUID&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2e3dddbe-2646-4964-b4ad-5a9b9fd83010&#34;</span>,
-    <span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">80500</span>,
-    <span style="color:#e6db74">&#34;buildversion&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0.8.5+dev-30736c5&#34;</span>,
-    <span style="color:#e6db74">&#34;protocolversion&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">19</span>,
-    <span style="color:#e6db74">&#34;totalsubsidy&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">343068000000000</span>,
+  <span style="color:#e6db74">&#34;jsonrpc&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2.0&#34;</span>,
+  <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#e6db74">&#34;result&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;ID&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;16Uiu2HAmJq8eGgj7aUE9DANQUssg6b4T1jRJDq4tvwKjnCZKk1cE&#34;</span>,
+    <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">:</span> [
+      <span style="color:#e6db74">&#34;/ip4/10.0.0.6/tcp/18150/p2p/16Uiu2HAmJq8eGgj7aUE9DANQUssg6b4T1jRJDq4tvwKjnCZKk1cE&#34;</span>,
+    ],
+    <span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100300</span>,
+    <span style="color:#e6db74">&#34;buildversion&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0.10.3+dev-1742484&#34;</span>,
+    <span style="color:#e6db74">&#34;protocolversion&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">33</span>,
+    <span style="color:#e6db74">&#34;totalsubsidy&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">991716000000000</span>,
     <span style="color:#e6db74">&#34;graphstate&#34;</span><span style="color:#f92672">:</span> {
       <span style="color:#e6db74">&#34;tips&#34;</span><span style="color:#f92672">:</span> [
-        <span style="color:#e6db74">&#34;00004d5e83f46cf14de8e4a8c76cf6831d1a294654076eabda19bf939a1e5786 main&#34;</span>
+        <span style="color:#e6db74">&#34;e6787427f5f4704eed0651181c4f3341fb1acaf1cbc63b215865da22ea6442b6 main&#34;</span>,
+        <span style="color:#e6db74">&#34;3b7b986370bc4cf5d6c14102ef2c198ff23e1e5b8e883208a0c1c8440e9f04f9&#34;</span>
       ],
-      <span style="color:#e6db74">&#34;mainorder&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">28656</span>,
-      <span style="color:#e6db74">&#34;mainheight&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">26284</span>,
-      <span style="color:#e6db74">&#34;layer&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">26285</span>
+      <span style="color:#e6db74">&#34;mainorder&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">114143</span>,
+      <span style="color:#e6db74">&#34;mainheight&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">48694</span>,
+      <span style="color:#e6db74">&#34;layer&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">49908</span>
     },
-    <span style="color:#e6db74">&#34;timeoffset&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
-    <span style="color:#e6db74">&#34;connections&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8</span>,
+    <span style="color:#e6db74">&#34;timeoffset&#34;</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,
     <span style="color:#e6db74">&#34;pow_diff&#34;</span><span style="color:#f92672">:</span> {
-      <span style="color:#e6db74">&#34;blake2bd_diff&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-      <span style="color:#e6db74">&#34;cuckaroo_diff&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">23554</span>,
-      <span style="color:#e6db74">&#34;cuckatoo_diff&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+      <span style="color:#e6db74">&#34;current_diff&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2933.93160025</span>
     },
-    <span style="color:#e6db74">&#34;testnet&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-    <span style="color:#e6db74">&#34;mixnet&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
     <span style="color:#e6db74">&#34;confirmations&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
     <span style="color:#e6db74">&#34;coinbasematurity&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">720</span>,
-    <span style="color:#e6db74">&#34;errors&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
     <span style="color:#e6db74">&#34;modules&#34;</span><span style="color:#f92672">:</span> [
       <span style="color:#e6db74">&#34;qitmeer&#34;</span>,
       <span style="color:#e6db74">&#34;miner&#34;</span>,
-      <span style="color:#e6db74">&#34;test&#34;</span>
-    ]
+      <span style="color:#e6db74">&#34;test&#34;</span>,
+      <span style="color:#e6db74">&#34;log&#34;</span>
+    ],
+    <span style="color:#e6db74">&#34;network&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;testnet&#34;</span>,
+    <span style="color:#e6db74">&#34;connections&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span>
   }
-
+}
 </code></pre></div>
 
 
@@ -5966,22 +5967,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1616472500"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1628659889"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1616472500"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1628659889"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1616472500"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1616472500"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1616472500" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1616472500"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1628659889"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1628659889"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1628659889" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1628659889"></script>
 
 
 <script>
