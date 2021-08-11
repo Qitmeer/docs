@@ -13,7 +13,7 @@ None
 #### Returns
 
 - `result: object` 
-    - `UUID: (string)` -  unique ID 
+    - `ID: (string)` -  mutipleaddress ID 
     - `version: (numeric)` - The version of the node as a numeric.
     - `buildversion: (string)` - build version 
     - `protocolversion: (numeric)` -  The protocol version of the node. 
@@ -26,57 +26,58 @@ None
     - `timeoffset: (numeric)`  - The node clock offset in seconds
     - `connections: (numeric)`  - number of connections
     - `pow_diff: (object)`  - difficulty of POW
-        - `blake2bd_diff: (numeric)`  - difficulty of Blake2B, pure CPU mining
-        - `cuckaroo_diff: (numeric)`  - difficulty of cuckaroo, anti-ASIC GPU mining
-        - `cuckatoo_diff: (numeric)`  - difficulty of cuckatoo, ASIC friendly GPU mining 
-    - `testnet: (boolean)` - launch test net
-    - `mixnet: (boolean)` - launch mix net
+        - `current_diff: (numeric)`  - current difficulty 
     - `confirmations: (numeric)` - number of blocks to wait for safe confirmation
     - `coinbasematurity: (numeric)` - number of blocks to wait for coinbase to be spent
-    - `error: (string)` - error message if happened
     - `modules: (array)` - loaded modules; qitmeer, miner, test by default
+    - `network: (string)` - current network
+    - `connections: (numeric)` - current connections 
 
 #### Example
 
 Request
 ```bash
-curl --data '{"method":"getNodeInfo","params":[],"jsonrpc":"2.0","id":1}' -s -k -u "rpcuser:rpcpass"  -H 'Content-Type: application/json' http://127.0.0.1:18131 | jq
+curl --data '{"method":"getNodeInfo","params":[],"jsonrpc":"2.0","id":1}' -s -k -u "rpcuser:rpcpass"  -H 'Content-Type: application/json' https://127.0.0.1:18131 | jq
 ```
 
 Response
 ```js
 {
-    "UUID": "2e3dddbe-2646-4964-b4ad-5a9b9fd83010",
-    "version": 80500,
-    "buildversion": "0.8.5+dev-30736c5",
-    "protocolversion": 19,
-    "totalsubsidy": 343068000000000,
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "ID": "16Uiu2HAmJq8eGgj7aUE9DANQUssg6b4T1jRJDq4tvwKjnCZKk1cE",
+    "address": [
+      "/ip4/10.0.0.6/tcp/18150/p2p/16Uiu2HAmJq8eGgj7aUE9DANQUssg6b4T1jRJDq4tvwKjnCZKk1cE",
+    ],
+    "version": 100300,
+    "buildversion": "0.10.3+dev-1742484",
+    "protocolversion": 33,
+    "totalsubsidy": 991716000000000,
     "graphstate": {
       "tips": [
-        "00004d5e83f46cf14de8e4a8c76cf6831d1a294654076eabda19bf939a1e5786 main"
+        "e6787427f5f4704eed0651181c4f3341fb1acaf1cbc63b215865da22ea6442b6 main",
+        "3b7b986370bc4cf5d6c14102ef2c198ff23e1e5b8e883208a0c1c8440e9f04f9"
       ],
-      "mainorder": 28656,
-      "mainheight": 26284,
-      "layer": 26285
+      "mainorder": 114143,
+      "mainheight": 48694,
+      "layer": 49908
     },
-    "timeoffset": 0,
-    "connections": 8,
+    "timeoffset": -1,
     "pow_diff": {
-      "blake2bd_diff": 1,
-      "cuckaroo_diff": 23554,
-      "cuckatoo_diff": 1
+      "current_diff": 2933.93160025
     },
-    "testnet": true,
-    "mixnet": false,
     "confirmations": 10,
     "coinbasematurity": 720,
-    "errors": "",
     "modules": [
       "qitmeer",
       "miner",
-      "test"
-    ]
+      "test",
+      "log"
+    ],
+    "network": "testnet",
+    "connections": 21
   }
-
+}
 ```
 
