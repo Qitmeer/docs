@@ -15,12 +15,13 @@ Get balance by address
 2. `SpendAmount: (numeric)` spent amount, already confirmed
 3. `UnspendAmount: (numeric)` spendable amount, not including frozen amount
 4. `ConfirmAmount: (numeric)` frozen amount, waiting for conformation
+5. `LockAmount: (numeric)` locked amount, waiting for unlock
 
 
 #### Example
 ##### Request
 ```sh
-$ curl -k -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_getBalanceByAddr","params":["TmbC1Fx1UXNt7D6zpaj83UrAEW7MbcUWuQz"],"id":1}' http://127.0.0.1:8130/api
+$ curl -k -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_getBalanceByAddr","params":["TmbC1Fx1UXNt7D6zpaj83UrAEW7MbcUWuQz", "MEER"],"id":1}' http://127.0.0.1:8130/api
 
 ```
 ##### Response
@@ -31,6 +32,7 @@ $ curl -k -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"j
   "result": {
     "TotalAmount": 900000000,
     "SpendAmount": 0,
+    "LockAmount": 0,
     "UnspendAmount": 900000000,
     "ConfirmAmount": 0
   }

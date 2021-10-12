@@ -26,7 +26,7 @@ sends the passed amount to the given address.
 ### Example
 #### Request
 ```sh
-$ curl -sk -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_sendToAddress","params":["Tmdcmmo7JqxxwHy6r46Sx2ZRbVF2dSjG9mm", 1 ],"id":1}' http://127.0.0.1:8130/api |jq .
+$ curl -sk -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_sendToAddress","params":["Tmdcmmo7JqxxwHy6r46Sx2ZRbVF2dSjG9mm", 1 , "MEER"],"id":1}' http://127.0.0.1:8130/api |jq .
 ```
 
 #### Response

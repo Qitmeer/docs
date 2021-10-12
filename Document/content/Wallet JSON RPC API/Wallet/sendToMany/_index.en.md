@@ -25,7 +25,7 @@ sends multiple amounts to multiple addresses using the provided account as a sou
 ### Example
 #### Request
 ```sh
-$ curl -sk -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_sendToMany","params":[{"TmVLfSPy3NZY1uDjJka92hqpPJR9k2XztQb":0.9, "TmR1kwdfb6pyQRNoJJMU2M62qEqJzqXPNBw":0.99} ],"id":1}' http://127.0.0.1:8130/api |jq .
+$ curl -sk -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_sendToMany","params":[{"TmVLfSPy3NZY1uDjJka92hqpPJR9k2XztQb":0.9, "TmR1kwdfb6pyQRNoJJMU2M62qEqJzqXPNBw":0.99}, "MEER" ],"id":1}' http://127.0.0.1:8130/api |jq .
 
 ```
 
