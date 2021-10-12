@@ -12,20 +12,20 @@
     <title>getBalanceByAddr :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1628659890" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1628659890" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1634027520" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1634027520" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1628659890" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1634027520" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1628659890"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1634027520"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1628659890"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1628659890"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1634027520"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1634027520"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1628659890"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1634027520"></script>
 
     
   </div>
@@ -3632,10 +3632,11 @@
 <li><code>SpendAmount: (numeric)</code> spent amount, already confirmed</li>
 <li><code>UnspendAmount: (numeric)</code> spendable amount, not including frozen amount</li>
 <li><code>ConfirmAmount: (numeric)</code> frozen amount, waiting for conformation</li>
+<li><code>LockAmount: (numeric)</code> locked amount, waiting for unlock</li>
 </ol>
 <h4 id="example">Example</h4>
 <h5 id="request">Request</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -k -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_getBalanceByAddr&#34;,&#34;params&#34;:[&#34;TmbC1Fx1UXNt7D6zpaj83UrAEW7MbcUWuQz&#34;],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -k -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_getBalanceByAddr&#34;,&#34;params&#34;:[&#34;TmbC1Fx1UXNt7D6zpaj83UrAEW7MbcUWuQz&#34;, &#34;MEER&#34;],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api
 
 </code></pre></div><h5 id="response">Response</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
@@ -3644,6 +3645,7 @@
   <span style="color:#f92672">&#34;result&#34;</span>: {
     <span style="color:#f92672">&#34;TotalAmount&#34;</span>: <span style="color:#ae81ff">900000000</span>,
     <span style="color:#f92672">&#34;SpendAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
+    <span style="color:#f92672">&#34;LockAmount&#34;</span>: <span style="color:#ae81ff">0</span>,
     <span style="color:#f92672">&#34;UnspendAmount&#34;</span>: <span style="color:#ae81ff">900000000</span>,
     <span style="color:#f92672">&#34;ConfirmAmount&#34;</span>: <span style="color:#ae81ff">0</span>
   }
@@ -5915,22 +5917,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1628659890"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1634027520"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1628659890"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1634027520"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1628659890"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1628659890"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1628659890" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1628659890"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1634027520"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1634027520"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1634027520" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1634027520"></script>
 
 
 <script>
