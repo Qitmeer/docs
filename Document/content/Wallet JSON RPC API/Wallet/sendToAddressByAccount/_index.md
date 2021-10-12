@@ -31,7 +31,7 @@ send passed amount using specific account
 ### Example
 #### Request
 ```sh
-$  curl -sk -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_sendToAddressByAccount","params":["test", "Tmb1dCAB8ixNC6d2VtdCYZuhXBVPbnRVi7y", 0.999, "", ""],"id":1}' http://127.0.0.1:8130/api |jq .
+$  curl -sk -u "test:test" -X POST -H 'Content-Type: application/json' --data '{"jsonrpc":"1.0","method":"wallet_sendToAddressByAccount","params":["test", "Tmb1dCAB8ixNC6d2VtdCYZuhXBVPbnRVi7y", 0.999, "MEER", "", ""],"id":1}' http://127.0.0.1:8130/api |jq .
 ```
 #### Response
 
