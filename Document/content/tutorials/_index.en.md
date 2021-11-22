@@ -17,4 +17,8 @@ weight: 3
 
 - [Qitmeer Rpc Guide](./qitmeer-rpc)
 
+- [Qitmeer Wallet Rpc Guide](./qitmeer-wallet-rpc)
+
 - [Qitmeer JS Guide](./qitmeer-js)
+
+- [Mount Swap Memory](./swap-memory)
