@@ -22,3 +22,5 @@ weight: 3
 - [Qitmeer JS Guide](./qitmeer-js)
 
 - [Mount Swap Memory](./swap-memory)
+
+- [Exchange Guide](./exchange-lib)
