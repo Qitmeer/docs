@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/tutorials/exchange-lib/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/json-rpc-api/getbestblockhash/</loc>
     <xhtml:link
                 rel="alternate"
