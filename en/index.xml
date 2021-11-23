@@ -21,5 +21,22 @@
 A: Proof-of-Work(PoW) is used to confirm transactions and produces new blocks, therefore it is a very important engine in PoW cryptocurrencies. PoW must not enable a participant to have a significant advantage over another participant. That is why Satoshi said: &amp;ldquo;Proof-of-work is essentially one-CPU-one-vote.&amp;rdquo; However, most widely used proof-of-work algorithms, such as SHA-256, Blake2b, Scrypt, are more efficient on ASIC devices when compared to CPUs and GPUs.</description>
     </item>
     
+    <item>
+      <title>Pool Stratum Protocol V1.0</title>
+      <link>https://qitmeer.github.io/docs/en/faqs/qitmeer-pool-stratum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qitmeer.github.io/docs/en/faqs/qitmeer-pool-stratum/</guid>
+      <description>Q: POW HASH
+A: POW Hash GOlang HashMeerXKeccakV1
+C CODE HashMeerXKeccakV1
+Q: Pool Stratum Protocol
+A: stateRoot can get from GetBlockTemplate RPC
+{&amp;quot;id&amp;quot;: null,&amp;quot;method&amp;quot;: &amp;quot;mining.notify&amp;quot;,&amp;quot;params&amp;quot;: [ &amp;quot;job_id&amp;quot;, &amp;quot;prev_hash&amp;quot;, &amp;quot;cb1&amp;quot;, &amp;quot;cb2&amp;quot;, &amp;quot;cb3&amp;quot;, &amp;quot;cb4&amp;quot;, &amp;quot;txs&amp;quot;, &amp;quot;version&amp;quot;, &amp;quot;nBits&amp;quot;, &amp;quot;nTime&amp;quot;, &amp;quot;stateRoot&amp;quot;, // &amp;quot;cleanJobs&amp;quot;, ]}  Q: Pow Header
+A: POW_HEADER
+header = s.Version + prevHash + merkleRootStr2 + stateRoot + s.Nbits + hex.EncodeToString(ntime) + hex.EncodeToString([]byte{uint8(s.PowType)}) + nonceStr  Q: Change Of CoinBase
+A: 1. [Coinbase amount struct] https://github.</description>
+    </item>
+    
   </channel>
 </rss>

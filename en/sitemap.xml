@@ -575,6 +575,10 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/faqs/qitmeer-pool-stratum/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/json-rpc-api/</loc>
     <xhtml:link
                 rel="alternate"
