@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://qitmeer.github.io/docs/images/favicon.ico" type="image/png">
 
-    <title>add :: Qitmeer Documentation</title>
+    <title>Qitmeer Java SDK :: Qitmeer Documentation</title>
 
     
     <link href="https://qitmeer.github.io/docs/css/nucleus.css?1638003449" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/add/">
+  <body class="" data-url="https://qitmeer.github.io/docs/en/tutorials/qitmeer-java-sdk/">
     <nav id="sidebar" class="">
 
 
@@ -143,7 +143,7 @@
   
     
     <li data-nav-id="/en/wallet-json-rpc-api/" title="Wallet JSON PRC" class="dd-item 
-        parent
+        
         
         
         ">
@@ -194,7 +194,7 @@
   
     
     <li data-nav-id="/en/wallet-json-rpc-api/qitmeerd/" title="QitmeerD API" class="dd-item 
-        parent
+        
         
         
         ">
@@ -221,8 +221,8 @@
   
     
     <li data-nav-id="/en/wallet-json-rpc-api/qitmeerd/add/" title="add" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/add/">
@@ -1051,7 +1051,7 @@
   
     
     <li data-nav-id="/en/tutorials/" title="Tutorials" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1150,8 +1150,8 @@
   
     
     <li data-nav-id="/en/tutorials/qitmeer-java-sdk/" title="Qitmeer Java SDK" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-java-sdk/">
@@ -3548,7 +3548,7 @@
                   
                     
                     
-                      <option id="en" value="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/add/" selected>English</option>
+                      <option id="en" value="https://qitmeer.github.io/docs/en/tutorials/qitmeer-java-sdk/" selected>English</option>
                     
                   
               
@@ -3606,7 +3606,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/Wallet%20JSON%20RPC%20API/QitmeerD/add/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-java-sdk/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -3637,13 +3637,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/wallet-json-rpc-api/'>Wallet JSON PRC</a> > <a href='https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/'>QitmeerD API</a> > add
-          
-         
+            <a href='https://qitmeer.github.io/docs/en/'>Qitmeer docs</a> > <a href='https://qitmeer.github.io/docs/en/tutorials/'>Tutorials</a> > Qitmeer Java SDK
           
          
           
@@ -3656,17 +3650,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#add">Add</a>
-      <ul>
-        <li><a href="#parameters">Parameters</a></li>
-        <li><a href="#returns">Returns</a></li>
-        <li><a href="#example">Example</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -3682,22 +3666,175 @@
           
             <h1>
               
-              add
+              Qitmeer Java SDK
             </h1>
           
 
         
 
 
-	<h2 id="add">Add</h2>
-<h3 id="parameters">Parameters</h3>
-<h3 id="returns">Returns</h3>
-<h4 id="success">Success</h4>
-<h4 id="error">Error</h4>
-<h3 id="example">Example</h3>
-<h4 id="request">Request</h4>
-<h4 id="response">Response</h4>
+	<h1 id="qitmeer-java-sdk">qitmeer-java-sdk</h1>
+<ol>
+<li>Connect RPC</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Qitmeer q <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Qitmeer<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;https://127.0.0.1:1234&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><ol start="2">
+<li>Get block count</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBlockCount</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockCount:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockCountFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="3">
+<li>Get block by order</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBlockByOrder</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    Block b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> Block<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockByOrder:\r\n&#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">getHash</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockByOrderFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="4">
+<li>Get block by hash</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBlockByHash</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    Block b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> Block<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockByhash:\r\n&#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">getHash</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockByhashFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="4">
+<li>Get block header by hash</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBlockHeader</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    BlockHeader b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> BlockHeader<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockHeader:\r\n&#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">getHash</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockHeaderFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="5">
+<li>Get block weight by hash</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBlockWeight</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockWeight:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockWeightFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="6">
+<li>Get block hash by order</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBlockHash</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockHash:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBlockHashFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="7">
+<li>Get best block hash</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getBestBlockHash</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBestBlockHash:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getBestBlockHashFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="8">
+<li>Block is on main chain</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">isOnMainChain</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">]);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isOnMainChain:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;isOnMainChainFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="9">
+<li>Get utxo</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getUtxo</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bae58ff3e0870938e241224fc8736998f5e8f6cf6423c383493bf13133e4d37d&#34;</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    Utxo b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> Utxo<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getUtxo:\r\n&#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">getCoinbase</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getUtxoFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="10">
+<li>Create Raw Transaction</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">FromTx u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FromTx<span style="color:#f92672">();</span>
+u<span style="color:#f92672">.</span><span style="color:#a6e22e">setTxid</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;019edb774482a9f619ca02f949881c2c9616a48e014ad27668ee5e56b64182f9&#34;</span><span style="color:#f92672">);</span>
+u<span style="color:#f92672">.</span><span style="color:#a6e22e">setVout</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+List<span style="color:#f92672">&lt;</span>FromTx<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
+ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">createRawTransaction</span><span style="color:#f92672">(</span>list<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;RmQb2VrPtd9nftMvKtRMxN297dzN5VydmMJ&#34;</span><span style="color:#f92672">,</span> 10<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;createRawTransaction:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;createRawTransactionFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="11">
+<li>Decode Raw Transaction</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">decodeRawTransaction</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;0100000001f98241b6565eee6876d24a018ea416962c1c8849f902ca19f6a9824477db9e0100000000ffffffff0100000a000000000000001976a9149887f352a02c4e60d99bcd2eab33c8b7b0198b0488ac00000000000000008214a3600100&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;decodeRawTransaction:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;decodeRawTransactionFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="12">
+<li>Get Raw Transaction By TxId</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getRawTransaction</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bae58ff3e0870938e241224fc8736998f5e8f6cf6423c383493bf13133e4d37d&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    TxRawResult b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> TxRawResult<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getRawTransaction:\r\n&#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">getTxid</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getRawTransactionFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="13">
+<li>Send Raw Transaction</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">sendRawTransaction</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;0100000001f98241b6565eee6876d24a018ea416962c1c8849f902ca19f6a9824477db9e0100000000ffffffff0178000000000000001976a914bd4d1888cb054b2755d65d93c356573e4d283ead88ac00000000000000000100&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    Utxo b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> Utxo<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sendRawTransaction:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
 
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sendRawTransactionFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="14">
+<li>Get Peer Info</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getPeerInfo</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    List<span style="color:#f92672">&lt;</span>PeerInfo<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseArray</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(),</span> PeerInfo<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getPeerInfo:\r\n&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getPeerInfoFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="15">
+<li>Get Node Info</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServiceResult result <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">getNodeInfo</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    JSONObject recJson <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    NodeInfo b <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJavaObject</span><span style="color:#f92672">(</span>recJson<span style="color:#f92672">,</span> NodeInfo<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getNodeInfo:\r\n&#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">getUUID</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getNodeInfoFaild:\r\n&#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 
 
 
@@ -3791,7 +3928,6 @@
 
     
         
-        
     
     
 
@@ -3806,9 +3942,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -3826,7 +3959,6 @@
 
     
         
-        
     
     
 
@@ -3841,7 +3973,6 @@
 
 
     
-        
         
     
     
@@ -3858,9 +3989,6 @@
 
 
     
-        
-            
-            
         
     
     
@@ -4383,6 +4511,7 @@
 
 
     
+        
         
     
     
@@ -4398,6 +4527,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -4446,6 +4578,7 @@
 
 
     
+        
         
     
     
@@ -4462,6 +4595,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -5968,10 +6104,10 @@
 
 
 
-<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/" title="QitmeerD API"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-installation/" title="Qitmeer Installation"> <i class="fa fa-chevron-left"></i></a>
 
 
-<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/qitmeerd/del/" title="del" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href="https://qitmeer.github.io/docs/en/tutorials/qitmeer-js/" title="Qitmeer JS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 
 
 </div>
@@ -5987,9 +6123,9 @@
             <i class="fab fa-fw fa-github"></i>
             <strong>Contribute on GitHub</strong>
             <p>
-              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=add&body=Link%3A%C2%A0Wallet%20JSON%20RPC%20API%2fQitmeerD%2fadd%2f_index.en.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/Wallet%20JSON%20RPC%20API/QitmeerD/add/_index.en.md">View File</a > |
-              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/Wallet%20JSON%20RPC%20API/QitmeerD/add/_index.en.md">Edit File</a >
+              <a target="blank" href="https://github.com/Qitmeer/docs/issues/new?title=Qitmeer%20Java%20SDK&body=Link%3A%C2%A0tutorials%2fqitmeer-java-sdk%2f_index.md%0A%0A%23%23%20Issue%0A%0A%23%23%20Suggested%20Fix%0A&labels=inaccurate%20guide">Report an Issue</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/tree/master/Document/content/tutorials/qitmeer-java-sdk/_index.md">View File</a > |
+              <a target="blank" href="https://github.com/Qitmeer/docs/edit/master/Document/content/tutorials/qitmeer-java-sdk/_index.md">Edit File</a >
             </p >
           </div>    
         
