@@ -66,6 +66,12 @@ $ hugo new content/tutorials/contribute-docs/_index.en.md
 
 > Figure 2. Doc category
 
+### Add link in index page
+
+There is an index page include all the links under each category, it is located at the parent folder of the containing folder of document, which is **content/tutorials/_index.en.md** for this tutorial.
+
+
+
 ## Edit document
 
 ### Front Matter
@@ -103,13 +109,15 @@ Below the front matter separator '**---**', you may fill the content of articles
 mathjax: true
 ---
 
-# How to sumbit document for Qitmeer
-
 Qitmeer is an Open-Source community and welcome everyone to give contribution with their own talent. In addition to coding, documentation is also an important work to share knowledge with the community. Here are the steps how we share our expererience of Qitmeer.
 
 ## Install Hugo
 ...
 ```
+
+**Note:**
+
+Hugo will insert the title configured in Front Matter, so we should **NOT** add title in the content.
 
 ### Images
 
@@ -148,6 +156,8 @@ https://github.com/Qitmeer/docs/blob/master/.github/workflows/gh-pages.yml.
 Therfore, all you have to do is just submit the changes to Github and make pull request to the upstream branch.
 
 ```sh
-
+$ git add .
+$ git commit -m"contribute qitmeer docs"
+$ git push
 ```
 
