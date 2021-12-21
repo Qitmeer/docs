@@ -1,4 +1,7 @@
-# Qitmeer Docs
+---
+title: "Contribute Docs"
+weight: 1
+---
 
 Qitmeer is an Open-Source community and welcome everyone to give contribution with their own talent. In addition to coding, documentation is also an important work to share knowledge with the community. Here are the steps how we share our expererience of Qitmeer.
 
@@ -40,7 +43,7 @@ Press Ctrl+C to stop
 
 Open browser and test website is accesible. Address: **http://localhost:1313/docs/**
 
-![Launch Docs](./Document/static/images/contribute-docs/launch-website.png)
+![Launch Docs](/images/contribute-docs/launch-website.png)
 
 > Figure1. Launch Qitmeer Docs
 
@@ -61,7 +64,7 @@ $ hugo new content/tutorials/contribute-docs/_index.en.md
 1. the **en** part indicates the language, you may subsititue with other languages, for instance, **cn** stands for Chinese. Or you may drop this part to disable the multiple language support, then it would be like "**_index.md**"
 2. The parts of the path are in line with the sitemap in the the left panel, for this case, this article is placed under **Tutorials** category.
 
-![Doc category](./Document/static/images/contribute-docs/doc-category.png)
+![Doc category](/images/contribute-docs/doc-category.png)
 
 > Figure 2. Doc category
 
@@ -166,3 +169,4 @@ $ git add .
 $ git commit -m"contribute qitmeer docs"
 $ git push
 ```
+
