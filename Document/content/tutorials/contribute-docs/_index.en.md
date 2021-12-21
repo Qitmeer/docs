@@ -28,11 +28,13 @@ https://gohugo.io/getting-started/installing
 
 ## Depoit Qitmeer Docs locally
 
-Download source code and launch web server:
+First, you need to fork Qitmeer Docs repo ("**https://github.com/qitmeer/docs"**) to your own github namespace, which is "**https://github.com/forchain/docs**" in this case.
+
+Then, download source code and launch web server:
 
 ```sh
-$ git clone https://github.com/Qitmeer/docs ~/github.com/Qitmeer/docs 
-$ cd ~/github.com/qitmeer/docs/Document
+$ git clone https://github.com/forchain/docs ~/github.com/forchain/docs 
+$ cd ~/github.com/forchain/docs/Document
 $ hugo serve
 ...
 Web Server is available at http://localhost:1313/docs/ (bind address 127.0.0.1)
@@ -56,7 +58,7 @@ You may complete those steps by one Hugo command:
 $ hugo new content/tutorials/contribute-docs/_index.en.md
 ```
 
-#### Note:
+#### Note
 
 1. the name of the subfolder must be in **hyphen-case** style, in this case, **"contribute-docs"**
 1. the **en** part indicates the language, you may subsititue with other languages, for instance, **cn** stands for Chinese. Or you may drop this part to disable the multiple language support, then it would be like "**_index.md**"
@@ -70,7 +72,14 @@ $ hugo new content/tutorials/contribute-docs/_index.en.md
 
 There is an index page include all the links under each category, it is located at the parent folder of the containing folder of document, which is **content/tutorials/_index.en.md** for this tutorial.
 
+```markdown
+- [Contribute Docs](./contribute-docs)
+```
 
+#### Note
+
+1. it is a *relative* link to the *containing* folder
+2. The link cannot contain whitespaces, that's why the naming style of the containing folder must be **hyper-case**.
 
 ## Edit document
 
@@ -115,7 +124,7 @@ Qitmeer is an Open-Source community and welcome everyone to give contribution wi
 ...
 ```
 
-**Note:**
+#### **Note**
 
 Hugo will insert the title configured in Front Matter, so we should **NOT** add title in the content.
 
