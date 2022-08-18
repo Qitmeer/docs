@@ -6,7 +6,7 @@ weight: 2
 ---
 
 ## Prerequisites
-### Introduction
+###### Introduction
 This tutorial gives a quick practice on how to use qitmeer to send a transaction from scratch. It covers 3 core roles in the network: qitmeer, miner, wallet. So, it would help you get a basic concept of qitmeer network in short time. 
 
 It includes four sections: first we launch a Qitmeer test node as server to provide the fundamental blockchain service; then we launch the qitmeer command line wallet to generate wallet for miner; in the next step, we run a miner node to win the mining reward from the network; lastly, we use wallet to send a transaction to an arbitrary recipient using our mining reward.
