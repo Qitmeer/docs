@@ -33,8 +33,9 @@ or
 * We take the construction of test network nodes as an example:
 ```
 ~ cd ./build/bin
-~ ./qng --mainnet
-~ docker run --rm -it --name qng qng:latest ./build/bin/qng --mixnet --acceptnonstd --modules=qitmeer --modules=p2p
+~ ./qng 
+or
+~ docker run --rm -it --name qng qng:latest ./build/bin/qng --acceptnonstd --modules=qitmeer --modules=p2p
 ``` 
 
 ### MeerEVM
@@ -45,9 +46,9 @@ or
 ``` 
 * If you don't need the default configuration, we provide an environment configuration parameter to meet your custom configuration for MeerEVM:
 ```
-~ ./qng --mainnet --evmenv="--http"
+~ ./qng --evmenv="--http"
 or
-~ ./qng --mainnet --evmenv="--http --http.port=8545 --ws --ws.port=8546"
+~ ./qng --evmenv="--http --http.port=8545 --ws --ws.port=8546"
 or
-~ ./qng --mainnet --evmenv="--syncmode=full --gcmode=archive --http --http.addr=0.0.0.0 --http.port=8545 --ws --ws.port=8546 --ws.addr=0.0.0.0 --http.api=eth,web3,net,debug,txpool --ws.api=eth,web3,net,debug,txpool"
+~ ./qng --evmenv="--syncmode=full --gcmode=archive --http --http.addr=0.0.0.0 --http.port=8545 --ws --ws.port=8546 --ws.addr=0.0.0.0 --http.api=eth,web3,net,debug,txpool --ws.api=eth,web3,net,debug,txpool"
 ``` 
