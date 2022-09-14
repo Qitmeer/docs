@@ -1,6 +1,6 @@
 ---
 title: Getting Started QNG
-weight: 2
+weight: 6
 #pre: "<b>1. </b>"
 # chapter: true
 ---
