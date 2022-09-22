@@ -30,7 +30,7 @@ or
 ```
 
 ### Run
-* We take the construction of test network nodes as an example:
+* We take the construction of network nodes as an example:
 ```
 ~ cd ./build/bin
 ~ ./qng 
