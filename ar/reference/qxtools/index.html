@@ -12,20 +12,20 @@
     <title>أدوات QX :: Qitmeer ملفات</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1663848810" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1663848810" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1665287011" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1663848810" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1665287011" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1663848810"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1665287011"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1663848810"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1663848810"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1665287011"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1665287011"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/ar";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1663848810"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1665287011"></script>
 
     
   </div>
@@ -438,7 +438,29 @@ RmPwHCuC2m6gvz9TnVLapHySk1ZU72FTSru
 
 <span style="color:#75715e"># base58 string</span>
 myBUMQTmZGK8yKLDranjSQEHbCYCaaywQD
-</code></pre></div>
+</code></pre></div><h5 id="qx-generate-address-by-mnemonic">Qx Generate address by mnemonic</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create qitmeer mainnet address by mnemonic</span>
+~ echo <span style="color:#e6db74">&#34;dune school cash fancy post theory sense again earth divide balcony always&#34;</span>|qx mnemonic-to-seed | qx ec-new |qx ec-to-public|qx ec-to-addr
+
+<span style="color:#75715e"># qng address</span>
+MmVipyQydGr6xN3qNkwBS48fzENUAYmnTZh
+</code></pre></div><h5 id="kahf-generate-qng-address-by-mnemonic">KAHF Generate qng address by mnemonic</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># import new wallet with mnemonic</span>
+~ dune school cash fancy post theory sense again earth divide balcony always
+</code></pre></div><p><img src="./wallet/kahf.jpeg" alt="kahf-qng-wallet"></p>
+<h5 id="qx-generate-evm-bip44-address-by-mnemonic">Qx Generate evm bip44 address by mnemonic</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create qitmeer mainnet address by mnemonic</span>
+~ echo <span style="color:#e6db74">&#34;dune school cash fancy post theory sense again earth divide balcony always&#34;</span>|qx mnemonic-to-seed|qx hd-new -v bip32|qx hd-derive -v bip32 -p <span style="color:#e6db74">&#34;m/44&#39;/60&#39;/0&#39;/0/0&#34;</span>|qx hd-to-ec -v bip32|qx ec-to-public|qx ec-to-ethaddr
+
+<span style="color:#75715e"># qng evm | eth | bsc address</span>
+0x2cb3aD95bE524F9d34E17Da37a901F63fa12Ba35
+</code></pre></div><h5 id="kahf-generate-evm-bip44-address-by-mnemonic">KAHF Generate evm bip44 address by mnemonic</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># import new wallet with mnemonic</span>
+~ dune school cash fancy post theory sense again earth divide balcony always
+</code></pre></div><p><img src="./wallet/eth.jpeg" alt="kahf-qng-wallet">
+<img src="./wallet/bsc.jpeg" alt="kahf-qng-wallet">
+<img src="./wallet/evm.jpeg" alt="kahf-qng-wallet"></p>
+
 
 
 
@@ -573,22 +595,22 @@ myBUMQTmZGK8yKLDranjSQEHbCYCaaywQD
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1663848810"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1665287011"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1663848810"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1665287011"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1663848810"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1663848810"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1663848810" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1663848810"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1665287011"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1665287011" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1665287011"></script>
 
 
 <script>
