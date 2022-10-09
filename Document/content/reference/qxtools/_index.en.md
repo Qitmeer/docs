@@ -86,3 +86,44 @@ addr & tx & sign
     msg-sign              create a message signature
     msg-verify            validate a message signature
 ```
+
+
+
+##### Qx Generate address by mnemonic
+
+```bash
+# create qitmeer mainnet address by mnemonic
+~ echo "dune school cash fancy post theory sense again earth divide balcony always"|qx mnemonic-to-seed | qx ec-new |qx ec-to-public|qx ec-to-addr
+
+# qng address
+MmVipyQydGr6xN3qNkwBS48fzENUAYmnTZh
+```
+
+##### KAHF Generate qng address by mnemonic
+
+```bash
+# import new wallet with mnemonic
+~ dune school cash fancy post theory sense again earth divide balcony always
+```
+![kahf-qng-wallet](./wallet/kahf.jpeg)
+
+
+##### Qx Generate evm bip44 address by mnemonic
+
+```bash
+# create qitmeer mainnet address by mnemonic
+~ echo "dune school cash fancy post theory sense again earth divide balcony always"|qx mnemonic-to-seed|qx hd-new -v bip32|qx hd-derive -v bip32 -p "m/44'/60'/0'/0/0"|qx hd-to-ec -v bip32|qx ec-to-public|qx ec-to-ethaddr
+
+# qng evm | eth | bsc address
+0x2cb3aD95bE524F9d34E17Da37a901F63fa12Ba35
+```
+
+##### KAHF Generate evm bip44 address by mnemonic
+
+```bash
+# import new wallet with mnemonic
+~ dune school cash fancy post theory sense again earth divide balcony always
+```
+![kahf-qng-wallet](./wallet/eth.jpeg)
+![kahf-qng-wallet](./wallet/bsc.jpeg)
+![kahf-qng-wallet](./wallet/evm.jpeg)
