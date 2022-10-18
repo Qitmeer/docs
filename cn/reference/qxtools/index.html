@@ -12,20 +12,20 @@
     <title>Qx 工具集 :: Qitmeer 文档</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1665287011" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1665287011" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1666055301" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1666055301" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1665287011" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1666055301" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1665287011"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1666055301"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1665287011"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1665287011"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1666055301"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1666055301"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/cn";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1665287011"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1666055301"></script>
 
     
   </div>
@@ -839,6 +839,7 @@
     <li><a href="#encoding-commands">Encoding Commands</a>
       <ul>
         <li></li>
+        <li><a href="#txtypecrosschainimport--tx-from-evm-to-meer">TxTypeCrossChainImport  (TX from EVM to MEER)</a></li>
       </ul>
     </li>
   </ul>
@@ -996,7 +997,36 @@ MmVipyQydGr6xN3qNkwBS48fzENUAYmnTZh
 </code></pre></div><p><img src="./wallet/eth.jpeg" alt="kahf-qng-wallet">
 <img src="./wallet/bsc.jpeg" alt="kahf-qng-wallet">
 <img src="./wallet/evm.jpeg" alt="kahf-qng-wallet"></p>
-
+<h3 id="txtypecrosschainimport--tx-from-evm-to-meer">TxTypeCrossChainImport  (TX from EVM to MEER)</h3>
+<p>From EVM to MEER PKAddress <code>XkCfdHoHHe2raZwNoY4sKcXFf6Jy9Q8XotAHenYsucPrEoj1FeUTR</code> 100 MEER coinID : 0 MEER</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./qx tx-encode -v <span style="color:#ae81ff">1</span> -i 0000000000000000000000000000000000000000000000000000000000000000:4294967294:258:TxTypeCrossChainImport -l <span style="color:#ae81ff">0</span> -o Tk6uJDaurxqPrg2bZqBa9XSpUcakebZ6EU1u9qqHNDcNW2MyeTtbX:10:0:TxTypeCrossChainImport
+</code></pre></div><pre><code class="language-output" data-lang="output">01000000010000000000000000000000000000000000000000000000000000000000000000feffffff0201000001000000e40b54020000001976a914ada117669b04771e481cc68ae8d4f33f913d1eda88ac0000000000000000cba5c3620100-7b22696e707574223a7b2230223a3235387d2c226f7574707574223a7b2230223a3235387d7d
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./qx tx-decode 01000000010000000000000000000000000000000000000000000000000000000000000000feffffff0201000001000000ca9a3b000000001976a914ada117669b04771e481cc68ae8d4f33f913d1eda88ac0000000000000000889b4d630100-7b22696e707574223a7b2230223a3235387d2c226f7574707574223a7b2230223a3235387d7d
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;a827b5b2017ccb0a805fcf3c3a0ea89989ae7c86a5019b7673e12f1a1f730e70&#34;</span>,
+	<span style="color:#f92672">&#34;txhash&#34;</span>: <span style="color:#e6db74">&#34;178c38b90566a6e89db52a73224a4c27f7854b85e63ff7ce5d3b62d538095545&#34;</span>,
+	<span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#ae81ff">1</span>,
+	<span style="color:#f92672">&#34;locktime&#34;</span>: <span style="color:#ae81ff">0</span>,
+	<span style="color:#f92672">&#34;expire&#34;</span>: <span style="color:#ae81ff">0</span>,
+	<span style="color:#f92672">&#34;vin&#34;</span>: [{
+		<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;TxTypeCrossChainImport&#34;</span>,
+		<span style="color:#f92672">&#34;scriptSig&#34;</span>: <span style="color:#66d9ef">null</span>
+	}],
+	<span style="color:#f92672">&#34;vout&#34;</span>: [{
+		<span style="color:#f92672">&#34;coin&#34;</span>: <span style="color:#e6db74">&#34;MEER&#34;</span>,
+		<span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">10000000000</span>,
+		<span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+			<span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 ada117669b04771e481cc68ae8d4f33f913d1eda OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+			<span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a914ada117669b04771e481cc68ae8d4f33f913d1eda88ac&#34;</span>,
+			<span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+			<span style="color:#f92672">&#34;addresses&#34;</span>: [<span style="color:#e6db74">&#34;MmbRPt1wRcHz1mAiH8Ri1ANtGRyY5ygJ3hJ&#34;</span>]
+		}
+	}]
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./qx sign -k <span style="color:#f92672">(</span>privateKey<span style="color:#f92672">)</span> -n mixnet 01000000010000000000000000000000000000000000000000000000000000000000000000feffffff0201000001000000e40b54020000001976a914ada117669b04771e481cc68ae8d4f33f913d1eda88ac0000000000000000cba5c3620100-7b22696e707574223a7b2230223a3235387d2c226f7574707574223a7b2230223a3235387d7d
+</code></pre></div><pre><code class="language-output" data-lang="output">01000000010000000000000000000000000000000000000000000000000000000000000000feffffff0201000001000000e40b54020000001976a914ada117669b04771e481cc68ae8d4f33f913d1eda88ac0000000000000000cba5c3620180354d6b42384655315135444761556e7753733679446a36364a7747654550394b4c5461786b626d5351684e396e546d70336566356a6b49483045022100ec14a41b314afc8c4348bab9122176f8d6b4ccbcaf4be1d2dc9be539cf89d98202203eb78a38c0403a8a8bcb63a30f4f39e1bd05031f55bd4c31a902567a5d6f155601
+</code></pre>
 
 
 
@@ -1490,22 +1520,22 @@ MmVipyQydGr6xN3qNkwBS48fzENUAYmnTZh
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1666055301"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1666055301"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1665287011"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1665287011"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1665287011" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1665287011"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1666055301"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1666055301"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1666055301" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1666055301"></script>
 
 
 <script>

@@ -12,20 +12,20 @@
     <title>sendToAddress :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1665287013" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1665287013" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1666055303" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1666055303" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1665287013" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1666055303" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1665287013"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1666055303"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1665287013"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1665287013"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1666055303"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1666055303"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1665287013"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1666055303"></script>
 
     
   </div>
@@ -587,6 +587,30 @@
         ">
       <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/dumpprivkey/">
           dumpPrivKey
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/en/wallet-json-rpc-api/wallet/evmtomeer/" title="evmToMeer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/evmtomeer/">
+          evmToMeer
           
       </a>
       
@@ -3747,6 +3771,7 @@
 <ol>
 <li><code>address: (hex string)</code> the given address</li>
 <li><code>amount: (numeric)</code> passed amount</li>
+<li><code>coinID: (numeric)</code> 0 =&gt; MEER 1=&gt; MEER balance</li>
 </ol>
 <h3 id="returns">Returns</h3>
 <h4 id="success">Success</h4>
@@ -3756,8 +3781,16 @@
 <code>-13</code> Enter the wallet passphrase with walletpassphrase first</p>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sk -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_sendToAddress&#34;,&#34;params&#34;:[&#34;Tmdcmmo7JqxxwHy6r46Sx2ZRbVF2dSjG9mm&#34;, 1 , &#34;MEER&#34;],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api |jq .
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sk -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_sendToAddress&#34;,&#34;params&#34;:[&#34;Tmdcmmo7JqxxwHy6r46Sx2ZRbVF2dSjG9mm&#34;, 1 , 0],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api |jq .
 </code></pre></div><h4 id="response">Response</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+  <span style="color:#f92672">&#34;result&#34;</span>: <span style="color:#e6db74">&#34;86140f1fa1e7d95707ec7e61748b91838e24a00ca8803f299c7caca591ff1af4&#34;</span>
+}
+</code></pre></div><h4 id="request-send-meer-to-evm">Request Send MEER To EVM</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sk -u <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;wallet_sendToAddress&#34;,&#34;params&#34;:[&#34;Tk6uJDaurxqPrg2bZqBa9XSpUcakebZ6EU1u9qqHNDcNW2MyeTtbX&#34;, 10 , 1],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:8130/api |jq .
+</code></pre></div><h4 id="response-1">Response</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;jsonrpc&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>,
   <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
@@ -4106,6 +4139,22 @@
         
             
             
+        
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
+            
+
+
+    
         
     
     
@@ -6109,22 +6158,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1665287013"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1666055303"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1665287013"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1666055303"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1665287013"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1665287013"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1665287013" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1665287013"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1666055303"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1666055303"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1666055303" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1666055303"></script>
 
 
 <script>

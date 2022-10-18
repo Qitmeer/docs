@@ -393,6 +393,10 @@
   </url>
   
   <url>
+    <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/evmtomeer/</loc>
+  </url>
+  
+  <url>
     <loc>https://qitmeer.github.io/docs/en/wallet-json-rpc-api/wallet/getaccountbyaddress/</loc>
   </url>
   
