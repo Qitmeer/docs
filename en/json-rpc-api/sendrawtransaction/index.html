@@ -12,20 +12,20 @@
     <title>sendRawTransaction :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1667296667" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1667296667" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1667309509" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1667309509" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1667296667" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1667309509" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1667296667"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1667309509"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1667296667"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1667296667"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1667309509"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1667309509"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1667296667"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1667309509"></script>
 
     
   </div>
@@ -3772,6 +3772,7 @@
 <li><code>hexTx: (hex string)</code>  hex string of signed transaction</li>
 <li><code>allowHighFees: (bool, default=false)</code> if allows high fee</li>
 </ol>
+<p><em><strong>Note</strong></em>: <em>The <code>allowHighFee == true</code> might be dangerous to use, Please make sure you know what you are doing, Please test on the <code>testnet</code> before you do anything on <code>mainnet</code>, otherwise you might take the risk of losing your asset. Read more about the concept of transaction fee from <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06.asciidoc#adding-fees-to-transactions">the bitcoin book</a></em></p>
 <h4 id="returns">Returns</h4>
 <h5 id="hex-string"><code>(hex string)</code></h5>
 <h4 id="errors">Errors</h4>
@@ -3802,7 +3803,6 @@
 </code></pre></div><h4 id="example">Example</h4>
 <h5 id="request">Request</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sku <span style="color:#e6db74">&#34;test:test&#34;</span> -X POST -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> --data <span style="color:#e6db74">&#39;{&#34;jsonrpc&#34;:&#34;1.0&#34;,&#34;method&#34;:&#34;sendRawTransaction&#34;,&#34;params&#34;:[&#34;0100000001f9802e5923afe50cbde3514c4169a8e84f83770c22e994cffb3c0a59e433d9cf01000000ffffffff01804a5d05000000001976a914a6b8fe2348fad076b7fd1b34b7e5b35db96dc2a088ac00000000000000001141cb5f016b483045022100b8ab0acf7f282e167669e3f20920c81b06554bc1fd5b41c4dd44ab4f3319a92f02200b664f920c77a7d8ac695380c22ec3131e2bd8f27617f84883fe9cf6d6bea0a1012102e8d120c3c729e636fe2909b02c65c025cb7f3f57d9891f4f566dd4724e82eb92&#34;, false],&#34;id&#34;:1}&#39;</span> http://127.0.0.1:18131 | jq
-
 </code></pre></div><h5 id="response">Response</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
   <span style="color:#e6db74">&#34;jsonrpc&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2.0&#34;</span>,
@@ -6169,22 +6169,22 @@
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1667296667"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1667309509"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1667296667"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1667309509"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1667296667"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1667296667"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1667296667" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1667296667"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1667309509"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1667309509"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1667309509" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1667309509"></script>
 
 
 <script>
