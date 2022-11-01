@@ -10,7 +10,7 @@ send raw transactions
 1. `hexTx: (hex string)`  hex string of signed transaction
 2. `allowHighFees: (bool, default=false)` if allows high fee
 
-***Note***: *The `allowHighFee == true` might be dangerous to use, Please make sure you know what you are doing, Please test on the `testnet` before you do anything on `mainnet`, otherwise you might take the risk of losing your asset.*
+***Note***: *The `allowHighFee == true` might be dangerous to use, Please make sure you know what you are doing, Please test on the `testnet` before you do anything on `mainnet`, otherwise you might take the risk of losing your asset. Read more about the concept of transaction fee from [the bitcoin book](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06.asciidoc#adding-fees-to-transactions)* 
 
 #### Returns
 ##### `(hex string)` 
