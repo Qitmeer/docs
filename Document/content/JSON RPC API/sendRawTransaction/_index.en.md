@@ -10,7 +10,7 @@ send raw transactions
 1. `hexTx: (hex string)`  hex string of signed transaction
 2. `allowHighFees: (bool, default=false)` if allows high fee
 
-***Note***: *The `allowHighFee == true` might be dangous to use, Please make sure you knwn what you are doing, Please test on the `testnet` before you do anything on `mainnet`, otherwise you might take the risk of losing your asset.*
+***Note***: *The `allowHighFee == true` might be dangerous to use, Please make sure you know what you are doing, Please test on the `testnet` before you do anything on `mainnet`, otherwise you might take the risk of losing your asset.*
 
 #### Returns
 ##### `(hex string)` 
