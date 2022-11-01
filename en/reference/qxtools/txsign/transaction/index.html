@@ -12,20 +12,20 @@
     <title>transaction :: Qitmeer Documentation</title>
 
     
-    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/theme.css?1667288242" rel="stylesheet">
-    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1667288242" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/nucleus.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/fontawesome-all.min.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hybrid.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/featherlight.min.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/perfect-scrollbar.min.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/auto-complete.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/atom-one-dark-reasonable.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/theme.css?1667296668" rel="stylesheet">
+    <link href="https://qitmeer.github.io/docs/css/hugo-theme.css?1667296668" rel="stylesheet">
     
-      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1667288242" rel="stylesheet">
+      <link href="https://qitmeer.github.io/docs/css/theme-mine.css?1667296668" rel="stylesheet">
     
 
-    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1667288242"></script>
+    <script src="https://qitmeer.github.io/docs/js/jquery-3.3.1.min.js?1667296668"></script>
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1667288242"></script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1667288242"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/lunr.min.js?1667296668"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/auto-complete.js?1667296668"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/qitmeer.github.io\/docs\/en";
     
 </script>
-<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1667288242"></script>
+<script type="text/javascript" src="https://qitmeer.github.io/docs/js/search.js?1667296668"></script>
 
     
   </div>
@@ -3769,92 +3769,161 @@
 <p>encode a unsigned transaction.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-encode --help
 
-Usage: qx tx-encode <span style="color:#f92672">[</span>ec_public_key<span style="color:#f92672">]</span>
-    -i value
-        The set of transaction input points encoded as TXHASH:INDEX:SEQUENCE.
-        TXHASH is a Base16 transaction hash. INDEX is the <span style="color:#ae81ff">32</span> bit input index in the context of the transaction. SEQUENCE is the optional <span style="color:#ae81ff">32</span> bit input sequence and defaults to the maximum value.
-    -l value
-        the transaction lock time
-    -o value
-        The set of transaction output data encoded as TARGET:NOX.
-        TARGET is an address <span style="color:#f92672">(</span>pay-to-pubkey-hash or pay-to-script-hash<span style="color:#f92672">)</span>.
-        NOX is the <span style="color:#ae81ff">64</span> bit spend amount in nox.
-    -v value
-        the transaction version <span style="color:#f92672">(</span>default 1<span style="color:#f92672">)</span>
+Usage: qx tx-encode <span style="color:#f92672">[</span>-i tx-input<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-l tx-lock-time<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-o tx-output<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-v tx-version<span style="color:#f92672">]</span> 
+  -i value
+    	The set of transaction input points encoded as TXHASH:INDEX:SEQUENCE:TXTYPE. 
+    	TXHASH is a Base16 transaction hash. INDEX is the <span style="color:#ae81ff">32</span> bit input index
+    	in the context of the transaction. SEQUENCE is the optional <span style="color:#ae81ff">32</span> bit 
+    	input sequence and defaults to the maximum value.
+    	TXTYPE is type type
+    	TxTypeRegular the standard tx
+    	TxTypeGenesisLock the tx try to lock the genesis output to the stake pool
+    	TxTypeCrossChainExport Cross chain by import tx
+    	TxTypeCrossChainImport Cross chain by vm tx
+    	
+  -l value
+    	the transaction lock time
+  -o value
+    	The set of transaction output data encoded as TARGET:MEER:COINID:TXTYPE. 
+    	TARGET is an address <span style="color:#f92672">(</span>pay-to-pubkey-hash or pay-to-script-hash<span style="color:#f92672">)</span>.
+    	MEER is the <span style="color:#ae81ff">64</span> bit spend amount in qitmeer.COINID enum <span style="color:#f92672">{</span>0 <span style="color:#f92672">=</span>&gt; MEER,1<span style="color:#f92672">=</span>&gt;ETHID<span style="color:#f92672">}</span>
+  -v value
+    	the transaction version <span style="color:#f92672">(</span>default 1<span style="color:#f92672">)</span>
 </code></pre></div><h4 id="example">Example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-encode -i 1b99ad8f271124533bf49cd943124d65a24de3266078391a6e6e92bae42849c8:2 -l <span style="color:#ae81ff">0</span> -o RmCYoUMqKZopUkai2YhUFHR9UeqjeyjTAgW:1 -o RmRYWLhtA3dkgd3vF3bEqZvsriTufMFPBRK:30
-
-0100010001c84928e4ba926e6e1a39786026e34da2654d1243d99cf43b532411278fad991b02000000ffffffff0200e1f505000000001976a91444d959afb6db4ad730a6e2c0daf46ceeb98c53a088ac005ed0b2000000001976a914d364af39e59cea1488a25e3cfcc48e20f31a7b1688ac0000000000000000
+<ul>
+<li>TxTypeRegular</li>
+</ul>
+<p>TnEvLExwzew6LPL13yXmWKnnZxD1c5Lr8Tw (has 99.989 meer) send 9.988 meer to TnHqTCHGYPfFyNtLQfYKVf5jd4KiQkropmV, with 90 meer left, fee = 0.001.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-encode -i 04f6d4055fac1e17975f30e345ac8602c9fd4c54351c99af615273950fe43ee8:0:4294967295:TxTypeRegular -l <span style="color:#ae81ff">0</span> -o TnHqTCHGYPfFyNtLQfYKVf5jd4KiQkropmV:9.988:0:TxTypeRegular -o TnEvLExwzew6LPL13yXmWKnnZxD1c5Lr8Tw:90:0:TxTypeRegular
+0100000001e83ee40f95735261af991c35544cfdc90286ac45e3305f97171eac5f05d4f60400000000ffffffff020000807a883b000000001976a914441db1582a69878dfa83042b529ba918b74aaf1088ac0000001a7118020000001976a9142421972d46cedd2283d244665a05bde2aec3446f88ac0000000000000000c8d360630100-7b22696e707574223a7b2230223a307d2c226f7574707574223a7b2230223a302c2231223a307d7d
 </code></pre></div><h4 id="set-locktime">Set Locktime</h4>
 <p>If nLocktime is not zero and is less than 500 million, it is interpreted as block height, which means that the trade is invalid and is not relayed or included in the block chain before the specified block height.</p>
 <p>If it exceeds 500 million, it is interpreted as a Unix era timestamp (the number of seconds since jan-1-1970), and the transaction is not valid until the specified time. The nLocktime transaction that specifies the future block or time must be held by the originating system and sent to the qitmeer network only after it is valid. If the transaction is transmitted to the network before the specified nLocktime, the first node rejects the transaction and is not relayed to other nodes. Using nLocktime is equivalent to a deferred check.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-encode -i 1b99ad8f271124533bf49cd943124d65a24de3266078391a6e6e92bae42849c8:2 -l <span style="color:#ae81ff">1562904504</span> -o RmCYoUMqKZopUkai2YhUFHR9UeqjeyjTAgW:1 -o RmRYWLhtA3dkgd3vF3bEqZvsriTufMFPBRK:30
-
-0100010001c84928e4ba926e6e1a39786026e34da2654d1243d99cf43b532411278fad991b02000000feffffff0200e1f505000000001976a91444d959afb6db4ad730a6e2c0daf46ceeb98c53a088ac005ed0b2000000001976a914d364af39e59cea1488a25e3cfcc48e20f31a7b1688acb807285d00000000
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-encode -i 04f6d4055fac1e17975f30e345ac8602c9fd4c54351c99af615273950fe43ee8:0:4294967295:TxTypeRegular -l <span style="color:#ae81ff">1667895234</span> -o TnHqTCHGYPfFyNtLQfYKVf5jd4KiQkropmV:9.988:0:TxTypeRegular -o TnEvLExwzew6LPL13yXmWKnnZxD1c5Lr8Tw:90:0:TxTypeRegular
+0100000001e83ee40f95735261af991c35544cfdc90286ac45e3305f97171eac5f05d4f60400000000feffffff020000807a883b000000002004c20f6a63b17576a914441db1582a69878dfa83042b529ba918b74aaf1088ac0000001a7118020000002004c20f6a63b17576a9142421972d46cedd2283d244665a05bde2aec3446f88acc20f6a6300000000b5d860630100-7b22696e707574223a7b2230223a307d2c226f7574707574223a7b2230223a302c2231223a307d7d
 </code></pre></div><hr>
 <h3 id="tx-decode">tx-decode</h3>
 <p>decode a transaction in base16 to json format.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-decode --help
 
-Usage: qx tx-decode <span style="color:#f92672">[</span>base16_string<span style="color:#f92672">]</span>
-    -n string
-        decode rawtx <span style="color:#66d9ef">for</span> the target network. <span style="color:#f92672">(</span>mainnet, testnet, privnet<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>default <span style="color:#e6db74">&#34;privnet&#34;</span><span style="color:#f92672">)</span>
+Usage: qx tx-decode <span style="color:#f92672">[</span>base16_string<span style="color:#f92672">]</span> 
+  -n string
+    	decode rawtx <span style="color:#66d9ef">for</span> the target network. <span style="color:#f92672">(</span>mainnet, testnet, privnet<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>default <span style="color:#e6db74">&#34;mainnet&#34;</span><span style="color:#f92672">)</span>
 </code></pre></div><h4 id="decode-testnet-rawtx">decode testnet rawtx</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-decode -n testnet 0100010001c84928e4ba926e6e1a39786026e34da2654d1243d99cf43b532411278fad991b02000000feffffff0200e1f505000000001976a91444d959afb6db4ad730a6e2c0daf46ceeb98c53a088ac005ed0b2000000001976a914d364af39e59cea1488a25e3cfcc48e20f31a7b1688acb807285d00000000
+<ul>
+<li>Locktime = 0</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-decode -n testnet 0100000001e83ee40f95735261af991c35544cfdc90286ac45e3305f97171eac5f05d4f60400000000ffffffff020000807a883b000000001976a914441db1582a69878dfa83042b529ba918b74aaf1088ac0000001a7118020000001976a9142421972d46cedd2283d244665a05bde2aec3446f88ac0000000000000000c8d360630100-7b22696e707574223a7b2230223a307d2c226f7574707574223a7b2230223a302c2231223a307d7d
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-	<span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;d0f1d098c2076c149a8bf3c650f56ce0b485c268e668aa7e79aea37454f3093d&#34;</span>,
-	<span style="color:#f92672">&#34;txhash&#34;</span>: <span style="color:#e6db74">&#34;f546294b0449f658596d93c7de02c769b6064e9b8b05f6b9b4060d396325dcf5&#34;</span>,
-	<span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#ae81ff">1</span>,
-	<span style="color:#f92672">&#34;locktime&#34;</span>: <span style="color:#ae81ff">1562904504</span>,
-	<span style="color:#f92672">&#34;expire&#34;</span>: <span style="color:#ae81ff">0</span>,
-	<span style="color:#f92672">&#34;vin&#34;</span>: [{
-		<span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;1b99ad8f271124533bf49cd943124d65a24de3266078391a6e6e92bae42849c8&#34;</span>,
-		<span style="color:#f92672">&#34;vout&#34;</span>: <span style="color:#ae81ff">2</span>,
-		<span style="color:#f92672">&#34;sequence&#34;</span>: <span style="color:#ae81ff">4294967294</span>,
-		<span style="color:#f92672">&#34;amountin&#34;</span>: <span style="color:#ae81ff">0</span>,
-		<span style="color:#f92672">&#34;blockheight&#34;</span>: <span style="color:#ae81ff">0</span>,
-		<span style="color:#f92672">&#34;txindex&#34;</span>: <span style="color:#ae81ff">0</span>,
-		<span style="color:#f92672">&#34;scriptSig&#34;</span>: {
-			<span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-			<span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
-		}
-	}],
-	<span style="color:#f92672">&#34;vout&#34;</span>: [{
-		<span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">100000000</span>,
-		<span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
-			<span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 44d959afb6db4ad730a6e2c0daf46ceeb98c53a0 OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
-			<span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a91444d959afb6db4ad730a6e2c0daf46ceeb98c53a088ac&#34;</span>,
-			<span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
-			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
-			<span style="color:#f92672">&#34;addresses&#34;</span>: [<span style="color:#e6db74">&#34;TmVE82jyakwjh6r14cwjMReoqYdCGUZcxTC&#34;</span>]
-		}
-	}, {
-		<span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">3000000000</span>,
-		<span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
-			<span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 d364af39e59cea1488a25e3cfcc48e20f31a7b16 OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
-			<span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a914d364af39e59cea1488a25e3cfcc48e20f31a7b1688ac&#34;</span>,
-			<span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
-			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
-			<span style="color:#f92672">&#34;addresses&#34;</span>: [<span style="color:#e6db74">&#34;TmiDpu62REmftyKDH7qVwiAYDcFNGkE5HQv&#34;</span>]
-		}
-	}]
+  <span style="color:#f92672">&#34;txid&#34;</span>: <span style="color:#e6db74">&#34;2532595f10645b5550f90c60a6cedac1fd947aba26ff880f609e7c686f7e0401&#34;</span>,
+  <span style="color:#f92672">&#34;txhash&#34;</span>: <span style="color:#e6db74">&#34;cf6be2dfccf7fc24d0b448fdb92cb7be934505f15d411bce2f4faf4f95d6e79b&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#ae81ff">1</span>,
+  <span style="color:#f92672">&#34;locktime&#34;</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">&#34;expire&#34;</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">&#34;vin&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;TxTypeRegular&#34;</span>,
+      <span style="color:#f92672">&#34;scriptSig&#34;</span>: {
+        <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+        <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+      }
+    }
+  ],
+  <span style="color:#f92672">&#34;vout&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;coin&#34;</span>: <span style="color:#e6db74">&#34;MEER Asset&#34;</span>,
+      <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">998800000</span>,
+      <span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+        <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 441db1582a69878dfa83042b529ba918b74aaf10 OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+        <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a914441db1582a69878dfa83042b529ba918b74aaf1088ac&#34;</span>,
+        <span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+        <span style="color:#f92672">&#34;addresses&#34;</span>: [
+          <span style="color:#e6db74">&#34;TnHqTCHGYPfFyNtLQfYKVf5jd4KiQkropmV&#34;</span>
+        ]
+      }
+    },
+    {
+      <span style="color:#f92672">&#34;coin&#34;</span>: <span style="color:#e6db74">&#34;MEER Asset&#34;</span>,
+      <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#ae81ff">9000000000</span>,
+      <span style="color:#f92672">&#34;scriptPubKey&#34;</span>: {
+        <span style="color:#f92672">&#34;asm&#34;</span>: <span style="color:#e6db74">&#34;OP_DUP OP_HASH160 2421972d46cedd2283d244665a05bde2aec3446f OP_EQUALVERIFY OP_CHECKSIG&#34;</span>,
+        <span style="color:#f92672">&#34;hex&#34;</span>: <span style="color:#e6db74">&#34;76a9142421972d46cedd2283d244665a05bde2aec3446f88ac&#34;</span>,
+        <span style="color:#f92672">&#34;reqSigs&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;pubkeyhash&#34;</span>,
+        <span style="color:#f92672">&#34;addresses&#34;</span>: [
+          <span style="color:#e6db74">&#34;TnEvLExwzew6LPL13yXmWKnnZxD1c5Lr8Tw&#34;</span>
+        ]
+      }
+    }
+  ]
 }
-</code></pre></div><hr>
+</code></pre></div><ul>
+<li>Locktime = 1667895234</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-decode -n testnet 0100000001e83ee40f95735261af991c35544cfdc90286ac45e3305f97171eac5f05d4f60400000000feffffff020000807a883b000000002004c20f6a63b17576a914441db1582a69878dfa83042b529ba918b74aaf1088ac0000001a7118020000002004c20f6a63b17576a9142421972d46cedd2283d244665a05bde2aec3446f88acc20f6a6300000000b5d860630100-7b22696e707574223a7b2230223a307d2c226f7574707574223a7b2230223a302c2231223a307d7d
+</code></pre></div><pre><code class="language-jason" data-lang="jason">{
+  &quot;txid&quot;: &quot;40c8a8fcd173ad0ec1ad75a06c3dfe1fd623821345f5417cb7562e4bf7a64aee&quot;,
+  &quot;txhash&quot;: &quot;67acbab1d4c65ca2c1f0b6449d4d3374ff670004cf252087beaa474344e1465a&quot;,
+  &quot;version&quot;: 1,
+  &quot;locktime&quot;: 1667895234,
+  &quot;expire&quot;: 0,
+  &quot;vin&quot;: [
+    {
+      &quot;type&quot;: &quot;TxTypeRegular&quot;,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;&quot;,
+        &quot;hex&quot;: &quot;&quot;
+      }
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;coin&quot;: &quot;MEER Asset&quot;,
+      &quot;amount&quot;: 998800000,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;c20f6a63 OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 441db1582a69878dfa83042b529ba918b74aaf10 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;04c20f6a63b17576a914441db1582a69878dfa83042b529ba918b74aaf1088ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;cltvpubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;TnHqTCHGYPfFyNtLQfYKVf5jd4KiQkropmV&quot;
+        ]
+      }
+    },
+    {
+      &quot;coin&quot;: &quot;MEER Asset&quot;,
+      &quot;amount&quot;: 9000000000,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;c20f6a63 OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 2421972d46cedd2283d244665a05bde2aec3446f OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;04c20f6a63b17576a9142421972d46cedd2283d244665a05bde2aec3446f88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;cltvpubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;TnEvLExwzew6LPL13yXmWKnnZxD1c5Lr8Tw&quot;
+        ]
+      }
+    }
+  ]
+}
+</code></pre><hr>
 <h3 id="tx-sign">tx-sign</h3>
 <p>sign a transactions using a private key.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-sign --help
 
-Usage: qx tx-sign <span style="color:#f92672">[</span>raw_tx_base16_string<span style="color:#f92672">]</span>
-    -k string
-        the ec private key to sign the raw transaction
+Usage: qx tx-sign <span style="color:#f92672">[</span>raw_tx_base16_string<span style="color:#f92672">]</span> 
+  -k string
+    	the ec private key to sign the raw transaction
+  -n string
+    	decode rawtx <span style="color:#66d9ef">for</span> the target network. <span style="color:#f92672">(</span>mainnet, testnet, privnet<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>default <span style="color:#e6db74">&#34;mainnet&#34;</span><span style="color:#f92672">)</span>
 </code></pre></div><h4 id="example-1">Example</h4>
 
 <div class="notices tip" ><p>The column rawtx is not send to the node and is used as an instance only.</p>
 </div>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-sign -k 3f2314d615696244ea14e46e43322842b3e09333e62c59c4160220a52bdf6239 0100010001c84928e4ba926e6e1a39786026e34da2654d1243d99cf43b532411278fad991b02000000feffffff0200e1f505000000001976a91444d959afb6db4ad730a6e2c0daf46ceeb98c53a088ac005ed0b2000000001976a914d364af39e59cea1488a25e3cfcc48e20f31a7b1688acb807285d00000000
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~ qx tx-sign -k e2ec07936723d6b8c054f1f6bfe2cf1c439733303e5a6f0062d54168d9265b14 -n testnet 0100000001e83ee40f95735261af991c35544cfdc90286ac45e3305f97171eac5f05d4f60400000000ffffffff020000807a883b000000001976a914441db1582a69878dfa83042b529ba918b74aaf1088ac0000001a7118020000001976a9142421972d46cedd2283d244665a05bde2aec3446f88ac0000000000000000c8d360630100-7b22696e707574223a7b2230223a307d2c226f7574707574223a7b2230223a302c2231223a307d7d
 
-0100000001c84928e4ba926e6e1a39786026e34da2654d1243d99cf43b532411278fad991b02000000feffffff0200e1f505000000001976a91444d959afb6db4ad730a6e2c0daf46ceeb98c53a088ac005ed0b2000000001976a914d364af39e59cea1488a25e3cfcc48e20f31a7b1688acb807285d0000000001000000000000000000000000000000006b483045022100bd22c1b3c92d3131440c8582222b123a7fca7bfec68738bbb7423ba93f483de1022079d8180e9a4d53bfd23d9286b17261f15e71336e82f2c1cef6cab2e1f0675eaf0121034d09a78b756b80e02200a94d2e24762432518fb29a4a3fd0adf0414e71554d70
+0100000001e83ee40f95735261af991c35544cfdc90286ac45e3305f97171eac5f05d4f60400000000ffffffff020000807a883b000000001976a914441db1582a69878dfa83042b529ba918b74aaf1088ac0000001a7118020000001976a9142421972d46cedd2283d244665a05bde2aec3446f88ac0000000000000000c8d36063016b483045022100981bc66c021d792f53ecb6d2b1fc001ec91f11df055b8fc78f3cf7df88e51c0102200744540c34b4c0a5ab47341f4db48668a2003c85ee8647bf7495747aff6bb5f10121036d16522df27ff0b534fc853e19e1f77fefb6c7341819574b5c83fa1e968f54e8
 </code></pre></div>
 
 
@@ -6218,22 +6287,22 @@ Usage: qx tx-sign <span style="color:#f92672">[</span>raw_tx_base16_string<span 
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
 
-<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1667288242"></script>
+<script src="https://qitmeer.github.io/docs/js/clipboard.min.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.min.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/perfect-scrollbar.jquery.min.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/jquery.sticky.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/featherlight.min.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/html5shiv-printshiv.min.js?1667296668"></script>
 
-<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1667288242"></script>
+<script src="https://qitmeer.github.io/docs/js/highlight.pack.js?1667296668"></script>
 <script>hljs.initHighlightingOnLoad();</script> 
 
 
-<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/learn.js?1667288242"></script>
-<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1667288242"></script>
-<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1667288242" rel="stylesheet" />
-<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1667288242"></script>
+<script src="https://qitmeer.github.io/docs/js/modernizr.custom-3.6.0.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/learn.js?1667296668"></script>
+<script src="https://qitmeer.github.io/docs/js/hugo-learn.js?1667296668"></script>
+<link href="https://qitmeer.github.io/docs/mermaid/mermaid.css?1667296668" rel="stylesheet" />
+<script src="https://qitmeer.github.io/docs/mermaid/mermaid.js?1667296668"></script>
 
 
 <script>
