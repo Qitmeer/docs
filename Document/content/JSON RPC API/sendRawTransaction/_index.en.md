@@ -10,6 +10,8 @@ send raw transactions
 1. `hexTx: (hex string)`  hex string of signed transaction
 2. `allowHighFees: (bool, default=false)` if allows high fee
 
+Note: The second parameter "allowHighFees" will allow high fee which means that the full balance in addition to the amount transferred out is treated as fees when the value is true. Please use the default value "false".
+
 #### Returns
 ##### `(hex string)` 
 
