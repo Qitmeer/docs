@@ -121,10 +121,14 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 .searchbox {
     margin-top: 1rem;
     position: relative;
-    border: 1px solid #915eae;
-    background: #764890;
-    border-radius: 4px;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF;
+    background: #8B0D76 ;
 }
+/* #sidebar .searchbox {
+  border-color:rgba(#FFFFFF, 1) !important;
+  background: rgba(#8B0D76, 1) !important;
+} */
 .searchbox label {
     color: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -464,7 +468,7 @@ h1 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-align: center;
     text-transform: uppercase;
-    color: #222;
+    color: #fff;
     font-weight: 200;
 }
 blockquote {
@@ -905,6 +909,7 @@ td {
     padding: 1rem 0 1rem;
     overflow: auto;
     position: relative;
+    background: #071838;
 }
 .hljs::selection, .hljs span::selection {
     background: #b7b7b7;
@@ -988,11 +993,12 @@ td {
     background: #34495E;
 }
 #top-bar {
-    background: #F6F6F6;
-    border-radius: 2px;
+    background: #071838;
+    border-radius: 10px;
     padding: 0 1rem;
     height: 0;
     min-height: 3rem;
+    border:1px solid  #ffff;
 }
 #top-github-link {
     position: relative;
