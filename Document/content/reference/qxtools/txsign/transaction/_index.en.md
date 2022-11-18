@@ -46,6 +46,11 @@ Usage: qx tx-encode [-i tx-input] [-l tx-lock-time] [-o tx-output] [-v tx-versio
     	the transaction version (default 1)
 ```
 
+{{% notice tip %}}
+The option `-l value=locktime` is the timestamp or blockheight which used to unlock a utxo that has being locked on a `locktime`. The `-l` option is the unlocking time, only affects unlocking, and only used to unlock CLTV type, which should be greater than the maximum time in the input. 
+{{% /notice %}}
+
+
 #### Example
 
 - Standard meer tx
