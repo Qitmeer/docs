@@ -7,7 +7,20 @@ weight: 1
 
 # Qitmeer Node Monitoring & Maintaining
 
-## Checking node connectivity
+
+## Table of Contents
+
+* [Checking Node Connectivity](#checking-onde-connectivity)
+    * [Check if the P2P port and RPC port are open](#check-if-the-P2P-port-and-RPC-port-are-open)
+    * [Check peer connection status](#check-peer-connection-status)
+    * [Reload peer connections](#reload-peer-connections)
+* [Check Node Synchronisation and Data Consistency](#check-node-synchronisation-and-data-consistency)
+    * [BlockDAG Status Check](#blockDAG-status-check)
+    * [EVM Status Check](#evm-status-check)
+    * [Checking and handling tx pending situations](#checking-and-handling-tx-pending-situations)
+
+
+## 1. Checking Node Connectivity
 
 To ensure that nodes can participate properly in the network, provide transaction broadcast services, etc., checking the connectivity of nodes is essential to guarantee the stability and reliability of the network. The following are some common node connectivity checks:
 
@@ -96,7 +109,7 @@ or
 
 ⚠️ To use the `reloadpeers` RPC, add the parameter `--modules=p2p` when the node is started.
 
-## 2.  Check node synchronisation and data consistency
+## 2.  Check Node Synchronisation and Data Consistency
 
 Data consistency is fundamental for nodes to provide proper blockchain services. Ensuring data consistency between a node and the whole network can prevent blockchain forks and abnormalities in the blockchain services of this node, or other problems, due to inconsistent node data.
 
