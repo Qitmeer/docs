@@ -18,4 +18,5 @@ weight: 3
 - [Mount Swap Memory](./swap-memory)
 - [Exchange Guide](./exchange-lib)
 - [Contribute Docs](./contribute-docs)
+- [Node Maintaining](./node-maintaining)
 
