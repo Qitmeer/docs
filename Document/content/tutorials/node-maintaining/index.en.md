@@ -5,9 +5,6 @@ weight: 1
 # chapter: true
 ---
 
-# Qitmeer Node Monitoring & Maintaining
-
-
 ## Table of Contents
 
 * [Checking Node Connectivity](#checking-onde-connectivity)
@@ -90,6 +87,8 @@ In this way, you can directly use ./cli-mynode.sh peerinfo | jq 'length', e.g:
 ⚠️ Make sure that `cli-mynode.sh` and `cli.sh` are in the same directory.
 
 ### 1.3  Reload peer connections
+
+***Note: deprecated method, don't use on 1.0.21 or above***
 
 Qitmeer provides RPC `p2p_reloadPeers` for reloading peers. If your node's peer connection count stays very low for a long time, you can try resetting the peer connections. Two ways to do this:
 
