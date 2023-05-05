@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://qitmeer.github.io/docs/en/tutorials/node-maintaining/</guid>
-      <description>Qitmeer Node Monitoring &amp;amp; Maintaining Table of Contents  Checking Node Connectivity  Check if the P2P port and RPC port are open Check peer connection status Reload peer connections   Check Node Synchronisation and Data Consistency  BlockDAG Status Check EVM Status Check Checking and handling tx pending situations    1. Checking Node Connectivity To ensure that nodes can participate properly in the network, provide transaction broadcast services, etc.</description>
+      <description>Table of Contents  Checking Node Connectivity  Check if the P2P port and RPC port are open Check peer connection status Reload peer connections   Check Node Synchronisation and Data Consistency  BlockDAG Status Check EVM Status Check Checking and handling tx pending situations    1. Checking Node Connectivity To ensure that nodes can participate properly in the network, provide transaction broadcast services, etc., checking the connectivity of nodes is essential to guarantee the stability and reliability of the network.</description>
     </item>
     
   </channel>
